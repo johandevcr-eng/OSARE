@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OSARE - Demo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        
+    <div class="left">
+        <div class="logo">
+            <img class="logo-inicial" src="img/osare.png" alt="OSARE">
+            <h2>OSARE</h2>
+        </div>
+
+        
+
+    <h1 id="title-menu">Menú principal</h1>
+    </div>
+
+    <div class="login">
+        <label class="label-login">Área de Cliente</label>
+        <input placeholder="ID de Usuario" type="text">
+        <label class="label-login">Contraseña</label>
+        <input type="password">
+        <button>Log In</button>
+    </div>
+
+</div>
+
+    <!-- main -->
+    <div class="main">
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><img class="imagenes" src="img/hogar.png" alt="">Inicio</li>
+                <li><img class="imagenes" src="img/informacion.png" alt="">Acerca de</li>
+                <li><img class="imagenes" src="img/servicios.png" alt="">Servicios</li>
+                <li><img class="imagenes" src="img/blog.png" alt="">Blog</li>
+                <li><img class="imagenes" src="img/contacto.png" alt="">Contacto</li>
+
+                <li id="img-redes" class="has-dropdown">
+                    <div class="menu-label"><img class="imagenes" src="img/redes.png" alt="">Redes sociales</div>
+                    <ul class="social-dropdown">
+                        <li><img class="imagenes" src="img/facebook.png" alt="">Facebook</li>
+                        <li><img class="imagenes" src="img/instagram.png" alt="">Instagram</li>
+                        <li><img class="imagenes" src="img/linkedin.png" alt="">LinkedIn</li>
+                        <li><img class="imagenes" src="img/whatsapp.png" alt="">WhatsApp</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- banner -->
+        <div class="banner">
+            <div>
+                <h2>Haz crecer tu PyMES</h2>
+                <h3><ins>Crecimiento Estratégico</ins></h3>
+                <p class="banner-text">
+                    En OSARE CR somos su aliado estratégico en soluciones de Outsourcing en Costa Rica. Ofrecemos consultoría estratégica en sistemas y procesos con el Método OSARE. <br> Blindaje operativo para PYMES y marcas personales: garantizamos su seguridad jurídica con respaldo legal y laboral integrado en cada servicio. <br> Potenciamos negocios mediante servicio integrales de:
+                </p>
+
+
+                
+                <section class="banner-list">
+                    
+                    <div>
+                        <ul class="">
+                            <li>Gestión Empresarial</li>
+                            <li>Contabildad</li>
+                            <li>Asesoría Legal</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Gestión de Nóminas</li>
+                            <li>Marketing Digital y Branding</li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <p class="banner-text">
+                    Nuestro enfoque de BPO (Business Process Outsourcing) le permite delegar procesos críticos como el cumplimiento Normativo, las Obligaciones Tributarias, el Branding y RRSS, para que usted se enfoque en hacer crecer su negocio. <br><br>
+
+                    <cite>"Protegemos su legado"</cite>
+
+                </p>
+            </div>
+
+            <div>
+                <img class="banner-img" src="img/banner.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Projects Carousel -->
+    <div class="projects">
+        <h3 class="projects-title">PROYECTOS DESTACADOS</h3>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn" id="prev" onclick="moveCarousel(-1)">&#9664;</button>
+            <div class="carousel-track-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-item">Campaña de<br>Marketing Global</div>
+                    <div class="carousel-item">Optimización<br>Contable Integral</div>
+                    <div class="carousel-item">Solución Administrativa<br>para E-commerce</div>
+                    <div class="carousel-item">Consultoría<br>Estratégica</div>
+                    <div class="carousel-item">Gestión de<br>Nóminas</div>
+                    <div class="carousel-item">Asesoría<br>Legal Empresarial</div>
+                </div>
+            </div>
+            <button class="carousel-btn" id="next" onclick="moveCarousel(1)">&#9654;</button>
+        </div>
+    </div>
+
+
+
+    <div class="siglas-banner2-row">
+        <div class="banner-siglas">
+            <!-- <h1 class="title-metodo-osare">Método OSARE</h1> -->
+            <p class="texto-siglas">
+                <span class="siglas"><span class="letra">O</span> - Organización:</span> Limpiamos el caos administrativo. Ponemos cada pieza en su lugar. <br>
+                <span class="siglas"><span class="letra">S</span> - Sistemas:</span> Creamos los manuales y procesos (SOPs) para que el negocio no dependa de tu memoria, sino de un método. <br>
+                <span class="siglas"><span class="letra">A</span> - Automatización:</span> Ponemos la tecnología a trabajar para ti. Menos tareas manuales, más tiempo libre. <br>
+                <span class="siglas"><span class="letra">R</span> - Resultados:</span> Medimos lo que importa. Si no se mide, no crece. <br>
+                <span class="siglas"><span class="letra">E</span> - Estrategia & Estructura Legal:</span> Blindamos cada proceso bajo la normativa legal para que el patrono o marca personal duerma tranquilo.
+
+            </p>
+        </div>
+
+        <div class="bannertwo">
+            <img id="banner2" src="img/two banner.png" alt="">
+        </div>
+    </div>
+
+        <div class="full-viewport-video">
+            <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="auto" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+        </div>
+
+
+        <!-- <div class="container">
+
+            <div>
+                <h2>Conseguirás</h2>
+                <p>reducir tus costos administrativos, al igual que disminuir la cantidad de espacio físico dedicado a equipos de oficina y personal destacado en el sitio.</p>
+            </div>
+
+            <div>
+                
+        </div> -->
+
+    </div>
+
+
+
+
+
+
+    <!-- Tabs -->
+    
+    <!-- <div class="tabs">
+        <div>Ingresar</div>
+        <div class="active">Inicio</div>
+        <div>Perfil</div>
+        <div>Servicios</div>
+        <div>Blog</div>
+        <div>Contacto</div>
+        <div>FAQ</div>
+    </div> -->
+
+    <!-- Steps -->
+    
+    <!-- <div class="steps">
+        <div class="step">
+            <h4>Paso 01</h4>
+            <p>Diagnóstico</p>
+        </div>
+
+        <div class="step">
+            <h4>Paso 02</h4>
+            <p>Estrategia</p>
+        </div>
+
+        <div class="step">
+            <h4>Paso 03</h4>
+            <p>Ejecución</p>
+        </div>
+
+        <div class="step">
+            <h4>Paso 04</h4>
+            <p>Resultados</p>
+        </div>
+    </div> -->
+
+</div>
+
+</body>
+</html>
