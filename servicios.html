@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSARE - Servicios Destacados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: #c0bebe;
+            color: #272727;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            background: linear-gradient(to left, #000000, #555);
+            color: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+        }
+
+        .header p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: #0eacd8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .services {
+            display: grid;
+            gap: 14px;
+        }
+
+        .service {
+            background: #afadad;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .service h2 {
+            margin: 0 0 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            color: #111;
+        }
+
+        .service p {
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 700px) {
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .service h2 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section class="header">
+            <h1>Servicios Destacados de OSARE</h1>
+            <p>Explora cada solución y descubre cómo podemos apoyar tu crecimiento empresarial con respaldo estratégico y operativo.</p>
+            <a class="back-link" href="index.html">Volver al inicio</a>
+        </section>
+
+        <section class="services">
+            <article class="service" id="marketing-global">
+                <h2>Campaña de Marketing Global</h2>
+                <p>Diseñamos campañas multicanal orientadas a posicionamiento, captación y crecimiento sostenido de marca.</p>
+            </article>
+
+            <article class="service" id="contable-integral">
+                <h2>Optimización Contable Integral</h2>
+                <p>Ordenamos tus procesos contables y fiscales para mejorar control financiero, cumplimiento y eficiencia operativa.</p>
+            </article>
+
+            <article class="service" id="ecommerce">
+                <h2>Solución Administrativa para E-commerce</h2>
+                <p>Implementamos estructura administrativa y flujos de trabajo para tiendas digitales en etapa de expansión.</p>
+            </article>
+
+            <article class="service" id="consultoria">
+                <h2>Consultoría Estratégica</h2>
+                <p>Te acompañamos con diagnóstico, planificación y acciones enfocadas en resultados medibles para tu negocio.</p>
+            </article>
+
+            <article class="service" id="nominas">
+                <h2>Gestión de Nóminas</h2>
+                <p>Administramos tu planilla con precisión, seguridad y apego legal para reducir riesgos y carga operativa.</p>
+            </article>
+
+            <article class="service" id="asesoria-legal">
+                <h2>Asesoría Legal Empresarial</h2>
+                <p>Brindamos soporte legal preventivo y correctivo para proteger la estructura y continuidad de tu empresa.</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
