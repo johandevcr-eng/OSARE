@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSARE - Demo</title>
     <link rel="stylesheet" href="style.css">
     <script src="functions.js"></script>
@@ -60,12 +61,15 @@
                 <li><img class="imagenes" src="img/contacto.png" alt="">Contacto</li>
 
                 <li id="img-redes" class="has-dropdown">
-                    <div class="menu-label"><img class="imagenes" src="img/redes.png" alt="">Redes sociales</div>
-                    <ul class="social-dropdown">
-                        <li><img class="imagenes" src="img/facebook.png" alt="">Facebook</li>
-                        <li><img class="imagenes" src="img/instagram.png" alt="">Instagram</li>
-                        <li><img class="imagenes" src="img/linkedin.png" alt="">LinkedIn</li>
-                        <li><img class="imagenes" src="img/whatsapp.png" alt="">WhatsApp</li>
+                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="socialDropdown">
+                        <span class="menu-label-text"><img class="imagenes" src="img/redes.png" alt="">Redes sociales</span>
+                        <span class="dropdown-arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul class="social-dropdown" id="socialDropdown">
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.png" alt="">Facebook</button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.png" alt="">Instagram</button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.png" alt="">LinkedIn</button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/whatsapp.png" alt="">WhatsApp</button></li>
                     </ul>
                 </li>
             </ul>
@@ -138,6 +142,7 @@
 
     <div class="siglas-banner2-row">
         <div class="bannertwo">
+            <div class="image-card-glow"></div>
             <img id="banner2" src="img/two banner.png" alt="">
         </div>
 

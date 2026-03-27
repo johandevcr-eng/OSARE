@@ -2,6 +2,38 @@
 // Carrusel
 let isAnimating = false;
 
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.has-dropdown');
+    const toggle = document.querySelector('.dropdown-toggle');
+
+    if (!dropdown || !toggle) {
+        return;
+    }
+
+    function setDropdownState(isOpen) {
+        dropdown.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    toggle.addEventListener('click', function (event) {
+        event.stopPropagation();
+        setDropdownState(!dropdown.classList.contains('is-open'));
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!dropdown.contains(event.target)) {
+            setDropdownState(false);
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            setDropdownState(false);
+            toggle.blur();
+        }
+    });
+});
+
 function moveCarousel(direction) {
     const track = document.getElementById('carouselTrack');
     if (!track || isAnimating) {
