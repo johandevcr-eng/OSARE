@@ -45,7 +45,9 @@ function moveCarousel(direction) {
         return;
     }
 
-    const itemWidth = items[0].offsetWidth + 20; // width + gap
+    const trackStyle = window.getComputedStyle(track);
+    const gap = parseFloat(trackStyle.columnGap || trackStyle.gap || '0') || 0;
+    const itemWidth = items[0].offsetWidth + gap;
 
     if (direction > 0) {
         isAnimating = true;
