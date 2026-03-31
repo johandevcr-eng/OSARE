@@ -670,6 +670,10 @@
         color: #2f2f2f;
     }
 
+
+
+    /* Container services */
+
     .container-services {
         display: flex;
         margin-bottom: 40px;
@@ -742,6 +746,7 @@
         height: clamp(56px, 5vw, 76px);
         object-fit: contain;
         margin: 0;
+        mix-blend-mode: multiply;
     }
 
     .container-services > div h3 {
@@ -771,18 +776,18 @@
     }
 
     .container-services > div:nth-child(1) {
-        background: linear-gradient(135deg, #8f8f8f 0%, #6f6f6f 100%);
+        background: linear-gradient(135deg, #a8a7a7 0%, #b3b0b0 100%);
     }
 
     .container-services > div:nth-child(2) {
-        background: #000000;
+        background: #ffffff;
     }
 
     .container-services > div:nth-child(2) h1,
     .container-services > div:nth-child(2) h2,
     .container-services > div:nth-child(2) h3,
     .container-services > div:nth-child(2) p {
-        color: #ffffff;
+        color: #000000;
     }
 
     .container-services > div:nth-child(2) h2 {
@@ -962,6 +967,10 @@
             --fixed-video-height: 76px;
         }
 
+        .objectives-carousel {
+            padding: 16px 12px;
+        }
+
         .container {
             padding: 12px;
             padding-top: calc(var(--fixed-video-height) + 12px);
@@ -1014,13 +1023,47 @@
         }
 
         .carousel-item {
-            min-width: 72vw;
-            font-size: 16px;
+            min-width: 100%;
+            font-size: 15px;
+            min-height: auto;
+            padding: 16px;
+        }
+
+        .carousel-item p {
+            font-size: 15px;
+            line-height: 1.65;
+            overflow-wrap: anywhere;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            padding: 0 38px;
+            gap: 0;
+        }
+
+        .carousel-track-container {
+            width: 100%;
         }
 
         .carousel-btn {
             width: 32px;
             height: 32px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        #prev {
+            left: 0;
+        }
+
+        #next {
+            right: 0;
+        }
+
+        .carousel-btn:hover {
+            transform: translateY(-50%) scale(1.08);
         }
 
         .siglas-banner2-row {
