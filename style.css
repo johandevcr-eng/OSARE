@@ -967,13 +967,18 @@
             --fixed-video-height: 76px;
         }
 
+        .section-title-main {
+            white-space: normal;
+            line-height: 1.2;
+        }
+
         .objectives-carousel {
             padding: 16px 12px;
         }
 
         .container {
-            padding: 12px;
-            padding-top: calc(var(--fixed-video-height) + 12px);
+            padding: 10px;
+            padding-top: calc(var(--fixed-video-height) + 10px);
         }
 
         .logo {
@@ -1037,7 +1042,7 @@
 
         .carousel-wrapper {
             position: relative;
-            padding: 0 38px;
+            padding: 0 34px;
             gap: 0;
         }
 
@@ -1087,5 +1092,72 @@
         footer {
             margin-top: 24px;
             padding: 16px 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 8px;
+            padding-top: calc(var(--fixed-video-height) + 8px);
+        }
+
+        .section-title-main {
+            font-size: 30px;
+            margin: 8px auto 16px;
+        }
+
+        .section-title-label {
+            margin: 36px 0 14px;
+            letter-spacing: 0.08em;
+        }
+
+        .banner,
+        .banner-siglas {
+            padding: 16px;
+        }
+
+        .texto-siglas {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .objectives-carousel {
+            padding: 12px 8px;
+        }
+
+        .carousel-item {
+            padding: 14px;
+            border-radius: 8px;
+        }
+
+        .carousel-item h4 {
+            font-size: 17px;
+        }
+
+        .carousel-item p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .carousel-wrapper {
+            padding: 0 30px;
+        }
+
+        .carousel-btn {
+            width: 28px;
+            height: 28px;
+            font-size: 14px;
+        }
+
+        .container-services > div {
+            padding: 18px 12px;
+        }
+
+        .container-services > div h3 {
+            font-size: 16px;
+        }
+
+        footer {
+            font-size: 14px;
         }
     }
