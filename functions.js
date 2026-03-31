@@ -3,30 +3,50 @@
 let isAnimating = false;
 
 document.addEventListener('DOMContentLoaded', function () {
-    const dropdown = document.querySelector('.has-dropdown');
-    const toggle = document.querySelector('.dropdown-toggle');
+    const dropdowns = Array.from(document.querySelectorAll('.has-dropdown'));
 
-    if (dropdown && toggle) {
-        function setDropdownState(isOpen) {
-            dropdown.classList.toggle('is-open', isOpen);
+    function setDropdownState(dropdown, isOpen) {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        dropdown.classList.toggle('is-open', isOpen);
+        if (toggle) {
             toggle.setAttribute('aria-expanded', String(isOpen));
         }
+    }
 
-        toggle.addEventListener('click', function (event) {
-            event.stopPropagation();
-            setDropdownState(!dropdown.classList.contains('is-open'));
+    if (dropdowns.length > 0) {
+        dropdowns.forEach(function (dropdown) {
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            if (!toggle) {
+                return;
+            }
+
+            toggle.addEventListener('click', function (event) {
+                event.stopPropagation();
+                const willOpen = !dropdown.classList.contains('is-open');
+
+                dropdowns.forEach(function (otherDropdown) {
+                    if (otherDropdown !== dropdown) {
+                        setDropdownState(otherDropdown, false);
+                    }
+                });
+
+                setDropdownState(dropdown, willOpen);
+            });
         });
 
         document.addEventListener('click', function (event) {
-            if (!dropdown.contains(event.target)) {
-                setDropdownState(false);
-            }
+            dropdowns.forEach(function (dropdown) {
+                if (!dropdown.contains(event.target)) {
+                    setDropdownState(dropdown, false);
+                }
+            });
         });
 
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
-                setDropdownState(false);
-                toggle.blur();
+                dropdowns.forEach(function (dropdown) {
+                    setDropdownState(dropdown, false);
+                });
             }
         });
     }
