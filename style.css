@@ -834,10 +834,10 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .container-services > div:nth-child(5),
+        /* .container-services > div:nth-child(5),
         .container-services > div:nth-child(6) {
             grid-column: auto;
-        }
+        } */
 
         .container-services > div {
             min-height: 170px;
@@ -1014,9 +1014,18 @@
         }
 
         .banner-list {
-            /* flex-direction: column;
-            gap: 0; */
-            padding: 0;
+            flex-direction: column;
+            gap: 0;
+            padding: 8px 16px;
+        }
+
+        .banner-list > div {
+            display: contents;
+        }
+
+        .banner-list ul {
+            margin: 0;
+            padding-left: 20px;
         }
 
         .projects-title {
@@ -1103,8 +1112,13 @@
         }
 
         .banner-list {
-            padding: 2px 0;
-            display: block;
+            flex-direction: column;
+            gap: 0;
+            padding: 8px 16px;
+        }
+
+        .banner-list > div {
+            display: contents;
         }
 
         .section-title-main {
