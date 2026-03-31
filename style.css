@@ -150,6 +150,11 @@
             height: auto;
     }
 
+    .sidebar a {
+        color: inherit;
+        text-decoration: none;
+    }
+
         .menu-label {
             display: flex;
             align-items: center;
