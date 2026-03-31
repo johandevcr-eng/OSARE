@@ -6,31 +6,62 @@ document.addEventListener('DOMContentLoaded', function () {
     const dropdown = document.querySelector('.has-dropdown');
     const toggle = document.querySelector('.dropdown-toggle');
 
-    if (!dropdown || !toggle) {
-        return;
+    if (dropdown && toggle) {
+        function setDropdownState(isOpen) {
+            dropdown.classList.toggle('is-open', isOpen);
+            toggle.setAttribute('aria-expanded', String(isOpen));
+        }
+
+        toggle.addEventListener('click', function (event) {
+            event.stopPropagation();
+            setDropdownState(!dropdown.classList.contains('is-open'));
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!dropdown.contains(event.target)) {
+                setDropdownState(false);
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                setDropdownState(false);
+                toggle.blur();
+            }
+        });
     }
 
-    function setDropdownState(isOpen) {
-        dropdown.classList.toggle('is-open', isOpen);
-        toggle.setAttribute('aria-expanded', String(isOpen));
-    }
+    // Handle click navigation from data-href attributes.
+    document.querySelectorAll('[data-href]').forEach(function (element) {
+        element.addEventListener('click', function () {
+            const target = element.getAttribute('data-href');
+            if (target) {
+                window.location.href = target;
+            }
+        });
 
-    toggle.addEventListener('click', function (event) {
-        event.stopPropagation();
-        setDropdownState(!dropdown.classList.contains('is-open'));
-    });
-
-    document.addEventListener('click', function (event) {
-        if (!dropdown.contains(event.target)) {
-            setDropdownState(false);
+        // Add keyboard activation for non-button interactive cards.
+        if (element.classList.contains('service-card')) {
+            element.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    const target = element.getAttribute('data-href');
+                    if (target) {
+                        window.location.href = target;
+                    }
+                }
+            });
         }
     });
 
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape') {
-            setDropdownState(false);
-            toggle.blur();
-        }
+    // Bind carousel controls declared with data attributes.
+    document.querySelectorAll('[data-carousel-direction]').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const direction = Number(button.getAttribute('data-carousel-direction'));
+            if (!Number.isNaN(direction) && direction !== 0) {
+                moveCarousel(direction);
+            }
+        });
     });
 });
 

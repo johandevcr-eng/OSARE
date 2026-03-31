@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OSARE - Servicios Destacados</title>
+    <script src="functions.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -41,11 +42,16 @@
         }
 
         .back-link {
-            display: inline-block;
+            display: inline-flex;
             margin-top: 14px;
             color: #0eacd8;
             text-decoration: none;
             font-weight: 600;
+            border: 0;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+            font: inherit;
         }
 
         .services {
@@ -87,21 +93,21 @@
         <section class="header">
             <h1>Servicios Destacados de OSARE</h1>
             <p>Explora cada solución y descubre cómo podemos apoyar tu crecimiento empresarial con respaldo estratégico y operativo.</p>
-            <a class="back-link" href="index.html">Volver al inicio</a>
+            <button class="back-link menu-link-btn" type="button" data-href="index.html">Volver al inicio</button>
         </section>
 
         <section class="services">
-            <article class="service" id="marketing-global">
+            <article class="service" id="servicios-marketing">
                 <h2>Campaña de Marketing Global</h2>
                 <p>Diseñamos campañas multicanal orientadas a posicionamiento, captación y crecimiento sostenido de marca.</p>
             </article>
 
-            <article class="service" id="contable-integral">
+            <article class="service" id="servicios-contables">
                 <h2>Optimización Contable Integral</h2>
                 <p>Ordenamos tus procesos contables y fiscales para mejorar control financiero, cumplimiento y eficiencia operativa.</p>
             </article>
 
-            <article class="service" id="ecommerce">
+            <article class="service" id="servicios-administrativos">
                 <h2>Solución Administrativa para E-commerce</h2>
                 <p>Implementamos estructura administrativa y flujos de trabajo para tiendas digitales en etapa de expansión.</p>
             </article>
@@ -116,7 +122,7 @@
                 <p>Administramos tu planilla con precisión, seguridad y apego legal para reducir riesgos y carga operativa.</p>
             </article>
 
-            <article class="service" id="asesoria-legal">
+            <article class="service" id="servicios-legales">
                 <h2>Asesoría Legal Empresarial</h2>
                 <p>Brindamos soporte legal preventivo y correctivo para proteger la estructura y continuidad de tu empresa.</p>
             </article>
