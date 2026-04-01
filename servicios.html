@@ -9,17 +9,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --fixed-video-height: 100px;
+        }
+
         body {
             margin: 0;
             font-family: 'Open Sans', sans-serif;
             background: #c0bebe;
             color: #272727;
+            overflow-x: hidden;
+        }
+
+        .full-viewport-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            margin: 0;
+            z-index: 10;
+        }
+
+        .full-viewport-video video {
+            display: block;
+            width: 100%;
+            height: var(--fixed-video-height);
+            object-fit: cover;
         }
 
         .page {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: calc(var(--fixed-video-height) + 20px) 20px 40px;
         }
 
         .header {
@@ -89,6 +110,10 @@
     </style>
 </head>
 <body>
+    <div class="full-viewport-video">
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="auto" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+    </div>
+
     <main class="page">
         <section class="header">
             <h1>Servicios Destacados de OSARE</h1>
