@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OSARE | Servicios Legales</title>
+	<script src="functions.js" defer></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="serv-leg.css">
+</head>
+<body>
+	<div class="container serv-leg-container">
+		<div class="full-viewport-video">
+			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="auto" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+		</div>
+
+		<div class="main">
+			<div class="sidebar">
+				<ul>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.png" alt=""><span>Inicio</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.png" alt=""><span>Acerca de</span></button></li>
+					<li class="has-dropdown">
+						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownLeg">
+							<span class="menu-label-text"><img class="imagenes" src="img/servicios.png" alt="">Servicios</span>
+							<span class="dropdown-arrow" aria-hidden="true"></span>
+						</button>
+						<ul class="submenu-dropdown" id="servicesDropdownLeg">
+							<li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+						</ul>
+					</li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.png" alt=""><span>Blog</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.png" alt=""><span>Contacto</span></button></li>
+
+					<li class="has-dropdown">
+						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="socialDropdownLeg">
+							<span class="menu-label-text"><img class="imagenes" src="img/redes.png" alt="">Redes sociales</span>
+							<span class="dropdown-arrow" aria-hidden="true"></span>
+						</button>
+						<ul class="social-dropdown" id="socialDropdownLeg">
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.png" alt="">Facebook</button></li>
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.png" alt="">Instagram</button></li>
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.png" alt="">LinkedIn</button></li>
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/whatsapp.png" alt="">WhatsApp</button></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<main class="page">
+				<section class="hero">
+					<h1>SERVICIOS LEGALES</h1>
+					<p>
+						Asesoramiento legal integral y especializado para proteger los intereses de su negocio, cumplir con regulaciones normativas y resolver conflictos con experticia profesional.
+					</p>
+					<blockquote>
+						"La prevención legal es el mejor cimiento para construir negocios sólidos y duraderos".
+					</blockquote>
+					<div class="hero-actions">
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar Servicios</button>
+						<button class="btn btn-secondary" type="button" data-href="index.html">Volver al inicio</button>
+					</div>
+				</section>
+
+				<section class="services-grid" aria-label="Servicios legales disponibles">
+					<article class="service-card">
+						<h2>Servicios Notariales</h2>
+						<ul>
+							<li>Constitución, modificación, disolución y liquidación de sociedades mercantiles.</li>
+							<li>Protocolización de actas de asambleas.</li>
+							<li>Estudios registrales, inscripción, traspasos de bienes muebles e inmuebles.</li>
+							<li>Actas notariales, certificación de documentos, autenticación de firmas.</li>
+							<li>Hipotecas, fideicomisos y propiedad intelectual.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+					</article>
+
+					<article class="service-card">
+						<h2>Asesoría Inmobiliaria</h2>
+						<ul>
+							<li>Estudios registrales, identificación de gravámenes e impuestos municipales.</li>
+							<li>Revisión y elaboración de contratos de alquiler y compraventa.</li>
+							<li>Trámites bancarios, hipotecas, préstamos y fideicomisos.</li>
+							<li>Asesoría en administración de inmuebles y condominios.</li>
+							<li>Asesoría e intermediación en transacciones inmobiliarias.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+					</article>
+
+					<article class="service-card">
+						<h2>Cumplimiento Normativo Empresarial</h2>
+						<ul>
+							<li>Diagnóstico y soluciones específicas en distintas áreas normativas.</li>
+							<li>Revisión de documentación constitutiva, permisos, patentes y licencias.</li>
+							<li>Revisión, mejoramiento e implementación de reglamentos internos y políticas corporativas.</li>
+							<li>Cumplimiento normativo en servicio al cliente y legislación laboral.</li>
+							<li>Protección de datos y asesoría en capacitaciones normativas.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+					</article>
+
+					<article class="service-card">
+						<h2>Procesos Judiciales - Litigio</h2>
+						<ul>
+							<li>Cobros judiciales, embargos y embargos arrendaticios.</li>
+							<li>Litigio en materia civil y laboral.</li>
+							<li>Procesos laborales disciplinarios internos y externos.</li>
+							<li>Representación ante el Ministerio de Trabajo y la CCSS.</li>
+							<li>Representación en procesos empresariales y personales diversos.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+					</article>
+
+					<article class="service-card">
+						<h2>Asesoría Emprendimientos y Pymes</h2>
+						<ul>
+							<li>Asesoría y tramitación de permisos, patentes y registros.</li>
+							<li>Gestión de préstamos bancarios y trámites institucionales.</li>
+							<li>Todos los servicios de cumplimiento normativo empresarial.</li>
+							<li>Capacitaciones sobre temas específicos de negocio y legal.</li>
+							<li>Acompañamiento en etapas críticas del emprendimiento.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+					</article>
+
+					<article class="service-card">
+						<h2>Asesoría General</h2>
+						<ul>
+							<li>Redacción de documentos comerciales conforme al marco legal.</li>
+							<li>Mediación y conciliación de conflictos.</li>
+							<li>Acompañamiento y asesoramiento en negociaciones.</li>
+							<li>Trámites consulares y asuntos internacionales.</li>
+							<li>Asesoría en diversas áreas del derecho.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+					</article>
+				</section>
+
+				<section class="note-box">
+					Si el servicio que busca no esta en este listado, escribanos. Podemos disenar una solucion legal personalizada para su empresa.
+				</section>
+
+				<section class="quote-box" id="cotizar">
+					<h3>Cotizar Servicios</h3>
+					<form class="quote-form" action="#" method="post">
+						<input type="text" name="nombre" placeholder="Nombre *" required>
+						<input type="text" name="apellidos" placeholder="Apellidos *" required>
+						<input type="text" name="empresa" placeholder="Empresa *" required>
+						<input type="email" name="email" placeholder="Email *" required>
+						<select name="servicio" class="full" required>
+							<option value="">Servicio *</option>
+							<option>Servicios Notariales</option>
+							<option>Asesoria Inmobiliaria</option>
+							<option>Cumplimiento Normativo Empresarial</option>
+							<option>Procesos Judiciales - Litigio</option>
+							<option>Asesoria Emprendimientos y Pymes</option>
+							<option>Asesoria General</option>
+						</select>
+						<textarea name="mensaje" class="full" placeholder="Mensaje (los detalles nos ayudaran a brindarte informacion mas precisa)"></textarea>
+						<button class="btn btn-primary full" type="submit">Enviar</button>
+					</form>
+				</section>
+			</main>
+		</div>
+	</div>
+</body>
+</html>
