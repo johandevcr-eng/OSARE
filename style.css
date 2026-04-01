@@ -311,6 +311,40 @@
 
         .social-fixed-item .social-dropdown {
             display: block;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            backdrop-filter: none;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .social-fixed-item .social-dropdown li {
+            flex: 0 0 auto;
+        }
+
+        .social-fixed-item .social-dropdown li + li {
+            margin-top: 0;
+        }
+
+        .social-fixed-item .social-link {
+            justify-content: center;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .social-fixed-item .social-link:hover,
+        .social-fixed-item .social-link:focus-visible {
+            background: transparent;
+            color: inherit;
+            transform: none;
+            outline: none;
+            box-shadow: none;
         }
 
         .social-fixed-item .dropdown-arrow {
