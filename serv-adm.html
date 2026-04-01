@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OSARE | Servicios Administrativos</title>
+	<script src="functions.js" defer></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="serv-adm.css">
+</head>
+<body>
+	<div class="container serv-adm-container">
+		<div class="full-viewport-video">
+			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="auto" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+		</div>
+
+		<div class="main">
+			<div class="sidebar">
+				<ul>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.png" alt=""><span>Inicio</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.png" alt=""><span>Acerca de</span></button></li>
+					<li class="has-dropdown">
+						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownAdmin">
+							<span class="menu-label-text"><img class="imagenes" src="img/servicios.png" alt="">Servicios</span>
+							<span class="dropdown-arrow" aria-hidden="true"></span>
+						</button>
+						<ul class="submenu-dropdown" id="servicesDropdownAdmin">
+							<li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+						</ul>
+					</li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.png" alt=""><span>Blog</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.png" alt=""><span>Contacto</span></button></li>
+
+					<li class="has-dropdown">
+						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="socialDropdownAdmin">
+							<span class="menu-label-text"><img class="imagenes" src="img/redes.png" alt="">Redes sociales</span>
+							<span class="dropdown-arrow" aria-hidden="true"></span>
+						</button>
+						<ul class="social-dropdown" id="socialDropdownAdmin">
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.png" alt="">Facebook</button></li>
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.png" alt="">Instagram</button></li>
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.png" alt="">LinkedIn</button></li>
+							<li><button class="social-link" type="button"><img class="imagenes" src="img/whatsapp.png" alt="">WhatsApp</button></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<main class="page">
+		<section class="hero">
+			<h1>SERVICIOS ADMINISTRATIVOS</h1>
+			<p>
+				Diseñamos soporte operativo para que su empresa delegue tareas administrativas clave, mantenga control de su información y avance con procesos más ordenados y medibles.
+			</p>
+			<blockquote>
+				"Concentre su energía en el valor diferencial de su negocio y deje en manos expertas los procesos de apoyo".
+			</blockquote>
+			<div class="hero-actions">
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar Servicios</button>
+				<button class="btn btn-secondary" type="button" data-href="index.html">Volver al inicio</button>
+			</div>
+		</section>
+
+		<section class="services-grid" aria-label="Servicios administrativos disponibles">
+			<article class="service-card">
+				<h2>Asistencia Virtual</h2>
+				<ul>
+					<li>Registro y digitación de información administrativa.</li>
+					<li>Orden, archivo y control de documentación.</li>
+					<li>Preparación de reportes y redacción de comunicaciones.</li>
+					<li>Gestión de agenda y soporte a gerencia.</li>
+					<li>Tareas personalizadas según su operación.</li>
+				</ul>
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+			</article>
+
+			<article class="service-card">
+				<h2>Gestión Documental</h2>
+				<ul>
+					<li>Digitalización y estructuración de expedientes.</li>
+					<li>Controles para consulta, acceso y trazabilidad.</li>
+					<li>Administración de contratos, clientes y proveedores.</li>
+					<li>Respaldo digital y copias de seguridad periódicas.</li>
+					<li>Protocolos de confidencialidad de la información.</li>
+				</ul>
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+			</article>
+
+			<article class="service-card">
+				<h2>Gestión de Nómina</h2>
+				<ul>
+					<li>Procesamiento completo de planilla por periodicidad.</li>
+					<li>Cálculo de comisiones, horas extra y jornadas especiales.</li>
+					<li>Aplicación de incapacidades, licencias y deducciones.</li>
+					<li>Liquidaciones y comprobantes para colaboradores.</li>
+					<li>Reportes institucionales y cumplimiento laboral.</li>
+				</ul>
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+			</article>
+
+			<article class="service-card">
+				<h2>Gestión de Proyectos</h2>
+				<ul>
+					<li>Cotizaciones y coordinación con proveedores.</li>
+					<li>Elaboración y control de presupuesto.</li>
+					<li>Planificación y seguimiento por fases.</li>
+					<li>Supervisión administrativa de ejecución.</li>
+					<li>Informes y documentación de cierre.</li>
+				</ul>
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+			</article>
+
+			<article class="service-card">
+				<h2>Expedientes Digitales (Nómina)</h2>
+				<ul>
+					<li>Expediente por colaborador en formato digital.</li>
+					<li>Contratos, acciones de personal y constancias.</li>
+					<li>Control de vacaciones, incapacidades y soportes.</li>
+					<li>Respaldo de seguridad y consulta en nube.</li>
+					<li>Actualización continua de registros.</li>
+				</ul>
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+			</article>
+
+			<article class="service-card">
+				<h2>Soporte General</h2>
+				<ul>
+					<li>Trámites administrativos de diversa naturaleza.</li>
+					<li>Gestión de tareas específicas bajo demanda.</li>
+					<li>Apoyo en control y seguimiento de equipos.</li>
+					<li>Asistencia para picos operativos.</li>
+					<li>Servicio a medida según sus requerimientos.</li>
+				</ul>
+				<button class="btn btn-primary" type="button" data-href="#cotizar">Cotizar</button>
+			</article>
+		</section>
+
+		<section class="note-box">
+			Si el servicio que busca no está en este listado, escríbanos. Podemos diseñar una solución administrativa personalizada para su empresa.
+		</section>
+
+		<section class="quote-box" id="cotizar">
+			<h3>Cotizar Servicios</h3>
+			<form class="quote-form" action="#" method="post">
+				<input type="text" name="nombre" placeholder="Nombre *" required>
+				<input type="text" name="apellidos" placeholder="Apellidos *" required>
+				<input type="text" name="empresa" placeholder="Empresa *" required>
+				<input type="email" name="email" placeholder="Email *" required>
+				<select name="servicio" class="full" required>
+					<option value="">Servicio *</option>
+					<option>Asistencia Virtual</option>
+					<option>Gestión Documental</option>
+					<option>Gestión de Nómina</option>
+					<option>Gestión de Proyectos</option>
+					<option>Expedientes Digitales (Nómina)</option>
+					<option>Soporte General</option>
+				</select>
+				<textarea name="mensaje" class="full" placeholder="Mensaje (los detalles nos ayudarán a brindarte información más precisa)"></textarea>
+				<button class="btn btn-primary full" type="submit">Enviar</button>
+			</form>
+		</section>
+			</main>
+		</div>
+	</div>
+</body>
+</html>
