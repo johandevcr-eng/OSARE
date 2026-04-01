@@ -304,6 +304,18 @@
         .has-dropdown .menu-label {
             width: 100%;
         }
+
+        .social-fixed-label {
+            cursor: default;
+        }
+
+        .social-fixed-item .social-dropdown {
+            display: block;
+        }
+
+        .social-fixed-item .dropdown-arrow {
+            display: none;
+        }
     
 
     .imagenes {
