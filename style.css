@@ -364,6 +364,10 @@
         height: 22px;
     }
 
+    .social-fixed-item .imagenes {
+        filter: brightness(0) saturate(100%) invert(42%) sepia(84%) saturate(1500%) hue-rotate(158deg) brightness(84%) contrast(94%);
+    }
+
     .submenu-dropdown {
         display: none;
         list-style: none;
