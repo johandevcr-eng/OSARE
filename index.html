@@ -3,25 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OSARE CR ofrece servicios administrativos, contables, legales y de marketing para PYMES en Costa Rica con enfoque estratégico y operativo.">
     <title>OSARE - Demo</title>
     <link rel="stylesheet" href="style.css">
-    <script src="functions.js"></script>
+    <script src="functions.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
 
     <div class="full-viewport-video">
-        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="auto" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
     </div>
     
     <!-- Header -->
@@ -86,7 +81,7 @@
             </ul>
         </div>
 
-        <img class="banner-princ-top" src="img/banner-princ.png" alt="Banner principal">
+        <img class="banner-princ-top" src="img/banner-princ.png" alt="Banner principal" fetchpriority="high" decoding="async">
         <!-- <img class="banner-princ-top" src="img/banner-princ2.png" alt="Banner principal 2" style="border-radius: 100px;"> -->
 
         <!-- banner -->
@@ -128,7 +123,7 @@
             </div>
 
             <div>
-                <img class="banner-img" src="img/banner.png" alt="">
+                <img class="banner-img" src="img/banner.png" alt="" fetchpriority="high" decoding="async">
             </div>
             
         </div>
@@ -185,7 +180,7 @@
     <div class="siglas-banner2-row">
         <div class="bannertwo">
             <div class="image-card-glow"></div>
-            <img id="banner2" src="img/two banner.png" alt="">
+            <img id="banner2" src="img/two banner.png" alt="" loading="lazy" decoding="async">
         </div>
 
         <div class="banner-siglas">
@@ -208,22 +203,22 @@
     <h2 class="section-title section-title-label">Nuestros servicios destacados</h2>
     <div class="container-services">
         <div class="service-card" role="button" tabindex="0" data-href="serv-adm.html">
-            <img src="img/servicios-adm.png" alt="Servicios Administrativos">
+            <img src="img/servicios-adm.png" alt="Servicios Administrativos" loading="lazy" decoding="async">
             <h3>Servicios Administrativos</h3>
         </div>
 
         <div class="service-card" role="button" tabindex="0" data-href="serv-cont.html">
-            <img src="img/servicios-cont.png" alt="Servicios Contables">
+            <img src="img/servicios-cont.png" alt="Servicios Contables" loading="lazy" decoding="async">
             <h3>Servicios Contables</h3>
         </div>
 
         <div class="service-card" role="button" tabindex="0" data-href="serv-leg.html">
-            <img src="img/servicios-leg.png" alt="Servicios Legales">
+            <img src="img/servicios-leg.png" alt="Servicios Legales" loading="lazy" decoding="async">
             <h3>Servicios Legales</h3>
         </div>
 
         <div class="service-card" role="button" tabindex="0" data-href="serv-mark.html">
-            <img src="img/servicios-mark.png" alt="Servicios de Marketing">
+            <img src="img/servicios-mark.png" alt="Servicios de Marketing" loading="lazy" decoding="async">
             <h3>Servicios de Marketing y Branding</h3>
         </div>
     </div>
