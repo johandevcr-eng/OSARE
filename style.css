@@ -500,7 +500,12 @@
         overflow: hidden;
     }
 
-    .main > .banner-princ-top {
+    .main > picture {
+        grid-column: 2;
+        display: block;
+    }
+
+    .main > picture > .banner-princ-top {
         grid-column: 2;
         display: block;
         width: 100%;
@@ -513,7 +518,7 @@
         margin-top: -20px;
     } */
 
-    .main > .banner-princ-top:last-of-type {
+    .main > picture > .banner-princ-top:last-of-type {
         margin-bottom: 14px;
     }
 
@@ -1138,18 +1143,22 @@
             margin: 0;
         }
 
-        .main > .banner-princ-top {
+        .main > picture {
+            grid-column: 1;
+        }
+
+        .main > picture > .banner-princ-top {
             grid-column: 1;
             width: 100%;
             margin: 0;
             border-radius: 20px;
         }
 
-        .main > .banner-princ-top + .banner-princ-top {
+        .main > picture + picture > .banner-princ-top {
             margin-top: -20px;
         }
 
-        .main > .banner-princ-top:last-of-type {
+        .main > picture > .banner-princ-top:last-of-type {
             margin-bottom: 14px;
         }
 
@@ -1241,9 +1250,9 @@
             mask-composite: unset;
         }
 
-        .main > .banner-princ-top {
-            height: clamp(190px, 50vw, 320px);
-            object-fit: cover;
+        .main > picture > .banner-princ-top {
+            height: auto;
+            object-fit: contain;
             object-position: center;
         }
 
@@ -1313,10 +1322,10 @@
             gap: 14px;
         }
 
-        .main > .banner-princ-top {
+        .main > picture > .banner-princ-top {
             border-radius: 14px;
-            height: clamp(170px, 56vw, 250px);
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
             object-position: center;
         }
 
@@ -1498,10 +1507,10 @@
             font-size: 14px;
         }
 
-        .main > .banner-princ-top {
+        .main > picture > .banner-princ-top {
             border-radius: 10px;
-            height: clamp(155px, 60vw, 210px);
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
             object-position: center;
         }
 
