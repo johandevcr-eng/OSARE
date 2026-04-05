@@ -613,9 +613,9 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 10px;
-        min-height: 240px;
-        box-shadow: 0 12px 28px rgba(8, 22, 40, 0.12);
-        border: 1px solid rgba(14, 172, 216, 0.14);
+        min-height: 50px;
+        box-shadow: 0 12px 28px rgba(2, 57, 128, 0.479), 0 0 0 1px rgba(14, 172, 216, 0.08), 0 10px 24px rgba(14, 172, 216, 0.16);
+        /* border: 1px solid rgba(2, 57, 128, 0.603); */
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -636,7 +636,7 @@
 
     .carousel-item:hover {
         transform: translateY(-4px);
-        box-shadow: 0 16px 32px rgba(8, 22, 40, 0.18);
+        box-shadow: 0 16px 32px rgba(8, 22, 40, 0.18), 0 0 0 1px rgba(14, 172, 216, 0.22), 0 16px 30px rgba(14, 172, 216, 0.24);
     }
 
     /* Banner Método OSARE */
