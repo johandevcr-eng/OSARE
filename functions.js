@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const dropdowns = Array.from(document.querySelectorAll('.has-dropdown'));
+    const backToTopButton = document.getElementById('backToTopBtn');
 
     function setDropdownState(dropdown, isOpen) {
         const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -70,5 +71,22 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    if (backToTopButton) {
+        const toggleBackToTopButton = function () {
+            backToTopButton.classList.toggle('is-visible', window.scrollY > 350);
+        };
+
+        window.addEventListener('scroll', toggleBackToTopButton, { passive: true });
+
+        backToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        toggleBackToTopButton();
+    }
 
 });
