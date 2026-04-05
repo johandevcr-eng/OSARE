@@ -524,28 +524,15 @@
         font-weight: 750;
     }
 
-    .carousel-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .carousel-track-container {
-        overflow: hidden;
-        width: 100%;
-    }
-
     .carousel-track {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(260px, 1fr));
         gap: 20px;
-        transition: transform 0.4s ease;
+        width: 100%;
     }
 
     .carousel-item {
-        min-width: clamp(260px, 30vw, 340px);
-        border-radius: 10px;
+        border-radius: 14px;
         padding: 18px;
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
@@ -553,14 +540,16 @@
         color: #333;
         text-align: left;
         line-height: 1.5;
-        background-color: #afadad;
+        background-color: #ffffff;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 10px;
         min-height: 240px;
-        transition: background-color 0.25s ease, color 0.25s ease;
+        box-shadow: 0 12px 28px rgba(8, 22, 40, 0.12);
+        border: 1px solid rgba(14, 172, 216, 0.14);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .carousel-item h4 {
@@ -579,42 +568,8 @@
     }
 
     .carousel-item:hover {
-        background: #8d8b8b;
-    }
-
-    .carousel-btn {
-        /* background: #2b2b2b; */
-        background: white;
-        color: black;
-        border: none;
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        font-size: 16px;
-        line-height: 1;
-        padding: 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        box-shadow: 0 10px 4px rgba(126, 124, 124, 0.8);
-    }
-
-    #prev {
-        padding-right: 4px;
-        padding-top: 3px;
-    }
-
-    #next {
-        padding-left: 4px;
-        padding-top: 3px;
-    }
-
-    .carousel-btn:hover {
-        background: #444;
-        transform: scale(1.08);
-        color: white;
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(8, 22, 40, 0.18);
     }
 
     /* Banner Método OSARE */
@@ -1128,8 +1083,9 @@
             padding: 20px 0;
         }
 
-        .carousel-wrapper {
-            gap: 10px;
+        .carousel-track {
+            grid-template-columns: repeat(2, minmax(240px, 1fr));
+            gap: 16px;
         }
 
         .banner-siglas {
@@ -1218,11 +1174,11 @@
         }
 
         .carousel-track {
+            grid-template-columns: 1fr;
             gap: 12px;
         }
 
         .carousel-item {
-            min-width: 100%;
             font-size: 15px;
             min-height: auto;
             padding: 16px;
@@ -1232,37 +1188,6 @@
             font-size: 15px;
             line-height: 1.65;
             overflow-wrap: anywhere;
-        }
-
-        .carousel-wrapper {
-            position: relative;
-            padding: 0 34px;
-            gap: 0;
-        }
-
-        .carousel-track-container {
-            width: 100%;
-        }
-
-        .carousel-btn {
-            width: 32px;
-            height: 32px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-        }
-
-        #prev {
-            left: 0;
-        }
-
-        #next {
-            right: 0;
-        }
-
-        .carousel-btn:hover {
-            transform: translateY(-50%) scale(1.08);
         }
 
         .siglas-banner2-row {
