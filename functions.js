@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (dropdowns.length > 0) {
+        // Force closed state on first render.
+        dropdowns.forEach(function (dropdown) {
+            setDropdownState(dropdown, false);
+        });
+
         dropdowns.forEach(function (dropdown) {
             const toggle = dropdown.querySelector('.dropdown-toggle');
             if (!toggle) {
@@ -92,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (primarySidebar && floatingSidebar) {
+        floatingSidebar.classList.remove('is-visible');
         let isPrimarySidebarVisible = true;
 
         const updatePrimarySidebarVisibility = function () {
