@@ -50,7 +50,7 @@
     <div class="main">
 
         <!-- sidebar -->
-        <div class="sidebar">
+        <div class="sidebar" id="primarySidebar">
             <ul>
                 <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
                 <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
@@ -92,7 +92,6 @@
             
             <div>
                 <h2>Haz crecer tu PyMES</h2>
-                <h3><ins>Crecimiento Estratégico</ins></h3>
                 <p class="banner-text">
                     En OSARE CR somos su aliado estratégico en soluciones de Outsourcing en Costa Rica. Ofrecemos consultoría estratégica en sistemas y procesos con el Método OSARE. <br> Blindaje operativo para PYMES y marcas personales: garantizamos su seguridad jurídica con respaldo legal y laboral integrado en cada servicio. <br> Potenciamos negocios mediante servicio integrales de:
                 </p>
@@ -131,10 +130,27 @@
                     <source srcset="img/banner.webp" type="image/webp">
                     <img class="banner-img" src="img/banner.webp" alt="" width="1080" height="1080" sizes="(max-width: 900px) 90vw, 40vw" fetchpriority="high" decoding="async">
                 </picture>
-            </div>
-            
+            </div>      
         </div>
     </div>
+
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+        <ul>
+            <li class="has-dropdown">
+                <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="floatingServicesDropdown">
+                    <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                    <span class="dropdown-arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="submenu-dropdown" id="floatingServicesDropdown">
+                    <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                </ul>
+            </li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+        </ul>
+    </aside>
 
     <!-- Objetives Carousel -->
     <div class="objectives-carousel">

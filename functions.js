@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const dropdowns = Array.from(document.querySelectorAll('.has-dropdown'));
     const backToTopButton = document.getElementById('backToTopBtn');
+    const primarySidebar = document.getElementById('primarySidebar');
+    const floatingSidebar = document.getElementById('floatingSidebar');
 
     function setDropdownState(dropdown, isOpen) {
         const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -87,6 +89,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         toggleBackToTopButton();
+    }
+
+    if (primarySidebar && floatingSidebar) {
+        let isPrimarySidebarVisible = true;
+
+        const toggleFloatingSidebar = function () {
+            const shouldShow = !isPrimarySidebarVisible && window.scrollY > 120;
+            floatingSidebar.classList.toggle('is-visible', shouldShow);
+        };
+
+        if ('IntersectionObserver' in window) {
+            const sidebarObserver = new IntersectionObserver(function (entries) {
+                if (entries.length === 0) {
+                    return;
+                }
+
+                isPrimarySidebarVisible = entries[0].isIntersecting;
+                toggleFloatingSidebar();
+            }, {
+                threshold: 0.08
+            });
+
+            sidebarObserver.observe(primarySidebar);
+        } else {
+            const primaryRect = primarySidebar.getBoundingClientRect();
+            isPrimarySidebarVisible = primaryRect.bottom > 0 && primaryRect.top < window.innerHeight;
+        }
+
+        window.addEventListener('scroll', toggleFloatingSidebar, { passive: true });
+        window.addEventListener('resize', toggleFloatingSidebar);
+        toggleFloatingSidebar();
     }
 
 });
