@@ -148,7 +148,8 @@
         position: fixed;
         top: calc(var(--fixed-video-height) + 16px);
         right: 16px;
-        width: min(300px, 24vw);
+        width: auto;
+        max-width: calc(100vw - 20px);
         z-index: 22;
         opacity: 0;
         visibility: hidden;
@@ -157,6 +158,14 @@
         transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
         overflow: visible;
         max-height: none;
+    }
+
+    .sidebar-floating > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+        width: max-content;
     }
 
     .sidebar-floating.is-visible {
@@ -168,6 +177,22 @@
 
     .sidebar-floating > ul > li {
         box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+        width: 100%;
+        max-width: calc(100vw - 24px);
+    }
+
+    .sidebar-floating .menu-link-btn,
+    .sidebar-floating .menu-label {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .sidebar-floating .menu-label-text {
+        gap: 10px;
+    }
+
+    .sidebar-floating .dropdown-arrow {
+        margin-left: 8px;
     }
 
     .sidebar ul {
@@ -332,8 +357,8 @@
         }
 
         .has-dropdown.is-open {
-            background: #555;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+            background: #a8aaa9;
+            box-shadow: none;
         }
 
         .has-dropdown.is-open .social-dropdown {
@@ -1098,7 +1123,8 @@
             right: 12px;
             left: auto;
             bottom: auto;
-            width: min(300px, 72vw);
+            width: auto;
+            max-width: calc(100vw - 16px);
             z-index: 35;
         }
 
@@ -1143,6 +1169,31 @@
     @media (max-width: 900px) {
         :root {
             --fixed-video-height: 88px;
+        }
+
+        .has-dropdown:not(.is-open):hover .social-dropdown,
+        .has-dropdown:not(.is-open):focus-within .social-dropdown,
+        .has-dropdown:not(.is-open):hover .submenu-dropdown,
+        .has-dropdown:not(.is-open):focus-within .submenu-dropdown {
+            display: none;
+        }
+
+        .has-dropdown:not(.is-open):hover .dropdown-arrow,
+        .has-dropdown:not(.is-open):focus-within .dropdown-arrow {
+            transform: rotate(45deg);
+        }
+
+        .sidebar-floating > ul > li {
+            margin: 3px 0;
+            padding: 8px;
+            border-radius: 8px;
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .sidebar-floating .menu-link-btn,
+        .sidebar-floating .menu-label {
+            padding: 8px;
         }
 
         .header {
@@ -1200,7 +1251,8 @@
 
         .sidebar-floating {
             right: 8px;
-            width: min(280px, 80vw);
+            width: auto;
+            max-width: calc(100vw - 12px);
         }
 
         .section-title-main {
@@ -1329,13 +1381,15 @@
         .sidebar-floating {
             top: calc(var(--fixed-video-height) + 4px);
             right: 6px;
-            width: min(220px, 84vw);
+            width: auto;
+            max-width: calc(100vw - 10px);
         }
 
         .sidebar-floating .menu-link-btn,
+        .sidebar-floating .menu-label,
         .sidebar-floating .submenu-link {
-            padding: 10px;
-            font-size: 14px;
+            padding: 8px;
+            font-size: 13px;
         }
 
         .sidebar-floating .menu-label-text {
@@ -1439,13 +1493,15 @@
     @media (max-width: 360px) {
         .sidebar-floating {
             right: 4px;
-            width: min(200px, 86vw);
+            width: auto;
+            max-width: calc(100vw - 8px);
         }
 
         .sidebar-floating .menu-link-btn,
+        .sidebar-floating .menu-label,
         .sidebar-floating .submenu-link {
-            padding: 8px;
-            font-size: 13px;
+            padding: 7px;
+            font-size: 12px;
         }
 
         .sidebar-floating .menu-label-text {
@@ -1460,6 +1516,7 @@
 
     @media (max-width: 320px) {
         .sidebar-floating {
-            width: min(188px, 88vw);
+            width: auto;
+            max-width: calc(100vw - 8px);
         }
     }

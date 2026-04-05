@@ -94,7 +94,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (primarySidebar && floatingSidebar) {
         let isPrimarySidebarVisible = true;
 
+        const updatePrimarySidebarVisibility = function () {
+            const rect = primarySidebar.getBoundingClientRect();
+            // Consider the fixed video/header space so visibility matches what the user sees.
+            const visibleTop = rect.top < window.innerHeight;
+            const visibleBottom = rect.bottom > 88;
+            isPrimarySidebarVisible = visibleTop && visibleBottom;
+        };
+
         const toggleFloatingSidebar = function () {
+            updatePrimarySidebarVisibility();
             const shouldShow = !isPrimarySidebarVisible && window.scrollY > 120;
             floatingSidebar.classList.toggle('is-visible', shouldShow);
         };
@@ -113,8 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             sidebarObserver.observe(primarySidebar);
         } else {
-            const primaryRect = primarySidebar.getBoundingClientRect();
-            isPrimarySidebarVisible = primaryRect.bottom > 0 && primaryRect.top < window.innerHeight;
+            updatePrimarySidebarVisibility();
         }
 
         window.addEventListener('scroll', toggleFloatingSidebar, { passive: true });
