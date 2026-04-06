@@ -64,7 +64,7 @@
         display: flex;
         align-items: center;
         font-size: 24px;
-        gap: 10px;
+        gap: 22px;
         flex-wrap: wrap;
     }
 
@@ -489,14 +489,19 @@
         min-width: 0;
         margin-left: 0;
         margin-top: 0;
-        background: linear-gradient(to left, #000000, #555);
-        color: white;
-        border-radius: 20px;
-        padding: 20px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 28px;
+        background: none;
+        color: inherit;
+        border-radius: 0;
+        padding: 16px 10px 10px;
+        display: grid;
+        grid-template-columns: minmax(230px, 1fr) minmax(260px, 360px) minmax(230px, 1fr);
+        grid-template-areas:
+            "title title title"
+            "left image right"
+            "list list list"
+            "quote quote quote";
+        align-items: start;
+        gap: 14px 52px;
         overflow: hidden;
     }
 
@@ -519,58 +524,90 @@
     } */
 
     .main > picture > .banner-princ-top:last-of-type {
-        margin-bottom: 14px;
-    }
-
-    .banner > div {
-        flex: 1 1 0;
-        min-width: 0;
+        margin-bottom: 5rem;
     }
 
     .banner h2 {
-        color: #0eacd8;
-        font-size: clamp(28px, 4vw, 38px);
+        grid-area: title;
+        text-align: center;
+        margin: 0 0 80px;
+        color: #111;
+        font-size: clamp(34px, 4.3vw, 50px);
+        line-height: 1.05;
     }
     
-    /* .subtitle-banner {
-        font-size: 20px;
-        margin-top: 5px;
-    } */
 
     .banner-text {
         font-size: 16px;
         line-height: 1.5;
         font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        color: #111;
+    }
+
+    .banner-text-left {
+        grid-area: left;
+    }
+
+    .banner-text-right {
+        grid-area: right;
+    }
+
+    .banner-image-wrap {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 12px;
     }
 
     .banner-list {
+        grid-area: list;
         font-size: 16px;
         line-height: 1.5;
         font-family: 'Open Sans', sans-serif;
-        background-color: white;
-        color: black;
+        background-color: #aaa5a55d;
+        color: #111;
         border-radius: 20px;
+        width: min(640px, 100%);
+        margin: 4px auto 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
-        padding: 12px 18px;
+        justify-content: center;
+        gap: 26px;
+        padding: 14px 18px;
+        margin-bottom: 10px;
+    }
 
+    .banner-list ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .banner-quote {
+        grid-area: quote;
+        margin: 2px 0 0;
+        text-align: center;
+        font-size: clamp(20px, 2.1vw, 30px);
+        color: #111;
     }
 
     .banner-img{
         display: block;
-        width: min(100%, 400px);
+        width: min(100%, 335px);
         height: auto;
-        margin-left: clamp(0px, 5vw, 100px);
+        margin: 0 auto;
     }
 
     cite{
         font-family: 'Lora', serif;
+        font-style: italic;
+        font-weight: 700;
     }
 
 /* Objectives Carousel */
     .objectives-carousel {
-        margin-top: 20px;        
+        margin-top: 50px;        
         margin-left: 0;
         width: 100%;
         border-radius: 20px;
@@ -639,34 +676,6 @@
         box-shadow: 0 16px 32px rgba(8, 22, 40, 0.18), 0 0 0 1px rgba(14, 172, 216, 0.22), 0 16px 30px rgba(14, 172, 216, 0.24);
     }
 
-    /* Banner Método OSARE */
-    /* .title-metodo-osare {
-        text-align: center;
-        color: #0eacd8;
-        line-height: 1.2;
-        font-family: 'Montserrat', sans-serif;
-        position: relative;
-        z-index: 1;
-        width: 180px;
-        height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-    }  */
-
-    /* .title-metodo-osare::after {
-        content: '';
-        position: absolute;
-        width: 180px;
-        height: 180px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background: white;
-        border-radius: 50%;
-        z-index: -1;
-    } */
 
     .letra{
         color: #0eacd8;
@@ -1159,7 +1168,7 @@
         }
 
         .main > picture > .banner-princ-top:last-of-type {
-            margin-bottom: 14px;
+            margin-bottom: 34px;
         }
 
         .banner {
@@ -1232,17 +1241,42 @@
         }
 
         .banner {
-            flex-direction: column;
-            align-items: flex-start;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "title"
+                "image"
+                "left"
+                "right"
+                "list"
+                "quote";
+            gap: 14px;
             padding: 24px;
+            background: linear-gradient(to left, #000000, #555);
+            color: white;
+            border-radius: 20px;
         }
 
-        .banner > div {
-            width: 100%;
+        .banner h2 {
+            margin: 0 0 24px;
+            color: #0eacd8;
+        }
+
+        .banner-text,
+        .banner-quote {
+            color: white;
+        }
+
+        .banner-text-left,
+        .banner-text-right {
+            text-align: left;
+        }
+
+        .banner-image-wrap {
+            padding-inline: 0;
         }
 
         .banner-img {
-            width: min(100%, 420px);
+            width: min(100%, 300px);
             margin: 0 auto;
             -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
             mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
@@ -1250,10 +1284,21 @@
             mask-composite: unset;
         }
 
+        .banner-list {
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 20px;
+            margin-bottom: 0;
+        }
+
         .main > picture > .banner-princ-top {
             height: auto;
             object-fit: contain;
             object-position: center;
+        }
+
+        .main > picture > .banner-princ-top:last-of-type {
+            margin-bottom: 14px;
         }
 
         .projects {
@@ -1334,14 +1379,18 @@
             border-radius: 16px;
         }
 
+        .banner h2 {
+            font-size: clamp(34px, 9vw, 46px);
+        }
+
         .banner-text,
         .banner-list {
             font-size: 15px;
         }
 
         .banner-list {
-            flex-direction: column;
-            gap: 0;
+            flex-direction: row;
+            gap: 10px;
             padding: 8px 16px;
         }
 
