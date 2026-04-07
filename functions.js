@@ -334,9 +334,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (magneticCta) {
         const maxShift = 14;
+        const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
         const resetMagnet = function () {
             magneticCta.style.transform = 'translate3d(0, 0, 0)';
         };
+
+        if (isMobileViewport || prefersReducedMotion || isCoarsePointer) {
+            resetMagnet();
+            return;
+        }
 
         document.addEventListener('mousemove', function (event) {
             const rect = magneticCta.getBoundingClientRect();
