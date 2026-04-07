@@ -2220,3 +2220,134 @@
             min-height: 300px;
         }
     }
+
+    /* Final responsive tuning */
+    @media (max-width: 900px) {
+        .header {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+        }
+
+        .left {
+            width: 100%;
+        }
+
+        .header-actions {
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .theme-toggle {
+            margin-inline: auto;
+        }
+
+        .social-proof-title {
+            font-size: clamp(13px, 2.8vw, 16px);
+            line-height: 1.3;
+            letter-spacing: 0.05em;
+            overflow-wrap: anywhere;
+        }
+
+        .benefit-item {
+            font-size: 15px;
+        }
+
+        .cta-magnet {
+            width: min(100%, 340px);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .header-actions {
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .theme-toggle {
+            margin-inline: 0;
+        }
+
+        .banner-text {
+            padding: 12px;
+        }
+
+        .banner-list {
+            padding: 10px 12px;
+        }
+
+        .social-proof,
+        .benefits-accordion,
+        .cta-premium {
+            border-radius: 16px;
+        }
+
+        .benefits-preview {
+            min-height: 190px;
+        }
+
+        .osare-word {
+            font-size: clamp(40px, 13vw, 72px);
+        }
+
+        .chaos-chip {
+            font-size: 10px;
+            padding: 6px 8px;
+        }
+
+        .cta-magnet {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .theme-toggle-track {
+            width: 80px;
+            height: 36px;
+            padding: 0 8px;
+        }
+
+        .theme-toggle-icon {
+            font-size: 14px;
+        }
+
+        .theme-toggle-icon-moon {
+            left: 18px;
+        }
+
+        .theme-toggle-icon-sun {
+            left: 62px;
+        }
+
+        .theme-toggle-thumb {
+            width: 28px;
+            height: 28px;
+            transform: translateX(44px);
+        }
+
+        body[data-theme='dark'] .theme-toggle-thumb {
+            transform: translateX(0);
+        }
+
+        .back-to-top {
+            right: 10px;
+            bottom: 12px;
+            min-height: 42px;
+            min-width: 42px;
+            padding: 0 10px;
+            gap: 0;
+        }
+
+        .back-to-top-text {
+            display: none;
+        }
+    }
