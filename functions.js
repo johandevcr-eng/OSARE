@@ -10,6 +10,51 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrolly = document.getElementById('osareScrolly');
     const chaosField = document.getElementById('chaosField');
     const magneticCta = document.getElementById('magneticCta');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobileViewport = window.matchMedia('(max-width: 900px)').matches;
+
+    function rafThrottle(callback) {
+        let ticking = false;
+        return function () {
+            if (ticking) {
+                return;
+            }
+            ticking = true;
+            window.requestAnimationFrame(function () {
+                ticking = false;
+                callback();
+            });
+        };
+    }
+
+    function warmUpLazyImages() {
+        const lazyImages = Array.from(document.querySelectorAll('img[loading="lazy"]')).filter(function (img) {
+            return !img.complete;
+        });
+
+        if (lazyImages.length === 0) {
+            return;
+        }
+
+        const warmupCount = isMobileViewport ? 6 : 3;
+        lazyImages.slice(0, warmupCount).forEach(function (img) {
+            img.loading = 'eager';
+            if (!img.getAttribute('fetchpriority')) {
+                img.setAttribute('fetchpriority', 'low');
+            }
+            if (typeof img.decode === 'function') {
+                img.decode().catch(function () {
+                    // Ignore decode errors for still-loading images.
+                });
+            }
+        });
+    }
+
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(warmUpLazyImages, { timeout: 1200 });
+    } else {
+        window.setTimeout(warmUpLazyImages, 450);
+    }
 
     function setDropdownState(dropdown, isOpen) {
         const toggle = dropdown.querySelector('.dropdown-toggle');
@@ -90,12 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
             backToTopButton.classList.toggle('is-visible', window.scrollY > 350);
         };
 
-        window.addEventListener('scroll', toggleBackToTopButton, { passive: true });
+        const onScrollBackToTop = rafThrottle(toggleBackToTopButton);
+        window.addEventListener('scroll', onScrollBackToTop, { passive: true });
 
         backToTopButton.addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: isMobileViewport || prefersReducedMotion ? 'auto' : 'smooth'
             });
         });
 
@@ -137,7 +183,8 @@ document.addEventListener('DOMContentLoaded', function () {
             updatePrimarySidebarVisibility();
         }
 
-        window.addEventListener('scroll', toggleFloatingSidebar, { passive: true });
+        const onScrollFloatingSidebar = rafThrottle(toggleFloatingSidebar);
+        window.addEventListener('scroll', onScrollFloatingSidebar, { passive: true });
         window.addEventListener('resize', toggleFloatingSidebar);
         toggleFloatingSidebar();
     }
@@ -210,9 +257,19 @@ document.addEventListener('DOMContentLoaded', function () {
             chaosField.style.filter = 'saturate(' + (0.85 + progress * 0.4).toFixed(2) + ')';
         };
 
-        window.addEventListener('scroll', updateScrolly, { passive: true });
-        window.addEventListener('resize', updateScrolly);
-        updateScrolly();
+        if (isMobileViewport || prefersReducedMotion) {
+            chaosField.classList.add('is-ordered');
+            letters.forEach(function (letter) {
+                letter.classList.add('is-visible');
+            });
+            chaosField.style.opacity = '0.9';
+            chaosField.style.filter = 'none';
+        } else {
+            const onScrollScrolly = rafThrottle(updateScrolly);
+            window.addEventListener('scroll', onScrollScrolly, { passive: true });
+            window.addEventListener('resize', updateScrolly);
+            updateScrolly();
+        }
     }
 
     if (benefitsAccordion && benefitsPreview) {
