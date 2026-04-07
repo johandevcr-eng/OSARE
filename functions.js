@@ -146,19 +146,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const savedTheme = localStorage.getItem('osare-theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-        const themeToggleLabel = themeToggle.querySelector('.theme-toggle-label');
+        let switchAnimationTimeout;
 
         const setThemeLabel = function (theme) {
-            if (!themeToggleLabel) {
-                return;
-            }
-            if (theme === 'dark') {
-                themeToggleLabel.textContent = '☀️';
-                themeToggleLabel.classList.remove('is-moon');
-            } else {
-                themeToggleLabel.textContent = '☾';
-                themeToggleLabel.classList.add('is-moon');
-            }
             themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
         };
 
@@ -167,6 +157,18 @@ document.addEventListener('DOMContentLoaded', function () {
         setThemeLabel(initialTheme);
 
         themeToggle.addEventListener('click', function () {
+            themeToggle.classList.remove('is-switching');
+            void themeToggle.offsetWidth;
+            themeToggle.classList.add('is-switching');
+
+            if (switchAnimationTimeout) {
+                clearTimeout(switchAnimationTimeout);
+            }
+
+            switchAnimationTimeout = window.setTimeout(function () {
+                themeToggle.classList.remove('is-switching');
+            }, 360);
+
             const nextTheme = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             document.body.setAttribute('data-theme', nextTheme);
             themeToggle.setAttribute('aria-pressed', String(nextTheme === 'dark'));
