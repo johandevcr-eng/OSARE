@@ -2490,3 +2490,158 @@
             line-height: 1.45;
         }
     }
+
+    @media (max-width: 360px) {
+        :root {
+            --fixed-video-height: 68px;
+        }
+
+        .container {
+            padding: 6px;
+            padding-top: calc(var(--fixed-video-height) + 6px);
+        }
+
+        .header {
+            gap: 8px;
+        }
+
+        .logo-inicial {
+            width: 58px;
+            height: 58px;
+            margin-right: 0;
+        }
+
+        .logo h2 {
+            font-size: 22px;
+        }
+
+        .theme-toggle-track {
+            width: 76px;
+            height: 34px;
+        }
+
+        .theme-toggle-icon {
+            font-size: 13px;
+        }
+
+        .theme-toggle-icon-moon {
+            left: 17px;
+        }
+
+        .theme-toggle-icon-sun {
+            left: 59px;
+        }
+
+        .theme-toggle-thumb {
+            width: 26px;
+            height: 26px;
+            transform: translateX(42px);
+        }
+
+        body[data-theme='dark'] .theme-toggle-thumb {
+            transform: translateX(0);
+        }
+
+        .sidebar > ul > li,
+        .menu-link-btn,
+        .menu-label,
+        .submenu-link,
+        .social-link {
+            font-size: 12px;
+            padding: 8px;
+            gap: 10px;
+        }
+
+        .imagenes {
+            width: 24px;
+            height: 24px;
+        }
+
+        .banner {
+            padding: 14px;
+            border-radius: 14px;
+        }
+
+        .banner h2 {
+            font-size: clamp(22px, 9vw, 28px);
+            margin-bottom: 12px;
+        }
+
+        .banner-text,
+        .banner-list,
+        .benefit-item,
+        .benefits-preview p {
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .section-title-main {
+            font-size: clamp(22px, 8vw, 26px);
+            margin: 8px auto 14px;
+        }
+
+        .section-title-label {
+            font-size: 12px;
+            margin: 28px 0 12px;
+        }
+
+        .social-proof,
+        .benefits-accordion,
+        .cta-premium,
+        .banner-siglas,
+        .bannertwo {
+            padding: 12px;
+            border-radius: 14px;
+        }
+
+        .osare-sticky-scene {
+            min-height: 240px;
+        }
+
+        .osare-word {
+            font-size: clamp(34px, 12vw, 54px);
+        }
+    }
+
+    @media (max-width: 320px) {
+        .logo h2 {
+            font-size: 20px;
+        }
+
+        .theme-toggle-track {
+            width: 72px;
+            height: 32px;
+        }
+
+        .theme-toggle-icon-moon {
+            left: 16px;
+        }
+
+        .theme-toggle-icon-sun {
+            left: 56px;
+        }
+
+        .theme-toggle-thumb {
+            width: 24px;
+            height: 24px;
+            transform: translateX(40px);
+        }
+
+        body[data-theme='dark'] .theme-toggle-thumb {
+            transform: translateX(0);
+        }
+
+        .banner,
+        .social-proof,
+        .benefits-accordion,
+        .cta-premium {
+            padding: 10px;
+        }
+
+        .back-to-top {
+            right: 8px;
+            bottom: 10px;
+            min-height: 40px;
+            min-width: 40px;
+        }
+    }
