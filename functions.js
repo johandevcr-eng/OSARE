@@ -150,6 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (primarySidebar && floatingSidebar) {
         floatingSidebar.classList.remove('is-visible');
+        if (isMobileViewport) {
+            floatingSidebar.style.display = 'none';
+        }
         let isPrimarySidebarVisible = true;
 
         const updatePrimarySidebarVisibility = function () {
@@ -166,27 +169,29 @@ document.addEventListener('DOMContentLoaded', function () {
             floatingSidebar.classList.toggle('is-visible', shouldShow);
         };
 
-        if ('IntersectionObserver' in window) {
-            const sidebarObserver = new IntersectionObserver(function (entries) {
-                if (entries.length === 0) {
-                    return;
-                }
+        if (!isMobileViewport) {
+            if ('IntersectionObserver' in window) {
+                const sidebarObserver = new IntersectionObserver(function (entries) {
+                    if (entries.length === 0) {
+                        return;
+                    }
 
-                isPrimarySidebarVisible = entries[0].isIntersecting;
-                toggleFloatingSidebar();
-            }, {
-                threshold: 0.08
-            });
+                    isPrimarySidebarVisible = entries[0].isIntersecting;
+                    toggleFloatingSidebar();
+                }, {
+                    threshold: 0.08
+                });
 
-            sidebarObserver.observe(primarySidebar);
-        } else {
-            updatePrimarySidebarVisibility();
+                sidebarObserver.observe(primarySidebar);
+            } else {
+                updatePrimarySidebarVisibility();
+            }
+
+            const onScrollFloatingSidebar = rafThrottle(toggleFloatingSidebar);
+            window.addEventListener('scroll', onScrollFloatingSidebar, { passive: true });
+            window.addEventListener('resize', toggleFloatingSidebar);
+            toggleFloatingSidebar();
         }
-
-        const onScrollFloatingSidebar = rafThrottle(toggleFloatingSidebar);
-        window.addEventListener('scroll', onScrollFloatingSidebar, { passive: true });
-        window.addEventListener('resize', toggleFloatingSidebar);
-        toggleFloatingSidebar();
     }
 
     if (themeToggle) {

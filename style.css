@@ -2360,3 +2360,133 @@
             display: none;
         }
     }
+
+    /* Mobile hardening */
+    @media (max-width: 900px) {
+        .main {
+            gap: 14px;
+        }
+
+        .sidebar > ul > li {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .menu-link-btn,
+        .menu-label,
+        .submenu-link,
+        .social-link {
+            padding: 10px;
+            gap: 12px;
+        }
+
+        .menu-label-text {
+            gap: 12px;
+        }
+
+        .banner {
+            padding: 18px;
+            gap: 12px;
+        }
+
+        .banner h2 {
+            margin-bottom: 16px;
+            font-size: clamp(28px, 7.5vw, 38px);
+        }
+
+        .banner-list {
+            width: 100%;
+        }
+
+        .siglas-banner2-row {
+            margin-top: 10px;
+        }
+
+        .cta-premium {
+            padding: 18px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .logo {
+            gap: 12px;
+        }
+
+        .logo h2 {
+            font-size: 30px;
+        }
+
+        .section-title-main {
+            font-size: clamp(24px, 7vw, 30px);
+            margin: 10px auto 18px;
+        }
+
+        .section-title-label {
+            font-size: 14px;
+            letter-spacing: 0.08em;
+        }
+
+        .banner-text {
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .banner-list {
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .container-services {
+            gap: 8px;
+            overflow: visible;
+        }
+
+        .container-services > div {
+            border-right: 1px solid rgba(0, 0, 0, 0.14);
+            border-radius: 12px;
+        }
+
+        .benefit-item {
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        .benefits-preview p {
+            max-width: 100%;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container {
+            padding: 8px;
+            padding-top: calc(var(--fixed-video-height) + 8px);
+        }
+
+        .logo h2 {
+            font-size: 26px;
+        }
+
+        .banner h2 {
+            font-size: clamp(24px, 9vw, 32px);
+        }
+
+        .sidebar > ul > li,
+        .menu-link-btn,
+        .menu-label,
+        .submenu-link,
+        .social-link {
+            font-size: 13px;
+        }
+
+        .social-proof-title {
+            letter-spacing: 0.03em;
+            font-size: 12px;
+        }
+
+        .cta-premium p {
+            font-size: 15px;
+            line-height: 1.45;
+        }
+    }
