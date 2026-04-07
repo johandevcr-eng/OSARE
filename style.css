@@ -7,11 +7,21 @@
         box-sizing: border-box;
     }
 
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
     body {
         margin: 0;
         font-family: 'Open Sans', sans-serif;
         background: white;
-        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+        overscroll-behavior-x: none;
+        touch-action: pan-y;
     }
 
     img,
@@ -33,7 +43,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
+        right: 0;
+        width: 100%;
         margin: 0;
         z-index: 10;
     }
@@ -1154,8 +1165,8 @@
         color: white;
         font-family: 'Open Sans', sans-serif;
         margin-top: 40px;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
+        width: 100%;
+        margin-left: 0;
     }
 
     @media (max-width: 1200px) {
