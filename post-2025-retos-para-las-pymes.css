@@ -128,6 +128,14 @@
     gap: var(--post-section-spacer-sm);
 }
 
+.post-article .post-challenges + .post-challenges {
+    margin-top: var(--post-section-spacer-sm);
+}
+
+.post-article .post-challenges + p {
+    margin-top: var(--post-section-spacer-md);
+}
+
 .post-challenges li {
     color: var(--text-main);
     line-height: 1.8;
@@ -142,6 +150,10 @@
 
 .post-challenges li p {
     margin-top: var(--post-section-spacer-sm);
+}
+
+.post-challenges li.post-challenge-compact-intro p {
+    margin-top: 8px;
 }
 
 .post-inline-image {
@@ -201,8 +213,41 @@
 }
 
 .post-ending-split .post-quote {
-    margin: 0;
+    margin: 16px 0 0;
     align-self: start;
+}
+
+.post-social-links {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.post-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--card-border);
+    background: rgba(255, 255, 255, 0.22);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-social-link img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.post-social-link:hover,
+.post-social-link:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(2, 22, 45, 0.18);
+    outline: none;
 }
 
 .post-quote {
@@ -247,6 +292,119 @@
     transform: translateY(-2px);
     box-shadow: 0 12px 22px rgba(0, 55, 80, 0.28);
     outline: none;
+}
+
+.post-lower-stack {
+    display: grid;
+    gap: 22px;
+}
+
+.post-recent-panel,
+.post-comments-panel {
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.post-recent-header {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.post-recent-header h3,
+.post-comments-panel h3 {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: clamp(20px, 2.1vw, 25px);
+    color: var(--text-main);
+}
+
+.post-recent-header a {
+    color: var(--text-main);
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.post-recent-header a:hover,
+.post-recent-header a:focus-visible {
+    text-decoration: underline;
+    outline: none;
+}
+
+.post-recent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.post-recent-card {
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.16);
+    color: var(--text-main);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-recent-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-recent-card h4 {
+    margin: 0;
+    padding: 14px;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.post-recent-card:hover,
+.post-recent-card:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(2, 22, 45, 0.14);
+    outline: none;
+}
+
+.post-comments-panel {
+    padding: 20px;
+}
+
+.post-comments-divider {
+    margin: 12px 0 14px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.post-comments-input {
+    width: 100%;
+    min-height: 56px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--text-main);
+    font: inherit;
+    padding: 14px;
+    resize: vertical;
+}
+
+.post-comments-input::placeholder {
+    color: var(--text-muted);
+}
+
+.post-comments-input:focus-visible {
+    outline: 2px solid rgba(7, 122, 164, 0.35);
+    outline-offset: 1px;
 }
 
 @media (max-width: 1200px) {
@@ -318,6 +476,14 @@
         width: 28px;
         height: 28px;
     }
+
+    .post-recent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-recent-card h4 {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -361,6 +527,12 @@
 
     .post-meta li + li::before {
         margin: 0 7px;
+    }
+
+    .post-recent-panel,
+    .post-comments-panel {
+        border-radius: 14px;
+        padding: 16px;
     }
 }
 
