@@ -1,9 +1,9 @@
 ﻿.post-page {
-    --post-page-width: 980px;
+    --post-page-width: 860px;
     --post-page-horizontal-padding: clamp(18px, 6vmin, 52px);
-    --post-page-vertical-padding: clamp(32px, 8vmin, 60px);
-    --post-section-spacer-sm: 18px;
-    --post-section-spacer-md: 24px;
+    --post-page-vertical-padding: clamp(36px, 8.4vmin, 66px);
+    --post-section-spacer-sm: 24px;
+    --post-section-spacer-md: 34px;
     grid-column: 2;
     min-width: 0;
     width: min(100%, var(--post-page-width));
@@ -14,7 +14,7 @@
 }
 
 .post-hero {
-    border-radius: 20px;
+    border-radius: 14px;
     padding: var(--post-page-vertical-padding) var(--post-page-horizontal-padding);
 }
 
@@ -31,14 +31,14 @@
 .post-title {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(30px, 4vw, 44px);
-    line-height: 1.15;
+    font-size: clamp(31px, 4vw, 42px);
+    line-height: 1.18;
     color: var(--text-main);
     text-wrap: balance;
 }
 
 .post-meta {
-    margin: 14px 0 0;
+    margin: 18px 0 0;
     padding: 0;
     list-style: none;
     display: flex;
@@ -81,7 +81,7 @@
 }
 
 .post-cover {
-    border-radius: 20px;
+    border-radius: 14px;
     overflow: hidden;
 }
 
@@ -93,43 +93,45 @@
 }
 
 .post-article {
-    border-radius: 20px;
+    border-radius: 14px;
     padding: var(--post-page-vertical-padding) var(--post-page-horizontal-padding);
     display: block;
 }
 
 .post-article > * + * {
-    margin-top: var(--post-section-spacer-sm);
+    margin-top: 22px;
 }
 
 .post-article p + p {
-    margin-top: var(--post-section-spacer-md);
+    margin-top: 30px;
 }
 
 .post-article p {
     margin: 0;
     color: var(--text-main);
-    line-height: 1.8;
+    line-height: 1.95;
     font-size: 17px;
-    text-align: left;
-    word-spacing: normal;
-    max-width: 78ch;
+    text-align: justify;
+    word-spacing: -0.02em;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    max-width: 72ch;
 }
 
 .post-article h3 {
-    margin: 10px 0 0;
+    margin: 26px 0 4px;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(20px, 2.2vw, 28px);
-    line-height: 1.25;
+    font-size: clamp(21px, 2.25vw, 27px);
+    line-height: 1.3;
     color: var(--text-main);
     text-wrap: balance;
 }
 
 .post-challenges {
     margin: 0;
-    padding-left: 24px;
+    padding-left: 30px;
     display: grid;
-    gap: var(--post-section-spacer-sm);
+    gap: 16px;
 }
 
 .post-article .post-challenges + .post-challenges {
@@ -142,10 +144,12 @@
 
 .post-challenges li {
     color: var(--text-main);
-    line-height: 1.8;
-    text-align: left;
-    word-spacing: normal;
-    max-width: 78ch;
+    line-height: 1.9;
+    text-align: justify;
+    word-spacing: -0.02em;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    max-width: 72ch;
 }
 
 .post-challenges li::after {
@@ -160,6 +164,11 @@
 
 .post-challenges li.post-challenge-compact-intro p {
     margin-top: 8px;
+}
+
+.post-challenges li.post-challenge-with-image,
+.post-challenges li.post-challenge-with-image p {
+    text-align: left;
 }
 
 .post-inline-image {
@@ -179,8 +188,8 @@
 
 .post-inline-image-inset-right {
     float: right;
-    width: clamp(250px, 48%, 390px);
-    margin: 6px 0 12px 22px;
+    width: clamp(240px, 44%, 350px);
+    margin: 6px 0 14px 24px;
 }
 
 .post-inline-image-inset-right img {
@@ -207,10 +216,10 @@
 .post-ending-split {
     clear: both;
     display: grid;
-    grid-template-columns: minmax(260px, 300px) 1fr;
+    grid-template-columns: minmax(250px, 290px) 1fr;
     align-items: start;
-    gap: 24px;
-    margin-top: var(--post-section-spacer-sm);
+    gap: 30px;
+    margin-top: 36px;
 }
 
 .post-ending-split .post-inline-image-ending {
@@ -219,7 +228,7 @@
 }
 
 .post-ending-split .post-quote {
-    margin: 16px 0 0;
+    margin: 10px 0 0;
     align-self: start;
 }
 
@@ -268,13 +277,15 @@
     color: var(--text-main);
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
-    line-height: 1.8;
-    text-align: left;
-    word-spacing: normal;
+    line-height: 1.95;
+    text-align: justify;
+    word-spacing: -0.02em;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .post-actions {
-    border-radius: 20px;
+    border-radius: 14px;
     padding: 18px;
     display: flex;
     gap: 12px;
@@ -303,15 +314,20 @@
 
 .post-lower-stack {
     display: grid;
-    gap: 22px;
+    gap: 18px;
+    margin-top: 6px;
 }
 
 .post-recent-panel,
 .post-comments-panel {
     border: 1px solid var(--card-border);
-    border-radius: 20px;
+    border-radius: 14px;
     padding: 18px;
     background: rgba(255, 255, 255, 0.2);
+}
+
+.post-page .glass-panel {
+    backdrop-filter: blur(4px);
 }
 
 .post-recent-header {
@@ -379,6 +395,7 @@
     color: var(--text-main);
     text-wrap: balance;
     display: -webkit-box;
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -445,7 +462,7 @@
 @media (max-width: 900px) {
     .post-hero,
     .post-article {
-        padding: 32px 22px;
+        padding: 30px 20px;
     }
 
     .post-cover img {
@@ -491,10 +508,11 @@
     .post-article p,
     .post-challenges li {
         font-size: 16px;
+        max-width: 100%;
     }
 
     .post-title {
-        font-size: clamp(28px, 7vw, 36px);
+        font-size: clamp(27px, 6.8vw, 35px);
     }
 
     .post-meta {
@@ -530,7 +548,7 @@
     .post-hero,
     .post-article,
     .post-actions {
-        padding: 24px 18px;
+        padding: 22px 16px;
     }
 
     .post-inline-image {
@@ -574,8 +592,9 @@
     .post-article p,
     .post-challenges li,
     .post-quote {
-        text-align: left;
-        word-spacing: normal;
+        text-align: justify;
+        word-spacing: -0.01em;
+        max-width: 100%;
     }
 
     .post-actions {
@@ -626,7 +645,7 @@
     .post-actions,
     .post-recent-panel,
     .post-comments-panel {
-        padding: 14px;
+        padding: 13px;
     }
 
     .post-title {
