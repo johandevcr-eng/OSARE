@@ -111,7 +111,8 @@
     color: var(--text-main);
     line-height: 1.8;
     font-size: 17px;
-    text-align: justify;
+    text-align: left;
+    word-spacing: normal;
 }
 
 .post-article h3 {
@@ -139,7 +140,8 @@
 .post-challenges li {
     color: var(--text-main);
     line-height: 1.8;
-    text-align: justify;
+    text-align: left;
+    word-spacing: normal;
 }
 
 .post-challenges li::after {
@@ -263,7 +265,8 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     line-height: 1.8;
-    text-align: justify;
+    text-align: left;
+    word-spacing: normal;
 }
 
 .post-actions {
@@ -554,6 +557,13 @@
     .post-page {
         --post-section-spacer-sm: 14px;
         --post-section-spacer-md: 18px;
+    }
+
+    .post-article p,
+    .post-challenges li,
+    .post-quote {
+        text-align: left;
+        word-spacing: normal;
     }
 
     .post-actions {
