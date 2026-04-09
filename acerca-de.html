@@ -39,10 +39,19 @@
             </div>
             <h1 id="title-menu">Menú principal</h1>
         </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+                <span class="theme-toggle-track">
+                    <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+                    <span class="theme-toggle-thumb"></span>
+                    <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                </span>
+            </button>
+        </div>
     </div>
 
     <div class="main">
-        <div class="sidebar">
+        <div class="sidebar" id="primarySidebar">
             <ul>
                 <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
                 <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
@@ -52,10 +61,10 @@
                         <span class="dropdown-arrow" aria-hidden="true"></span>
                     </button>
                     <ul class="submenu-dropdown" id="servicesDropdown">
-                        <li><button class="submenu-link" type="button" data-href="servicios.html#servicios-administrativos">Servicios Administrativos</button></li>
-                        <li><button class="submenu-link" type="button" data-href="servicios.html#servicios-contables">Servicios Contables</button></li>
-                        <li><button class="submenu-link" type="button" data-href="servicios.html#servicios-legales">Servicios Legales</button></li>
-                        <li><button class="submenu-link" type="button" data-href="servicios.html#servicios-marketing">Servicios Marketing y Branding</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
                     </ul>
                 </li>
                 <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
@@ -69,7 +78,6 @@
                         <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.webp" data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt=""></button></li>
                         <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/" alt=""></button></li>
                         <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.webp" data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt=""></button></li>
-                        <li><button class="social-link" type="button"><img class="imagenes" src="img/whatsapp.webp" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" alt=""></button></li>
                     </ul>
                 </li>
             </ul>
@@ -134,6 +142,25 @@
             
         </div>
     </div>
+
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+        <ul>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="serv-adm.html"><img class="imagenes" src="img/servicios.webp" alt=""><span>Servicios Administrativos</span></button></li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="serv-cont.html"><img class="imagenes" src="img/servicios.webp" alt=""><span>Servicios Contables</span></button></li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="serv-leg.html"><img class="imagenes" src="img/servicios.webp" alt=""><span>Servicios Legales</span></button></li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="serv-mark.html"><img class="imagenes" src="img/servicios.webp" alt=""><span>Servicios Marketing y Branding</span></button></li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+        </ul>
+    </aside>
+
+    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+        <span class="back-to-top-icon" aria-hidden="true">↑</span>
+        <span class="back-to-top-text">Subir</span>
+    </button>
+
+    <button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+        <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp">
+    </button>
 
     <footer>@ OSARE.CR | Todos los derechos reservados</footer>
 

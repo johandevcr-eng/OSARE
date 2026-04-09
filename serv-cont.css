@@ -1,8 +1,31 @@
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
-	background: #c0bebe;
-	color: #222;
+	background: linear-gradient(140deg, var(--bg-main), var(--bg-soft));
+	color: var(--text-main);
+}
+
+.serv-cont-topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 18px;
+	padding: 14px 18px;
+	margin-bottom: 18px;
+	border-radius: 18px;
+}
+
+.serv-cont-brand {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	min-width: 0;
+}
+
+.serv-cont-brand h2 {
+	margin: 0;
+	line-height: 1.1;
+	color: var(--text-main);
 }
 
 .page {
@@ -17,11 +40,12 @@ body {
 }
 
 .hero {
-	background: linear-gradient(120deg, #0f1011 0%, #3d4044 100%);
-	color: white;
+	background: var(--card-bg);
+	color: var(--text-main);
 	border-radius: 18px;
 	padding: 26px;
-	box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+	box-shadow: var(--panel-shadow);
+	border: 1px solid var(--card-border);
 }
 
 .hero h1 {
@@ -41,8 +65,8 @@ body {
 .hero blockquote {
 	margin: 18px 0 0;
 	padding: 14px 16px;
-	border-left: 4px solid #0eacd8;
-	background: rgba(255, 255, 255, 0.08);
+	border-left: 4px solid var(--accent);
+	background: rgba(0, 166, 209, 0.12);
 	border-radius: 10px;
 	font-style: italic;
 }
@@ -68,8 +92,8 @@ body {
 }
 
 .btn-secondary {
-	background: white;
-	color: #1c1f22;
+	background: rgba(255, 255, 255, 0.74);
+	color: var(--text-main);
 }
 
 .services-grid {
@@ -80,10 +104,10 @@ body {
 }
 
 .service-card {
-	background: #e2e2e2;
+	background: rgba(255, 255, 255, 0.74);
 	border-radius: 14px;
 	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.09);
+	border: 1px solid rgba(14, 172, 216, 0.18);
 }
 
 .service-card h2 {
@@ -105,26 +129,28 @@ body {
 
 .note-box {
 	margin-top: 16px;
-	background: #252729;
-	color: #f2f2f2;
+	background: var(--card-bg);
+	color: var(--text-main);
 	border-radius: 12px;
 	padding: 16px 18px;
 	line-height: 1.6;
+	border: 1px solid var(--card-border);
 }
 
 .quote-box {
 	margin-top: 22px;
-	background: #f7f7f7;
+	background: var(--card-bg);
 	border-radius: 16px;
 	padding: 22px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+	box-shadow: var(--panel-shadow);
+	border: 1px solid var(--card-border);
 }
 
 .quote-box h3 {
 	margin: 0 0 12px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 24px;
-	color: #1d2022;
+	color: var(--text-main);
 }
 
 .quote-form {
@@ -141,12 +167,36 @@ body {
 .quote-form select,
 .quote-form textarea {
 	width: 100%;
-	border: 1px solid #cacaca;
+	border: 1px solid var(--card-border);
 	border-radius: 10px;
 	padding: 11px 12px;
 	font: inherit;
-	background: white;
+	background: rgba(255, 255, 255, 0.85);
+	color: #1a1f26;
 	box-sizing: border-box;
+}
+
+body[data-theme='dark'] .service-card,
+body[data-theme='dark'] .quote-form input,
+body[data-theme='dark'] .quote-form select,
+body[data-theme='dark'] .quote-form textarea,
+body[data-theme='dark'] .btn-secondary {
+	background: rgba(11, 23, 38, 0.72);
+	color: var(--text-main);
+	border-color: rgba(130, 179, 255, 0.22);
+}
+
+body[data-theme='dark'] .quote-form input,
+body[data-theme='dark'] .quote-form select,
+body[data-theme='dark'] .quote-form textarea,
+body[data-theme='dark'] .quote-form option {
+	color: #ffffff;
+	-webkit-text-fill-color: #ffffff;
+}
+
+body[data-theme='dark'] .quote-form input::placeholder,
+body[data-theme='dark'] .quote-form textarea::placeholder {
+	color: rgba(255, 255, 255, 0.78);
 }
 
 .quote-form textarea {
@@ -163,8 +213,52 @@ body {
 }
 
 @media (max-width: 860px) {
+	.serv-cont-topbar {
+		padding: 12px;
+	}
+
+	.serv-cont-brand h2 {
+		font-size: clamp(18px, 4vw, 24px);
+	}
+
 	.services-grid,
 	.quote-form {
 		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 680px) {
+	.serv-cont-topbar {
+		flex-wrap: wrap;
+		justify-content: center;
+		text-align: center;
+		gap: 10px;
+	}
+
+	.serv-cont-brand {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.hero,
+	.quote-box {
+		padding: 18px;
+	}
+
+	.hero-actions .btn,
+	.service-card .btn {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.hero h1 {
+		font-size: clamp(22px, 8vw, 30px);
+	}
+
+	.service-card,
+	.note-box,
+	.quote-box {
+		padding: 16px;
 	}
 }

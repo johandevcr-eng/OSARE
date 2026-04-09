@@ -29,8 +29,24 @@
 			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
 		</div>
 
+		<div class="serv-mark-topbar glass-panel">
+			<div class="serv-mark-brand logo">
+				<img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="634" height="614" decoding="async">
+				<h2>OSARE</h2>
+			</div>
+			<div class="header-actions">
+				<button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+					<span class="theme-toggle-track">
+						<span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+						<span class="theme-toggle-thumb"></span>
+						<span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+					</span>
+				</button>
+			</div>
+		</div>
+
 		<div class="main">
-			<div class="sidebar">
+			<div class="sidebar" id="primarySidebar">
 				<ul>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
@@ -57,7 +73,6 @@
                         <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.webp" data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt=""></button></li>
                         <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/" alt=""></button></li>
                         <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.webp" data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt=""></button></li>
-                        <li><button class="social-link" type="button"><img class="imagenes" src="img/whatsapp.webp" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" alt=""></button></li>
                     </ul>
                 </li>
 			</ul>
@@ -178,6 +193,15 @@
 				</section>
 			</main>
 		</div>
+
+		<button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+			<span class="back-to-top-icon" aria-hidden="true">↑</span>
+			<span class="back-to-top-text">Subir</span>
+		</button>
+
+		<button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+			<img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp">
+		</button>
 	</div>
 </body>
 </html>

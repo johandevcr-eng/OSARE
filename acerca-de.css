@@ -12,11 +12,13 @@
 .about-principles {
 	border-radius: 20px;
 	padding: 15px;
+	border: 1px solid var(--card-border);
+	box-shadow: var(--panel-shadow);
 }
 
 .about-hero {
-	background: linear-gradient(to left, #111111, #4e4e4e);
-	color: white;
+	background: var(--card-bg);
+	color: var(--text-main);
     margin-bottom: 15px;
     
 }
@@ -24,7 +26,7 @@
 .about-hero h2 {
 	margin: 0 0 12px;
 	font-size: clamp(30px, 4vw, 42px);
-	color: #0eacd8;
+	color: var(--accent);
 }
 
 .about-hero p {
@@ -38,13 +40,13 @@
 }
 
 .about-how {
-	background: #d5d5d5;
+	background: var(--card-bg);
 }
 
 .about-how h3 {
 	margin: 0 0 16px;
 	font-size: clamp(22px, 2.8vw, 32px);
-	color: #1f1f1f;
+	color: var(--text-main);
 }
 
 .about-cards {
@@ -54,23 +56,23 @@
 }
 
 .about-card {
-	background: #ffffff;
+	background: rgba(255, 255, 255, 0.74);
 	border-radius: 16px;
 	padding: 18px;
-	border: 1px solid rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(14, 172, 216, 0.18);
 }
 
 .about-card h4 {
 	margin: 0 0 10px;
 	font-size: 20px;
-	color: #0f0f0f;
+	color: var(--text-main);
 }
 
 .about-card p {
 	margin: 0;
 	font-size: 15px;
 	line-height: 1.6;
-	color: #252525;
+	color: var(--text-muted);
 }
 
 
@@ -82,12 +84,18 @@
     align-items: center;
     justify-content: center;
     margin: 30px auto;
-    border-color: black;
+	border: 1px solid var(--card-border);
+	background: var(--card-bg);
+	color: var(--text-main);
+}
+
+#info-button img {
+	transition: filter 0.2s ease;
 }
 
 
 .about-principles {
-	background: #2d2f31;
+	background: var(--card-bg);
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 14px;
@@ -95,24 +103,35 @@
 }
 
 .principle-block {
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(255, 255, 255, 0.82);
 	border-radius: 14px;
 	padding: 18px;
+	border: 1px solid rgba(14, 172, 216, 0.2);
 }
 
 .principle-block h4 {
 	margin: 0 0 10px;
 	font-size: 19px;
-	color: #0eacd8;
+	color: var(--accent);
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 }
 
 .principle-block p {
 	margin: 0;
-	color: #212121;
+	color: var(--text-muted);
 	line-height: 1.6;
 	font-size: 15px;
+}
+
+body[data-theme='dark'] .about-card,
+body[data-theme='dark'] .principle-block {
+	background: rgba(11, 23, 38, 0.72);
+	border: 1px solid rgba(130, 179, 255, 0.22);
+}
+
+body[data-theme='dark'] #info-button img {
+	filter: brightness(0) invert(1);
 }
 
 
