@@ -2291,23 +2291,29 @@
     /* Final responsive tuning */
     @media (max-width: 900px) {
         .header {
+            position: relative;
             flex-direction: column;
-            align-items: stretch;
+            align-items: flex-start;
             gap: 12px;
         }
 
         .left {
             width: 100%;
+            padding-right: 112px;
         }
 
         .header-actions {
+            position: absolute;
+            top: 0;
+            right: 0;
             margin-left: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
+            width: auto;
         }
 
         .theme-toggle {
-            margin-inline: auto;
+            margin-inline: 0;
         }
 
         .social-proof-title {
@@ -2335,8 +2341,8 @@
         }
 
         .header-actions {
-            justify-content: flex-start;
-            width: 100%;
+            justify-content: flex-end;
+            width: auto;
         }
 
         .theme-toggle {
@@ -2378,27 +2384,27 @@
 
     @media (max-width: 420px) {
         .theme-toggle-track {
-            width: 80px;
-            height: 36px;
+            width: 74px;
+            height: 34px;
             padding: 0 8px;
         }
 
         .theme-toggle-icon {
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .theme-toggle-icon-moon {
-            left: 18px;
+            left: 16px;
         }
 
         .theme-toggle-icon-sun {
-            left: 62px;
+            left: 56px;
         }
 
         .theme-toggle-thumb {
-            width: 28px;
-            height: 28px;
-            transform: translateX(44px);
+            width: 26px;
+            height: 26px;
+            transform: translateX(40px);
         }
 
         body[data-theme='dark'] .theme-toggle-thumb {
@@ -2586,26 +2592,26 @@
         }
 
         .theme-toggle-track {
-            width: 76px;
-            height: 34px;
+            width: 70px;
+            height: 32px;
         }
 
         .theme-toggle-icon {
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .theme-toggle-icon-moon {
-            left: 17px;
+            left: 15px;
         }
 
         .theme-toggle-icon-sun {
-            left: 59px;
+            left: 53px;
         }
 
         .theme-toggle-thumb {
-            width: 26px;
-            height: 26px;
-            transform: translateX(42px);
+            width: 24px;
+            height: 24px;
+            transform: translateX(38px);
         }
 
         body[data-theme='dark'] .theme-toggle-thumb {
@@ -2679,22 +2685,22 @@
         }
 
         .theme-toggle-track {
-            width: 72px;
-            height: 32px;
+            width: 66px;
+            height: 30px;
         }
 
         .theme-toggle-icon-moon {
-            left: 16px;
+            left: 14px;
         }
 
         .theme-toggle-icon-sun {
-            left: 56px;
+            left: 50px;
         }
 
         .theme-toggle-thumb {
-            width: 24px;
-            height: 24px;
-            transform: translateX(40px);
+            width: 22px;
+            height: 22px;
+            transform: translateX(36px);
         }
 
         body[data-theme='dark'] .theme-toggle-thumb {
