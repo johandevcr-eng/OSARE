@@ -9,19 +9,183 @@
     <meta property="og:site_name" content="OSARE CR">
     <meta property="og:title" content="Blog | OSARE CR">
     <meta property="og:description" content="Ideas, guías y recomendaciones para fortalecer la operación y crecimiento de su negocio.">
-    <meta property="og:url" content="https://osare.cr/blog.html">
+    <meta property="og:url" content="https://osarecr.com/blog">
     <meta property="og:image" content="https://osare.cr/img/osare.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog | OSARE CR">
     <meta name="twitter:description" content="Ideas, guías y recomendaciones para fortalecer la operación y crecimiento de su negocio.">
     <meta name="twitter:image" content="https://osare.cr/img/osare.webp">
     <title>Blog | OSARE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <script src="functions.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <h1>Blog</h1>
-        <p>Próximamente publicaremos artículos y recursos para apoyar el crecimiento de su empresa.</p>
-    </main>
+
+<div class="container">
+
+    <div class="full-viewport-video">
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="logo">
+                <img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="634" height="614" decoding="async">
+                <h2>OSARE</h2>
+            </div>
+            <h1 id="title-menu">Menú principal</h1>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+                <span class="theme-toggle-track">
+                    <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+                    <span class="theme-toggle-thumb"></span>
+                    <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar" id="primarySidebar">
+            <ul>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+                <li class="has-dropdown">
+                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdown">
+                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                        <span class="dropdown-arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul class="submenu-dropdown" id="servicesDropdown">
+                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                    </ul>
+                </li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+
+                <li id="img-redes" class="social-fixed-item">
+                    <ul class="social-dropdown" id="socialDropdown">
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.webp" data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt=""></button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/" alt=""></button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.webp" data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt=""></button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <main class="blog-page">
+            <section class="blog-hero glass-panel">
+                <p class="blog-kicker">Blog</p>
+                <h2>OSARE te comparte</h2>
+                <p>
+                    Ideas prácticas para fortalecer la operación de su empresa y tomar mejores decisiones en administración,
+                    contabilidad, legal y branding.
+                </p>
+            </section>
+
+            <section class="blog-list" aria-label="Artículos del blog OSARE">
+                <article class="blog-card glass-panel service-card" role="button" tabindex="0" data-href="post-2025-retos-para-las-pymes.html">
+                    <img
+                        src="img/art-retos.avif"
+                        alt="2025: Retos para las Pymes"
+                        loading="lazy"
+                        decoding="async">
+                    <div class="blog-card-content">
+                        <h3>2025: Retos para las Pymes</h3>
+                        <p>
+                            En cualquier parte del mundo, las pequeñas y medianas empresas enfrentan escenarios de...
+                        </p>
+                        <p class="blog-meta">Nelson Castro · 13 ago 2024</p>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-panel service-card" role="button" tabindex="0" data-href="https://www.osarecr.com/post/branding-corporativo-una-de-las-claves-para-el-%C3%A9xito-de-tu-empresa">
+                    <img
+                        src="img/art-branding.avif"
+                        alt="Branding Corporativo: Una de las claves para el Exito de tu Empresa"
+                        loading="lazy"
+                        decoding="async">
+                    <div class="blog-card-content">
+                        <h3>Branding Corporativo: ¡Una de las claves par...</h3>
+                        <p>
+                            En el mundo de los negocios, el branding corporativo se ha convertido en una herramienta...
+                        </p>
+                        <p class="blog-meta">Nelson Castro · 17 jul 2024</p>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-panel service-card" role="button" tabindex="0" data-href="https://www.osarecr.com/post/servicio-tercerizado-de-administración-de-nóminas">
+                    <img
+                        src="img/art-tercerizado.avif"
+                        alt="Servicio tercerizado de administracion de nominas"
+                        loading="lazy"
+                        decoding="async">
+                    <div class="blog-card-content">
+                        <h3>Servicio Tercerizado de Administración...</h3>
+                        <p>
+                            En el mundo empresarial actual, la tercerización de servicios se ha convertido en una estrategia...
+                        </p>
+                        <p class="blog-meta">Nelson Castro · 8 mar 2024</p>
+                    </div>
+                </article>
+
+                <article class="blog-card glass-panel service-card" role="button" tabindex="0" data-href="https://www.osarecr.com/post/conveniencia-de-la-tercerización-administrativa">
+                    <img
+                        src="img/art-conveniencia.avif"
+                        alt="Conveniencia de la tercerizacion administrativa"
+                        loading="lazy"
+                        decoding="async">
+                    <div class="blog-card-content">
+                        <h3>Conveniencia de la tercerización administrativa</h3>
+                        <p>
+                            En la actualidad, muchas empresas se enfrentan al desafio de gestionar eficientemente sus...
+                        </p>
+                        <p class="blog-meta">Nelson Castro · 14 feb 2024</p>
+                    </div>
+                </article>
+
+            </section>
+        </main>
+    </div>
+
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+        <ul>
+            <li class="has-dropdown">
+                <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="floatingServicesDropdown">
+                    <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                    <span class="dropdown-arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="submenu-dropdown" id="floatingServicesDropdown">
+                    <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                </ul>
+            </li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+        </ul>
+    </aside>
+
+    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+        <span class="back-to-top-icon" aria-hidden="true">↑</span>
+        <span class="back-to-top-text">Subir</span>
+    </button>
+
+    <button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+        <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp">
+    </button>
+
+    <footer>@ OSARE.CR | Todos los derechos reservados</footer>
+
+</div>
+
 </body>
 </html>
 
