@@ -16,12 +16,179 @@
     <meta name="twitter:description" content="Converse con nuestro equipo y reciba una propuesta a la medida de su negocio.">
     <meta name="twitter:image" content="https://osare.cr/img/osare.webp">
     <title>Contacto | OSARE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">
+    <script src="functions.js" defer></script>
+    <script src="contacto.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <h1>Contacto</h1>
-        <p>Esta sección estará disponible pronto. Mientras tanto, puede escribirnos por nuestras redes sociales desde la página principal.</p>
-    </main>
+
+<div class="container">
+
+    <div class="full-viewport-video">
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="logo">
+                <img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="634" height="614" decoding="async">
+                <h2>OSARE</h2>
+            </div>
+            <h1 id="title-menu">Menu principal</h1>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+                <span class="theme-toggle-track">
+                    <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+                    <span class="theme-toggle-thumb"></span>
+                    <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar" id="primarySidebar">
+            <ul>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+                <li class="has-dropdown">
+                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownContacto">
+                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                        <span class="dropdown-arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul class="submenu-dropdown" id="servicesDropdownContacto">
+                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                    </ul>
+                </li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+
+                <li id="img-redes" class="social-fixed-item">
+                    <ul class="social-dropdown" id="socialDropdown">
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.webp" data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt=""></button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/" alt=""></button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.webp" data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt=""></button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <main class="contact-page">
+            <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
+                <h2 class="contact-title">Contacto</h2>
+
+                <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+                    <div class="contact-grid contact-grid-top">
+                        <label class="contact-field">
+                            <span>Nombre <strong>*</strong></span>
+                            <input type="text" name="nombre" autocomplete="given-name" required>
+                        </label>
+
+                        <label class="contact-field">
+                            <span>Apellido <strong>*</strong></span>
+                            <input type="text" name="apellido" autocomplete="family-name" required>
+                        </label>
+
+                        <label class="contact-field">
+                            <span>Posicion</span>
+                            <input type="text" name="posicion" autocomplete="organization-title">
+                        </label>
+
+                        <label class="contact-field">
+                            <span>Email <strong>*</strong></span>
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+                    </div>
+
+                    <div class="contact-grid contact-grid-mid">
+                        <label class="contact-field contact-field-company">
+                            <span>Nombre Empresa <strong>*</strong></span>
+                            <input type="text" name="empresa" autocomplete="organization" required>
+                        </label>
+
+                        <label class="contact-field">
+                            <span>Teléfono</span>
+                            <input type="tel" name="telefono" autocomplete="tel">
+                        </label>
+
+                        <label class="contact-field contact-field-address">
+                            <span>Dirección</span>
+                            <input type="text" name="direccion" autocomplete="street-address">
+                        </label>
+                    </div>
+
+                    <div class="contact-bottom">
+                        <label class="contact-field contact-message">
+                            <span>Comentario</span>
+                            <textarea name="comentario" rows="6" placeholder="Agregar respuesta aquí"></textarea>
+                        </label>
+
+                        <div class="contact-optin-wrap">
+                            <label class="contact-optin">
+                                <input type="checkbox" name="suscripcion" checked>
+                                <span>Quiero suscribirme y recibir información sobre los servicios</span>
+                            </label>
+
+                            <div class="contact-captcha" aria-label="Verificacion anti robot">
+                                <div
+                                    class="g-recaptcha"
+                                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                                    data-callback="onContactCaptchaChange"
+                                    data-expired-callback="onContactCaptchaExpired"
+                                    data-error-callback="onContactCaptchaExpired"></div>
+                                <p class="contact-captcha-error" id="captchaError" aria-live="polite"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <button class="contact-submit" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rapidos">
+        <ul>
+            <li class="has-dropdown">
+                <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="floatingServicesDropdownContacto">
+                    <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                    <span class="dropdown-arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="submenu-dropdown" id="floatingServicesDropdownContacto">
+                    <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                </ul>
+            </li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+        </ul>
+    </aside>
+
+    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+        <span class="back-to-top-icon" aria-hidden="true">↑</span>
+        <span class="back-to-top-text">Subir</span>
+    </button>
+
+    <button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+        <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp">
+    </button>
+
+    <footer>@ OSARE.CR | Todos los derechos reservados</footer>
+
+</div>
+
 </body>
 </html>
 
