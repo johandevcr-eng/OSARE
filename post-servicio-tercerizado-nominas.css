@@ -357,15 +357,21 @@ body[data-theme='light'] .post-comments-panel {
 }
 
 .post-recent-card {
-    border: 1px solid var(--card-border);
+    border: 2px solid rgba(20, 48, 78, 0.28);
     border-radius: 10px;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.16);
     color: var(--text-main);
     text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     display: grid;
     grid-template-rows: auto 1fr;
+    box-shadow: 0 8px 16px rgba(7, 30, 56, 0.14);
+}
+
+body[data-theme='dark'] .post-recent-card {
+    border-color: rgba(138, 186, 255, 0.45);
+    box-shadow: 0 10px 20px rgba(1, 12, 28, 0.48);
 }
 
 .post-recent-card img {
@@ -395,7 +401,8 @@ body[data-theme='light'] .post-comments-panel {
 .post-recent-card:hover,
 .post-recent-card:focus-visible {
     transform: translateY(-2px);
-    box-shadow: 0 12px 22px rgba(2, 22, 45, 0.14);
+    box-shadow: 0 14px 26px rgba(2, 22, 45, 0.22);
+    border-color: rgba(10, 122, 164, 0.55);
     outline: none;
 }
 
@@ -412,13 +419,19 @@ body[data-theme='light'] .post-comments-panel {
 .post-comments-input {
     width: 100%;
     min-height: 56px;
-    border: 1px solid var(--card-border);
+    border: 2px solid rgba(20, 48, 78, 0.28);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.14);
     color: var(--text-main);
     font: inherit;
     padding: 14px;
     resize: vertical;
+    box-shadow: 0 8px 16px rgba(7, 30, 56, 0.12);
+}
+
+body[data-theme='dark'] .post-comments-input {
+    border-color: rgba(138, 186, 255, 0.45);
+    box-shadow: 0 10px 18px rgba(1, 12, 28, 0.44);
 }
 
 .post-comments-input::placeholder {
