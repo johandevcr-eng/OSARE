@@ -18,7 +18,7 @@ body {
 .serv-leg-brand {
 	display: flex;
 	align-items: center;
-	gap: 14px;
+	gap: 6px;
 	min-width: 0;
 }
 
@@ -237,6 +237,7 @@ body[data-theme='dark'] .quote-form textarea::placeholder {
 
 	.serv-leg-brand {
 		justify-content: center;
+		gap: 4px;
 		width: 100%;
 	}
 

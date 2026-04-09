@@ -19,7 +19,7 @@
 		.serv-adm-brand {
 			display: flex;
 			align-items: center;
-			gap: 14px;
+			gap: 6px;
 			min-width: 0;
 		}
 
@@ -238,6 +238,7 @@
 
 			.serv-adm-brand {
 				justify-content: center;
+				gap: 4px;
 				width: 100%;
 			}
 
