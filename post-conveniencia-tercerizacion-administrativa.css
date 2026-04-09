@@ -314,6 +314,13 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
+body:not([data-theme='dark']) .post-recent-panel,
+body:not([data-theme='dark']) .post-comments-panel,
+body[data-theme='light'] .post-recent-panel,
+body[data-theme='light'] .post-comments-panel {
+    background: var(--card-bg);
+}
+
 .post-recent-header {
     margin-bottom: 14px;
     display: flex;
