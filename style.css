@@ -1,6 +1,4 @@
 
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap');
-
     :root {
         --fixed-video-height: 100px;
     }
@@ -84,7 +82,7 @@
     .logo h2 {
         margin: 0;
         line-height: 1;
-        font-family: 'Copperplate Gothic Bold', 'Cinzel', 'Copperplate Gothic', 'Copperplate', serif;
+        font-family: 'Copperplate Gothic Bold', 'Copperplate Gothic', 'Copperplate', serif;
     }
 
     .logo-inicial { 
