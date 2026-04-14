@@ -75,8 +75,9 @@
         display: flex;
         align-items: center;
         font-size: 24px;
-        gap: 8px;
+        gap: 15px;
         flex-wrap: wrap;
+        margin-bottom: 10px;
     }
 
     .logo h2 {
@@ -86,10 +87,9 @@
     }
 
     .logo-inicial { 
-        width: 95px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        margin-right: 0;
     }
 
     
@@ -97,8 +97,8 @@
         text-transform: uppercase;
         font-size: 0px;
         font-family: 'Montserrat', sans-serif;
-        margin: 0;
         line-height: 0;
+        margin: 0;
         height: 0;
         overflow: hidden;
     }
