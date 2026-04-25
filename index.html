@@ -1,62 +1,40 @@
 <!-- <!DOCTYPE html> -->
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <meta
-      name="description"
-      content="OSARE CR ofrece servicios administrativos, contables, legales y de marketing para PYMES en Costa Rica con enfoque estratégico y operativo."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_CR" />
-    <meta property="og:site_name" content="OSARE CR" />
-    <meta property="og:title" content="OSARE CR | Soluciones para PYMES" />
-    <meta
-      property="og:description"
-      content="Servicios administrativos, contables, legales y de marketing para impulsar su negocio en Costa Rica."
-    />
-    <meta property="og:url" content="https://osare.cr/" />
-    <meta
-      property="og:image"
-      content="https://osare.cr/img/banner-princ.webp"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="OSARE CR | Soluciones para PYMES" />
-    <meta
-      name="twitter:description"
-      content="Servicios administrativos, contables, legales y de marketing para impulsar su negocio en Costa Rica."
-    />
-    <meta
-      name="twitter:image"
-      content="https://osare.cr/img/banner-princ.webp"
-    />
-    <title>OSARE - Demo</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="functions.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="full-viewport-video">
-        <video
-          id="comp-jusdonlo_video"
-          class="K8MSra"
-          crossorigin="anonymous"
-          playsinline
-          preload="metadata"
-          muted
-          loop
-          autoplay
-          onerror="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="description"
+    content="OSARE CR ofrece servicios administrativos, contables, legales y de marketing para PYMES en Costa Rica con enfoque estratégico y operativo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:site_name" content="OSARE CR" />
+  <meta property="og:title" content="OSARE CR | Soluciones para PYMES" />
+  <meta property="og:description"
+    content="Servicios administrativos, contables, legales y de marketing para impulsar su negocio en Costa Rica." />
+  <meta property="og:url" content="https://osare.cr/" />
+  <meta property="og:image" content="https://osare.cr/img/banner-princ.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OSARE CR | Soluciones para PYMES" />
+  <meta name="twitter:description"
+    content="Servicios administrativos, contables, legales y de marketing para impulsar su negocio en Costa Rica." />
+  <meta name="twitter:image" content="https://osare.cr/img/banner-princ.webp" />
+  <title>OSARE - Demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="functions.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="full-viewport-video">
+      <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop
+        autoplay onerror="
             if (!this.dataset.fallback) {
               this.dataset.fallback = '1';
               this.src =
@@ -64,663 +42,393 @@
               this.load();
               this.play().catch(function () {});
             }
-          "
-          src="video/banner.mp4"
-        ></video>
+          " src="video/banner.mp4"></video>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="left">
+        <div class="logo">
+          <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async" />
+          <h2>OSARE</h2>
+        </div>
+
+        <h1 id="title-menu">Menú principal</h1>
       </div>
 
-      <!-- Header -->
-      <div class="header">
-        <div class="left">
-          <div class="logo">
-            <img
-              class="logo-inicial"
-              src="img/osare.jpg"
-              alt="OSARE"
-              width="614"
-              height="614"
-              decoding="async"
-            />
-            <h2>OSARE</h2>
-          </div>
-
-          <h1 id="title-menu">Menú principal</h1>
-        </div>
-
-        <div class="header-actions">
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Cambiar tema"
-            aria-pressed="false"
-          >
-            <span class="theme-toggle-track">
-              <span
-                class="theme-toggle-icon theme-toggle-icon-moon"
-                aria-hidden="true"
-                >☾</span
-              >
-              <span class="theme-toggle-thumb"></span>
-              <span
-                class="theme-toggle-icon theme-toggle-icon-sun"
-                aria-hidden="true"
-                >☀</span
-              >
-            </span>
-          </button>
-        </div>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+            <span class="theme-toggle-thumb"></span>
+            <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+          </span>
+        </button>
       </div>
+    </div>
 
-      <!-- main -->
-      <div class="main">
-        <!-- sidebar -->
-        <div class="sidebar" id="primarySidebar">
-          <ul>
-            <li class="nav-button-item">
-              <button
-                class="menu-link-btn"
-                type="button"
-                data-href="index.html"
-              >
-                <img class="imagenes" src="img/hogar.webp" alt="" /><span
-                  >Inicio</span
-                >
-              </button>
-            </li>
-            <li class="nav-button-item">
-              <button
-                class="menu-link-btn"
-                type="button"
-                data-href="acerca-de.html"
-              >
-                <img class="imagenes" src="img/informacion.webp" alt="" /><span
-                  >Acerca de</span
-                >
-              </button>
-            </li>
-            <li class="has-dropdown">
-              <button
-                class="menu-label dropdown-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="servicesDropdown"
-              >
-                <span class="menu-label-text"
-                  ><img
-                    class="imagenes"
-                    src="img/servicios.webp"
-                    alt=""
-                  />Servicios</span
-                >
-                <span class="dropdown-arrow" aria-hidden="true"></span>
-              </button>
-              <ul class="submenu-dropdown" id="servicesDropdown">
-                <li>
-                  <button
-                    class="submenu-link"
-                    type="button"
-                    data-href="serv-adm.html"
-                  >
-                    Servicios Administrativos
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="submenu-link"
-                    type="button"
-                    data-href="serv-cont.html"
-                  >
-                    Servicios Contables
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="submenu-link"
-                    type="button"
-                    data-href="serv-leg.html"
-                  >
-                    Servicios Legales
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="submenu-link"
-                    type="button"
-                    data-href="serv-mark.html"
-                  >
-                    Servicios Marketing y Branding
-                  </button>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-button-item">
-              <button class="menu-link-btn" type="button" data-href="blog.html">
-                <img class="imagenes" src="img/blog.webp" alt="" /><span
-                  >Blog</span
-                >
-              </button>
-            </li>
-            <li class="nav-button-item">
-              <button
-                class="menu-link-btn"
-                type="button"
-                data-href="contacto.html"
-              >
-                <img class="imagenes" src="img/contacto.webp" alt="" /><span
-                  >Contacto</span
-                >
-              </button>
-            </li>
-
-            <li id="img-redes" class="social-fixed-item">
-              <ul class="social-dropdown" id="socialDropdown">
-                <li>
-                  <button class="social-link" type="button">
-                    <img
-                      class="imagenes"
-                      src="img/facebook.webp"
-                      data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
-                      alt=""
-                    />
-                  </button>
-                </li>
-                <li>
-                  <button class="social-link" type="button">
-                    <img
-                      class="imagenes"
-                      src="img/instagram.webp"
-                      data-href="https://www.instagram.com/osare_cr/"
-                      alt=""
-                    />
-                  </button>
-                </li>
-                <li>
-                  <button class="social-link" type="button">
-                    <img
-                      class="imagenes"
-                      src="img/linkedin.webp"
-                      data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
-                      alt=""
-                    />
-                  </button>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <picture>
-          <source srcset="img/banner-princ.avif" type="image/avif" />
-          <source srcset="img/banner-princ.webp" type="image/webp" />
-          <img
-            class="banner-princ-top"
-            src="img/banner-princ.webp"
-            alt="Banner principal"
-            width="1096"
-            height="636"
-            sizes="(max-width: 900px) 100vw, 70vw"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </picture>
-
-        <!-- banner -->
-        <div class="banner">
-          <h2>Haz crecer tu pymes</h2>
-
-          <p class="banner-text banner-text-left">
-            En OSARE CR somos su aliado estratégico en soluciones de outsourcing
-            en Costa Rica. Ofrecemos consultoría estratégica en sistemas y
-            procesos con el Método OSARE.<br /><br />
-            Blindaje operativo para PYMES y marcas personales: garantizamos su
-            seguridad jurídica con respaldo legal y laboral integrado en cada
-            servicio.<br />
-            Potenciamos negocios mediante servicios integrales de:
-          </p>
-
-          <div class="banner-image-wrap">
-            <picture>
-              <source srcset="img/banner.avif" type="image/avif" />
-              <source srcset="img/banner.webp" type="image/webp" />
-              <img
-                class="banner-img"
-                src="img/banner.webp"
-                alt=""
-                width="1080"
-                height="1080"
-                sizes="(max-width: 900px) 90vw, 40vw"
-                fetchpriority="high"
-                decoding="async"
-              />
-            </picture>
-          </div>
-
-          <p class="banner-text banner-text-right">
-            Nuestro enfoque de BPO (Business Process Outsourcing) le permite
-            delegar procesos críticos como el cumplimiento normativo, las
-            obligaciones tributarias, el branding y RRSS, para que usted se
-            enfoque en hacer crecer su negocio.
-          </p>
-
-          <section class="banner-list">
-            <div>
-              <ul>
-                <li>Gestión Empresarial</li>
-                <li>Contabilidad</li>
-                <li>Asesoría Legal</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Gestión de Nóminas</li>
-                <li>Marketing Digital y Branding</li>
-              </ul>
-            </div>
-          </section>
-
-          <p class="banner-quote"><cite>"Protegemos su legado"</cite></p>
-        </div>
-      </div>
-
-      <aside
-        class="sidebar sidebar-floating"
-        id="floatingSidebar"
-        aria-label="Accesos rápidos"
-      >
+    <!-- main -->
+    <div class="main">
+      <!-- sidebar -->
+      <div class="sidebar" id="primarySidebar">
         <ul>
+          <li class="nav-button-item">
+            <button class="menu-link-btn" type="button" data-href="index.html">
+              <img class="imagenes" src="img/hogar.webp" alt="" /><span>Inicio</span>
+            </button>
+          </li>
+          <li class="nav-button-item">
+            <button class="menu-link-btn" type="button" data-href="acerca-de.html">
+              <img class="imagenes" src="img/informacion.webp" alt="" /><span>Acerca de</span>
+            </button>
+          </li>
           <li class="has-dropdown">
-            <button
-              class="menu-label dropdown-toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="floatingServicesDropdown"
-            >
-              <span class="menu-label-text"
-                ><img
-                  class="imagenes"
-                  src="img/servicios.webp"
-                  alt=""
-                />Servicios</span
-              >
+            <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
+              aria-controls="servicesDropdown">
+              <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="" />Servicios</span>
               <span class="dropdown-arrow" aria-hidden="true"></span>
             </button>
-            <ul class="submenu-dropdown" id="floatingServicesDropdown">
+            <ul class="submenu-dropdown" id="servicesDropdown">
               <li>
-                <button
-                  class="submenu-link"
-                  type="button"
-                  data-href="serv-adm.html"
-                >
+                <button class="submenu-link" type="button" data-href="serv-adm.html">
                   Servicios Administrativos
                 </button>
               </li>
               <li>
-                <button
-                  class="submenu-link"
-                  type="button"
-                  data-href="serv-cont.html"
-                >
+                <button class="submenu-link" type="button" data-href="serv-cont.html">
                   Servicios Contables
                 </button>
               </li>
               <li>
-                <button
-                  class="submenu-link"
-                  type="button"
-                  data-href="serv-leg.html"
-                >
+                <button class="submenu-link" type="button" data-href="serv-leg.html">
                   Servicios Legales
                 </button>
               </li>
               <li>
-                <button
-                  class="submenu-link"
-                  type="button"
-                  data-href="serv-mark.html"
-                >
+                <button class="submenu-link" type="button" data-href="serv-mark.html">
                   Servicios Marketing y Branding
                 </button>
               </li>
             </ul>
           </li>
           <li class="nav-button-item">
-            <button
-              class="menu-link-btn"
-              type="button"
-              data-href="contacto.html"
-            >
-              <img class="imagenes" src="img/contacto.webp" alt="" /><span
-                >Contacto</span
-              >
+            <button class="menu-link-btn" type="button" data-href="blog.html">
+              <img class="imagenes" src="img/blog.webp" alt="" /><span>Blog</span>
             </button>
           </li>
+          <li class="nav-button-item">
+            <button class="menu-link-btn" type="button" data-href="contacto.html">
+              <img class="imagenes" src="img/contacto.webp" alt="" /><span>Contacto</span>
+            </button>
+          </li>
+
+          <li id="img-redes" class="social-fixed-item">
+            <ul class="social-dropdown" id="socialDropdown">
+              <li>
+                <button class="social-link" type="button">
+                  <img class="imagenes" src="img/facebook.webp"
+                    data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt="" />
+                </button>
+              </li>
+              <li>
+                <button class="social-link" type="button">
+                  <img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/"
+                    alt="" />
+                </button>
+              </li>
+              <li>
+                <button class="social-link" type="button">
+                  <img class="imagenes" src="img/linkedin.webp"
+                    data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt="" />
+                </button>
+              </li>
+            </ul>
+          </li>
         </ul>
-      </aside>
+      </div>
 
-      <section class="social-proof glass-panel" aria-label="Marcas aliadas">
-        <p class="social-proof-title">
-          #########################################
+      <picture>
+        <source srcset="img/banner-princ.avif" type="image/avif" />
+        <source srcset="img/banner-princ.webp" type="image/webp" />
+        <img class="banner-princ-top" src="img/banner-princ.webp" alt="Banner principal" width="1096" height="636"
+          sizes="(max-width: 900px) 100vw, 70vw" fetchpriority="high" decoding="async" />
+      </picture>
+
+      <!-- banner -->
+      <div class="banner">
+        <h2>Haz crecer tu pyme</h2>
+
+        <p class="banner-text banner-text-left">
+          En OSARE CR somos su aliado estratégico en soluciones de outsourcing
+          en Costa Rica. Ofrecemos consultoría estratégica en sistemas y
+          procesos con el Método OSARE.<br /><br />
+          Blindaje operativo para PYMES y marcas personales: garantizamos su
+          seguridad jurídica con respaldo legal y laboral integrado en cada
+          servicio.<br />
+          Potenciamos negocios mediante servicios integrales de:
         </p>
-        <div class="logo-marquee" aria-hidden="true">
-          <div class="logo-track">
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-            <span class="logo-pill">#</span>
-          </div>
-        </div>
-      </section>
 
-      <section class="benefits-accordion-wrap">
-        <h2 class="section-title section-title-main">
-          ¿Qué conseguirás en OSARE.CR?
-        </h2>
-        <div class="benefits-accordion glass-panel" id="benefitsAccordion">
-          <div
-            class="benefits-list"
-            role="tablist"
-            aria-label="Beneficios OSARE"
-          >
-            <button
-              class="benefit-item"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-image="strategy"
-            >
-              <strong>1. Conseguirás</strong>
-              <span
-                >Reducir tus costos administrativos, al igual que disminuir la
-                cantidad de espacio físico dedicado a equipos de oficina y
-                personal destacado en el sitio.</span
-              >
-            </button>
-            <button
-              class="benefit-item"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-image="team"
-            >
-              <strong>2. Lograrás</strong>
-              <span
-                >Mejorar el rendimiento del personal que quizás esté
-                sobrecargado de funciones o tareas que no corresponden a la
-                razón de ser del negocio.</span
-              >
-            </button>
-            <button
-              class="benefit-item"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-image="focus"
-            >
-              <strong>3. Podrás</strong>
-              <span
-                >Enfocarte en los objetivos de tu empresa, sin preocuparte por
-                las labores de oficina que solo son accesorias o
-                complementarias.</span
-              >
-            </button>
-            <button
-              class="benefit-item"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-image="specialists"
-            >
-              <strong>4. Contarás</strong>
-              <span
-                >Con servicios especializados en áreas o tareas indispensables
-                sin la necesidad de aumentar tu planilla ni aumentar las cargas
-                y responsabilidades patronales.</span
-              >
-            </button>
-            <button
-              class="benefit-item"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-image="service"
-            >
-              <strong>5. Recibirás</strong>
-              <span
-                >Un servicio profesional, confiable y eficaz en una modalidad
-                externa pero siempre a la mano, gracias a medios tecnológicos y
-                una política de comunicación abierta y fluida.</span
-              >
-            </button>
-            <button
-              class="benefit-item"
-              type="button"
-              role="tab"
-              aria-selected="false"
-              data-image="growth"
-            >
-              <strong>6. Obtendrás</strong>
-              <span
-                >Servicios a la medida, que impactarán positivamente la
-                rentabilidad de tu negocio.</span
-              >
-            </button>
-          </div>
-          <div
-            class="benefits-preview"
-            id="benefitsPreview"
-            aria-live="polite"
-          ></div>
-        </div>
-      </section>
-
-      <div class="siglas-banner2-row">
-        <div class="bannertwo">
-          <div class="image-card-glow"></div>
+        <div class="banner-image-wrap">
           <picture>
-            <source srcset="img/two banner.avif" type="image/avif" />
-            <source srcset="img/two banner.webp" type="image/webp" />
-            <img
-              id="banner2"
-              src="img/two banner.webp"
-              alt=""
-              width="1060"
-              height="670"
-              sizes="(max-width: 900px) 100vw, 60vw"
-              loading="lazy"
-              fetchpriority="low"
-              decoding="async"
-            />
+            <source srcset="img/banner.avif" type="image/avif" />
+            <source srcset="img/banner.webp" type="image/webp" />
+            <img class="banner-img" src="img/banner.webp" alt="" width="1080" height="1080"
+              sizes="(max-width: 900px) 90vw, 40vw" fetchpriority="high" decoding="async" />
           </picture>
         </div>
 
-        <section
-          class="banner-siglas osare-scrolly glass-panel"
-          id="osareScrolly"
-        >
-          <div class="osare-sticky-scene">
-            <div class="osare-word" aria-label="Metodo OSARE">
-              <span data-letter="O">O</span>
-              <span data-letter="S">S</span>
-              <span data-letter="A">A</span>
-              <span data-letter="R">R</span>
-              <span data-letter="E">E</span>
-            </div>
-            <div class="chaos-field" id="chaosField" aria-hidden="true">
-              <span class="chaos-chip">Facturas</span>
-              <span class="chaos-chip">IVA</span>
-              <span class="chaos-chip">Nomina</span>
-              <span class="chaos-chip">KPI</span>
-              <span class="chaos-chip">Contratos</span>
-              <span class="chaos-chip">SOP</span>
-              <span class="chaos-chip">RRSS</span>
-              <span class="chaos-chip">Impuestos</span>
-              <span class="chaos-chip">Cobros</span>
-              <span class="chaos-chip">CRM</span>
-            </div>
+        <p class="banner-text banner-text-right">
+          Nuestro enfoque de BPO (Business Process Outsourcing) le permite
+          delegar procesos críticos como el cumplimiento normativo, las
+          obligaciones tributarias, el branding y RRSS, para que usted se
+          enfoque en hacer crecer su negocio.
+        </p>
+
+        <section class="banner-list">
+          <div>
+            <ul>
+              <li>Gestión Empresarial</li>
+              <li>Contabilidad</li>
+              <li>Asesoría Legal</li>
+            </ul>
           </div>
-          <div class="osare-steps" aria-label="Descripcion del metodo OSARE">
-            <article>
-              <h3><span class="letra">O</span> - Organización</h3>
-              <p>Ponemos cada cosa en su lugar. Eliminamos el caos.</p>
-            </article>
-            <article>
-              <h3><span class="letra">S</span> - Sistemas</h3>
-              <p>
-                Creamos los manuales y procesos (SOPs) para que el negocio
-                dependa de un método.
-              </p>
-            </article>
-            <article>
-              <h3><span class="letra">A</span> - Automatización</h3>
-              <p>Optimizamos el trabajo reduciendo tareas manuales.</p>
-            </article>
-            <article>
-              <h3><span class="letra">R</span> - Resultados</h3>
-              <p>
-                Medimos lo importante para garantizar decisiones basadas en
-                datos.
-              </p>
-            </article>
-            <article>
-              <h3>
-                <span class="letra">E</span> - Estrategia y estructura legal
-              </h3>
-              <p>
-                Blindamos cada proceso bajo normativa legal. Todo se hace bien
-              </p>
-            </article>
+          <div>
+            <ul>
+              <li>Gestión de Nóminas</li>
+              <li>Marketing Digital y Branding</li>
+            </ul>
           </div>
         </section>
+
+        <p class="banner-quote"><cite>"Protegemos su legado"</cite></p>
       </div>
-
-      <!-- Servicios destacados -->
-
-      <h2 class="section-title section-title-label">
-        Nuestros servicios destacados
-      </h2>
-      <div class="container-services">
-        <div
-          class="service-card"
-          role="button"
-          tabindex="0"
-          data-href="serv-adm.html"
-        >
-          <img
-            src="img/servicios-adm.webp"
-            alt="Servicios Administrativos"
-            width="224"
-            height="223"
-            loading="lazy"
-            fetchpriority="low"
-            decoding="async"
-          />
-          <h3>Servicios Administrativos</h3>
-        </div>
-
-        <div
-          class="service-card"
-          role="button"
-          tabindex="0"
-          data-href="serv-cont.html"
-        >
-          <img
-            src="img/servicios-cont.webp"
-            alt="Servicios Contables"
-            width="193"
-            height="189"
-            loading="lazy"
-            fetchpriority="low"
-            decoding="async"
-          />
-          <h3>Servicios Contables</h3>
-        </div>
-
-        <div
-          class="service-card"
-          role="button"
-          tabindex="0"
-          data-href="serv-leg.html"
-        >
-          <img
-            src="img/servicios-leg.webp"
-            alt="Servicios Legales"
-            width="226"
-            height="230"
-            loading="lazy"
-            fetchpriority="low"
-            decoding="async"
-          />
-          <h3>Servicios Legales</h3>
-        </div>
-
-        <div
-          class="service-card"
-          role="button"
-          tabindex="0"
-          data-href="serv-mark.html"
-        >
-          <img
-            src="img/servicios-mark.webp"
-            alt="Servicios de Marketing"
-            width="231"
-            height="226"
-            loading="lazy"
-            fetchpriority="low"
-            decoding="async"
-          />
-          <h3>Servicios de Marketing y Branding</h3>
-        </div>
-      </div>
-
-      <section class="cta-premium glass-panel">
-        <p>
-          Convertimos tu operación en un sistema a la mano, escalable y
-          protegido.
-        </p>
-        <button
-          class="cta-magnet"
-          id="magneticCta"
-          type="button"
-          data-href="contacto.html"
-        >
-          Hablar con OSARE
-        </button>
-      </section>
-
-      <button
-        class="back-to-top"
-        id="backToTopBtn"
-        type="button"
-        aria-label="Subir al inicio"
-      >
-        <span class="back-to-top-icon" aria-hidden="true">↑</span>
-        <span class="back-to-top-text">Inicio</span>
-      </button>
-
-      <button
-        class="whatsapp-float"
-        type="button"
-        data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0"
-        aria-label="Abrir WhatsApp"
-      >
-        <img
-          class="whatsapp-float-icon"
-          src="img/whatsapp.webp"
-          alt="WhatsApp"
-        />
-      </button>
-
-      <footer>@ OSARE.CR | Todos los derechos reservados</footer>
     </div>
-  </body>
+
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+      <ul>
+        <li class="has-dropdown">
+          <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
+            aria-controls="floatingServicesDropdown">
+            <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="" />Servicios</span>
+            <span class="dropdown-arrow" aria-hidden="true"></span>
+          </button>
+          <ul class="submenu-dropdown" id="floatingServicesDropdown">
+            <li>
+              <button class="submenu-link" type="button" data-href="serv-adm.html">
+                Servicios Administrativos
+              </button>
+            </li>
+            <li>
+              <button class="submenu-link" type="button" data-href="serv-cont.html">
+                Servicios Contables
+              </button>
+            </li>
+            <li>
+              <button class="submenu-link" type="button" data-href="serv-leg.html">
+                Servicios Legales
+              </button>
+            </li>
+            <li>
+              <button class="submenu-link" type="button" data-href="serv-mark.html">
+                Servicios Marketing y Branding
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-button-item">
+          <button class="menu-link-btn" type="button" data-href="contacto.html">
+            <img class="imagenes" src="img/contacto.webp" alt="" /><span>Contacto</span>
+          </button>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="social-proof glass-panel" aria-label="Marcas aliadas">
+      <p class="social-proof-title">
+        Servicios que impactan tu negocio
+      </p>
+      <div class="logo-marquee" aria-hidden="true">
+        <div class="logo-track">
+          <span class="logo-pill">Gestión de Nómina</span>
+          <span class="logo-pill">Asistencia Virtual</span>
+          <span class="logo-pill">Auxiliares Contables Remotos</span>
+          <span class="logo-pill">Inventarios</span>
+          <span class="logo-pill">Servicios Notariales</span>
+          <span class="logo-pill">Asesoría Inmobiliaria</span>
+          <span class="logo-pill">Creación de Contenido</span>
+          <span class="logo-pill">Desarrollo y Posicionamiento de Marca</span>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-accordion-wrap">
+      <h2 class="section-title section-title-main">
+        ¿Qué conseguirás en OSARE.CR?
+      </h2>
+      <div class="benefits-accordion glass-panel" id="benefitsAccordion">
+        <div class="benefits-list" role="tablist" aria-label="Beneficios OSARE">
+          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="strategy">
+            <strong>1. Conseguirás</strong>
+            <span>Reducir tus costos administrativos, al igual que disminuir la
+              cantidad de espacio físico dedicado a equipos de oficina y
+              personal destacado en el sitio.</span>
+          </button>
+          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="team">
+            <strong>2. Lograrás</strong>
+            <span>Mejorar el rendimiento del personal que quizás esté
+              sobrecargado de funciones o tareas que no corresponden a la
+              razón de ser del negocio.</span>
+          </button>
+          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="focus">
+            <strong>3. Podrás</strong>
+            <span>Enfocarte en los objetivos de tu empresa, sin preocuparte por
+              las labores de oficina que solo son accesorias o
+              complementarias.</span>
+          </button>
+          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="specialists">
+            <strong>4. Contarás</strong>
+            <span>Con servicios especializados en áreas o tareas indispensables
+              sin la necesidad de aumentar tu planilla ni aumentar las cargas
+              y responsabilidades patronales.</span>
+          </button>
+          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="service">
+            <strong>5. Recibirás</strong>
+            <span>Un servicio profesional, confiable y eficaz en una modalidad
+              externa pero siempre a la mano, gracias a medios tecnológicos y
+              una política de comunicación abierta y fluida.</span>
+          </button>
+          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="growth">
+            <strong>6. Obtendrás</strong>
+            <span>Servicios a la medida, que impactarán positivamente la
+              rentabilidad de tu negocio.</span>
+          </button>
+        </div>
+        <div class="benefits-preview" id="benefitsPreview" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="siglas-banner2-row">
+      <div class="bannertwo">
+        <div class="image-card-glow"></div>
+        <picture>
+          <source srcset="img/two banner.avif" type="image/avif" />
+          <source srcset="img/two banner.webp" type="image/webp" />
+          <img id="banner2" src="img/two banner.webp" alt="" width="1060" height="670"
+            sizes="(max-width: 900px) 100vw, 60vw" loading="lazy" fetchpriority="low" decoding="async" />
+        </picture>
+      </div>
+
+      <section class="banner-siglas osare-scrolly glass-panel" id="osareScrolly">
+        <div class="osare-sticky-scene">
+          <div class="osare-word" aria-label="Método OSARE">
+            <span data-letter="O">O</span>
+            <span data-letter="S">S</span>
+            <span data-letter="A">A</span>
+            <span data-letter="R">R</span>
+            <span data-letter="E">E</span>
+          </div>
+          <div class="chaos-field" id="chaosField" aria-hidden="true">
+            <span class="chaos-chip">Facturas</span>
+            <span class="chaos-chip">IVA</span>
+            <span class="chaos-chip">Nómina</span>
+            <span class="chaos-chip">KPI</span>
+            <span class="chaos-chip">Contratos</span>
+            <span class="chaos-chip">SOP</span>
+            <span class="chaos-chip">RRSS</span>
+            <span class="chaos-chip">Impuestos</span>
+            <span class="chaos-chip">Cobros</span>
+            <span class="chaos-chip">CRM</span>
+          </div>
+        </div>
+        <div class="osare-steps" aria-label="Descripción del método OSARE">
+          <article>
+            <h3><span class="letra">O</span> - Organización</h3>
+            <p>Ponemos cada cosa en su lugar. Eliminamos el caos.</p>
+          </article>
+          <article>
+            <h3><span class="letra">S</span> - Sistemas</h3>
+            <p>
+              Creamos los manuales y procesos (SOPs) para que el negocio
+              dependa de un método.
+            </p>
+          </article>
+          <article>
+            <h3><span class="letra">A</span> - Automatización</h3>
+            <p>Optimizamos el trabajo reduciendo tareas manuales.</p>
+          </article>
+          <article>
+            <h3><span class="letra">R</span> - Resultados</h3>
+            <p>
+              Medimos lo importante para garantizar decisiones basadas en
+              datos.
+            </p>
+          </article>
+          <article>
+            <h3>
+              <span class="letra">E</span> - Estrategia y estructura legal
+            </h3>
+            <p>
+              Blindamos cada proceso bajo normativa legal. Todo se hace bien
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Servicios destacados -->
+
+    <h2 class="section-title section-title-label">
+      Nuestros servicios destacados
+    </h2>
+    <div class="container-services">
+      <div class="service-card" role="button" tabindex="0" data-href="serv-adm.html">
+        <img src="img/servicios-adm.webp" alt="Servicios Administrativos" width="224" height="223" loading="lazy"
+          fetchpriority="low" decoding="async" />
+        <h3>Servicios Administrativos</h3>
+      </div>
+
+      <div class="service-card" role="button" tabindex="0" data-href="serv-cont.html">
+        <img src="img/servicios-cont.webp" alt="Servicios Contables" width="193" height="189" loading="lazy"
+          fetchpriority="low" decoding="async" />
+        <h3>Servicios Contables</h3>
+      </div>
+
+      <div class="service-card" role="button" tabindex="0" data-href="serv-leg.html">
+        <img src="img/servicios-leg.webp" alt="Servicios Legales" width="226" height="230" loading="lazy"
+          fetchpriority="low" decoding="async" />
+        <h3>Servicios Legales</h3>
+      </div>
+
+      <div class="service-card" role="button" tabindex="0" data-href="serv-mark.html">
+        <img src="img/servicios-mark.webp" alt="Servicios de Marketing" width="231" height="226" loading="lazy"
+          fetchpriority="low" decoding="async" />
+        <h3>Servicios de Marketing y Branding</h3>
+      </div>
+    </div>
+
+    <section class="cta-premium glass-panel">
+      <p>
+        Convertimos tu operación en un sistema a la mano, escalable y
+        protegido.
+      </p>
+      <button class="cta-magnet" id="magneticCta" type="button" data-href="contacto.html">
+        Hablar con OSARE
+      </button>
+    </section>
+
+    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+      <span class="back-to-top-icon" aria-hidden="true">↑</span>
+      <span class="back-to-top-text">Inicio</span>
+    </button>
+
+    <button class="whatsapp-float" type="button"
+      data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+      <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp" />
+    </button>
+
+    <footer>@ OSARE.CR | Todos los derechos reservados</footer>
+  </div>
+</body>
+
 </html>
