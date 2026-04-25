@@ -1929,13 +1929,17 @@
     .logo-marquee {
         overflow: hidden;
         position: relative;
+        padding-inline: 2px;
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 90%, transparent 100%);
     }
 
     .logo-track {
         display: flex;
-        gap: 14px;
+        gap: 0;
         width: max-content;
-        animation: logoLoop 28s linear infinite;
+        animation: logoLoop 17s linear infinite;
+        will-change: transform;
     }
 
     .logo-pill {
@@ -1946,6 +1950,8 @@
         background: rgba(255, 255, 255, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.75);
         white-space: nowrap;
+        flex: 0 0 auto;
+        margin-right: 14px;
     }
 
     @keyframes logoLoop {

@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isMobileViewport = window.matchMedia('(max-width: 900px)').matches;
 
+    const logoTrack = document.querySelector('.logo-track');
+    if (logoTrack && !logoTrack.dataset.loopReady) {
+        const originalItems = Array.from(logoTrack.children);
+        originalItems.forEach(function (item) {
+            const clone = item.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            logoTrack.appendChild(clone);
+        });
+        logoTrack.dataset.loopReady = 'true';
+    }
+
     function rafThrottle(callback) {
         let ticking = false;
         return function () {
