@@ -10,17 +10,16 @@
     <meta property="og:title" content="Contacto | OSARE CR">
     <meta property="og:description" content="Converse con nuestro equipo y reciba una propuesta a la medida de su negocio.">
     <meta property="og:url" content="https://osare.cr/contacto.html">
-    <meta property="og:image" content="https://osare.cr/img/osare.webp">
+    <meta property="og:image" content="https://osare.cr/img/osare.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contacto | OSARE CR">
     <meta name="twitter:description" content="Converse con nuestro equipo y reciba una propuesta a la medida de su negocio.">
-    <meta name="twitter:image" content="https://osare.cr/img/osare.webp">
+    <meta name="twitter:image" content="https://osare.cr/img/osare.jpg">
     <title>Contacto | OSARE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contacto.css">
     <script src="functions.js" defer></script>
     <script src="contacto.js" defer></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -30,13 +29,13 @@
 <div class="container">
 
     <div class="full-viewport-video">
-        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/480p/mp4/file.mp4'; this.load(); this.play().catch(function () {}); }" src="https://video.wixstatic.com/video/5ec6b7_da708167b6eb4e70a2e6d979f8a285de/720p/mp4/file.mp4"></video>
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }" src="video/banner.mp4"></video>
     </div>
 
     <div class="header">
         <div class="left">
             <div class="logo">
-                <img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="634" height="614" decoding="async">
+                <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="634" height="614" decoding="async">
                 <h2>OSARE</h2>
             </div>
             <h1 id="title-menu">Menú principal</h1>
@@ -86,7 +85,10 @@
             <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
                 <h2 class="contact-title">Contacto</h2>
 
-                <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+                <form class="contact-form" id="contactForm" name="contacto" action="https://formspree.io/f/xvzdyqdk" method="post" novalidate>
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde OSARE">
+                    <input type="hidden" name="_next" value="https://osare.cr/gracias.html">
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
                     <div class="contact-grid contact-grid-top">
                         <label class="contact-field">
                             <span>Nombre <strong>*</strong></span>
@@ -137,16 +139,6 @@
                                 <input type="checkbox" name="suscripcion" checked>
                                 <span>Quiero suscribirme y recibir información sobre los servicios</span>
                             </label>
-
-                            <div class="contact-captcha" aria-label="Verificación anti robot">
-                                <div
-                                    class="g-recaptcha"
-                                    data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                                    data-callback="onContactCaptchaChange"
-                                    data-expired-callback="onContactCaptchaExpired"
-                                    data-error-callback="onContactCaptchaExpired"></div>
-                                <p class="contact-captcha-error" id="captchaError" aria-live="polite"></p>
-                            </div>
                         </div>
                     </div>
 
@@ -191,5 +183,3 @@
 
 </body>
 </html>
-
-
