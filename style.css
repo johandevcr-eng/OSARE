@@ -73,7 +73,7 @@
         justify-content: space-between;
         gap: 18px;
         padding: 14px 18px;
-        margin-bottom: 18px;
+        margin-bottom: 8px;
         border-radius: 18px;
         background: rgba(255, 255, 255, 0.72);
     }
@@ -135,10 +135,11 @@
 
     .home-topbar .topbar-menu .submenu-dropdown {
         position: absolute;
-        top: calc(100% + 8px);
+        top: 100%;
         left: 0;
         width: max-content;
         min-width: 260px;
+        margin-top: 0;
         z-index: 40;
     }
 
@@ -254,6 +255,7 @@
 
     .main.main-no-sidebar {
         grid-template-columns: 1fr;
+        gap: 4px;
     }
 
     .main.main-no-sidebar > picture {
@@ -271,12 +273,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+        gap: 8px;
         width: 100%;
-        margin: 0;
+        margin-top: 5rem;
         margin-bottom: 5rem;
-        padding: clamp(26px, 3vw, 36px) clamp(26px, 3vw, 40px);
-        aspect-ratio: 1096 / 636;
+        padding: clamp(10px, 1.2vw, 16px) clamp(10px, 1.2vw, 16px);
+        aspect-ratio: auto;
         background: transparent;
         border-radius: 0;
         text-align: center;
@@ -1457,10 +1459,10 @@
         .main > .banner-princ-summary {
             grid-column: 1;
             border-radius: 0;
-            padding: 18px 16px;
-            margin-bottom: 34px;
+            padding: 10px 8px;
+            margin-bottom: 8px;
             aspect-ratio: auto;
-            min-height: 320px;
+            min-height: 0;
         }
 
         .main > picture + picture > .banner-princ-top {
@@ -1542,6 +1544,15 @@
 
         .home-topbar {
             padding: 12px;
+        }
+
+        .home-topbar .topbar-menu .submenu-dropdown {
+            position: static;
+            top: auto;
+            left: auto;
+            width: 100%;
+            min-width: 0;
+            margin-top: 8px;
         }
 
         .banner {
@@ -1701,10 +1712,10 @@
 
         .main > .banner-princ-summary {
             border-radius: 0;
-            gap: 10px;
-            padding: 14px 12px;
-            margin-bottom: 14px;
-            min-height: 260px;
+            gap: 6px;
+            padding: 8px 6px;
+            margin-bottom: 6px;
+            min-height: 0;
         }
 
         .banner-princ-summary-logo .logo-inicial {
