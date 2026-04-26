@@ -8,12 +8,11 @@ body {
 .serv-mark-topbar {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-start;
 	gap: 18px;
 	padding: 14px 18px;
 	margin-bottom: 18px;
-	border-radius: 18px;
-}
+	border-radius: 18px;	background: rgba(255, 255, 255, 0.72);}
 
 .serv-mark-brand {
 	display: flex;

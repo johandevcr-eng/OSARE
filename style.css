@@ -68,18 +68,20 @@
     }
 
     .home-topbar {
-        justify-content: flex-start;
-        padding: 14px 18px;
-        margin-bottom: 18px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.72);
+        display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 18px;
+		padding: 20px 18px;
+		margin-bottom: 18px;
+		border-radius: 18px;
     }
 
     .home-topbar-brand {
         display: flex;
-        align-items: center;
-        gap: 6px;
-        min-width: 0;
+		align-items: center;
+		gap: 6px;
+		min-width: 0;
     }
 
     .home-topbar .logo {
