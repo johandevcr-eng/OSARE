@@ -1782,6 +1782,10 @@
         -webkit-backdrop-filter: blur(16px);
     }
 
+    /*
+    Switch claro/oscuro deshabilitado temporalmente.
+    Se conserva todo el CSS para poder reactivarlo despues.
+
     .header-actions {
         margin-left: auto;
     }
@@ -1909,6 +1913,7 @@
         animation: activeIconPulse 0.34s ease;
         text-shadow: 0 0 12px rgba(255, 214, 120, 0.85);
     }
+    */
 
     .social-proof {
         margin-top: 50px;
@@ -2217,7 +2222,6 @@
     body[data-theme='dark'] .benefit-item,
     body[data-theme='dark'] .osare-steps article,
     body[data-theme='dark'] .logo-pill,
-    body[data-theme='dark'] .theme-toggle,
     body[data-theme='dark'] .banner-list {
         background: rgba(11, 23, 38, 0.72);
         border-color: rgba(128, 171, 235, 0.3);
@@ -2262,6 +2266,7 @@
     }
 
     @media (max-width: 640px) {
+        /* Switch claro/oscuro deshabilitado temporalmente.
         .theme-toggle-track {
             width: 88px;
             height: 40px;
@@ -2289,6 +2294,7 @@
         body[data-theme='dark'] .theme-toggle-thumb {
             transform: translateX(0);
         }
+        */
 
         .social-proof,
         .benefits-accordion,
@@ -2327,6 +2333,7 @@
             padding-right: 112px;
         }
 
+        /* Switch claro/oscuro deshabilitado temporalmente.
         .header-actions {
             position: absolute;
             top: 0;
@@ -2340,6 +2347,7 @@
         .theme-toggle {
             margin-inline: 0;
         }
+        */
 
         .social-proof-title {
             font-size: clamp(13px, 2.8vw, 16px);
@@ -2365,6 +2373,7 @@
             gap: 8px;
         }
 
+        /* Switch claro/oscuro deshabilitado temporalmente.
         .header-actions {
             justify-content: flex-end;
             width: auto;
@@ -2373,6 +2382,7 @@
         .theme-toggle {
             margin-inline: 0;
         }
+        */
 
         .banner-text {
             padding: 12px;
@@ -2408,6 +2418,7 @@
     }
 
     @media (max-width: 420px) {
+        /* Switch claro/oscuro deshabilitado temporalmente.
         .theme-toggle-track {
             width: 74px;
             height: 34px;
@@ -2435,6 +2446,7 @@
         body[data-theme='dark'] .theme-toggle-thumb {
             transform: translateX(0);
         }
+        */
 
         .back-to-top {
             right: 10px;
@@ -2620,6 +2632,7 @@
             font-size: 22px;
         }
 
+        /* Switch claro/oscuro deshabilitado temporalmente.
         .theme-toggle-track {
             width: 70px;
             height: 32px;
@@ -2646,6 +2659,7 @@
         body[data-theme='dark'] .theme-toggle-thumb {
             transform: translateX(0);
         }
+        */
 
         .sidebar > ul > li,
         .menu-link-btn,
@@ -2713,6 +2727,7 @@
             font-size: 20px;
         }
 
+        /* Switch claro/oscuro deshabilitado temporalmente.
         .theme-toggle-track {
             width: 66px;
             height: 30px;
@@ -2735,6 +2750,7 @@
         body[data-theme='dark'] .theme-toggle-thumb {
             transform: translateX(0);
         }
+        */
 
         .banner,
         .social-proof,
