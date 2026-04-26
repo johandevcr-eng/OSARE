@@ -2013,6 +2013,7 @@
         padding: 22px;
         position: relative;
         color: #f8fbff;
+        background: #ffffff;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -2039,9 +2040,9 @@
         position: absolute;
         inset: 0;
         border-radius: inherit;
-        opacity: 0.9;
+        opacity: 0;
         z-index: 0;
-        background: var(--benefit-preview, linear-gradient(160deg, rgba(0, 166, 209, 0.7), rgba(0, 13, 30, 0.9)));
+        background: #ffffff;
     }
 
     .benefits-preview-copy {
