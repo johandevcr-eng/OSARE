@@ -336,7 +336,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 item.setAttribute('aria-selected', String(isActive));
             });
 
-            benefitsPreview.innerHTML = '<h3>' + details.title + '</h3><p>' + details.text + '</p>';
             benefitsPreview.style.setProperty('--benefit-preview', details.gradient);
         };
 
@@ -345,6 +344,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 setActiveBenefit(button);
             });
         });
+
+        if (benefitButtons.length > 0) {
+            setActiveBenefit(benefitButtons[0]);
+        }
 
     }
 

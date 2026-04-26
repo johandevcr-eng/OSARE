@@ -2020,6 +2020,20 @@
         overflow: hidden;
     }
 
+    .benefits-preview-picture {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        margin: 0;
+    }
+
+    .benefits-preview-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
     .benefits-preview::before {
         content: '';
         position: absolute;
@@ -2030,10 +2044,13 @@
         background: var(--benefit-preview, linear-gradient(160deg, rgba(0, 166, 209, 0.7), rgba(0, 13, 30, 0.9)));
     }
 
+    .benefits-preview-copy {
+        position: relative;
+        z-index: 2;
+    }
+
     .benefits-preview h3,
     .benefits-preview p {
-        position: relative;
-        z-index: 1;
         margin: 0;
     }
 
