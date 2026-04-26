@@ -2,73 +2,129 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gracias por contactar a OSARE CR.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Gracias por contactar a OSARE CR. Hemos recibido su mensaje correctamente.">
     <meta name="robots" content="noindex, nofollow">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CR">
+    <meta property="og:site_name" content="OSARE CR">
+    <meta property="og:title" content="Gracias | OSARE CR">
+    <meta property="og:description" content="Confirmacion de envio recibida. Nuestro equipo le respondera pronto.">
+    <meta property="og:url" content="https://osare.cr/gracias.html">
+    <meta property="og:image" content="https://osare.cr/img/osare.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gracias | OSARE CR">
+    <meta name="twitter:description" content="Confirmacion de envio recibida. Nuestro equipo le respondera pronto.">
+    <meta name="twitter:image" content="https://osare.cr/img/osare.jpg">
     <title>Gracias | OSARE</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .thanks-wrap {
-            min-height: 100vh;
-            display: grid;
-            place-items: center;
-            padding: 2rem 1rem;
-        }
-
-        .thanks-card {
-            width: min(720px, 94vw);
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 1rem;
-            padding: 2rem;
-            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
-            text-align: center;
-        }
-
-        .thanks-card h1 {
-            margin: 0 0 0.6rem;
-            font-size: clamp(1.8rem, 3vw, 2.4rem);
-        }
-
-        .thanks-card p {
-            margin: 0.5rem 0;
-        }
-
-        .thanks-actions {
-            margin-top: 1.3rem;
-            display: flex;
-            gap: 0.8rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .thanks-btn {
-            display: inline-block;
-            padding: 0.7rem 1rem;
-            border-radius: 0.6rem;
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid #1f2937;
-            color: #1f2937;
-            background: #ffffff;
-        }
-
-        .thanks-btn-primary {
-            background: #1f2937;
-            color: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" href="gracias.css">
+    <script src="functions.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class="thanks-wrap">
-        <section class="thanks-card" aria-label="Confirmacion de envio">
-            <h1>Gracias por escribirnos</h1>
-            <p>Recibimos tu mensaje correctamente.</p>
-            <p>Te responderemos lo antes posible.</p>
-            <div class="thanks-actions">
-                <a class="thanks-btn thanks-btn-primary" href="index.html">Ir al inicio</a>
-                <a class="thanks-btn" href="contacto.html">Enviar otro mensaje</a>
+
+<div class="container">
+
+    <div class="full-viewport-video">
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }" src="video/banner.mp4"></video>
+    </div>
+
+    <div class="header">
+        <div class="left">
+            <div class="logo">
+                <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="634" height="614" decoding="async">
+                <h2>OSARE</h2>
             </div>
-        </section>
-    </main>
+            <h1 id="title-menu">Menú principal</h1>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+                <span class="theme-toggle-track">
+                    <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+                    <span class="theme-toggle-thumb"></span>
+                    <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="sidebar" id="primarySidebar">
+            <ul>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+                <li class="has-dropdown">
+                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownGracias">
+                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                        <span class="dropdown-arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul class="submenu-dropdown" id="servicesDropdownGracias">
+                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                    </ul>
+                </li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+
+                <li id="img-redes" class="social-fixed-item">
+                    <ul class="social-dropdown" id="socialDropdown">
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.webp" data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt=""></button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/" alt=""></button></li>
+                        <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.webp" data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt=""></button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <main class="thanks-page">
+            <section class="thanks-panel glass-panel" aria-label="Confirmacion de envio">
+                <p class="thanks-kicker">Mensaje enviado</p>
+                <h1 class="thanks-title">Gracias por contactarnos</h1>
+                <p class="thanks-copy">Recibimos su solicitud correctamente y nuestro equipo le responderá a la brevedad.</p>
+
+                <div class="thanks-actions">
+                    <a class="thanks-btn thanks-btn-primary" href="index.html">Volver al inicio</a>
+                    <a class="thanks-btn" href="contacto.html">Enviar otro mensaje</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rapidos">
+        <ul>
+            <li class="has-dropdown">
+                <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="floatingServicesDropdownGracias">
+                    <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                    <span class="dropdown-arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="submenu-dropdown" id="floatingServicesDropdownGracias">
+                    <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                </ul>
+            </li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+        </ul>
+    </aside>
+
+    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+        <span class="back-to-top-icon" aria-hidden="true">↑</span>
+        <span class="back-to-top-text">Inicio</span>
+    </button>
+
+    <button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+        <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp">
+    </button>
+
+    <footer>@ OSARE.CR | Todos los derechos reservados</footer>
+
+</div>
+
 </body>
 </html>
