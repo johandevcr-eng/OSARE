@@ -39,7 +39,8 @@
 
     /* video */
     .full-viewport-video {
-        position: static;
+        position: sticky;
+        top: 0;
         width: 100%;
         margin: 0;
         z-index: 10;
@@ -82,7 +83,7 @@
         flex-shrink: 0;
     }
 
-    .home-topbar .topbar-menu {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu {
         width: auto;
         flex-shrink: 1;
         flex-grow: 1;
@@ -93,7 +94,7 @@
         overflow: visible;
     }
 
-    .home-topbar .topbar-menu > ul {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu > ul {
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -101,7 +102,7 @@
         flex-wrap: wrap;
     }
 
-    .home-topbar .topbar-menu > ul > li {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu > ul > li {
         margin: 0;
         padding: 0;
         background: transparent;
@@ -110,13 +111,13 @@
         font-size: 14px;
     }
 
-    .home-topbar .topbar-menu > ul > li:hover {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu > ul > li:hover {
         background: transparent;
         color: #1f2937;
     }
 
-    .home-topbar .topbar-menu .menu-link-btn,
-    .home-topbar .topbar-menu .menu-label {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-link-btn,
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-label {
         width: auto;
         padding: 10px 12px;
         gap: 10px;
@@ -125,11 +126,11 @@
         color: #111827;
     }
 
-    .home-topbar .topbar-menu .menu-label-text {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-label-text {
         gap: 10px;
     }
 
-    .home-topbar .topbar-menu .submenu-dropdown {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .submenu-dropdown {
         position: absolute;
         top: 100%;
         left: 0;
@@ -139,16 +140,16 @@
         z-index: 40;
     }
 
-    .home-topbar .topbar-menu .has-dropdown {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .has-dropdown {
         position: relative;
     }
 
-    .home-topbar .topbar-menu .imagenes {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .imagenes {
         width: 20px;
         height: 20px;
     }
 
-    .home-topbar .topbar-menu #img-redes {
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu #img-redes {
         display: none;
     }
 
@@ -252,6 +253,86 @@
     .main.main-no-sidebar {
         grid-template-columns: 1fr;
         gap: 4px;
+    }
+
+    /* Internal pages: move primary menu to top horizontal layout */
+    .main:not(.main-no-sidebar) {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .main:not(.main-no-sidebar) > *:not(#primarySidebar) {
+        grid-column: 1;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar.sidebar {
+        position: static;
+        top: auto;
+        align-self: auto;
+        max-height: none;
+        overflow: visible;
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar > ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar > ul > li {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        border-radius: 0;
+        color: #1f2937;
+        font-size: 14px;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar > ul > li:hover {
+        background: transparent;
+        color: #1f2937;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar .menu-link-btn,
+    .main:not(.main-no-sidebar) > #primarySidebar .menu-label {
+        width: auto;
+        padding: 10px 12px;
+        gap: 10px;
+        border-radius: 999px;
+        background: rgba(168, 170, 169, 0.28);
+        color: #111827;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar .menu-label-text {
+        gap: 10px;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar .has-dropdown {
+        position: relative;
+        align-items: stretch;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar .submenu-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: max-content;
+        min-width: 260px;
+        margin-top: 0;
+        z-index: 40;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar .imagenes {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main:not(.main-no-sidebar) > #primarySidebar #img-redes {
+        display: none;
     }
 
     .main.main-no-sidebar > picture {

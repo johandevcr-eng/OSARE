@@ -1,8 +1,15 @@
 
 document.addEventListener('DOMContentLoaded', function () {
+    const pageTopbar = document.querySelector('.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar');
+    const primarySidebar = document.getElementById('primarySidebar');
+
+    if (pageTopbar && primarySidebar && !pageTopbar.contains(primarySidebar)) {
+        primarySidebar.classList.add('topbar-menu');
+        pageTopbar.appendChild(primarySidebar);
+    }
+
     const dropdowns = Array.from(document.querySelectorAll('.has-dropdown'));
     const backToTopButton = document.getElementById('backToTopBtn');
-    const primarySidebar = document.getElementById('primarySidebar');
     const floatingSidebar = document.getElementById('floatingSidebar');
     // const themeToggle = document.getElementById('themeToggle');
     const benefitsAccordion = document.getElementById('benefitsAccordion');
