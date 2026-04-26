@@ -67,6 +67,31 @@
         flex-wrap: wrap;
     }
 
+    .home-topbar {
+        justify-content: flex-start;
+        padding: 14px 18px;
+        margin-bottom: 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.72);
+    }
+
+    .home-topbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
+    }
+
+    .home-topbar .logo {
+        margin-bottom: 0;
+    }
+
+    .home-topbar-brand h2 {
+        margin: 0;
+        line-height: 1.1;
+        color: var(--text-main);
+    }
+
     .left {
         min-width: 0;
     }
@@ -1331,6 +1356,10 @@
             align-items: flex-start;
         }
 
+        .home-topbar {
+            padding: 12px;
+        }
+
         .banner {
             grid-template-columns: 1fr;
             grid-template-areas:
@@ -1443,6 +1472,17 @@
         .logo-inicial {
             width: 72px;
             height: 72px;
+        }
+
+        .home-topbar {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .home-topbar-brand,
+        .home-topbar .logo {
+            justify-content: center;
+            width: 100%;
         }
 
         #primarySidebar ul {
