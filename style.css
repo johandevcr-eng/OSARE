@@ -256,6 +256,80 @@
         grid-template-columns: 1fr;
     }
 
+    .main.main-no-sidebar > picture {
+        grid-column: 1;
+    }
+
+    .main.main-no-sidebar > picture > .banner-princ-top {
+        grid-column: 1;
+        width: 100%;
+    }
+
+    .main > .banner-princ-summary {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 5rem;
+        padding: clamp(26px, 3vw, 36px) clamp(26px, 3vw, 40px);
+        aspect-ratio: 1096 / 636;
+        background: transparent;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .main.main-no-sidebar > .banner-princ-summary {
+        grid-column: 1;
+    }
+
+    .banner-princ-summary-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .banner-princ-summary-logo .logo-inicial {
+        width: clamp(108px, 9vw, 142px);
+        height: clamp(108px, 9vw, 142px);
+    }
+
+    .banner-princ-summary-logo h2 {
+        margin: 0;
+        font-size: clamp(40px, 4.1vw, 62px);
+        line-height: 1;
+        color: #111827;
+    }
+
+    .banner-princ-summary h3 {
+        margin: 0;
+        font-size: clamp(34px, 3.7vw, 54px);
+        line-height: 1.05;
+        color: #111827;
+    }
+
+    .banner-princ-summary p {
+        margin: 0;
+        max-width: 760px;
+        font-size: clamp(19px, 1.45vw, 24px);
+        line-height: 1.45;
+        color: #1f2937;
+    }
+
+    .banner-princ-summary-highlight {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        font-size: clamp(15px, 1.1vw, 20px);
+        color: #0eacd8;
+        text-transform: uppercase;
+    }
+
     .sidebar {
         width: 100%;
         flex-shrink: 0;
@@ -1380,6 +1454,15 @@
             border-radius: 20px;
         }
 
+        .main > .banner-princ-summary {
+            grid-column: 1;
+            border-radius: 0;
+            padding: 18px 16px;
+            margin-bottom: 34px;
+            aspect-ratio: auto;
+            min-height: 320px;
+        }
+
         .main > picture + picture > .banner-princ-top {
             margin-top: -20px;
         }
@@ -1614,6 +1697,19 @@
             height: auto;
             object-fit: contain;
             object-position: center;
+        }
+
+        .main > .banner-princ-summary {
+            border-radius: 0;
+            gap: 10px;
+            padding: 14px 12px;
+            margin-bottom: 14px;
+            min-height: 260px;
+        }
+
+        .banner-princ-summary-logo .logo-inicial {
+            width: 86px;
+            height: 86px;
         }
 
         .banner {
