@@ -69,19 +69,20 @@
 
     .home-topbar {
         display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 18px;
-		padding: 20px 18px;
-		margin-bottom: 18px;
-		border-radius: 18px;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 14px 18px;
+        margin-bottom: 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.72);
     }
 
     .home-topbar-brand {
         display: flex;
-		align-items: center;
-		gap: 6px;
-		min-width: 0;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
     }
 
     .home-topbar .logo {
@@ -90,8 +91,16 @@
 
     .home-topbar-brand h2 {
         margin: 0;
-        line-height: 1.1;
+        line-height: 1;
         color: var(--text-main);
+    }
+
+    .home-topbar-brand .logo-inicial,
+    .serv-adm-brand .logo-inicial,
+    .serv-cont-brand .logo-inicial,
+    .serv-leg-brand .logo-inicial,
+    .serv-mark-brand .logo-inicial {
+        display: block;
     }
 
     .left {
@@ -1354,7 +1363,7 @@
             padding: 8px;
         }
 
-        .header {
+        .header:not(.home-topbar) {
             align-items: flex-start;
         }
 

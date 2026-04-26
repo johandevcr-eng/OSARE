@@ -13,7 +13,8 @@
 			gap: 18px;
 			padding: 14px 18px;
 			margin-bottom: 18px;
-			border-radius: 18px;			background: rgba(255, 255, 255, 0.72);		}
+			border-radius: 18px;			
+			background: rgba(255, 255, 255, 0.72);		}
 
 		.serv-adm-brand {
 			display: flex;
@@ -24,7 +25,7 @@
 
 		.serv-adm-brand h2 {
 			margin: 0;
-			line-height: 1.1;
+			line-height: 1;
 			color: var(--text-main);
 		}
 
