@@ -1,6 +1,6 @@
 
     :root {
-        --fixed-video-height: 100px;
+        --fixed-video-height: 74px;
     }
 
     * {
@@ -34,16 +34,12 @@
         max-width: 1500px;
         margin: auto;
         padding: 20px;
-        padding-top: calc(var(--fixed-video-height) + 20px);
         position: relative;
     }
 
     /* video */
     .full-viewport-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        position: static;
         width: 100%;
         margin: 0;
         z-index: 10;
@@ -928,40 +924,34 @@
 
     .bannertwo {
         display: flex;
-            justify-content: center;
-            align-items: center;
+        justify-content: center;
+        align-items: center;
         flex: 1 1 0;
         min-width: 0;
-        border-radius: 20px;
-        overflow: hidden;
-            position: relative;
-            padding: 22px;
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(235, 241, 245, 0.78));
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.14);
-        }
+        border-radius: 0;
+        overflow: visible;
+        position: relative;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
 
-        .image-card-glow {
-            position: absolute;
-            inset: auto auto 12% 10%;
-            width: 40%;
-            height: 35%;
-            background: radial-gradient(circle, rgba(14, 172, 216, 0.26) 0%, rgba(14, 172, 216, 0) 72%);
-            pointer-events: none;
-            filter: blur(10px);
+    .image-card-glow {
+        display: none;
     }
 
     #banner2 {
         display: block;
         width: 100%;
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 0;
         margin: 0;
-            object-fit: cover;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+        box-shadow: none;
     }
 
     @media (max-width: 900px) {
@@ -1488,7 +1478,7 @@
 
     @media (max-width: 900px) {
         :root {
-            --fixed-video-height: 88px;
+            --fixed-video-height: 66px;
         }
 
         #primarySidebar .submenu-dropdown,
@@ -1637,7 +1627,7 @@
 
     @media (max-width: 640px) {
         :root {
-            --fixed-video-height: 76px;
+            --fixed-video-height: 58px;
         }
 
         .sidebar-floating {
@@ -1657,7 +1647,6 @@
 
         .container {
             padding: 10px;
-            padding-top: calc(var(--fixed-video-height) + 10px);
         }
 
         .logo {
@@ -1851,7 +1840,6 @@
 
         .container {
             padding: 8px;
-            padding-top: calc(var(--fixed-video-height) + 8px);
         }
 
         .banner-list {
@@ -2836,7 +2824,6 @@
 
         .container {
             padding: 8px;
-            padding-top: calc(var(--fixed-video-height) + 8px);
         }
 
         .logo h2 {
@@ -2868,12 +2855,11 @@
 
     @media (max-width: 360px) {
         :root {
-            --fixed-video-height: 68px;
+            --fixed-video-height: 52px;
         }
 
         .container {
             padding: 6px;
-            padding-top: calc(var(--fixed-video-height) + 6px);
         }
 
         .header {
