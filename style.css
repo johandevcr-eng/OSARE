@@ -147,6 +147,16 @@
         border-radius: 999px;
         background: rgba(168, 170, 169, 0.28);
         color: #111827;
+        transition: background 0.18s ease, color 0.18s ease, outline-color 0.18s ease;
+        outline: 1.5px solid transparent;
+        outline-offset: -1.5px;
+    }
+
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-link-btn:hover,
+    :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-label:hover {
+        background: rgba(14, 172, 216, 0.14);
+        color: #0078a8;
+        outline-color: rgba(14, 172, 216, 0.50);
     }
 
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-label-text {
@@ -408,6 +418,7 @@
         color: #111827;
         font-weight: 900;
         letter-spacing: -0.02em;
+        font-family: 'Copperplate Gothic Bold', 'Copperplate Gothic', 'Copperplate', serif;
     }
 
     .banner-princ-summary h3 {
@@ -1034,10 +1045,10 @@
         background-color: #292a2bc7;
         color: white;
         border-radius: 20px;
-        padding: 20px 40px;
+        padding: 10px 40px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         font-family: 'Open Sans', sans-serif;
         min-width: 0;
     }
@@ -1506,10 +1517,8 @@
     }
 
     footer {
-        text-align: center;
-        padding: 28px 0;
         background: linear-gradient(135deg, #0f1722 0%, #1a2840 100%);
-        color: rgba(255,255,255,0.75);
+        color: #fff;
         font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
         font-size: 14px;
         letter-spacing: 0.04em;
@@ -1517,6 +1526,118 @@
         width: 100%;
         margin-left: 0;
         border-radius: 18px 18px 0 0;
+        padding: 34px 24px 22px;
+    }
+
+    .footer-inner {
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(220px, 1fr) auto minmax(220px, 1fr);
+        align-items: center;
+        gap: 18px 24px;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-self: start;
+    }
+
+    .footer-logo {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .footer-brand-name {
+        font-family: 'Copperplate Gothic Bold', 'Copperplate Gothic', 'Copperplate', serif;
+        font-size: 21px;
+        color: #fff;
+        letter-spacing: 0.08em;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-self: center;
+        gap: 14px;
+    }
+
+    .footer-social-btn {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+        padding: 0;
+    }
+
+    .footer-social-btn:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-2px);
+    }
+
+    .footer-social-btn img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+    }
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .footer-link-btn {
+        background: none;
+        border: none;
+        color: #fff;
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 4px 2px;
+        transition: opacity 0.2s ease, text-decoration-color 0.2s ease;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
+    }
+
+    .footer-link-btn:hover {
+        opacity: 1;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .footer-divider {
+        color: #fff;
+        opacity: 0.55;
+        font-size: 16px;
+    }
+
+    .footer-copy {
+        grid-column: 1 / -1;
+        margin: 4px 0 0;
+        color: #fff;
+        opacity: 0.86;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 12px;
     }
 
     @media (max-width: 1200px) {
@@ -1611,19 +1732,30 @@
     }
 
     @media (max-width: 900px) {
-        :root {
-            --fixed-video-height: 66px;
+        footer {
+            margin-top: 24px;
+            border-radius: 16px 16px 0 0;
+            padding: 24px 14px 18px;
         }
 
-        #primarySidebar .submenu-dropdown,
-        #floatingSidebar .submenu-dropdown,
-        #primarySidebar .has-dropdown .social-dropdown,
-        #floatingSidebar .has-dropdown .social-dropdown {
-            display: none;
+        .footer-inner {
+            grid-template-columns: 1fr;
+            gap: 14px;
+            justify-items: center;
         }
 
-        #primarySidebar .has-dropdown.is-open .submenu-dropdown,
-        #floatingSidebar .has-dropdown.is-open .submenu-dropdown,
+        .footer-brand,
+        .footer-social,
+        .footer-links {
+            justify-self: center;
+            justify-content: center;
+        }
+
+        .footer-copy {
+            margin-top: 2px;
+            font-size: 11px;
+            padding-top: 10px;
+        }
         #primarySidebar .has-dropdown.is-open .social-dropdown,
         #floatingSidebar .has-dropdown.is-open .social-dropdown {
             display: block;
@@ -1916,11 +2048,6 @@
             margin: 36px 0 24px;
         }
 
-        footer {
-            margin-top: 24px;
-            padding: 16px 12px;
-        }
-
         .back-to-top {
             right: 14px;
             bottom: 18px;
@@ -2093,7 +2220,7 @@
     }
 
     :root {
-        --bg-main: #f9f9f9;
+        --bg-main: #ffffff;
         --bg-soft: #f2f4f7;
         --text-main: #0f1722;
         --text-muted: #39495d;
@@ -2304,6 +2431,7 @@
 
     .social-proof {
         margin-top: var(--section-gap);
+        margin-bottom: var(--section-gap);
         border-radius: 22px;
         padding: 24px 28px;
     }
@@ -2372,7 +2500,7 @@
 
     .benefit-item {
         text-align: left;
-        border: 1px solid rgba(255, 255, 255, 0.45);
+        border: 1px rgba(255, 255, 255, 0.45);
         background: linear-gradient(135deg, rgba(255,255,255,0.60) 0%, rgba(232,240,250,0.45) 100%);
         border-radius: 14px;
         color: var(--text-main);
@@ -2396,11 +2524,18 @@
     }
 
     .benefit-item:hover,
-    .benefit-item.is-active {
-        border-color: rgba(0, 166, 209, 0.64);
+    .benefit-item.is-active:hover {
+        border: 1px solid rgba(14, 172, 216, 0.60);
         transform: translateX(6px) scale(1.01);
         background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(215,235,248,0.72) 100%);
         box-shadow: 0 8px 20px rgba(0, 120, 180, 0.15);
+    }
+
+    .benefit-item.is-active {
+        border-color: var(--card-border);
+        transform: none;
+        background: linear-gradient(135deg, rgba(255,255,255,0.60) 0%, rgba(232,240,250,0.45) 100%);
+        box-shadow: none;
     }
 
     .benefits-preview {
@@ -2463,7 +2598,7 @@
     }
 
     .osare-scrolly {
-        min-height: 780px;
+        min-height: 480px;
         position: relative;
     }
 
