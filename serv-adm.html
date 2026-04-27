@@ -1,183 +1,217 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="description" content="Servicios administrativos para PYMES: asistencia virtual, gestión documental, nómina y soporte operativo con enfoque estratégico.">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description"
+		content="Servicios administrativos para PYMES: asistencia virtual, gestión documental, nómina y soporte operativo con enfoque estratégico.">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="es_CR">
 	<meta property="og:site_name" content="OSARE CR">
 	<meta property="og:title" content="Servicios Administrativos | OSARE CR">
-	<meta property="og:description" content="Asistencia virtual, gestión documental, nómina y soporte operativo para PYMES.">
+	<meta property="og:description"
+		content="Asistencia virtual, gestión documental, nómina y soporte operativo para PYMES.">
 	<meta property="og:url" content="https://osare.cr/serv-adm.html">
 	<meta property="og:image" content="https://osare.cr/img/servicios-adm.webp">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Servicios Administrativos | OSARE CR">
-	<meta name="twitter:description" content="Asistencia virtual, gestión documental, nómina y soporte operativo para PYMES.">
+	<meta name="twitter:description"
+		content="Asistencia virtual, gestión documental, nómina y soporte operativo para PYMES.">
 	<meta name="twitter:image" content="https://osare.cr/img/servicios-adm.webp">
 	<title>OSARE | Servicios Administrativos</title>
 	<script src="functions.js" defer></script>
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="serv-adm.css">
 </head>
+
 <body>
 	<div class="container serv-adm-container">
 		<div class="full-viewport-video">
-			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }" src="video/banner.mp4"></video>
+			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted
+				loop autoplay
+				onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }"
+				src="video/banner.mp4"></video>
 		</div>
 
-		<div class="serv-adm-topbar glass-panel">
-			<div class="serv-adm-brand logo">
-				<img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="634" height="614" decoding="async">
-				<h2>OSARE</h2>
+		<div class="header home-topbar glass-panel" aria-label="Encabezado principal">
+			<div class="home-topbar-brand logo">
+				<img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async" />
+				<!-- <h2 class="logo-wordmark" aria-label="OSARE">
+          <span>O</span><span>S</span><span class="accent">A</span><span class="accent">R</span><span>E</span>
+        </h2> -->
+				<img src="img/logo_letras.png" alt="" width="140" height="35" loading="lazy" decoding="async" />
 			</div>
-			
-			<!-- Switch Claro/Oscuro -->
-			
-			<!-- <div class="header-actions">
-				<button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
-					<span class="theme-toggle-track">
-						<span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">&#9782;</span>
-						<span class="theme-toggle-thumb"></span>
-						<span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">&#9728;</span>
-					</span>
-				</button>
-			</div> -->
-		</div>
 
-		<div class="main">
-			<div class="sidebar" id="primarySidebar">
+			<h1 id="title-menu">Menú principal</h1>
+
+			<nav class="sidebar topbar-menu" id="primarySidebar" aria-label="Menú principal">
 				<ul>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+					<li class="nav-button-item">
+						<button class="menu-link-btn" type="button" data-href="index.html">
+							<img class="imagenes" src="img/hogar.webp" alt="" /><span>Inicio</span>
+						</button>
+					</li>
+					<li class="nav-button-item">
+						<button class="menu-link-btn" type="button" data-href="acerca-de.html">
+							<img class="imagenes" src="img/informacion.webp" alt="" /><span>Acerca de</span>
+						</button>
+					</li>
 					<li class="has-dropdown">
-						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownAdmin">
-							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
+							aria-controls="servicesDropdown">
+							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
+									alt="" />Servicios</span>
 							<span class="dropdown-arrow" aria-hidden="true"></span>
 						</button>
-						<ul class="submenu-dropdown" id="servicesDropdownAdmin">
-							<li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+						<ul class="submenu-dropdown" id="servicesDropdown">
+							<li>
+								<button class="submenu-link" type="button" data-href="serv-adm.html">
+									Servicios Administrativos
+								</button>
+							</li>
+							<li>
+								<button class="submenu-link" type="button" data-href="serv-cont.html">
+									Servicios Contables
+								</button>
+							</li>
+							<li>
+								<button class="submenu-link" type="button" data-href="serv-leg.html">
+									Servicios Legales
+								</button>
+							</li>
+							<li>
+								<button class="submenu-link" type="button" data-href="serv-mark.html">
+									Servicios Marketing y Branding
+								</button>
+							</li>
 						</ul>
 					</li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
-
-				<li id="img-redes" class="social-fixed-item">
-                    <ul class="social-dropdown" id="socialDropdown">
-                        <li><button class="social-link" type="button"><img class="imagenes" src="img/facebook.webp" data-href="https://www.facebook.com/people/Osarecr/61552264208402/" alt=""></button></li>
-                        <li><button class="social-link" type="button"><img class="imagenes" src="img/instagram.webp" data-href="https://www.instagram.com/osare_cr/" alt=""></button></li>
-                        <li><button class="social-link" type="button"><img class="imagenes" src="img/linkedin.webp" data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" alt=""></button></li>
-                    </ul>
-                </li>
-			</ul>
+					<li class="nav-button-item">
+						<button class="menu-link-btn" type="button" data-href="blog.html">
+							<img class="imagenes" src="img/blog.webp" alt="" /><span>Blog</span>
+						</button>
+					</li>
+					<li class="nav-button-item">
+						<button class="menu-link-btn" type="button" data-href="contacto.html">
+							<img class="imagenes" src="img/contacto.webp" alt="" /><span>Contacto</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
 		</div>
 
-		<main class="page">
-		<section class="hero">
-			<h1>SERVICIOS ADMINISTRATIVOS</h1>
-			<p>
-				Diseñamos soporte operativo para que su empresa delegue tareas administrativas clave, mantenga control de su información y avance con procesos más ordenados y medibles.
-			</p>
-			<h4>
-				"Concentre su energía en el valor diferencial de su negocio y deje en manos expertas los procesos de apoyo".
-			</h4>
-			<div class="hero-actions">
-				<button class="btn btn-primary btn-cta" type="button" data-href="contacto.html">Solicitar Diagnóstico Administrativo</button>
-				<button class="btn btn-secondary" type="button" data-href="index.html">Volver al inicio</button>
-			</div>
-		</section>
+		<div class="main main-no-sidebar">
+			<main class="page">
+				<section class="hero">
+					<h1>SERVICIOS ADMINISTRATIVOS</h1>
+					<p>
+						Diseñamos soporte operativo para que su empresa delegue tareas administrativas clave, mantenga
+						control de su información y avance con procesos más ordenados y medibles.
+					</p>
+					<h4>
+						"Concentre su energía en el valor diferencial de su negocio y deje en manos expertas los
+						procesos de apoyo".
+					</h4>
+					<div class="hero-actions">
+						<button class="btn btn-primary btn-cta" type="button" data-href="contacto.html">Solicitar
+							Diagnóstico Administrativo</button>
+						<button class="btn btn-secondary" type="button" data-href="index.html">Volver al inicio</button>
+					</div>
+				</section>
 
-		<section class="problem-solution">
-			<p class="ps-headline">¿Sientes que el día a día consume tu tiempo estratégico?</p>
-			<p class="ps-body">En <strong>OSARE</strong> transformamos el caos operativo en una estructura de crecimiento.</p>
-		</section>
-<h1>FALTA MODIFICAR LOS ÍCONOS</h1>
-		<section class="services-grid" aria-label="Servicios administrativos disponibles">
-			
-			<article class="service-card">
-				<h2><span class="card-icon">&#128101;</span>Gestión de Nómina</h2>
-				<ul>
-					<li>Procesamiento completo de planilla por periodicidad.</li>
-					<li>Cálculo de comisiones, horas extra y jornadas especiales.</li>
-					<li>Aplicación de incapacidades, licencias y deducciones.</li>
-					<li>Liquidaciones y comprobantes para colaboradores.</li>
-					<li>Reportes institucionales y cumplimiento laboral.</li>
-				</ul>
-				<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-			</article>
-			
-			<article class="service-card">
-				<h2><span class="card-icon">&#128194;</span>Gestión Documental</h2>
-				<ul>
-					<li>Digitalización y estructuración de expedientes.</li>
-					<li>Controles para consulta, acceso y trazabilidad.</li>
-					<li>Administración de contratos, clientes y proveedores.</li>
-					<li>Respaldo digital y copias de seguridad periódicas.</li>
-					<li>Protocolos de confidencialidad de la información.</li>
-				</ul>
-				<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-			</article>
+				<section class="problem-solution">
+					<p class="ps-headline">¿Sientes que el día a día consume tu tiempo estratégico?</p>
+					<p class="ps-body">En <strong>OSARE</strong> transformamos el caos operativo en una estructura de
+						crecimiento.</p>
+				</section>
+				<section class="services-grid" aria-label="Servicios administrativos disponibles">
 
-			<article class="service-card">
-				<h2><span class="card-icon">&#128188;</span>Asistencia Virtual</h2>
-				<ul>
-					<li>Registro y digitación de información administrativa.</li>
-					<li>Orden, archivo y control de documentación.</li>
-					<li>Preparación de reportes y redacción de comunicaciones.</li>
-					<li>Gestión de agenda y soporte a gerencia.</li>
-					<li>Tareas personalizadas según su operación.</li>
-				</ul>
-				<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-			</article>
+					<article class="service-card">
+						<h2><span class="card-icon">&#128101;</span>Gestión de Nómina</h2>
+						<ul>
+							<li>Procesamiento completo de planilla por periodicidad.</li>
+							<li>Cálculo de comisiones, horas extra y jornadas especiales.</li>
+							<li>Aplicación de incapacidades, licencias y deducciones.</li>
+							<li>Liquidaciones y comprobantes para colaboradores.</li>
+							<li>Reportes institucionales y cumplimiento laboral.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
+					</article>
 
-			<article class="service-card">
-				<h2><span class="card-icon">&#128203;</span>Gestión de Proyectos</h2>
-				<ul>
-					<li>Cotizaciones y coordinación con proveedores.</li>
-					<li>Elaboración y control de presupuesto.</li>
-					<li>Planificación y seguimiento por fases.</li>
-					<li>Supervisión administrativa de ejecución.</li>
-					<li>Informes y documentación de cierre.</li>
-				</ul>
-				<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-			</article>
+					<article class="service-card">
+						<h2><span class="card-icon">&#128194;</span>Gestión Documental</h2>
+						<ul>
+							<li>Digitalización y estructuración de expedientes.</li>
+							<li>Controles para consulta, acceso y trazabilidad.</li>
+							<li>Administración de contratos, clientes y proveedores.</li>
+							<li>Respaldo digital y copias de seguridad periódicas.</li>
+							<li>Protocolos de confidencialidad de la información.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
+					</article>
 
-			<article class="service-card">
-				<h2><span class="card-icon">&#128194;</span>Expedientes Digitales (Nómina)</h2>
-				<ul>
-					<li>Expediente por colaborador en formato digital.</li>
-					<li>Contratos, acciones de personal y constancias.</li>
-					<li>Control de vacaciones, incapacidades y soportes.</li>
-					<li>Respaldo de seguridad y consulta en nube.</li>
-					<li>Actualización continua de registros.</li>
-				</ul>
-				<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-			</article>
+					<article class="service-card">
+						<h2><span class="card-icon">&#128188;</span>Asistencia Virtual</h2>
+						<ul>
+							<li>Registro y digitación de información administrativa.</li>
+							<li>Orden, archivo y control de documentación.</li>
+							<li>Preparación de reportes y redacción de comunicaciones.</li>
+							<li>Gestión de agenda y soporte a gerencia.</li>
+							<li>Tareas personalizadas según su operación.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
+					</article>
 
-			<article class="service-card">
-				<h2><span class="card-icon">&#9881;</span>Soporte General</h2>
-				<ul>
-					<li>Trámites administrativos de diversa naturaleza.</li>
-					<li>Gestión de tareas específicas bajo demanda.</li>
-					<li>Apoyo en control y seguimiento de equipos.</li>
-					<li>Asistencia para picos operativos.</li>
-					<li>Servicio a medida según sus requerimientos.</li>
-				</ul>
-				<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-			</article>
-		</section>
+					<article class="service-card">
+						<h2><span class="card-icon">&#128203;</span>Gestión de Proyectos</h2>
+						<ul>
+							<li>Cotizaciones y coordinación con proveedores.</li>
+							<li>Elaboración y control de presupuesto.</li>
+							<li>Planificación y seguimiento por fases.</li>
+							<li>Supervisión administrativa de ejecución.</li>
+							<li>Informes y documentación de cierre.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
+					</article>
 
-		<section class="note-box">
-			Si el servicio que busca no está en este listado, escríbanos. Podemos diseñar una solución administrativa personalizada para su empresa.
-		</section>
+					<article class="service-card">
+						<h2><span class="card-icon">&#128194;</span>Expedientes Digitales (Nómina)</h2>
+						<ul>
+							<li>Expediente por colaborador en formato digital.</li>
+							<li>Contratos, acciones de personal y constancias.</li>
+							<li>Control de vacaciones, incapacidades y soportes.</li>
+							<li>Respaldo de seguridad y consulta en nube.</li>
+							<li>Actualización continua de registros.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
+					</article>
 
-		<!-- <section class="social-proof">
+					<article class="service-card">
+						<h2><span class="card-icon">&#9881;</span>Soporte General</h2>
+						<ul>
+							<li>Trámites administrativos de diversa naturaleza.</li>
+							<li>Gestión de tareas específicas bajo demanda.</li>
+							<li>Apoyo en control y seguimiento de equipos.</li>
+							<li>Asistencia para picos operativos.</li>
+							<li>Servicio a medida según sus requerimientos.</li>
+						</ul>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
+					</article>
+				</section>
+
+				<section class="note-box">
+					Si el servicio que busca no está en este listado, escríbanos. Podemos diseñar una solución
+					administrativa personalizada para su empresa.
+				</section>
+
+				<!-- <section class="social-proof">
 			<div class="sp-inner">
 				<p class="sp-headline">"Más de <strong>50 empresas en Costa Rica</strong> han optimizado su gerencia con nuestro método."</p>
 				<div class="sp-stats">
@@ -200,7 +234,7 @@
 				</div>
 			</div>
 		</section> -->
-		</main>
+			</main>
 		</div>
 
 		<button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
@@ -208,10 +242,12 @@
 			<span class="back-to-top-text">Inicio</span>
 		</button>
 
-		<button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+		<button class="whatsapp-float" type="button"
+			data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0"
+			aria-label="Abrir WhatsApp">
 			<img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp">
 		</button>
 	</div>
 </body>
-</html>
 
+</html>
