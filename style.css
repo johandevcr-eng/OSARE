@@ -101,6 +101,11 @@
         flex-shrink: 0;
     }
 
+    :is(.serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) {
+        position: relative;
+        z-index: 50;
+    }
+
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu {
         width: auto;
         flex-shrink: 1;
@@ -284,7 +289,7 @@
     }
 
     .main:not(.main-no-sidebar) > #primarySidebar.sidebar {
-        position: static;
+        position: relative;
         top: auto;
         align-self: auto;
         max-height: none;
@@ -341,7 +346,7 @@
         width: max-content;
         min-width: 260px;
         margin-top: 0;
-        z-index: 40;
+        z-index: 9999;
     }
 
     .main:not(.main-no-sidebar) > #primarySidebar .imagenes {
