@@ -2228,9 +2228,9 @@
         --card-border: rgba(17, 24, 39, 0.10);
         --accent: #00a6d1;
         --accent-strong: #007da8;
-        --cta: #d9600a;
-        --cta-hover: #b84e06;
-        --cta-glow: rgba(217, 96, 10, 0.35);
+        --cta: #0a84ff;
+        --cta-hover: #005fcb;
+        --cta-glow: rgba(10, 132, 255, 0.38);
         --section-gap: clamp(56px, 6vw, 96px);
         --panel-shadow: 0 10px 32px rgba(15, 23, 34, 0.09), 0 1px 4px rgba(15, 23, 34, 0.05);
         --radius-card: 20px;
