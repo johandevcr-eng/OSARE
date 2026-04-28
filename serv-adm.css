@@ -329,33 +329,6 @@
 			box-sizing: border-box;
 		}
 
-		body[data-theme='dark'] .service-card,
-		body[data-theme='dark'] .quote-form input,
-		body[data-theme='dark'] .quote-form select,
-		body[data-theme='dark'] .quote-form textarea,
-		body[data-theme='dark'] .btn-secondary {
-			background: rgba(11, 23, 38, 0.72);
-			color: var(--text-main);
-			border-color: rgba(130, 179, 255, 0.22);
-		}
-
-		body[data-theme='dark'] .service-card:hover {
-			box-shadow: 0 12px 40px rgba(14, 172, 216, 0.22), 0 3px 10px rgba(0,0,0,0.22);
-		}
-
-		body[data-theme='dark'] .quote-form input,
-		body[data-theme='dark'] .quote-form select,
-		body[data-theme='dark'] .quote-form textarea,
-		body[data-theme='dark'] .quote-form option {
-			color: #ffffff;
-			-webkit-text-fill-color: #ffffff;
-		}
-
-		body[data-theme='dark'] .quote-form input::placeholder,
-		body[data-theme='dark'] .quote-form textarea::placeholder {
-			color: rgba(255, 255, 255, 0.78);
-		}
-
 		.quote-form textarea {
 			min-height: 118px;
 			resize: vertical;

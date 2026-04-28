@@ -106,25 +106,20 @@
     outline-offset: 1px;
 }
 
-body:not([data-theme='dark']) .contact-field input,
-body:not([data-theme='dark']) .contact-field textarea,
-body[data-theme='light'] .contact-field input,
-body[data-theme='light'] .contact-field textarea {
+.contact-field input,
+.contact-field textarea {
     border: 1px solid #000000 !important;
     background: var(--card-bg);
     box-shadow: none;
 }
 
-body:not([data-theme='dark']) .contact-panel,
-body[data-theme='light'] .contact-panel {
+.contact-panel {
     border: 1px solid #000000 !important;
     background: var(--card-bg);
 }
 
-body:not([data-theme='dark']) .contact-captcha,
-body[data-theme='light'] .contact-captcha,
-body:not([data-theme='dark']) .contact-captcha-check,
-body[data-theme='light'] .contact-captcha-check {
+.contact-captcha,
+.contact-captcha-check {
     border: 1px solid #000000 !important;
     background: var(--card-bg);
 }

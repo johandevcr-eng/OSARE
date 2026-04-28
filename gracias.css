@@ -13,8 +13,7 @@
     text-align: center;
 }
 
-body:not([data-theme='dark']) .thanks-panel,
-body[data-theme='light'] .thanks-panel {
+.thanks-panel {
     border: 1px solid #000000 !important;
     background: var(--card-bg);
 }
@@ -81,8 +80,7 @@ body[data-theme='light'] .thanks-panel {
     color: #f8fbff;
 }
 
-body:not([data-theme='dark']) .thanks-btn,
-body[data-theme='light'] .thanks-btn {
+.thanks-btn {
     border: 1px solid #000000;
 }
 

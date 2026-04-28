@@ -26,7 +26,8 @@
 .about-hero h2 {
 	margin: 0 0 12px;
 	font-size: clamp(30px, 4vw, 42px);
-	color: var(--accent);
+	color: #0eacd8;
+	text-align: center;
 }
 
 .about-hero p {
@@ -46,7 +47,8 @@
 .about-how h3 {
 	margin: 0 0 16px;
 	font-size: clamp(22px, 2.8vw, 32px);
-	color: var(--text-main);
+	color: #0eacd8;
+	text-align: center;
 }
 
 .about-cards {
@@ -57,15 +59,19 @@
 
 .about-card {
 	background: rgba(255, 255, 255, 0.74);
-	border-radius: 16px;
+	border-radius: 14px;
 	padding: 18px;
-	border: 1px solid rgba(14, 172, 216, 0.18);
+	border: 1px solid rgba(14, 172, 216, 0.2);
+	box-shadow: 0 6px 20px rgba(14, 172, 216, 0.08);
 }
 
 .about-card h4 {
 	margin: 0 0 10px;
-	font-size: 20px;
-	color: var(--text-main);
+	font-size: 19px;
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	text-align: center;
 }
 
 .about-card p {
@@ -73,20 +79,44 @@
 	font-size: 15px;
 	line-height: 1.6;
 	color: var(--text-muted);
+	text-align: justify;
+	word-spacing: -0.5px;
+	hyphens: auto;
+}
+
+.about-page .btn {
+	border: 0;
+	border-radius: 999px;
+	padding: 10px 20px;
+	font: 700 14px/1 'Montserrat', sans-serif;
+	cursor: pointer;
+	transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
+}
+
+.about-page .btn-primary {
+	background: #0eacd8;
+	color: #ffffff;
+	box-shadow: 0 3px 12px rgba(14, 172, 216, 0.30);
+}
+
+.about-page .btn-primary:hover {
+	background: #0991b8;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(14, 172, 216, 0.42);
+}
+
+.about-page .btn-cta {
+	padding: 13px 26px;
+	font-size: 15px;
+	letter-spacing: 0.01em;
 }
 
 
 #info-button {
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     margin: 30px auto;
-	border: 1px solid var(--card-border);
-	background: var(--card-bg);
-	color: var(--text-main);
 }
 
 #info-button img {
@@ -98,22 +128,15 @@
 	background: var(--card-bg);
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 14px;
-    }
+	gap: 16px;
+}
 
-    @media (max-width: 768px) {
-        .about-principles {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-    }
-
-    @media (max-width: 480px) {
-        .about-principles {
-            grid-template-columns: 1fr;
-            gap: 12px;
+.principle-block {
+	background: rgba(255, 255, 255, 0.74);
 	border-radius: 14px;
 	padding: 18px;
 	border: 1px solid rgba(14, 172, 216, 0.2);
+	box-shadow: 0 6px 20px rgba(14, 172, 216, 0.08);
 }
 
 .principle-block h4 {
@@ -122,6 +145,7 @@
 	color: var(--accent);
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
+	text-align: center;
 }
 
 .principle-block p {
@@ -129,18 +153,23 @@
 	color: var(--text-muted);
 	line-height: 1.6;
 	font-size: 15px;
+	text-align: justify;
+	word-spacing: -0.5px;
+	hyphens: auto;
 }
 
-body[data-theme='dark'] .about-card,
-body[data-theme='dark'] .principle-block {
-	background: rgba(11, 23, 38, 0.72);
-	border: 1px solid rgba(130, 179, 255, 0.22);
+@media (max-width: 768px) {
+	.about-principles {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }
 
-body[data-theme='dark'] #info-button img {
-	filter: brightness(0) invert(1);
+@media (max-width: 480px) {
+	.about-principles {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
 }
-
 
 .about-button {
 	display: inline-block;
