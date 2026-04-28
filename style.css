@@ -86,8 +86,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 18px;
-        padding: 14px 18px;
+        gap: 12px;
+        padding: 6px 14px;
         border-radius: 18px;
         background: rgba(249, 249, 249, 0.78);
         backdrop-filter: blur(18px) saturate(1.6);
@@ -103,7 +103,7 @@
     .home-topbar-brand {
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 4px;
         min-width: 0;
         flex-shrink: 0;
     }
@@ -128,7 +128,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 8px;
+        gap: 6px;
         flex-wrap: wrap;
     }
 
@@ -138,7 +138,7 @@
         background: transparent;
         border-radius: 0;
         color: #1f2937;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu > ul > li:hover {
@@ -149,11 +149,12 @@
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-link-btn,
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-label {
         width: auto;
-        padding: 10px 12px;
-        gap: 10px;
+        padding: 8px 10px;
+        gap: 8px;
         border-radius: 999px;
         background: rgba(168, 170, 169, 0.28);
         color: #111827;
+        font-size: 13px;
         transition: background 0.18s ease, color 0.18s ease, outline-color 0.18s ease;
         outline: 1.5px solid transparent;
         outline-offset: -1.5px;
@@ -167,7 +168,7 @@
     }
 
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .menu-label-text {
-        gap: 10px;
+        gap: 8px;
     }
 
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .submenu-dropdown {
@@ -186,8 +187,8 @@
     }
 
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu .imagenes {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     :is(.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar) .topbar-menu #img-redes {
@@ -212,6 +213,19 @@
     .serv-leg-brand .logo-inicial,
     .serv-mark-brand .logo-inicial {
         display: block;
+    }
+
+    .home-topbar-brand .logo-title-wordmark {
+        display: block;
+        width: 140px;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .home-topbar-brand .logo-inicial {
+        width: 100px;
+        height: 90px;
     }
 
     .left {
@@ -2100,6 +2114,11 @@
             height: 72px;
         }
 
+        .home-topbar-brand .logo-inicial {
+            width: 54px;
+            height: 54px;
+        }
+
         .home-topbar {
             justify-content: center;
             text-align: center;
@@ -2109,6 +2128,10 @@
         .home-topbar .logo {
             justify-content: center;
             width: 100%;
+        }
+
+        .home-topbar-brand .logo-title-wordmark {
+            width: clamp(98px, 40vw, 126px);
         }
 
         .home-topbar .topbar-menu > ul {
@@ -3090,6 +3113,15 @@
 
         .logo h2 {
             font-size: 22px;
+        }
+
+        .home-topbar-brand .logo-title-wordmark {
+            width: clamp(90px, 50vw, 116px);
+        }
+
+        .home-topbar-brand .logo-inicial {
+            width: 48px;
+            height: 48px;
         }
 
 
