@@ -196,6 +196,11 @@
 			gap: 8px;
 		}
 
+		.card-bullet {
+			width: 35px;
+			height: 35px;
+		}
+
 		.card-icon {
 			font-size: 22px;
 			line-height: 1;
