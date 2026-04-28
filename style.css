@@ -20,6 +20,7 @@
     html {
         width: 100%;
         max-width: 100%;
+        overflow-x: hidden;
         overflow-x: clip;
     }
 
@@ -29,6 +30,7 @@
         background: var(--bg-main);
         width: 100%;
         max-width: 100%;
+        overflow-x: hidden;
         overflow-x: clip;
         overscroll-behavior-x: none;
         touch-action: pan-y;
@@ -36,6 +38,12 @@
 
     img,
     video {
+        max-width: 100%;
+    }
+
+    svg,
+    canvas,
+    iframe {
         max-width: 100%;
     }
 
@@ -80,7 +88,6 @@
         justify-content: space-between;
         gap: 18px;
         padding: 14px 18px;
-        margin-bottom: 8px;
         border-radius: 18px;
         background: rgba(249, 249, 249, 0.78);
         backdrop-filter: blur(18px) saturate(1.6);
@@ -168,7 +175,8 @@
         top: 100%;
         left: 0;
         width: max-content;
-        min-width: 260px;
+        min-width: min(260px, calc(100vw - 32px));
+        max-width: calc(100vw - 32px);
         margin-top: 0;
         z-index: 40;
     }
@@ -387,7 +395,6 @@
         justify-content: center;
         gap: 14px;
         width: 100%;
-        margin-top: 6rem;
         margin-bottom: 6rem;
         padding: clamp(16px, 2vw, 32px) clamp(16px, 2vw, 32px);
         aspect-ratio: auto;
@@ -408,6 +415,13 @@
         gap: 10px;
     }
 
+    .banner-princ-summary-logo img {
+        display: block;
+        width: clamp(170px, 24vw, 340px);
+        height: auto;
+        object-fit: contain;
+    }
+
     .banner-princ-summary-logo .logo-inicial {
         width: clamp(108px, 9vw, 142px);
         height: clamp(108px, 9vw, 142px);
@@ -425,7 +439,7 @@
 
     .banner-princ-summary h3 {
         margin: 0;
-        font-size: clamp(36px, 4vw, 58px);
+        font-size: clamp(28px, 4.8vw, 58px);
         line-height: 1.05;
         color: #111827;
         font-weight: 800;
@@ -435,7 +449,7 @@
     .banner-princ-summary p {
         margin: 0;
         max-width: 760px;
-        font-size: clamp(19px, 1.45vw, 24px);
+        font-size: clamp(16px, 1.45vw, 24px);
         line-height: 1.45;
         color: #1f2937;
     }
@@ -444,7 +458,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 800;
         letter-spacing: 0.08em;
-        font-size: clamp(15px, 1.1vw, 20px);
+        font-size: clamp(13px, 1.1vw, 20px);
         color: var(--cta);
         text-transform: uppercase;
     }
@@ -1083,6 +1097,87 @@
         box-shadow: none;
     }
 
+    .banner-blindaje-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        padding: 40px 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .banner-blindaje-bg-art {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .banner-blindaje-bg-art img {
+        width: min(100%, 560px);
+        height: auto;
+        opacity: 0.22;
+        object-fit: contain;
+    }
+
+    .banner-blindaje-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .banner-blindaje-logo img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        position: relative;
+        z-index: 2;
+    }
+
+    .banner-blindaje-title {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(28px, 4vw, 48px);
+        font-weight: 800;
+        line-height: 1.2;
+        color: #111827;
+        letter-spacing: -0.02em;
+        position: relative;
+        z-index: 2;
+    }
+
+    .banner-blindaje-subtitle {
+        margin: 0;
+        font-size: clamp(14px, 2vw, 18px);
+        line-height: 1.6;
+        color: #1f2937;
+        font-weight: 500;
+        max-width: 500px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .banner-blindaje-method {
+        margin: 10px 0 0;
+        font-size: clamp(12px, 1.5vw, 16px);
+        font-weight: 600;
+        color: #4b5563;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+    }
+
     .image-card-glow {
         display: none;
     }
@@ -1114,10 +1209,55 @@
             height: auto;
             width: 100%;
         }
+
+        .banner-blindaje-content {
+            padding: 30px 16px;
+            gap: 16px;
+        }
+
+        .banner-blindaje-logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .banner-blindaje-bg-art img {
+            width: min(100%, 520px);
+            opacity: 0.2;
+        }
+
+        .banner-blindaje-title {
+            font-size: clamp(24px, 5vw, 36px);
+        }
+
+        .banner-blindaje-subtitle {
+            font-size: clamp(13px, 2.5vw, 16px);
+        }
     }
 
+    @media (max-width: 640px) {
+        .banner-blindaje-content {
+            padding: 24px 12px;
+            gap: 14px;
+        }
 
+        .banner-blindaje-logo img {
+            width: 90px;
+            height: 90px;
+        }
 
+        .banner-blindaje-bg-art img {
+            width: min(100%, 420px);
+            opacity: 0.18;
+        }
+
+        .banner-blindaje-title {
+            font-size: clamp(22px, 6vw, 32px);
+        }
+
+        .banner-blindaje-subtitle {
+            font-size: clamp(12px, 3vw, 14px);
+        }
+    }
 
     
     /* Tabs */
@@ -1528,7 +1668,7 @@
         width: 100%;
         margin-left: 0;
         border-radius: 18px 18px 0 0;
-        padding: 34px 24px 22px;
+        padding: 15px 15px;
     }
 
     .footer-inner {
@@ -1544,15 +1684,14 @@
     .footer-brand {
         display: flex;
         align-items: center;
-        gap: 12px;
         justify-self: start;
     }
 
     .footer-logo {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        object-fit: cover;
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-right: 12px;
     }
 
     .footer-brand-name {
@@ -1948,6 +2087,10 @@
             justify-content: flex-start;
         }
 
+        .home-topbar .topbar-menu .submenu-dropdown {
+            max-width: 100%;
+        }
+
         #primarySidebar ul {
             grid-template-columns: 1fr;
         }
@@ -1974,6 +2117,10 @@
             padding: 8px 6px;
             margin-bottom: 6px;
             min-height: 0;
+        }
+
+        .banner-princ-summary-logo img {
+            width: clamp(150px, 58vw, 240px);
         }
 
         .banner-princ-summary-logo .logo-inicial {

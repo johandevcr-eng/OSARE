@@ -49,10 +49,7 @@
     <div class="header home-topbar glass-panel" aria-label="Encabezado principal">
       <div class="home-topbar-brand logo">
         <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async" />
-        <!-- <h2 class="logo-wordmark" aria-label="OSARE">
-          <span>O</span><span>S</span><span class="accent">A</span><span class="accent">R</span><span>E</span>
-        </h2> -->
-        <img src="img/logo_letras.png" alt="" width="140" height="35" loading="lazy" decoding="async" />
+        <img src="img/logo_letras.png" alt="" width="140" height="35" decoding="async" />
       </div>
 
       <h1 id="title-menu">Menú principal</h1>
@@ -302,12 +299,17 @@
     <div class="siglas-banner2-row">
       <div class="bannertwo">
         <div class="image-card-glow"></div>
-        <picture>
-          <source srcset="img/two banner.avif" type="image/avif" />
-          <source srcset="img/two banner.webp" type="image/webp" />
-          <img id="banner2" src="img/two banner.webp" alt="" width="1060" height="670"
-            sizes="(max-width: 900px) 100vw, 60vw" loading="lazy" fetchpriority="low" decoding="async" />
-        </picture>
+        <div class="banner-blindaje-content">
+          <div class="banner-blindaje-bg-art" aria-hidden="true">
+            <img src="img/fondo_metodo_osare.png" alt="" decoding="async" />
+          </div>
+          <div class="banner-blindaje-logo">
+            <img src="img/osare.jpg" alt="OSARE" width="120" height="120" decoding="async" />
+          </div>
+          <h2 class="banner-blindaje-title">La Arquitectura del Blindaje</h2>
+          <p class="banner-blindaje-subtitle">Eficiencia operativa y seguridad jurídica total para proteger el legado de su PyME.</p>
+          <p class="banner-blindaje-method">El Método OSARE</p>
+        </div>
       </div>
 
       <section class="banner-siglas osare-scrolly glass-panel" id="osareScrolly">
@@ -371,7 +373,6 @@
 
     <h2 class="section-title section-title-label">
       Nuestros servicios destacados
-      <h1>FALTA ESTA SECCIÓN DE MODIFICAR</h1>
     </h2>
     <div class="container-services">
       <div class="service-card" role="button" tabindex="0" data-href="serv-adm.html">
@@ -422,8 +423,7 @@
     <footer>
       <div class="footer-inner">
         <div class="footer-brand">
-          <img class="footer-logo" src="img/logo_footer.png" alt="OSARE" width="50" height="50" loading="lazy" decoding="async" />
-          <span class="footer-brand-name">OSARE CR</span>
+          <img class="footer-logo" src="img/logo_footer.png" alt="OSARE" loading="lazy" decoding="async" />
         </div>
 
         <nav class="footer-social" aria-label="Redes sociales">
