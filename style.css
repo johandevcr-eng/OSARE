@@ -1142,8 +1142,9 @@
     .banner-blindaje-bg-art img {
         width: min(100%, 560px);
         height: auto;
-        opacity: 0.22;
+        opacity: 0.48;
         object-fit: contain;
+        transform: translate(18px, 25px);
     }
 
     .banner-blindaje-logo {
@@ -1241,7 +1242,8 @@
 
         .banner-blindaje-bg-art img {
             width: min(100%, 520px);
-            opacity: 0.2;
+            opacity: 0.44;
+            transform: translate(12px, 10px);
         }
 
         .banner-blindaje-title {
@@ -1266,7 +1268,8 @@
 
         .banner-blindaje-bg-art img {
             width: min(100%, 420px);
-            opacity: 0.18;
+            opacity: 0.38;
+            transform: translate(8px, 8px);
         }
 
         .banner-blindaje-title {
