@@ -148,6 +148,80 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    const cookieBannerStorageKey = 'osare-cookie-consent-v1';
+    const savedCookieConsent = localStorage.getItem(cookieBannerStorageKey);
+
+    const removeCookieBanner = function () {
+        const existingBanner = document.getElementById('cookieNotice');
+        if (!existingBanner) {
+            return;
+        }
+        existingBanner.classList.remove('is-visible');
+        document.body.classList.remove('cookie-banner-visible');
+        window.setTimeout(function () {
+            if (existingBanner && existingBanner.parentNode) {
+                existingBanner.parentNode.removeChild(existingBanner);
+            }
+        }, 260);
+    };
+
+    const saveCookieConsent = function (choice) {
+        const payload = {
+            choice: choice,
+            savedAt: new Date().toISOString()
+        };
+        localStorage.setItem(cookieBannerStorageKey, JSON.stringify(payload));
+    };
+
+    const buildCookieBanner = function () {
+        const banner = document.createElement('section');
+        banner.id = 'cookieNotice';
+        banner.className = 'cookie-notice';
+        banner.setAttribute('role', 'dialog');
+        banner.setAttribute('aria-live', 'polite');
+        banner.setAttribute('aria-label', 'Aviso de cookies');
+
+        banner.innerHTML = [
+            '<div class="cookie-notice__body">',
+            '<span class="cookie-notice__icon" aria-hidden="true">&#x1F36A;</span>',
+            '<div class="cookie-notice__text-wrap">',
+            '<p class="cookie-notice__text">',
+            '<strong>OSARE CR</strong> utiliza cookies propias y de terceros para mejorar su experiencia y analizar el uso del sitio.',
+            ' Al continuar navegando, acepta su uso seg\u00FAn nuestra',
+            ' <a class="cookie-notice__link" href="politica-privacidad.html">Pol\u00EDtica de Privacidad</a>.',
+            '</p>',
+            '</div>',
+            '</div>',
+            '<div class="cookie-notice__actions">',
+            '<button class="cookie-notice__btn cookie-notice__btn--primary" type="button" data-cookie-action="accept">Aceptar</button>',
+            '<button class="cookie-notice__btn cookie-notice__btn--ghost" type="button" data-cookie-action="reject">M\u00E1s informaci\u00F3n</button>',
+            '</div>'
+        ].join('');
+
+        banner.querySelectorAll('[data-cookie-action]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                const action = button.getAttribute('data-cookie-action');
+                if (action === 'accept') {
+                    saveCookieConsent('accepted');
+                } else {
+                    saveCookieConsent('rejected-non-essential');
+                }
+                removeCookieBanner();
+            });
+        });
+
+        return banner;
+    };
+
+    if (!savedCookieConsent) {
+        const cookieBanner = buildCookieBanner();
+        document.body.appendChild(cookieBanner);
+        window.requestAnimationFrame(function () {
+            document.body.classList.add('cookie-banner-visible');
+            cookieBanner.classList.add('is-visible');
+        });
+    }
+
     if (backToTopButton) {
         const toggleBackToTopButton = function () {
             backToTopButton.classList.toggle('is-visible', window.scrollY > 350);

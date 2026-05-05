@@ -302,7 +302,7 @@
     .main {
         display: grid;
         grid-template-columns: clamp(180px, 18vw, 240px) 1fr;
-        margin-top: 0;
+        margin-top: 14px;
         align-items: flex-start;
         gap: 20px;
     }
@@ -1142,8 +1142,9 @@
     .banner-blindaje-bg-art img {
         width: min(100%, 560px);
         height: auto;
-        opacity: 0.22;
+        opacity: 0.50;
         object-fit: contain;
+        transform: translate(18px, 25px);
     }
 
     .banner-blindaje-logo {
@@ -1241,7 +1242,8 @@
 
         .banner-blindaje-bg-art img {
             width: min(100%, 520px);
-            opacity: 0.2;
+            opacity: 0.46;
+            transform: translate(12px, 10px);
         }
 
         .banner-blindaje-title {
@@ -1266,7 +1268,8 @@
 
         .banner-blindaje-bg-art img {
             width: min(100%, 420px);
-            opacity: 0.18;
+            opacity: 0.42;
+            transform: translate(8px, 8px);
         }
 
         .banner-blindaje-title {
@@ -1650,7 +1653,7 @@
     .whatsapp-float {
         position: fixed;
         right: 24px;
-        bottom: 92px;
+        bottom: 24px;
         width: auto;
         height: auto;
         border: 0;
@@ -1663,7 +1666,11 @@
         cursor: pointer;
         box-shadow: none;
         z-index: 31;
-        transition: transform 0.2s ease;
+        transition: bottom 0.36s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s ease;
+    }
+
+    .back-to-top.is-visible ~ .whatsapp-float {
+        bottom: 92px;
     }
 
     .whatsapp-float:hover,
@@ -1676,6 +1683,117 @@
         width: 60px;
         height: 60px;
         object-fit: contain;
+    }
+
+    .cookie-notice {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 45;
+        background: linear-gradient(135deg, #0f1722 0%, #1a2840 100%);
+        color: #f0f4f8;
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.32);
+        padding: 7px 24px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .cookie-notice.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .cookie-notice__body {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .cookie-notice__icon {
+        font-size: 20px;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+
+    .cookie-notice__text-wrap {
+        min-width: 0;
+    }
+
+    .cookie-notice__text {
+        margin: 0;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: rgba(240, 244, 248, 0.92);
+    }
+
+    .cookie-notice__link {
+        color: #00a6d1;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        font-weight: 700;
+    }
+
+    .cookie-notice__actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+    }
+
+    .cookie-notice__btn {
+        min-height: 40px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        padding: 0 20px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: transform 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .cookie-notice__btn:hover,
+    .cookie-notice__btn:focus-visible {
+        transform: translateY(-1px);
+        filter: brightness(1.08);
+        outline: none;
+    }
+
+    .cookie-notice__btn--primary {
+        background: linear-gradient(135deg, #0a84ff, #005fcb);
+        color: #ffffff;
+        border-color: rgba(10, 132, 255, 0.5);
+        box-shadow: 0 4px 14px rgba(10, 132, 255, 0.38);
+        font-weight: 800;
+    }
+
+    .cookie-notice__btn--ghost {
+        background: rgba(255, 255, 255, 0.07);
+        color: #f0f4f8;
+        border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    body.cookie-banner-visible .whatsapp-float {
+        bottom: 90px;
+    }
+
+    body.cookie-banner-visible .back-to-top.is-visible ~ .whatsapp-float {
+        bottom: 158px;
+    }
+
+    body.cookie-banner-visible .back-to-top {
+        bottom: 90px;
     }
 
     footer {
@@ -1921,6 +2039,40 @@
     }
 
     @media (max-width: 900px) {
+        .cookie-notice {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 14px 16px;
+            gap: 12px;
+        }
+
+        .cookie-notice__body {
+            width: 100%;
+        }
+
+        .cookie-notice__actions {
+            width: 100%;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cookie-notice__btn {
+            flex: 1 1 130px;
+        }
+
+        body.cookie-banner-visible .whatsapp-float {
+            bottom: 148px;
+        }
+
+        body.cookie-banner-visible .back-to-top.is-visible ~ .whatsapp-float {
+            bottom: 216px;
+        }
+
+        body.cookie-banner-visible .back-to-top {
+            bottom: 148px;
+        }
+
         footer {
             margin-top: 16px;
             border-radius: 16px 16px 0 0;
@@ -2082,6 +2234,28 @@
     }
 
     @media (max-width: 640px) {
+        .cookie-notice__text {
+            font-size: 12.5px;
+        }
+
+        .cookie-notice__btn {
+            min-height: 38px;
+            font-size: 12px;
+            padding: 0 14px;
+        }
+
+        body.cookie-banner-visible .whatsapp-float {
+            bottom: 168px;
+        }
+
+        body.cookie-banner-visible .back-to-top.is-visible ~ .whatsapp-float {
+            bottom: 236px;
+        }
+
+        body.cookie-banner-visible .back-to-top {
+            bottom: 168px;
+        }
+
         :root {
             --fixed-video-height: 58px;
         }
