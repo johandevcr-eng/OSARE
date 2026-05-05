@@ -149,14 +149,14 @@
 
 
 .about-principles {
-	background: var(--card-bg);
+	background: transparent;
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 16px;
-	border-radius: 20px;
-	padding: 20px;
-	border: 1px solid var(--card-border);
-	box-shadow: var(--panel-shadow);
+	gap: 14px;
+	border-radius: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: none;
 }
 
 .principle-block {
@@ -166,16 +166,17 @@
 	border: 1px solid rgba(14, 172, 216, 0.2);
 	box-shadow: 0 6px 20px rgba(14, 172, 216, 0.08);
 	position: relative;
+	text-align: center;
 }
 
 .principle-block::before {
 	content: '\201C';
 	display: block;
-	font-size: 72px;
-	line-height: 1;
-	color: var(--accent);
+	font-size: clamp(100px, 10vw, 160px);
+	line-height: 0.6;
+	margin-bottom: -8px;
+	color: #0c2d5e;
 	font-family: Georgia, serif;
-	margin-bottom: 8px;
 	text-align: center;
 }
 
@@ -193,8 +194,8 @@
 	color: var(--text-muted);
 	line-height: 1.6;
 	font-size: 18px;
-	text-align: justify;
-	word-spacing: -0.5px;
+	text-align: center;
+	word-spacing: 0;
 	hyphens: auto;
 }
 
@@ -238,7 +239,7 @@
 @media (max-width: 700px) {
 	.about-card,
 	.principle-block {
-		padding: 14px;
+		padding: 14px 16px;
 	}
 
 	.about-hero-column h2 {
@@ -252,6 +253,10 @@
 	.about-card p,
 	.about-hero p {
 		font-size: clamp(15px, 4.3vw, 19px);
+	}
+
+	.principle-block::before {
+		font-size: clamp(90px, 18vw, 130px);
 	}
 }
 
