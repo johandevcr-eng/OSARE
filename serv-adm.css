@@ -84,6 +84,8 @@
 			background: rgba(0, 166, 209, 0.12);
 			border-radius: 10px;
 			font-style: italic;
+			display: inline-block;
+			max-width: 100%;
 		}
 
 		.hero h4 {
