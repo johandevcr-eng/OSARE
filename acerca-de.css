@@ -51,9 +51,8 @@
 	font-size: 18px;
 	line-height: 1.4;
 	color: var(--text-muted);
-	text-align: justify;
-	word-spacing: 0;
-	hyphens: auto;
+	text-align: left;
+	hyphens: none;
 }
 
 .about-how {
@@ -104,9 +103,8 @@
 	font-size: 18px;
 	line-height: 1.4;
 	color: var(--text-muted);
-	text-align: justify;
-	word-spacing: 0;
-	hyphens: auto;
+	text-align: left;
+	hyphens: none;
 }
 
 .about-page .btn {
@@ -163,7 +161,7 @@
 .principle-block {
 	background: rgba(255, 255, 255, 0.74);
 	border-radius: 14px;
-	padding: 24px;
+	padding: 60px 20px 60px 20px;	
 	border: 1px solid rgba(14, 172, 216, 0.2);
 	box-shadow: 0 6px 20px rgba(14, 172, 216, 0.08);
 	position: relative;
@@ -196,8 +194,7 @@
 	line-height: 1.6;
 	font-size: 18px;
 	text-align: center;
-	word-spacing: 0;
-	hyphens: auto;
+	hyphens: none;
 }
 
 @media (max-width: 768px) {
