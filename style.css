@@ -1081,7 +1081,8 @@
         border-radius: 20px;
         padding: 10px 40px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: flex-start;
         font-family: 'Open Sans', sans-serif;
         min-width: 0;
@@ -1196,6 +1197,19 @@
         text-transform: uppercase;
         position: relative;
         z-index: 2;
+    }
+
+    .banner-siglas .banner-blindaje-method {
+        color: #00aaff;
+        font-size: clamp(13px, 1.4vw, 16px);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 0 0 18px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #00aaff;
+        width: 100%;
+        text-align: center;
     }
 
     .image-card-glow {
