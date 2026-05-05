@@ -1,210 +1,218 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <link rel="icon" type="image/jpeg" href="img/osare.jpg">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<meta name="description" content="Servicios de branding y marketing digital: identidad de marca, contenidos, pauta digital y posicionamiento para crecer con estrategia.">
-	<meta property="og:type" content="website">
-	<meta property="og:locale" content="es_CR">
-	<meta property="og:site_name" content="OSARE CR">
-	<meta property="og:title" content="Branding y Marketing Digital | OSARE CR">
-	<meta property="og:description" content="Identidad de marca, contenido, pauta digital y posicionamiento para crecer con estrategia.">
-	<meta property="og:url" content="https://osare.cr/serv-mark.html">
-	<meta property="og:image" content="https://osare.cr/img/servicios-mark.webp">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Branding y Marketing Digital | OSARE CR">
-	<meta name="twitter:description" content="Identidad de marca, contenido, pauta digital y posicionamiento para crecer con estrategia.">
-	<meta name="twitter:image" content="https://osare.cr/img/servicios-mark.webp">
-	<title>OSARE | Branding y Marketing Digital</title>
-	<script src="functions.js" defer></script>
-	<link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="serv-mark.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Contacte a OSARE CR para recibir asesoría administrativa, contable, legal y de marketing para tu empresa.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CR">
+    <meta property="og:site_name" content="OSARE CR">
+    <meta property="og:title" content="Contacto | OSARE CR">
+    <meta property="og:description" content="Converse con nuestro equipo y recibe una propuesta a la medida de tu negocio.">
+    <meta property="og:url" content="https://osare.cr/contacto.html">
+    <meta property="og:image" content="https://osare.cr/img/osare.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto | OSARE CR">
+    <meta name="twitter:description" content="Converse con nuestro equipo y recibe una propuesta a la medida de tu negocio.">
+    <meta name="twitter:image" content="https://osare.cr/img/osare.jpg">
+    <title>Contacto | OSARE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contacto.css">
+    <script src="functions.js" defer></script>
+    <script src="contacto.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-	<div class="container serv-mark-container">
-		<div class="full-viewport-video">
-			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }" src="video/banner.mp4"></video>
-		</div>
 
-		<div class="header home-topbar glass-panel" aria-label="Encabezado principal">
-			<div class="home-topbar-brand logo">
-				<img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async" />
-				<img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35" decoding="async" />
-			</div>
+<div class="container">
 
-			<h1 id="title-menu">Menú principal</h1>
+    <div class="full-viewport-video">
+        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }" src="video/banner.mp4"></video>
+    </div>
 
-			<nav class="sidebar topbar-menu" id="primarySidebar" aria-label="Menú principal">
-				<ul>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
-					<li class="has-dropdown">
-						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownMark">
-							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
-							<span class="dropdown-arrow" aria-hidden="true"></span>
-						</button>
-						<ul class="submenu-dropdown" id="servicesDropdownMark">
-							<li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
-						</ul>
-					</li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
-				</ul>
-			</nav>
-		</div>
+    <div class="header home-topbar glass-panel">
+        <div class="home-topbar-brand logo">
+            <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async">
+            <img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35" decoding="async">
+        </div>
+        <h1 id="title-menu">Menú principal</h1>
 
-		<div class="main main-no-sidebar">
+        <!-- Switch Claro/Oscuro -->
+        
+        <!-- <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+                <span class="theme-toggle-track">
+                    <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
+                    <span class="theme-toggle-thumb"></span>
+                    <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+                </span>
+            </button>
+        </div> -->
+    </div>
 
-			<main class="page">
-				<section class="hero">
-					<h1>BRANDING Y MARKETING DIGITAL</h1>
-					<p>
-						Impulsamos el posicionamiento de tu marca con estrategia, contenido y ejecución digital para que tu negocio conecte con la audiencia correcta y crezca de forma sostenible.
-					</p>
-					<blockquote>
-						"La tercerización puede ofrecer flexibilidad y acceso a nuevas tecnologías que de otra manera no estarían disponibles." - Tim Cook
-					</blockquote>
-					<div class="hero-actions">
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar Servicios</button>
-						<button class="btn btn-secondary" type="button" data-href="index.html">Volver al inicio</button>
-					</div>
-				</section>
+    <div class="main">
+        <div class="sidebar" id="primarySidebar">
+            <ul>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+                <li class="has-dropdown">
+                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownContacto">
+                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                        <span class="dropdown-arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul class="submenu-dropdown" id="servicesDropdownContacto">
+                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                    </ul>
+                </li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
 
-				<section class="services-grid" aria-label="Servicios de marketing y branding disponibles">
-					<article class="service-card">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Identidad de Marca Empresarial y Personal</h2>
-						<ul>
-							<li>Logotipo y variantes del logo para distintos canales.</li>
-							<li>Paleta de colores, tipografía y elementos gráficos de marca.</li>
-								<li>Tema, lema y slogan alineados a tu propuesta de valor.</li>
-							<li>Definición de voz y tono de la marca.</li>
-							<li>Aplicación coherente en papelería y medios digitales.</li>
-						</ul>
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-					</article>
+            </ul>
+        </div>
 
-					<article class="service-card">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Desarrollo y Posicionamiento de Marca</h2>
-						<ul>
-							<li>Análisis DAFO, valores y fortalezas sostenibles.</li>
-							<li>Definición de público y cliente objetivo.</li>
-							<li>Diseño de propuesta única de valor.</li>
-							<li>Mejora de perfiles, sitio web y canales de comunicación.</li>
-							<li>Sincronización de branding con SEO y redes sociales.</li>
-						</ul>
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-					</article>
+        <main class="contact-page">
+            <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
+                <h2 class="contact-title">Contacto</h2>
 
-					<article class="service-card">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Creación de Contenido</h2>
-						<ul>
-							<li>Diseño de imágenes, infografías, fotografía y video.</li>
-							<li>Contenido para interacción, fidelización, educación y ventas.</li>
-							<li>Estrategia y frecuencia según audiencia y giro de negocio.</li>
-							<li>Calendario mensual y plan de historias.</li>
-							<li>Reuniones de planificación y evaluación de resultados.</li>
-						</ul>
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-					</article>
+                <form class="contact-form" id="contactForm" name="contacto" action="https://formspree.io/f/xvzdyqdk" method="post" novalidate>
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde OSARE">
+                    <input type="hidden" name="_next" value="gracias.html">
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+                    <div class="contact-grid contact-grid-top">
+                        <label class="contact-field">
+                            <span>Nombre <strong>*</strong></span>
+                            <input type="text" name="nombre" autocomplete="given-name" required>
+                        </label>
 
-					<article class="service-card">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Publicidad en Medios Digitales</h2>
-						<ul>
-							<li>Gestión SEM y campañas ADS (Google, Meta y LinkedIn).</li>
-							<li>Estrategia de medios según público y objetivo comercial.</li>
-							<li>Asesoría de presupuesto publicitario.</li>
-							<li>Análisis de rendimiento y retorno de inversión (ROI).</li>
-							<li>Desarrollo de comunidad como alcance orgánico.</li>
-						</ul>
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-					</article>
+                        <label class="contact-field">
+                            <span>Apellido <strong>*</strong></span>
+                            <input type="text" name="apellido" autocomplete="family-name" required>
+                        </label>
 
-					<article class="service-card">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Branding y Cultura Corporativa</h2>
-						<ul>
-							<li>Aplicación de identidad de marca en cultura interna.</li>
-							<li>Políticas de servicio y relación con cliente interno y externo.</li>
-							<li>Employee branding para colaboradores y equipos directivos.</li>
-							<li>Medición de imagen y reputación de la empresa.</li>
-							<li>Branding emocional aplicado en ventas y atención al cliente.</li>
-						</ul>
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-					</article>
+                        <label class="contact-field">
+                            <span>Posición</span>
+                            <input type="text" name="posicion" autocomplete="organization-title">
+                        </label>
 
-					<article class="service-card">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Soporte General</h2>
-						<ul>
-							<li>Asesoría general en marketing y comunicación digital.</li>
-							<li>Servicios específicos u ocasionales según necesidad.</li>
-							<li>Administración de redes sociales.</li>
-							<li>Charlas y capacitaciones para equipos.</li>
-							<li>Otros servicios complementarios.</li>
-						</ul>
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
-					</article>
-				</section>
+                        <label class="contact-field">
+                            <span>Email <strong>*</strong></span>
+                            <input type="email" name="email" autocomplete="email" required>
+                        </label>
+                    </div>
 
-				<section class="note-box">
-					Si requiere un alcance diferente, podemos estructurar una estrategia de branding y marketing digital a la medida de tu negocio.
-				</section>
-			</main>
-		</div>
+                    <div class="contact-grid contact-grid-mid">
+                        <label class="contact-field contact-field-company">
+                            <span>Nombre Empresa <strong>*</strong></span>
+                            <input type="text" name="empresa" autocomplete="organization" required>
+                        </label>
 
-		<button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
-			<span class="back-to-top-icon" aria-hidden="true">↑</span>
-			<span class="back-to-top-text">Inicio</span>
-		</button>
+                        <label class="contact-field">
+                            <span>Teléfono</span>
+                            <input type="tel" name="telefono" autocomplete="tel">
+                        </label>
 
-		<button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
-			<img class="whatsapp-float-icon" src="img/whatsapp.png" alt="WhatsApp">
-		</button>
+                        <label class="contact-field contact-field-address">
+                            <span>Dirección</span>
+                            <input type="text" name="direccion" autocomplete="street-address">
+                        </label>
+                    </div>
 
-		<footer>
-			<div class="footer-inner">
-				<div class="footer-brand">
-					<img class="footer-logo" src="img/logo_footer.png" alt="OSARE" loading="lazy" decoding="async" />
-				</div>
+                    <div class="contact-bottom">
+                        <label class="contact-field contact-message">
+                            <span>Comentario</span>
+                            <textarea name="comentario" rows="6" placeholder="Agregar respuesta aquí"></textarea>
+                        </label>
 
-				<nav class="footer-social" aria-label="Redes sociales">
-					<button class="footer-social-btn" type="button"
-						data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
-						aria-label="Facebook OSARE CR">
-						<img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy" decoding="async" />
-					</button>
-					<button class="footer-social-btn" type="button"
-						data-href="https://www.instagram.com/osare_cr/"
-						aria-label="Instagram OSARE CR">
-						<img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy" decoding="async" />
-					</button>
-					<button class="footer-social-btn" type="button"
-						data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
-						aria-label="LinkedIn OSARE CR">
-						<img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy" decoding="async" />
-					</button>
-					<button class="footer-social-btn" type="button"
-						data-href="https://t.me/osarecr"
-						aria-label="Telegram OSARE CR">
-						<img class="footer-social-icon-telegram" src="img/telegram.png" alt="Telegram" width="24" height="24" loading="lazy" decoding="async" />
-					</button>
-				</nav>
+                        <div class="contact-optin-wrap">
+                            <label class="contact-optin">
+                                <input type="checkbox" name="suscripcion" checked>
+                                <span>Quiero suscribirme y recibir información sobre los servicios</span>
+                            </label>
+                        </div>
+                    </div>
 
-				<nav class="footer-links" aria-label="Páginas legales">
-					<button class="footer-link-btn" type="button" data-href="terminos-condiciones.html">Términos y condiciones</button>
-					<span class="footer-divider" aria-hidden="true">·</span>
-					<button class="footer-link-btn" type="button" data-href="politica-privacidad.html">Política de privacidad</button>
-				</nav>
+                    <div class="contact-actions">
+                        <button class="contact-submit" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
 
-				<p class="footer-copy">&copy; 2026 OSARE.CR — Todos los derechos reservados.</p>
-			</div>
-		</footer>
-	</div>
+    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+        <ul>
+            <li class="has-dropdown">
+                <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="floatingServicesDropdownContacto">
+                    <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+                    <span class="dropdown-arrow" aria-hidden="true"></span>
+                </button>
+                <ul class="submenu-dropdown" id="floatingServicesDropdownContacto">
+                    <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
+                    <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+                </ul>
+            </li>
+            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+        </ul>
+    </aside>
+
+    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+        <span class="back-to-top-icon" aria-hidden="true">↑</span>
+        <span class="back-to-top-text">Inicio</span>
+    </button>
+
+    <button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+        <img class="whatsapp-float-icon" src="img/whatsapp.png" alt="WhatsApp">
+    </button>
+
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img class="footer-logo" src="img/logo_footer.png" alt="OSARE" loading="lazy" decoding="async" />
+                </div>
+
+                <nav class="footer-social" aria-label="Redes sociales">
+                    <button class="footer-social-btn" type="button"
+                        data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
+                        aria-label="Facebook OSARE CR">
+                        <img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy" decoding="async" />
+                    </button>
+                    <button class="footer-social-btn" type="button"
+                        data-href="https://www.instagram.com/osare_cr/"
+                        aria-label="Instagram OSARE CR">
+                        <img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy" decoding="async" />
+                    </button>
+                    <button class="footer-social-btn" type="button"
+                        data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
+                        aria-label="LinkedIn OSARE CR">
+                        <img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy" decoding="async" />
+                    </button>
+                    <button class="footer-social-btn" type="button"
+                        data-href="https://t.me/osarecr"
+                        aria-label="Telegram OSARE CR">
+                        <img class="footer-social-icon-telegram" src="img/telegram.png" alt="Telegram" width="24" height="24" loading="lazy" decoding="async" />
+                    </button>
+                </nav>
+
+                <nav class="footer-links" aria-label="Páginas legales">
+                    <button class="footer-link-btn" type="button" data-href="terminos-condiciones.html">Términos y condiciones</button>
+                    <span class="footer-divider" aria-hidden="true">·</span>
+                    <button class="footer-link-btn" type="button" data-href="politica-privacidad.html">Política de privacidad</button>
+                </nav>
+
+                <p class="footer-copy">&copy; 2026 OSARE.CR — Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+</div>
+
 </body>
 </html>
-
