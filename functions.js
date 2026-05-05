@@ -178,23 +178,29 @@ document.addEventListener('DOMContentLoaded', function () {
         banner.id = 'cookieNotice';
         banner.className = 'cookie-notice';
         banner.setAttribute('role', 'dialog');
+        banner.setAttribute('aria-modal', 'true');
         banner.setAttribute('aria-live', 'polite');
         banner.setAttribute('aria-label', 'Aviso de cookies');
 
         banner.innerHTML = [
+            '<div class="cookie-notice__panel">',
             '<div class="cookie-notice__body">',
-            '<span class="cookie-notice__icon" aria-hidden="true">&#x1F36A;</span>',
             '<div class="cookie-notice__text-wrap">',
             '<p class="cookie-notice__text">',
-            '<strong>OSARE CR</strong> utiliza cookies propias y de terceros para mejorar su experiencia y analizar el uso del sitio.',
-            ' Al continuar navegando, acepta su uso seg\u00FAn nuestra',
-            ' <a class="cookie-notice__link" href="politica-privacidad.html">Pol\u00EDtica de Privacidad</a>.',
+            '<strong>OSARE</strong> utiliza cookies propias y de terceros para mejorar su experiencia y analizar el uso del sitio.',
+            ' Al continuar navegando, acepta su uso según nuestra política.',
             '</p>',
+            '<div class="cookie-notice__links">',
+            '<a class="cookie-notice__link" href="politica-privacidad.html">Política de Privacidad</a>',
+            '<a class="cookie-notice__link" href="terminos-condiciones.html">Términos y Condiciones</a>',
+            '</div>',
             '</div>',
             '</div>',
             '<div class="cookie-notice__actions">',
             '<button class="cookie-notice__btn cookie-notice__btn--primary" type="button" data-cookie-action="accept">Aceptar</button>',
-            '<button class="cookie-notice__btn cookie-notice__btn--ghost" type="button" data-cookie-action="reject">M\u00E1s informaci\u00F3n</button>',
+            '<button class="cookie-notice__btn cookie-notice__btn--ghost" type="button" data-cookie-action="essential">Solo esenciales</button>',
+            '<button class="cookie-notice__btn cookie-notice__btn--danger" type="button" data-cookie-action="reject">Rechazar</button>',
+            '</div>',
             '</div>'
         ].join('');
 
@@ -203,6 +209,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const action = button.getAttribute('data-cookie-action');
                 if (action === 'accept') {
                     saveCookieConsent('accepted');
+                } else if (action === 'essential') {
+                    saveCookieConsent('essential-only');
                 } else {
                     saveCookieConsent('rejected-non-essential');
                 }
