@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
-	background: linear-gradient(140deg, var(--bg-main), var(--bg-soft));
+	background: white;
 	color: var(--text-main);
 }
 
@@ -142,10 +142,6 @@ body {
 .services-visual {
 	grid-area: visual;
 	margin: 0;
-	background: rgba(255, 255, 255, 0.68);
-	border-radius: 14px;
-	border: 1px solid rgba(14, 172, 216, 0.18);
-	padding: 12px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -171,12 +167,13 @@ body {
 }
 
 .services-grid-summary {
-	/* grid-area: summary;
+	grid-area: summary;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	align-items: center; */
-	text-align: justify;
+	align-items: center;
+	gap: 14px;
+	text-align: center;
 }
 
 .services-grid-note {
