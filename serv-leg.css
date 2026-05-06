@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
-	background: linear-gradient(140deg, var(--bg-main), var(--bg-soft));
+	background: #ffffff;
 	color: var(--text-main);
 }
 
