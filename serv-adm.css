@@ -440,18 +440,37 @@ body {
 		grid-template-columns: 1fr;
 	}
 
+	.services-grid {
+		grid-template-columns: 1fr !important;
+		grid-template-areas:
+			"card1"
+			"card2"
+			"card3"
+			"card4"
+			"card5"
+			"image"
+			"note"
+			"cta";
+		gap: 14px;
+	}
+
 	.sp-stats {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	.service-image {
 		justify-content: center;
+		min-height: 220px;
 	}
 
 	.service-image img {
 		transform: none;
 		object-position: center center;
 		margin: 0 auto;
+	}
+
+	.services-cta .btn {
+		max-width: none;
 	}
 }
 

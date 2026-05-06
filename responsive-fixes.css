@@ -1,7 +1,10 @@
 /* Global responsive hardening for all pages */
 
 :root {
+  --tablet-gap: clamp(12px, 2.5vw, 22px);
   --mobile-side-gap: clamp(10px, 3.8vw, 18px);
+  --mobile-font: 15px;
+  --small-mobile-font: 14px;
 }
 
 html,
@@ -9,6 +12,10 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+* {
+  min-width: 0;
 }
 
 img,
@@ -23,15 +30,9 @@ iframe {
 /* Avoid horizontal overflow from long text/URLs */
 p,
 li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 a,
-span,
-button {
+td,
+th {
   overflow-wrap: anywhere;
   word-break: normal;
 }
@@ -42,7 +43,71 @@ table {
   border-collapse: collapse;
 }
 
+/* Touch devices: dropdowns open only via click state (.is-open) */
+@media (hover: none), (pointer: coarse) {
+  .has-dropdown:hover .submenu-dropdown,
+  .has-dropdown:focus-within .submenu-dropdown,
+  .has-dropdown:hover .social-dropdown,
+  .has-dropdown:focus-within .social-dropdown {
+    display: none !important;
+  }
+
+  .has-dropdown.is-open .submenu-dropdown,
+  .has-dropdown.is-open .social-dropdown {
+    display: block !important;
+  }
+
+  .has-dropdown:not(.is-open) .dropdown-arrow {
+    transform: rotate(45deg) !important;
+  }
+
+  .has-dropdown.is-open .dropdown-arrow {
+    transform: rotate(225deg) !important;
+  }
+}
+
+/* Large tablets / small laptops */
+@media (max-width: 1200px) {
+  .container,
+  .main,
+  .page-content,
+  .banner,
+  .hero,
+  .services-grid,
+  .container-services,
+  .social-proof,
+  .benefits-accordion,
+  .cta-premium,
+  footer {
+    max-width: 100%;
+  }
+
+  .container {
+    padding-left: var(--tablet-gap);
+    padding-right: var(--tablet-gap);
+  }
+
+  .sidebar-floating {
+    right: 10px;
+  }
+}
+
+/* Tablets */
 @media (max-width: 900px) {
+  #primarySidebar .has-dropdown .submenu-dropdown,
+  #floatingSidebar .has-dropdown .submenu-dropdown,
+  #primarySidebar .has-dropdown .social-dropdown,
+  #floatingSidebar .has-dropdown .social-dropdown {
+    display: none !important;
+  }
+
+  #primarySidebar .has-dropdown.is-open .submenu-dropdown,
+  #floatingSidebar .has-dropdown.is-open .submenu-dropdown,
+  #primarySidebar .has-dropdown.is-open .social-dropdown,
+  #floatingSidebar .has-dropdown.is-open .social-dropdown {
+    display: block !important;
+  }
+
   table {
     display: block;
     overflow-x: auto;
@@ -50,7 +115,45 @@ table {
   }
 
   body {
-    font-size: 15px;
+    font-size: var(--mobile-font);
+  }
+
+  .main,
+  .services-grid,
+  .container-services,
+  .benefits-accordion,
+  .siglas-banner2-row {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .topbar-menu > ul,
+  .sidebar > ul {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .menu-link-btn,
+  .menu-label,
+  .submenu-link,
+  .footer-link-btn,
+  .footer-social-btn {
+    min-height: 42px;
+  }
+
+  .banner-princ-summary,
+  .hero,
+  .banner,
+  .page-content {
+    padding: 16px !important;
+  }
+
+  .banner-princ-summary h3,
+  .section-title,
+  .banner-blindaje-title,
+  .privacy-header h1 {
+    line-height: 1.15;
+    letter-spacing: normal;
   }
 
   .container,
@@ -66,9 +169,20 @@ table {
   footer {
     max-width: 100%;
   }
+
+  .back-to-top,
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+  }
 }
 
+/* Phones */
 @media (max-width: 640px) {
+  body {
+    font-size: var(--mobile-font);
+  }
+
   .container,
   .page-content,
   .main,
@@ -79,6 +193,19 @@ table {
 
   .main {
     gap: 12px !important;
+  }
+
+  .topbar-menu .menu-link-btn,
+  .topbar-menu .menu-label,
+  .sidebar .menu-link-btn,
+  .sidebar .menu-label {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .submenu-dropdown {
+    min-width: min(260px, calc(100vw - 32px));
+    max-width: calc(100vw - 32px);
   }
 
   .hero,
@@ -94,5 +221,86 @@ table {
   .back-to-top,
   .whatsapp-float {
     right: 12px;
+  }
+
+  .back-to-top {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    gap: 0;
+  }
+
+  .back-to-top-text {
+    display: none;
+  }
+
+  .back-to-top-icon {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    font-size: 15px;
+    margin: 0 auto;
+    transform: translate(0.5px, -0.5px);
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  body {
+    font-size: var(--small-mobile-font);
+  }
+
+  .container,
+  .page-content,
+  .main,
+  footer {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .banner-princ-summary,
+  .hero,
+  .banner,
+  .page-content,
+  .service-card,
+  .cta-premium,
+  .social-proof,
+  .benefits-accordion {
+    padding: 12px !important;
+  }
+
+  .banner-princ-summary h3,
+  .privacy-header h1,
+  .section-title {
+    font-size: clamp(18px, 7.3vw, 24px) !important;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .menu-link-btn,
+  .menu-label,
+  .submenu-link,
+  .footer-link-btn,
+  .footer-social-btn,
+  .cta-magnet,
+  .btn {
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  .back-to-top,
+  .whatsapp-float {
+    right: 8px;
+    bottom: 8px;
   }
 }

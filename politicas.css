@@ -2423,7 +2423,7 @@
         .carousel-item p {
             font-size: 14px;
             line-height: 1.65;
-            overflow-wrap: anywhere;
+            overflow-wrap: break-word;
         }
 
         .siglas-banner2-row {
@@ -3067,7 +3067,7 @@
             font-size: clamp(12px, 2.8vw, 15px);
             line-height: 1.3;
             letter-spacing: 0.05em;
-            overflow-wrap: anywhere;
+            overflow-wrap: break-word;
         }
 
         .benefit-item {

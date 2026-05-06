@@ -213,6 +213,8 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	overflow-wrap: break-word;
+	word-break: normal;
 }
 
 .card-bullet {
@@ -310,6 +312,7 @@ body {
 	}
 
 	.services-grid {
+		grid-template-columns: 1fr !important;
 		grid-template-areas:
 			"visual"
 			"card-a"
@@ -317,6 +320,7 @@ body {
 			"card-c"
 			"card-d"
 			"summary";
+		gap: 14px;
 	}
 
 	.services-grid-summary {
