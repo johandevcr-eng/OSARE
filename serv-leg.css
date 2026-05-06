@@ -100,13 +100,15 @@ body {
 .services-grid {
 	margin-top: 24px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: minmax(360px, 1.6fr) minmax(260px, 0.95fr);
 	grid-template-areas:
-		"card-a visual card-b"
-		"card-c card-d card-e"
-		"card-f card-f card-f"
-		"cta cta cta";
+		"visual card-a"
+		"visual card-b"
+		"visual card-c"
+		"note card-d"
+		"card-e card-f";
 	gap: 14px;
+	align-items: stretch;
 }
 
 .service-card--a {
@@ -150,7 +152,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 220px;
+	min-height: 440px;
 }
 
 .services-visual img {
@@ -161,14 +163,35 @@ body {
 }
 
 .services-grid-cta {
-	grid-area: cta;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
+	width: 100%;
+	margin-top: 8px;
 }
 
 .services-grid-cta .btn {
 	min-width: 180px;
+	width: min(100%, 220px);
+	padding: 13px 24px;
+	border-radius: 999px;
+	font-size: 15px;
+	letter-spacing: 0.01em;
+	box-shadow: 0 7px 18px rgba(14, 172, 216, 0.28);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.services-grid-cta .btn:hover,
+.services-grid-cta .btn:focus-visible {
+	background: #0991b8;
+	transform: translateY(-2px);
+	box-shadow: 0 12px 24px rgba(14, 172, 216, 0.4);
+	outline: none;
+}
+
+.services-grid-cta .btn:active {
+	transform: translateY(0);
+	box-shadow: 0 5px 12px rgba(14, 172, 216, 0.26);
 }
 
 .service-card h2 {
@@ -196,16 +219,27 @@ body {
 	margin-top: 14px;
 }
 
+.services-lower-left {
+	grid-area: note;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 120px;
+	text-align: center;
+}
+
 .note-box {
-	margin: 16px auto 0;
-	background: var(--card-bg);
+	margin: 0;
+	background: transparent;
 	color: var(--text-main);
-	border-radius: 12px;
-	padding: 16px 18px;
+	border-radius: 0;
+	padding: 0;
 	line-height: 1.6;
-	border: 1px solid var(--card-border);
-	width: fit-content;
-	max-width: 100%;
+	border: 0;
+	width: 100%;
+	max-width: 560px;
+	font-size: clamp(14px, 1.2vw, 24px);
 }
 
 .quote-box {
@@ -276,22 +310,26 @@ body {
 
 	.services-grid {
 		grid-template-areas:
-			"card-a"
 			"visual"
+			"card-a"
 			"card-b"
 			"card-c"
+			"note"
 			"card-d"
 			"card-e"
-			"card-f"
-			"cta";
+			"card-f";
 	}
 
 	.services-grid-cta {
-		justify-content: stretch;
+		justify-content: center;
 	}
 
 	.services-grid-cta .btn {
-		width: 100%;
+		width: min(100%, 220px);
+	}
+
+	.services-visual {
+		min-height: 300px;
 	}
 }
 
