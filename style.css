@@ -1411,7 +1411,7 @@
         justify-content: center;
         width: 56px;
         height: 56px;
-        background: #f0fafd;
+        background: transparent;
         border-radius: 12px;
         margin-bottom: 16px;
         flex-shrink: 0;
@@ -1421,7 +1421,7 @@
         width: 34px;
         height: 34px;
         object-fit: contain;
-        mix-blend-mode: multiply;
+        mix-blend-mode: normal;
     }
 
     .service-card-body {
