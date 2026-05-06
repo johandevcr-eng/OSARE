@@ -100,7 +100,7 @@ body {
 .services-grid {
 	margin-top: 24px;
 	display: grid;
-	grid-template-columns: minmax(270px, 1.08fr) minmax(270px, 1.08fr) minmax(220px, 0.78fr);
+	grid-template-columns: minmax(250px, 0.95fr) minmax(250px, 0.95fr) minmax(340px, 1.35fr);
 	grid-template-areas:
 		"visual visual card-a"
 		"visual visual card-b"
@@ -176,24 +176,34 @@ body {
 	grid-area: summary;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: flex-start;
-	gap: 14px;
+	gap: 10px;
 	text-align: left;
-	padding: 8px 0 12px;
+	padding: 10px 0 12px;
+}
+
+.services-grid-summary-title {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: clamp(18px, 1.6vw, 22px);
+	line-height: 1.2;
+	color: #0a2f6b;
 }
 
 .services-grid-note {
 	margin: 0;
 	font-family: inherit;
-	font-size: clamp(18px, 1.5vw, 24px);
-	line-height: 1.45;
+	font-size: clamp(15px, 1.2vw, 18px);
+	line-height: 1.55;
 	letter-spacing: normal;
 	color: rgba(20, 27, 36, 0.82);
 }
 
 .services-grid-summary .btn {
 	min-width: 180px;
+	align-self: center;
+	margin-inline: auto;
 }
 
 .service-card--a,
@@ -326,6 +336,10 @@ body {
 	.services-grid-summary {
 		align-items: stretch;
 		text-align: left;
+	}
+
+	.services-grid-summary-title {
+		font-size: clamp(17px, 4.8vw, 20px);
 	}
 
 	.services-grid-summary .btn {
