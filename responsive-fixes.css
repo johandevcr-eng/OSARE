@@ -1,0 +1,98 @@
+/* Global responsive hardening for all pages */
+
+:root {
+  --mobile-side-gap: clamp(10px, 3.8vw, 18px);
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Avoid horizontal overflow from long text/URLs */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+button {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Mobile-friendly tables without breaking desktop layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 900px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .container,
+  .page-content,
+  .main,
+  .banner,
+  .hero,
+  .services-grid,
+  .container-services,
+  .social-proof,
+  .benefits-accordion,
+  .cta-premium,
+  footer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  .page-content,
+  .main,
+  footer {
+    padding-left: var(--mobile-side-gap) !important;
+    padding-right: var(--mobile-side-gap) !important;
+  }
+
+  .main {
+    gap: 12px !important;
+  }
+
+  .hero,
+  .banner,
+  .page-content,
+  .service-card,
+  .cta-premium,
+  .social-proof,
+  .benefits-accordion {
+    border-radius: 12px;
+  }
+
+  .back-to-top,
+  .whatsapp-float {
+    right: 12px;
+  }
+}
