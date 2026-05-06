@@ -1,5 +1,4 @@
-﻿
-    :root {
+﻿    :root {
         --fixed-video-height: 74px;
     }
 
@@ -266,6 +265,7 @@
 
     h2{
         font-family: 'Montserrat', sans-serif;
+        color: #8f2c0f;
     }
 
     /* Login */ 
@@ -786,7 +786,7 @@
     margin: 0 0 10px;
     font-size: clamp(21px, 3.2vw, 33px);
     font-weight: 800;
-    color: var(--text-main);
+    color: #0a2f6b;
     letter-spacing: -0.02em;
 }
 
@@ -830,7 +830,7 @@
     margin: 0 0 16px;
     font-size: 15px;
     font-weight: 700;
-    color: #0f172a;
+    color: #0a2f6b;
     border-bottom: 2px solid #2da9cf;
     padding-bottom: 8px;
 }
@@ -839,7 +839,7 @@
     margin: 20px 0 12px;
     font-size: 17px;
     font-weight: 600;
-    color: #1f2937;
+    color: #0a2f6b;
 }
 
 .page-content section p {
