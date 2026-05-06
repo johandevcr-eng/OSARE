@@ -105,8 +105,7 @@ body {
 		"visual card-a"
 		"visual card-b"
 		"visual card-c"
-		"note card-d"
-		"card-e card-f";
+		"note card-d";
 	gap: 14px;
 	align-items: stretch;
 }
@@ -127,14 +126,6 @@ body {
 	grid-area: card-d;
 }
 
-.service-card--e {
-	grid-area: card-e;
-}
-
-.service-card--f {
-	grid-area: card-f;
-}
-
 .service-card {
 	background: rgba(255, 255, 255, 0.74);
 	border-radius: 14px;
@@ -142,32 +133,36 @@ body {
 	border: 1px solid rgba(14, 172, 216, 0.18);
 }
 
+.service-card--d {
+	grid-area: card-d;
+	align-self: stretch;
+}
+
 .services-visual {
 	grid-area: visual;
 	margin: 0;
-	background: rgba(255, 255, 255, 0.68);
-	border-radius: 14px;
-	border: 1px solid rgba(14, 172, 216, 0.18);
-	padding: 12px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 440px;
+	align-self: stretch;
+	min-height: 100%;
 }
 
 .services-visual img {
+	display: block;
 	max-width: 100%;
-	height: auto;
+	max-height: 100%;
+	height: 100%;
 	object-fit: contain;
-	border-radius: 10px;
 }
 
 .services-grid-cta {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	margin-top: 8px;
+	width: min(100%, 560px);
+	max-width: 100%;
+	margin-top: 0;
 }
 
 .services-grid-cta .btn {
@@ -225,8 +220,10 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-height: 120px;
-	text-align: center;
+	min-height: 100%;
+	text-align: left;
+	padding: 8px 0 0;
+	gap: 18px;
 }
 
 .note-box {
@@ -237,9 +234,33 @@ body {
 	padding: 0;
 	line-height: 1.6;
 	border: 0;
-	width: 100%;
-	max-width: 560px;
-	font-size: clamp(14px, 1.2vw, 24px);
+	width: min(100%, 560px);
+	max-width: 100%;
+	box-shadow: none;
+}
+
+.note-box-kicker {
+	margin: 0 0 10px;
+	font: 800 12px/1.2 'Montserrat', sans-serif;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: #0eacd8;
+}
+
+.note-box h3 {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: clamp(20px, 1.6vw, 28px);
+	line-height: 1.12;
+	max-width: none;
+}
+
+.note-box-text {
+	margin: 14px 0 0;
+	max-width: none;
+	font-size: clamp(15px, 1.08vw, 18px);
+	line-height: 1.75;
+	color: rgba(28, 35, 43, 0.9);
 }
 
 .quote-box {
@@ -315,13 +336,11 @@ body {
 			"card-b"
 			"card-c"
 			"note"
-			"card-d"
-			"card-e"
-			"card-f";
+			"card-d";
 	}
 
 	.services-grid-cta {
-		justify-content: center;
+		justify-content: flex-start;
 	}
 
 	.services-grid-cta .btn {
@@ -352,6 +371,12 @@ body {
 		padding: 18px;
 	}
 
+	.services-lower-left,
+	.services-grid-cta {
+		align-items: stretch;
+		justify-content: flex-start;
+	}
+
 	.hero-actions .btn,
 	.service-card .btn {
 		width: 100%;
@@ -367,5 +392,10 @@ body {
 	.note-box,
 	.quote-box {
 		padding: 16px;
+	}
+
+	.note-box h3,
+	.note-box-text {
+		max-width: none;
 	}
 }

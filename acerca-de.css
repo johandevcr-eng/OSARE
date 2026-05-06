@@ -3,8 +3,8 @@
 	flex: 1;
 	min-width: 0;
 	width: 100%;
-	max-width: 100%;
-	margin: 32px 0 0;
+	max-width: 1280px;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
@@ -28,7 +28,7 @@
 
 .about-hero-column h2 {
 	margin: 0;
-	font-size: 25px;
+	font-size: clamp(22px, 2.8vw, 32px);
 	color: var(--accent);
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
@@ -51,8 +51,9 @@
 	font-size: 18px;
 	line-height: 1.4;
 	color: var(--text-muted);
-	text-align: left;
-	hyphens: none;
+	text-align: justify;
+	word-spacing: 0;
+	hyphens: auto;
 }
 
 .about-how {
@@ -69,7 +70,6 @@
 	font-size: 22px;
 	color: #0eacd8;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 .about-cards {
@@ -103,8 +103,9 @@
 	font-size: 18px;
 	line-height: 1.4;
 	color: var(--text-muted);
-	text-align: left;
-	hyphens: none;
+	text-align: justify;
+	word-spacing: 0;
+	hyphens: auto;
 }
 
 .about-page .btn {
@@ -148,34 +149,33 @@
 
 
 .about-principles {
-	background: transparent;
+	background: var(--card-bg);
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 14px;
-	border-radius: 0;
-	padding: 0;
-	border: 0;
-	box-shadow: none;
+	gap: 16px;
+	border-radius: 20px;
+	padding: 20px;
+	border: 1px solid var(--card-border);
+	box-shadow: var(--panel-shadow);
 }
 
 .principle-block {
 	background: rgba(255, 255, 255, 0.74);
 	border-radius: 14px;
-	padding: 60px 20px 60px 20px;	
+	padding: 24px;
 	border: 1px solid rgba(14, 172, 216, 0.2);
 	box-shadow: 0 6px 20px rgba(14, 172, 216, 0.08);
 	position: relative;
-	text-align: center;
 }
 
 .principle-block::before {
 	content: '\201C';
 	display: block;
-	font-size: clamp(100px, 10vw, 160px);
-	line-height: 0.6;
-	margin-bottom: -8px;
-	color: #0c2d5e;
+	font-size: 72px;
+	line-height: 1;
+	color: var(--accent);
 	font-family: Georgia, serif;
+	margin-bottom: 8px;
 	text-align: center;
 }
 
@@ -193,8 +193,9 @@
 	color: var(--text-muted);
 	line-height: 1.6;
 	font-size: 18px;
-	text-align: center;
-	hyphens: none;
+	text-align: justify;
+	word-spacing: -0.5px;
+	hyphens: auto;
 }
 
 @media (max-width: 768px) {
@@ -237,7 +238,7 @@
 @media (max-width: 700px) {
 	.about-card,
 	.principle-block {
-		padding: 14px 16px;
+		padding: 14px;
 	}
 
 	.about-hero-column h2 {
@@ -251,10 +252,6 @@
 	.about-card p,
 	.about-hero p {
 		font-size: clamp(15px, 4.3vw, 19px);
-	}
-
-	.principle-block::before {
-		font-size: clamp(90px, 18vw, 130px);
 	}
 }
 
