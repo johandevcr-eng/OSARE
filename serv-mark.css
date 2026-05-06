@@ -181,8 +181,10 @@ body {
 
 .services-grid-note {
 	margin: 40px 0;
-	font-family: 'Montserrat', sans-serif;
+	font-family: inherit;
 	font-size: 18px;
+	line-height: 1.45;
+	letter-spacing: normal;
 	color: rgba(20, 27, 36, 0.74);
 }
 
