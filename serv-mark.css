@@ -100,8 +100,36 @@ body {
 .services-grid {
 	margin-top: 24px;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+		"visual visual card-a"
+		"visual visual card-b"
+		"card-c card-d summary";
 	gap: 14px;
+}
+
+.service-card--a {
+	grid-area: card-a;
+}
+
+.service-card--b {
+	grid-area: card-b;
+}
+
+.service-card--c {
+	grid-area: card-c;
+}
+
+.service-card--d {
+	grid-area: card-d;
+}
+
+.service-card--e {
+	grid-area: card-e;
+}
+
+.service-card--f {
+	grid-area: card-f;
 }
 
 .service-card {
@@ -109,6 +137,57 @@ body {
 	border-radius: 14px;
 	padding: 20px;
 	border: 1px solid rgba(14, 172, 216, 0.18);
+}
+
+.services-visual {
+	grid-area: visual;
+	margin: 0;
+	background: rgba(255, 255, 255, 0.68);
+	border-radius: 14px;
+	border: 1px solid rgba(14, 172, 216, 0.18);
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 360px;
+}
+
+.services-visual img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	border-radius: 10px;
+}
+
+.services-grid-cta {
+	grid-area: cta;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.services-grid-cta .btn {
+	min-width: 180px;
+}
+
+.services-grid-summary {
+	/* grid-area: summary;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center; */
+	text-align: justify;
+}
+
+.services-grid-note {
+	margin: 40px 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	color: rgba(20, 27, 36, 0.74);
+}
+
+.services-grid-summary .btn {
+	min-width: 180px;
 }
 
 .service-card h2 {
@@ -137,13 +216,15 @@ body {
 }
 
 .note-box {
-	margin-top: 16px;
+	margin: 16px auto 0;
 	background: var(--card-bg);
 	color: var(--text-main);
 	border-radius: 12px;
 	padding: 16px 18px;
 	line-height: 1.6;
 	border: 1px solid var(--card-border);
+	width: fit-content;
+	max-width: 100%;
 }
 
 .quote-box {
@@ -210,6 +291,25 @@ body {
 	.services-grid,
 	.quote-form {
 		grid-template-columns: 1fr;
+	}
+
+	.services-grid {
+		grid-template-areas:
+			"visual"
+			"card-a"
+			"card-b"
+			"card-c"
+			"card-d"
+			"summary";
+	}
+
+	.services-grid-summary {
+		align-items: stretch;
+		text-align: left;
+	}
+
+	.services-grid-summary .btn {
+		width: 100%;
 	}
 }
 
