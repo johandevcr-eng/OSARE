@@ -29,7 +29,7 @@
 .about-hero-column h2 {
 	margin: 0;
 	font-size: clamp(26px, 3.2vw, 42px);
-	color: var(--accent);
+	color: #173f78;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	text-align: center;
