@@ -255,35 +255,35 @@ body {
 
 .service-image {
 	grid-area: image;
-	overflow: hidden;
+	overflow: visible;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 14px;
 	height: 100%;
-	padding-left: 130px;
+	width: 100%;
+	
 }
 
 .service-image img {
-	width: min(100%, 360px);
+	width: min(100%, 450px);
 	height: auto;
-	max-height: min(56vh, 520px);
+	max-height: min(60vh, 450px);
 	object-fit: contain;
 	object-position: center center;
 	display: block;
-	margin: 0;
-	transform: none;
-	padding-bottom: 50px;
+	transform: translateX(30px);
+	padding: 30px;
 }
 
 .services-cta {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
-	width: min(100%, 360px);
+	width: 100%;
 	padding-top: 0;
-	padding-left: 16px;
+	padding-left: 0;
 }
 
 .services-cta .btn {
