@@ -8,28 +8,39 @@ document.addEventListener('DOMContentLoaded', function () {
         pageTopbar.appendChild(primarySidebar);
     }
 
-    if (primarySidebar) {
-        const primaryList = primarySidebar.querySelector('ul');
-        if (primaryList && !primaryList.querySelector('.topbar-cta-item')) {
-            const ctaItem = document.createElement('li');
-            ctaItem.className = 'nav-button-item topbar-cta-item';
-            ctaItem.innerHTML = '<button class="menu-link-btn" type="button" data-href="contacto.html"><span>Hablemos</span></button>';
-            primaryList.appendChild(ctaItem);
-        }
-    }
+    // if (primarySidebar) {
+    //     const primaryList = primarySidebar.querySelector('ul');
+    //     if (primaryList && !primaryList.querySelector('.topbar-cta-item')) {
+    //         const ctaItem = document.createElement('li');
+    //         ctaItem.className = 'nav-button-item topbar-cta-item';
+    //         ctaItem.innerHTML = '<button class="menu-link-btn" type="button" data-href="contacto.html"><span>Hablemos</span></button>';
+    //         primaryList.appendChild(ctaItem);
+    //     }
+    // }
 
     document.querySelectorAll('footer .footer-inner').forEach(function (footerInner) {
         if (footerInner.querySelector('.footer-company-data')) {
             return;
         }
-        const companyData = document.createElement('p');
-        companyData.className = 'footer-company-data';
-        companyData.textContent = 'Cédula jurídica: 3-101-932568 | Dirección: Cartago, Dulce Nombre, Terranova, A2, Costa Rica';
-        const footerCopy = footerInner.querySelector('.footer-copy');
-        if (footerCopy) {
-            footerInner.insertBefore(companyData, footerCopy);
-        } else {
-            footerInner.appendChild(companyData);
+        let footerRight = footerInner.querySelector('.footer-right');
+        if (!footerRight) {
+            footerRight = document.createElement('div');
+            footerRight.className = 'footer-right';
+            // Insert before .footer-copy (always at the end of grid)
+            const footerCopy = footerInner.querySelector('.footer-copy');
+            if (footerCopy) {
+                footerInner.insertBefore(footerRight, footerCopy);
+            } else {
+                footerInner.appendChild(footerRight);
+            }
+        }
+
+        
+
+        // Links legales
+        const footerLinks = footerInner.querySelector('.footer-links');
+        if (footerLinks && !footerRight.contains(footerLinks)) {
+            footerRight.appendChild(footerLinks);
         }
     });
 

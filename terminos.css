@@ -2026,6 +2026,31 @@
         margin-bottom: -7px;
     }
 
+    .footer-company-data {
+        grid-column: 3;
+        justify-self: end;
+        align-self: center;
+        margin: 0;
+        display: grid;
+        gap: 4px;
+        text-align: right;
+        font-style: normal;
+        font-size: 13px;
+        line-height: 1.35;
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+    }
+
+    .footer-company-data a {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .footer-company-data a:hover {
+        opacity: 0.9;
+    }
+
     .footer-link-btn {
         background: none;
         border: none;
@@ -2172,6 +2197,13 @@
         .footer-links {
             justify-self: center;
             justify-content: center;
+        }
+
+        .footer-company-data {
+            grid-column: auto;
+            justify-self: center;
+            text-align: center;
+            font-size: 13px;
         }
 
         .footer-links {
