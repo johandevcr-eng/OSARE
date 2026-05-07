@@ -204,10 +204,10 @@ body {
 .services-grid-note {
 	margin: 0;
 	font-family: inherit;
-	font-size: clamp(15px, 1.2vw, 18px);
+	font-size: clamp(17px, 1.35vw, 20px);
 	line-height: 1.55;
 	letter-spacing: normal;
-	color: rgba(20, 27, 36, 0.82);
+	color: #061a3d;
 }
 
 .services-grid-summary .btn {
