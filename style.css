@@ -976,20 +976,22 @@
 
     .banner-bpo-card {
         grid-area: right;
-        background: rgba(241, 245, 249, 0.95);
-        border: 1px solid rgba(14, 172, 216, 0.28);
-        border-radius: 18px;
-        padding: 20px 22px 22px;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
     }
 
     .banner-bpo-quote {
         display: block;
         text-align: center;
-        font-size: clamp(92px, 9vw, 120px);
-        line-height: 0.8;
-        color: #0eacd8;
-        margin-bottom: -6px;
-        font-family: Georgia, serif;
+        font-size: clamp(80px, 9vw, 120px);
+        line-height: 0.7;
+        color: #1a1a1a;
+        margin-bottom: 16px;
+        font-family: 'Lora', Georgia, serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
     }
 
     .banner-bpo-card h3 {
@@ -1003,11 +1005,12 @@
 
     .banner-bpo-card p {
         margin: 0;
-        color: #0f2748;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
-        line-height: 1.45;
-        text-align: left;
+        color: #1a1a1a;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-align: center;
         hyphens: none;
         overflow-wrap: break-word;
         word-break: normal;
