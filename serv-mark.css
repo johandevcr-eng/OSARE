@@ -202,17 +202,22 @@ body {
 }
 
 .services-grid-note {
-	margin: 0;
+	margin: 0 auto;
 	font-family: inherit;
-	font-size: clamp(17px, 1.35vw, 20px);
-	line-height: 1.55;
+	font-size: clamp(16px, 1.25vw, 19px);
+	line-height: 1.45;
 	letter-spacing: normal;
-	color: #061a3d;
+	color: #0a2f6b;
+	font-weight: 600;
+	width: 25rem;
+	text-align: justify;
+
 }
 
 .services-grid-summary .btn {
 	min-width: 180px;
 	align-self: center;
+	margin-top: 8px;
 	margin-inline: auto;
 }
 
