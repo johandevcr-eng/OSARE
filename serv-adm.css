@@ -262,6 +262,7 @@ body {
 	justify-content: center;
 	gap: 14px;
 	height: 100%;
+	padding-left: 130px;
 }
 
 .service-image img {
@@ -273,6 +274,7 @@ body {
 	display: block;
 	margin: 0;
 	transform: none;
+	padding-bottom: 50px;
 }
 
 .services-cta {
