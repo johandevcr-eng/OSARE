@@ -302,7 +302,7 @@ body {
 	grid-area: note;
 	margin: 0;
 	background: linear-gradient(to top left, rgba(111, 165, 228, 0) 46%, rgba(111, 165, 228, 0.22) 72%, rgba(111, 165, 228, 0.45) 100%), linear-gradient(135deg, #173f78 0%, #0b2954 100%);
-	font-size: clamp(21px, 2.1vw, 24px);
+	font-size: clamp(19px, 1.9vw, 22px);
 	color: #ffffff;
 	border-radius: 14px;
 	padding: 22px 20px;
