@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     }
 
+    if (pageTopbar) {
+        const updateTopbarState = function () {
+            pageTopbar.classList.toggle('is-scrolled', window.scrollY > 14);
+        };
+        const onScrollTopbar = rafThrottle(updateTopbarState);
+        window.addEventListener('scroll', onScrollTopbar, { passive: true });
+        updateTopbarState();
+    }
+
     function warmUpLazyImages() {
         const lazyImages = Array.from(document.querySelectorAll('img[loading="lazy"]')).filter(function (img) {
             return !img.complete;
