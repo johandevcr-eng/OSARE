@@ -1895,11 +1895,13 @@
         display: flex;
         align-items: center;
         justify-self: start;
+        align-self: end;
+        margin-top: 6px;
     }
 
     .footer-logo {
-        width: 100px;
-        height: 100px;
+        width: 125px;
+        height: 125px;
         object-fit: contain;
         margin-right: 12px;
     }
