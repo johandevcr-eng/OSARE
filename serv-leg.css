@@ -245,7 +245,7 @@ body {
 	border-radius: 0;
 	padding: 0;
 	line-height: 1.5;
-	font-size: clamp(18px, 1.25vw, 22px);
+	font-size: clamp(16px, 1.1vw, 20px);
 	font-weight: 700;
 	text-align: center;
 	border: 0;
