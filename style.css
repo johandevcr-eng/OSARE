@@ -934,6 +934,47 @@
         grid-area: right;
     }
 
+    .banner-text-block p {
+        margin: 0;
+    }
+
+    .banner-text-block p + p {
+        margin-top: 10px;
+    }
+
+    .banner-text-block strong,
+    .banner-text-how,
+    .banner-text-areas span {
+        color: #0d4f8b;
+        font-weight: 700;
+    }
+
+    .banner-text-areas {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px 24px;
+        margin: 14px 0 16px;
+    }
+
+    .banner-text-areas span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .banner-text-areas span img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        flex-shrink: 0;
+        padding: 10px;
+    }
+
+    .banner-text-how {
+        margin-top: 14px;
+        font-size: 1.06em;
+    }
+
     .banner-bpo-card {
         grid-area: right;
         background: rgba(241, 245, 249, 0.95);
@@ -3003,6 +3044,20 @@
     }
 
     @media (max-width: 640px) {
+
+        .banner-text-areas {
+            grid-template-columns: 1fr;
+            gap: 2px;
+        }
+
+        .banner-text-areas span {
+            gap: 6px;
+        }
+
+        .banner-text-areas span img {
+            width: 24px;
+            height: 24px;
+        }
 
         .social-proof,
         .benefits-accordion,
