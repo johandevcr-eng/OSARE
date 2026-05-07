@@ -31,7 +31,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
-    <link rel="stylesheet" href="responsive-fixes.css">
+  <link rel="stylesheet" href="responsive-fixes.css">
 </head>
 
 <body>
@@ -53,7 +53,8 @@
     <div class="header home-topbar glass-panel" aria-label="Encabezado principal">
       <div class="home-topbar-brand logo">
         <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async" />
-        <img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35" decoding="async" />
+        <img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35"
+          decoding="async" />
       </div>
 
       <h1 id="title-menu">Menú principal</h1>
@@ -123,7 +124,7 @@
           </span>
         </button>
       </div> -->
-      
+
     </div>
 
     <!-- main -->
@@ -167,24 +168,31 @@
           </p>
         </div>
 
-        <div class="banner-image-wrap">
+        <div class="siglas-banner2-row">
+          <div class="bannertwo">
+            <div class="image-card-glow"></div>
+            <div class="banner-blindaje-content">
+              <div class="banner-blindaje-bg-art" aria-hidden="true">
+                <img src="img/fondo_metodo_osare.png" alt="" decoding="async" />
+              </div>
+              <div class="banner-blindaje-logo">
+                <img src="img/logo_negro.webp" class="logo-negro" alt="OSARE" decoding="async" />
+              </div>
+              <h2 class="banner-blindaje-title">La Arquitectura del Blindaje</h2>
+              <p class="banner-blindaje-subtitle">Eficiencia operativa y seguridad jurídica total para proteger el
+                legado de tu PyME.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="banner-image-wrap">
           <picture>
-            <img class="banner-img" src="img/banner.png" alt="" width="1080" height="1080"
+            <img class="banner-img" src="img/" alt="" width="1080" height="1080"
               sizes="(max-width: 900px) 90vw, 40vw" fetchpriority="high" decoding="async" />
           </picture>
-        </div>
+        </div> -->
 
-        <article class="banner-bpo-card" aria-label="Nuestro enfoque de BPO">
-          <span class="banner-bpo-quote" aria-hidden="true">&rdquo;</span>
-          <p>
-            Nuestro enfoque de BPO (Business Process Outsourcing) te permite
-            delegar procesos críticos como el cumplimiento normativo, las
-            obligaciones tributarias, el branding y RRSS, para que te enfoques
-            en hacer crecer tu negocio.
-          </p>
-        </article>
-
-        <!-- <section class="banner-list" aria-label="Listado de servicios integrales">
+      <!-- <section class="banner-list" aria-label="Listado de servicios integrales">
           <ul>
             <li>Gestión Empresarial</li>
             <li>Contabilidad</li>
@@ -196,11 +204,8 @@
           </ul>
         </section> -->
 
-        <p class="banner-quote"><cite>"Protegemos tu legado"</cite></p>
-      </div>
-    </div>
 
-    <!-- <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+      <!-- <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
       <ul>
         <li class="has-dropdown">
           <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
@@ -239,129 +244,135 @@
       </ul>
     </aside> -->
 
-    <section class="social-proof glass-panel" aria-label="Marcas aliadas">
-      <p class="social-proof-title">
-        Servicios que impactan tu negocio
-      </p>
-      <div class="logo-marquee" aria-hidden="true">
-        <div class="logo-track">
-          <span class="logo-pill">Gestión de Nómina</span>
-          <span class="logo-pill">Asistencia Virtual</span>
-          <span class="logo-pill">Auxiliares Contables Remotos</span>
-          <span class="logo-pill">Inventarios</span>
-          <span class="logo-pill">Servicios Notariales</span>
-          <span class="logo-pill">Asesoría Inmobiliaria</span>
-          <span class="logo-pill">Creación de Contenido</span>
-          <span class="logo-pill">Desarrollo y Posicionamiento de Marca</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="benefits-accordion-wrap section-bg-soft">
-      <h2 class="section-title section-title-main">
-        ¿Qué conseguirás en OSARE?
-      </h2>
-      <div class="benefits-accordion glass-panel" id="benefitsAccordion">
-        <div class="benefits-list" role="tablist" aria-label="Beneficios OSARE">
-          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="strategy">
-            <strong>1. Conseguirás</strong>
-            <span>Reducir tus costos administrativos, al igual que disminuir la
-              cantidad de espacio físico dedicado a equipos de oficina y
-              personal destacado en el sitio.</span>
-          </button>
-          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="team">
-            <strong>2. Lograrás</strong>
-            <span>Mejorar el rendimiento del personal que quizás esté
-              sobrecargado de funciones o tareas que no corresponden a la
-              razón de ser del negocio.</span>
-          </button>
-          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="focus">
-            <strong>3. Podrás</strong>
-            <span>Enfocarte en los objetivos de tu empresa, sin preocuparte por
-              las labores de oficina que solo son accesorias o
-              complementarias.</span>
-          </button>
-          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="specialists">
-            <strong>4. Contarás</strong>
-            <span>Con servicios especializados en áreas o tareas indispensables
-              sin la necesidad de aumentar tu planilla ni aumentar las cargas
-              y responsabilidades patronales.</span>
-          </button>
-          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="service">
-            <strong>5. Recibirás</strong>
-            <span>Un servicio profesional, confiable y eficaz en una modalidad
-              externa pero siempre a la mano, gracias a medios tecnológicos y
-              una política de comunicación abierta y fluida.</span>
-          </button>
-          <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="growth">
-            <strong>6. Obtendrás</strong>
-            <span>Servicios a la medida, que impactarán positivamente la
-              rentabilidad de tu negocio.</span>
-          </button>
-        </div>
-        <div class="benefits-preview" id="benefitsPreview" aria-live="polite">
-          <picture class="benefits-preview-picture" aria-hidden="true">
-            <img class="benefits-preview-image" src="img/proposito.jpeg" alt="" width="1080" height="670"
-              loading="lazy" fetchpriority="low" decoding="async" />
-          </picture>
-        </div>
-      </div>
-    </section>
-
-    <div class="siglas-banner2-row">
-      <div class="bannertwo">
-        <div class="image-card-glow"></div>
-        <div class="banner-blindaje-content">
-          <div class="banner-blindaje-bg-art" aria-hidden="true">
-            <img src="img/fondo_metodo_osare.png" alt="" decoding="async" />
+      <section class="benefits-accordion-wrap section-bg-soft">
+        <h2 class="section-title section-title-main">
+          ¿Qué conseguirás en OSARE?
+        </h2>
+        <div class="benefits-accordion" id="benefitsAccordion">
+          <div class="benefits-list glass-panel" role="tablist" aria-label="Beneficios OSARE">
+            <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="strategy">
+              <strong>1. Conseguirás</strong>
+              <span>Reducir tus costos administrativos, al igual que disminuir la
+                cantidad de espacio físico dedicado a equipos de oficina y
+                personal destacado en el sitio.</span>
+            </button>
+            <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="team">
+              <strong>2. Lograrás</strong>
+              <span>Mejorar el rendimiento del personal que quizás esté
+                sobrecargado de funciones o tareas que no corresponden a la
+                razón de ser del negocio.</span>
+            </button>
+            <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="focus">
+              <strong>3. Podrás</strong>
+              <span>Enfocarte en los objetivos de tu empresa, sin preocuparte por
+                las labores de oficina que solo son accesorias o
+                complementarias.</span>
+            </button>
+            <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="specialists">
+              <strong>4. Contarás</strong>
+              <span>Con servicios especializados en áreas o tareas indispensables
+                sin la necesidad de aumentar tu planilla ni aumentar las cargas
+                y responsabilidades patronales.</span>
+            </button>
+            <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="service">
+              <strong>5. Recibirás</strong>
+              <span>Un servicio profesional, confiable y eficaz en una modalidad
+                externa pero siempre a la mano, gracias a medios tecnológicos y
+                una política de comunicación abierta y fluida.</span>
+            </button>
+            <button class="benefit-item" type="button" role="tab" aria-selected="false" data-image="growth">
+              <strong>6. Obtendrás</strong>
+              <span>Servicios a la medida, que impactarán positivamente la
+                rentabilidad de tu negocio.</span>
+            </button>
           </div>
-          <div class="banner-blindaje-logo">
-            <img src="img/logo_negro.webp" class="logo-negro" alt="OSARE" decoding="async" />
+          <div class="benefits-preview" id="benefitsPreview" aria-live="polite">
+            <picture class="benefits-preview-picture" aria-hidden="true">
+              <img class="benefits-preview-image" src="img/banner.png" alt="" width="1080" height="670" loading="lazy"
+                fetchpriority="low" decoding="async" />
+            </picture>
           </div>
-          <h2 class="banner-blindaje-title">La Arquitectura del Blindaje</h2>
-          <p class="banner-blindaje-subtitle">Eficiencia operativa y seguridad jurídica total para proteger el legado de tu PyME.</p>
         </div>
-      </div>
+      </section>
 
-      <section class="banner-siglas osare-scrolly glass-panel" id="osareScrolly">
-        <p class="banner-blindaje-method">El Método OSARE</p>
-        <div class="osare-steps" aria-label="Descripción del método OSARE">
-          <article>
-            <h3><span class="letra">O</span> - Organización</h3>
-            <p>Ponemos cada cosa en su lugar. Eliminamos el caos.</p>
-          </article>
-          <article>
-            <h3><span class="letra">S</span> - Sistemas</h3>
-            <p>
-              Creamos los manuales y procesos (SOPs) para que el negocio
-              dependa de un método.
-            </p>
-          </article>
-          <article>
-            <h3><span class="letra">A</span> - Automatización</h3>
-            <p>Optimizamos el trabajo reduciendo tareas manuales.</p>
-          </article>
-          <article>
-            <h3><span class="letra">R</span> - Resultados</h3>
-            <p>
-              Medimos lo importante para garantizar decisiones basadas en
-              datos.
-            </p>
-          </article>
-          <article>
-            <h3>
-              <span class="letra">E</span> - Estrategia y estructura legal
-            </h3>
-            <p>
-              Blindamos cada proceso bajo normativa legal. Todo se hace bien
-            </p>
-          </article>
+      <section class="social-proof glass-panel" aria-label="Marcas aliadas">
+        <p class="social-proof-title">
+          Servicios que impactan tu negocio
+        </p>
+        <div class="logo-marquee" aria-hidden="true">
+          <div class="logo-track">
+            <span class="logo-pill">Gestión de Nómina</span>
+            <span class="logo-pill">Gestión Documental</span>
+            <span class="logo-pill">Auxiliares Contables Remotos</span>
+            <span class="logo-pill">Contabilidad General</span>
+            <span class="logo-pill">Servicios Notariales</span>
+            <span class="logo-pill">Asesoría Inmobiliaria</span>
+            <span class="logo-pill">Creación de Contenido</span>
+            <span class="logo-pill">Desarrollo y Posicionamiento de Marca</span>
+          </div>
+        </div>
+      </section>
+
+      <article class="banner-bpo-card" aria-label="Nuestro enfoque de BPO">
+        <span class="banner-bpo-quote" aria-hidden="true">&rdquo;</span>
+        <p>
+          Nuestro enfoque de BPO (Business Process Outsourcing) te permite
+          delegar procesos críticos como el cumplimiento normativo, las
+          obligaciones tributarias, el branding y RRSS, para que te enfoques
+          en hacer crecer tu negocio.
+        </p>
+      </article>
+
+
+
+
+      <section class="banner-siglas osare-scrolly" id="osareScrolly">
+        <figure class="osare-visual-card">
+          <img class="osare-visual-image" src="img/proposito.jpeg"
+            alt="Comparativa entre el método tradicional y el modelo OSARE preventivo" loading="lazy"
+            decoding="async" />
+        </figure>
+        <div class="osare-content-card glass-panel">
+          <p class="banner-blindaje-method">El Método OSARE</p>
+          <div class="osare-steps" aria-label="Descripción del método OSARE">
+            <article>
+              <h3><span class="letra">O</span> - Organización</h3>
+              <p>Ponemos cada cosa en su lugar. Eliminamos el caos.</p>
+            </article>
+            <article>
+              <h3><span class="letra">S</span> - Sistemas</h3>
+              <p>
+                Creamos los manuales y procesos (SOPs) para que el negocio
+                dependa de un método.
+              </p>
+            </article>
+            <article>
+              <h3><span class="letra">A</span> - Automatización</h3>
+              <p>Optimizamos el trabajo reduciendo tareas manuales.</p>
+            </article>
+            <article>
+              <h3><span class="letra">R</span> - Resultados</h3>
+              <p>
+                Medimos lo importante para garantizar decisiones basadas en
+                datos.
+              </p>
+            </article>
+            <article>
+              <h3>
+                <span class="letra">E</span> - Estrategia y estructura legal
+              </h3>
+              <p>
+                Blindamos cada proceso bajo normativa legal. Todo se hace bien
+              </p>
+            </article>
+          </div>
         </div>
       </section>
     </div>
 
     <!-- Servicios destacados -->
 
+    <p class="banner-quote">¡Protegemos tu patrimonio!</p>
     <h2 class="section-title section-title-label">
       Nuestras áreas de servicio
     </h2>
@@ -431,8 +442,7 @@
       <img class="whatsapp-float-icon" src="img/whatsapp.png" alt="WhatsApp" />
     </button>
 
-    <button class="telegram-float" type="button"
-      data-href="https://t.me/osarecr" aria-label="Abrir Telegram">
+    <button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram">
       <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" />
     </button>
 
@@ -444,18 +454,15 @@
 
         <nav class="footer-social" aria-label="Redes sociales">
           <button class="footer-social-btn" type="button"
-            data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
-            aria-label="Facebook OSARE CR">
+            data-href="https://www.facebook.com/people/Osarecr/61552264208402/" aria-label="Facebook OSARE CR">
             <img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy" decoding="async" />
           </button>
-          <button class="footer-social-btn" type="button"
-            data-href="https://www.instagram.com/osare_cr/"
+          <button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
             aria-label="Instagram OSARE CR">
             <img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy" decoding="async" />
           </button>
           <button class="footer-social-btn" type="button"
-            data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
-            aria-label="LinkedIn OSARE CR">
+            data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" aria-label="LinkedIn OSARE CR">
             <img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy" decoding="async" />
           </button>
           <!--
@@ -473,12 +480,12 @@
           <button class="footer-link-btn" type="button" data-href="politicas.html">Política de privacidad</button>
         </nav>
 
-        
+
 
         <p class="footer-copy">&copy; 2026 OSARE.CR — Todos los derechos reservados.</p>
       </div>
     </footer>
   </div>
 </body>
-</html>
 
+</html>

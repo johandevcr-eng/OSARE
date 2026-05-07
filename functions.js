@@ -139,7 +139,11 @@ document.addEventListener('DOMContentLoaded', function () {
         element.addEventListener('click', function () {
             const target = element.getAttribute('data-href');
             if (target) {
-                window.location.href = target;
+                if (target.startsWith('http://') || target.startsWith('https://')) {
+                    window.open(target, '_blank', 'noopener,noreferrer');
+                } else {
+                    window.location.href = target;
+                }
             }
         });
 
@@ -150,7 +154,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     event.preventDefault();
                     const target = element.getAttribute('data-href');
                     if (target) {
-                        window.location.href = target;
+                        if (target.startsWith('http://') || target.startsWith('https://')) {
+                            window.open(target, '_blank', 'noopener,noreferrer');
+                        } else {
+                            window.location.href = target;
+                        }
                     }
                 }
             });

@@ -1852,10 +1852,10 @@
         box-shadow: 0 0 0 4px rgba(14, 172, 216, 0.28), 0 18px 34px rgba(2, 62, 84, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.42);
     }
 
-    .whatsapp-float {
+    .whatsapp-float,
+    .telegram-float {
         position: fixed;
         right: 24px;
-        bottom: 92px;
         width: auto;
         height: auto;
         border: 0;
@@ -1871,16 +1871,40 @@
         transition: transform 0.2s ease;
     }
 
+    .whatsapp-float {
+        bottom: 96px;
+    }
+
+    .telegram-float {
+        bottom: 24px;
+    }
+
+    .back-to-top.is-visible ~ .whatsapp-float {
+        bottom: 164px;
+    }
+
+    .back-to-top.is-visible ~ .telegram-float {
+        bottom: 92px;
+    }
+
     .whatsapp-float:hover,
-    .whatsapp-float:focus-visible {
+    .whatsapp-float:focus-visible,
+    .telegram-float:hover,
+    .telegram-float:focus-visible {
         transform: translateY(-2px);
         outline: none;
     }
 
-    .whatsapp-float-icon {
+    .whatsapp-float-icon,
+    .telegram-float-icon {
         width: 60px;
         height: 60px;
         object-fit: contain;
+    }
+
+    .telegram-float-icon {
+        width: 52px;
+        height: 52px;
     }
 
     footer {
@@ -2484,7 +2508,15 @@
             height: auto;
         }
 
-        .whatsapp-float-icon {
+        .telegram-float {
+            right: 14px;
+            bottom: 22px;
+            width: auto;
+            height: auto;
+        }
+
+        .whatsapp-float-icon,
+        .telegram-float-icon {
             width: 36px;
             height: 36px;
         }
@@ -3163,7 +3195,15 @@
             height: auto;
         }
 
-        .whatsapp-float-icon {
+        .telegram-float {
+            right: 10px;
+            bottom: 16px;
+            width: auto;
+            height: auto;
+        }
+
+        .whatsapp-float-icon,
+        .telegram-float-icon {
             width: 32px;
             height: 32px;
         }
