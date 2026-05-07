@@ -315,8 +315,7 @@ body {
 	align-self: stretch;
 	display: flex;
 	align-items: center;
-	text-align: justify;
-	text-align-last: left;
+	text-align: left;
 }
 
 
