@@ -309,12 +309,11 @@ body {
 	line-height: 1.5;
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	box-shadow: 0 8px 22px rgba(0, 96, 160, 0.25);
-	width: 100%;
+	width: fit-content;
 	max-width: 100%;
-	justify-self: stretch;
-	align-self: stretch;
-	display: flex;
-	align-items: center;
+	justify-self: start;
+	align-self: start;
+	display: inline-block;
 	text-align: left;
 }
 
