@@ -213,8 +213,16 @@ body {
 	padding: 16px 18px;
 	line-height: 1.6;
 	border: 1px solid var(--card-border);
+	box-shadow: 0 4px 24px rgba(14, 172, 216, 0.08), 0 1px 4px rgba(0, 0, 0, 0.06);
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 	width: fit-content;
 	max-width: 100%;
+}
+
+.note-box:hover {
+	transform: translateY(-5px) scale(1.012);
+	box-shadow: 0 12px 40px rgba(14, 172, 216, 0.18), 0 3px 10px rgba(0, 0, 0, 0.09);
+	border-color: rgba(14, 172, 216, 0.46);
 }
 
 .quote-box {
