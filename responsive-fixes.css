@@ -7,6 +7,11 @@
   --small-mobile-font: 14px;
 }
 
+/* Separación amplia debajo del menú superior fijo */
+.home-topbar + .main {
+  margin-top: calc(var(--fixed-video-height, 74px) + 8rem) !important;
+}
+
 html,
 body {
   width: 100%;
