@@ -172,21 +172,22 @@
 .principle-block::before {
 	content: '\201D';
 	display: block;
-	font-size: 116px;
+	font-size: 140px;
 	line-height: 1;
 	color: var(--accent);
 	font-family: Georgia, serif;
-	margin-bottom: 2px;
+	margin-bottom: -50px;
 	text-align: center;
 }
 
 .principle-block h4 {
 	margin: 0 0 10px;
-	font-size: 22px;
+	font-size: 25px;
 	color: var(--accent);
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
 	text-align: center;
+	margin-bottom: 2rem;
 }
 
 .principle-block p {
