@@ -8,6 +8,31 @@ document.addEventListener('DOMContentLoaded', function () {
         pageTopbar.appendChild(primarySidebar);
     }
 
+    if (primarySidebar) {
+        const primaryList = primarySidebar.querySelector('ul');
+        if (primaryList && !primaryList.querySelector('.topbar-cta-item')) {
+            const ctaItem = document.createElement('li');
+            ctaItem.className = 'nav-button-item topbar-cta-item';
+            ctaItem.innerHTML = '<button class="menu-link-btn" type="button" data-href="contacto.html"><span>Hablemos</span></button>';
+            primaryList.appendChild(ctaItem);
+        }
+    }
+
+    document.querySelectorAll('footer .footer-inner').forEach(function (footerInner) {
+        if (footerInner.querySelector('.footer-company-data')) {
+            return;
+        }
+        const companyData = document.createElement('p');
+        companyData.className = 'footer-company-data';
+        companyData.textContent = 'Cédula jurídica: 3-101-932568 | Dirección: Cartago, Dulce Nombre, Terranova, A2, Costa Rica';
+        const footerCopy = footerInner.querySelector('.footer-copy');
+        if (footerCopy) {
+            footerInner.insertBefore(companyData, footerCopy);
+        } else {
+            footerInner.appendChild(companyData);
+        }
+    });
+
     const dropdowns = Array.from(document.querySelectorAll('.has-dropdown'));
     const backToTopButton = document.getElementById('backToTopBtn');
     const floatingSidebar = document.getElementById('floatingSidebar');
@@ -208,8 +233,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ' Al continuar navegando, acepta su uso según nuestra política.',
             '</p>',
             '<div class="cookie-notice__links">',
-            '<a class="cookie-notice__link" href="politica-privacidad.html">Política de Privacidad</a>',
-            '<a class="cookie-notice__link" href="terminos-condiciones.html">Términos y Condiciones</a>',
+            '<a class="cookie-notice__link" href="politicas.html">Política de Privacidad</a>',
+            '<a class="cookie-notice__link" href="terminos.html">Términos y Condiciones</a>',
             '</div>',
             '</div>',
             '</div>',
