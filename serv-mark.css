@@ -205,13 +205,12 @@ body {
 	margin: 0 auto;
 	font-family: inherit;
 	font-size: clamp(16px, 1.25vw, 19px);
-	line-height: 1.45;
-	letter-spacing: normal;
+	line-height: 1.8;
 	color: #0a2f6b;
 	font-weight: 600;
 	width: 25rem;
 	text-align: justify;
-
+	margin-bottom: 30px;
 }
 
 .services-grid-summary .btn {
