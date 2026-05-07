@@ -311,8 +311,8 @@ body {
 	box-shadow: 0 8px 22px rgba(0, 96, 160, 0.25);
 	width: fit-content;
 	max-width: 100%;
-	justify-self: start;
-	align-self: start;
+	justify-self: center;
+	align-self: center;
 	display: inline-block;
 	text-align: left;
 }
