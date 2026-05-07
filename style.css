@@ -1823,10 +1823,13 @@
         display: flex;
         align-items: center;
         justify-self: end;
+        align-self: end;
         gap: 8px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-end;
         text-align: right;
+        padding-bottom: 0;
+        margin-bottom: -7px;
     }
 
     .footer-link-btn {
@@ -1856,14 +1859,14 @@
 
     .footer-copy {
         grid-column: 1 / -1;
-        margin: 4px 0 0;
+        margin: 0;
         color: #fff;
         opacity: 0.86;
         font-size: 12px;
         letter-spacing: 0.04em;
         text-align: center;
         border-top: 1px solid rgba(255, 255, 255, 0.18);
-        padding-top: 12px;
+        padding-top: 10px;
     }
     
 
@@ -2002,6 +2005,10 @@
         .footer-links {
             justify-self: center;
             justify-content: center;
+        }
+
+        .footer-links {
+            margin-bottom: 0;
         }
 
         .footer-copy {
