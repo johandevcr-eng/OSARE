@@ -2828,7 +2828,7 @@
     }
 
     .section-bg-soft {
-        background: var(--bg-soft);
+        background: transparent;
         border-radius: 28px;
         padding: 48px 24px;
         margin: 0 -10px;
