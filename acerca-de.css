@@ -194,9 +194,11 @@
 	color: var(--text-muted);
 	line-height: 1.6;
 	font-size: 18px;
-	text-align: left;
-	word-spacing: normal;
-	hyphens: none;
+	text-align: justify;
+	text-align-last: center;
+	text-justify: inter-word;
+	word-spacing: -0.02em;
+	hyphens: auto;
 	overflow-wrap: break-word;
 	word-break: normal;
 }
