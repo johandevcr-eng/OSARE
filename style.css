@@ -428,7 +428,7 @@
         justify-content: center;
         gap: 14px;
         width: 100%;
-        margin-bottom: 6rem;
+        margin-bottom: 2.5rem;
         padding: clamp(16px, 2vw, 32px) clamp(16px, 2vw, 32px);
         aspect-ratio: auto;
         background: transparent;
