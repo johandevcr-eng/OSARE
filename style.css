@@ -1504,10 +1504,10 @@
 
     .service-card-icon {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 56px;
-        height: 56px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 96px;
+        height: 96px;
         background: transparent;
         border-radius: 12px;
         margin-bottom: 16px;
@@ -1515,8 +1515,8 @@
     }
 
     .service-card-icon img {
-        width: 34px;
-        height: 34px;
+        width: 72px;
+        height: 72px;
         object-fit: contain;
         mix-blend-mode: normal;
     }
