@@ -97,6 +97,76 @@ table {
   }
 }
 
+/* Deterministic topbar dropdown behavior */
+@media (min-width: 1025px) {
+  .home-topbar,
+  .home-topbar .topbar-menu,
+  .home-topbar .topbar-menu > ul,
+  .home-topbar .topbar-menu > ul > li,
+  .home-topbar .topbar-menu .has-dropdown {
+    overflow: visible;
+  }
+
+  .home-topbar .topbar-menu > ul {
+    display: flex !important;
+    grid-template-columns: none !important;
+  }
+
+  .home-topbar .topbar-menu .submenu-dropdown {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: clamp(260px, 28vw, 320px) !important;
+    min-width: 260px !important;
+    max-width: min(320px, calc(100vw - 32px)) !important;
+    margin-top: 0 !important;
+    padding-top: 8px !important;
+    z-index: 120 !important;
+  }
+
+  .home-topbar .topbar-menu .has-dropdown:hover .submenu-dropdown,
+  .home-topbar .topbar-menu .has-dropdown:focus-within .submenu-dropdown,
+  .home-topbar .topbar-menu .has-dropdown:not(.is-open):hover .submenu-dropdown,
+  .home-topbar .topbar-menu .has-dropdown:not(.is-open):focus-within .submenu-dropdown {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-topbar,
+  .home-topbar .topbar-menu,
+  .home-topbar .topbar-menu > ul,
+  .home-topbar .topbar-menu > ul > li,
+  .home-topbar .topbar-menu .has-dropdown {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .home-topbar .topbar-menu > ul {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-content: stretch !important;
+    gap: 10px !important;
+  }
+
+  .home-topbar .topbar-menu .menu-link-btn,
+  .home-topbar .topbar-menu .menu-label {
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  .home-topbar .topbar-menu .submenu-dropdown {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-top: 8px !important;
+    z-index: auto !important;
+  }
+}
+
 /* Tablets */
 @media (max-width: 900px) {
   .full-viewport-video,
