@@ -5,6 +5,7 @@
     justify-self: center;
     display: grid;
     align-items: center;
+    margin-top: 16px;
 }
 
 .thanks-panel {
