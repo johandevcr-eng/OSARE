@@ -902,6 +902,11 @@ table {
     right: var(--fab-right) !important;
     width: var(--fab-size) !important;
     height: var(--fab-size) !important;
+    min-width: var(--fab-size) !important;
+    min-height: var(--fab-size) !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: 0 !important;
   }
 
   .back-to-top {
@@ -913,6 +918,17 @@ table {
   }
 
   .whatsapp-float {
-    bottom: calc(var(--fab-base-bottom) + (var(--fab-size) * 2) + (var(--fab-gap) * 2) + env(safe-area-inset-bottom, 0px) - 6px) !important;
+    bottom: calc(var(--fab-base-bottom) + (var(--fab-size) * 2) + (var(--fab-gap) * 2) + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .whatsapp-float-icon,
+  .telegram-float-icon {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block;
   }
 }
