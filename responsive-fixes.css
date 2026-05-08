@@ -7,18 +7,19 @@
   --small-mobile-font: 14px;
 }
 
-/* Keep topbar in normal flow to avoid overlay/cutoff issues */
+/* Keep topbar fixed with the video on all pages */
 .home-topbar {
-  position: relative !important;
-  top: auto !important;
-  left: auto !important;
-  transform: none !important;
-  margin: calc(var(--fixed-video-height, 74px) + 8px) auto 0 !important;
+  position: fixed !important;
+  top: calc(var(--fixed-video-height, 74px) + 8px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  z-index: 80 !important;
 }
 
 /* Base spacing below menu */
 .home-topbar + .main {
-  margin-top: clamp(20px, 2.8vw, 34px) !important;
+  margin-top: calc(var(--fixed-video-height, 74px) + 96px) !important;
 }
 
 html,
@@ -83,16 +84,16 @@ table {
 /* Large tablets / small laptops */
 @media (max-width: 1200px) {
   .home-topbar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
+    position: fixed !important;
+    top: calc(var(--fixed-video-height, 74px) + 8px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     width: calc(100% - 20px) !important;
-    margin: calc(var(--fixed-video-height, 74px) + 8px) auto 0 !important;
+    margin: 0 !important;
   }
 
   .home-topbar + .main {
-    margin-top: 24px !important;
+    margin-top: calc(var(--fixed-video-height, 74px) + 11rem) !important;
   }
 
   .container,
@@ -225,6 +226,10 @@ table {
 }
 
 @media (max-width: 768px) {
+  .home-topbar + .main {
+    margin-top: calc(var(--fixed-video-height, 74px) + 14rem) !important;
+  }
+
   .home-topbar .topbar-menu > ul {
     grid-template-columns: 1fr !important;
   }
@@ -409,7 +414,7 @@ table {
   }
 
   .home-topbar + .main {
-    margin-top: 18px !important;
+    margin-top: calc(var(--fixed-video-height, 74px) + 16rem) !important;
   }
 
   .container,
@@ -596,7 +601,7 @@ table {
   }
 
   .home-topbar + .main {
-    margin-top: 16px !important;
+    margin-top: calc(var(--fixed-video-height, 74px) + 17rem) !important;
   }
 
   .container,
