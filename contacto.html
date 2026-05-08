@@ -107,11 +107,18 @@
                         <p class="contact-lead">Cuentanos sobre tu necesidad y nuestro equipo te respondera en menos de
                             24 horas habiles.</p>
 
-                        <form class="contact-form" id="contactForm" name="contacto"
-                            action="https://formsubmit.co/johandev.cr@gmail.com" method="post" novalidate>
-                            <input type="hidden" name="_subject" value="Nuevo contacto desde OSARE">
-                            <input type="hidden" name="_next" value="gracias.html">
-                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+                        <!-- 1. Mantenemos el nombre y agregamos data-netlify-honeypot para el antispam -->
+                        <form class="contact-form" id="contactForm" name="contacto" netlify data-netlify="true"
+                            data-netlify-honeypot="bot-field" action="/gracias.html" method="POST">
+
+                            <input type="hidden" name="form-name" value="contacto">
+
+                            <!-- 2. Reemplazamos los campos de otros servicios por los de Netlify -->
+                            <!-- Este es el campo "trampa" para bots. Debe coincidir con el nombre en data-netlify-honeypot -->
+                            <p style="display:none">
+                                <label>No llenar esto: <input name="bot-field" /></label>
+                            </p>
+
                             <div class="contact-grid contact-grid-top">
                                 <label class="contact-field">
                                     <span>Nombre <strong>*</strong></span>
@@ -168,16 +175,10 @@
                                 </label>
 
                                 <div class="contact-optin-wrap">
-                                    <!-- <p class="contact-human-note">Nuestro equipo de consultores revisara tu caso y te contactara con una recomendacion inicial.</p> -->
                                     <label class="contact-optin">
                                         <input type="checkbox" name="suscripcion" checked>
                                         <span>Quiero suscribirme y recibir información sobre los servicios</span>
                                     </label>
-
-                                    <!-- <div class="contact-trust" aria-label="Elementos de confianza">
-                                <p>Respuesta en menos de 24 horas habiles.</p>
-                                <p>Garantia de confidencialidad total.</p>
-                            </div> -->
                                 </div>
                             </div>
 
@@ -186,8 +187,7 @@
                             </div>
 
                             <p class="contact-privacy-note">Al hacer clic en enviar, aceptas nuestra <a
-                                    href="politicas.html">Politica de privacidad</a> y el tratamiento de tus datos para
-                                fines de contacto comercial.</p>
+                                    href="politicas.html">Politica de privacidad</a>.</p>
                         </form>
                     </section>
 
