@@ -1,7 +1,9 @@
 /* Global responsive hardening for all pages */
 
 :root {
+  --tablet-gap: 16px;
   --tablet-gap: clamp(12px, 2.5vw, 22px);
+  --mobile-side-gap: 12px;
   --mobile-side-gap: clamp(10px, 3.8vw, 18px);
   --mobile-font: 15px;
   --small-mobile-font: 14px;
@@ -27,6 +29,8 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 * {
@@ -40,6 +44,54 @@ canvas,
 iframe {
   max-width: 100%;
   height: auto;
+}
+
+video {
+  object-fit: cover;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+  .glass-panel,
+  .home-topbar,
+  .cookie-notice__panel,
+  .hero,
+  .banner,
+  .service-card,
+  .benefits-list,
+  .benefits-preview {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(249, 249, 249, 0.95) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Avoid horizontal overflow from long text/URLs */
@@ -410,6 +462,11 @@ table {
 /* Phones */
 @media (max-width: 640px) {
   body {
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+  }
+
+  body {
     font-size: var(--mobile-font);
   }
 
@@ -443,6 +500,12 @@ table {
     justify-content: flex-start;
     padding: 12px 14px !important;
     font-size: 14px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
   }
 
   .submenu-link {

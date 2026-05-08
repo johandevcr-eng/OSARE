@@ -1,5 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
+    const supportsMatchMedia = typeof window.matchMedia === 'function';
     const pageTopbar = document.querySelector('.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar');
     const primarySidebar = document.getElementById('primarySidebar');
 
@@ -53,8 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const scrolly = document.getElementById('osareScrolly');
     const chaosField = document.getElementById('chaosField');
     const magneticCta = document.getElementById('magneticCta');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobileViewport = window.matchMedia('(max-width: 900px)').matches;
+    const prefersReducedMotion = supportsMatchMedia
+        ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        : false;
+    const isMobileViewport = supportsMatchMedia
+        ? window.matchMedia('(max-width: 900px)').matches
+        : window.innerWidth <= 900;
 
     const logoTrack = document.querySelector('.logo-track');
     if (logoTrack && !logoTrack.dataset.loopReady) {
@@ -201,8 +206,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    const storage = {
+        getItem: function (key) {
+            try {
+                return window.localStorage.getItem(key);
+            } catch (error) {
+                return null;
+            }
+        },
+        setItem: function (key, value) {
+            try {
+                window.localStorage.setItem(key, value);
+            } catch (error) {
+                // Ignore storage errors (private mode, blocked storage, quotas).
+            }
+        }
+    };
+
     const cookieBannerStorageKey = 'osare-cookie-consent-v1';
-    const savedCookieConsent = localStorage.getItem(cookieBannerStorageKey);
+    const savedCookieConsent = storage.getItem(cookieBannerStorageKey);
 
     const removeCookieBanner = function () {
         const existingBanner = document.getElementById('cookieNotice');
@@ -223,7 +245,7 @@ document.addEventListener('DOMContentLoaded', function () {
             choice: choice,
             savedAt: new Date().toISOString()
         };
-        localStorage.setItem(cookieBannerStorageKey, JSON.stringify(payload));
+        storage.setItem(cookieBannerStorageKey, JSON.stringify(payload));
     };
 
     const buildCookieBanner = function () {
@@ -531,7 +553,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (magneticCta) {
         const maxShift = 14;
-        const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+        const isCoarsePointer = supportsMatchMedia
+            ? window.matchMedia('(pointer: coarse)').matches
+            : false;
         const resetMagnet = function () {
             magneticCta.style.transform = 'translate3d(0, 0, 0)';
         };
