@@ -45,6 +45,19 @@ body {
 	padding: 26px;
 	box-shadow: var(--panel-shadow);
 	border: 1px solid var(--card-border);
+	position: relative;
+	overflow: hidden;
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #0eacd8 0%, #0078a8 60%, rgba(14, 172, 216, 0.2) 100%);
+	border-radius: 18px 18px 0 0;
 }
 
 .hero h1 {
