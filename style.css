@@ -2888,7 +2888,7 @@
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
         letter-spacing: 0.12em;
-        color: var(--text-main);
+        color: #0ba8d4;
         text-transform: uppercase;
         font-size: clamp(11px, 0.95vw, 13px);
     }
@@ -2897,6 +2897,7 @@
         overflow: hidden;
         position: relative;
         padding-inline: 2px;
+        padding-block: 6px;
         -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
         mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
         scrollbar-width: none;
@@ -2920,11 +2921,15 @@
         font-weight: 700;
         color: var(--text-main);
         background: #ffffff;
-        border: 1px solid #e6edf4;
+        border: 2px solid #0ba8d4;
         white-space: nowrap;
         flex: 0 0 auto;
         margin-right: 0;
         font-size: 14px;
+    }
+
+    .logo-pill strong {
+        color: #0ba8d4;
     }
 
     @keyframes logoLoop {

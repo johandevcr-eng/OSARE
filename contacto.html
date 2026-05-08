@@ -101,114 +101,145 @@
             </div>
 
             <main class="contact-page">
-                <div>
-                            <p>Elije la manera que te resulte más cómoda:</p>
-                            <ul>
-                                <li>Por los canales de mensajería que encuentras en el costado</li>
-                                <li>Por el correo electrónico que encontrarás en el pie de página</li>
-                                <li>Por el formulario de contacto que ves justo aquí</li>
+                <p class="contact-intro">Estás a un paso de iniciar una relación comercial que le agregará valor a tu negocio o idea...</p>
+
+                <div class="contact-conversion-layout">
+                    <aside class="contact-proof-panel glass-panel" aria-label="Confianza y acompanamiento OSARE">
+                        <img class="contact-agent-photo" src="img/foto-contacto.png" alt="Asesora de OSARE" loading="lazy" decoding="async">
+                        <h3>Tu solicitud será atendida por un asesor de nuestro equipo</h3>
+                        <div class="contact-proof-box">
+                            <p>En OSARE atendemos tu solicitud, analizamos tu caso, y te devolvemos una ruta de acción inicial para que avances con seguridad.</p>
+
+                            <ul class="contact-proof-list">
+                                <li>Respuesta en menos de 24 horas hábiles.</li>
+                                <li>Confidencialidad absoluta en el manejo de tu información.</li>
+                                <li>Consultas ilimitadas en tu proceso de decisión. *</li>
+                                <li>Seguimiento de tus inquietudes y necesidades.</li>
                             </ul>
                         </div>
-                <div class="contact-conversion-layout">  
-                    <section class="contact-panel glass-panel" aria-label="Formulario de contacto"> 
-                        <h2 class="contact-title">Empieza a blindar tu negocio hoy</h2>
-                        <!-- 1. Mantenemos el nombre y agregamos data-netlify-honeypot para el antispam -->
-                        <form class="contact-form" id="contactForm" name="contacto" netlify data-netlify="true"
-                            data-netlify-honeypot="bot-field" action="/gracias.html" method="POST">
+                        <p id="asterisco">* Referentes a los servicios ofrecidos, no implica asesoría.</p>
+                    </aside>
 
-                            <input type="hidden" name="form-name" value="contacto">
+                    <section class="contact-form-column" aria-label="Canales de contacto y formulario">
+                        <!-- <div class="contact-choice-note">
+                            <p>Elije la manera que te resulte más cómoda:</p>
+                            <ul>
+                                <li>Por los canales de mensajería que encuentras en el costado.</li>
+                                <li>Por el correo electrónico que encontrarás en el pie de página.</li>
+                                <li>Por el formulario de contacto que ves justo aquí.</li>
+                            </ul>
+                        </div> -->
 
-                            <!-- 2. Reemplazamos los campos de otros servicios por los de Netlify -->
-                            <!-- Este es el campo "trampa" para bots. Debe coincidir con el nombre en data-netlify-honeypot -->
-                            <p style="display:none">
-                                <label>No llenar esto: <input name="bot-field" /></label>
-                            </p>
+                        <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
+                            <h2 class="contact-title">Empieza a blindar tu negocio hoy</h2>
 
-                            <div class="contact-grid contact-grid-top">
-                                <label class="contact-field">
-                                    <span>Nombre <strong>*</strong></span>
-                                    <input type="text" name="nombre" autocomplete="given-name" required>
-                                </label>
+                            <form class="contact-form" id="contactForm" name="contacto" netlify data-netlify="true"
+                                data-netlify-honeypot="bot-field" action="/gracias.html" method="POST">
 
-                                <label class="contact-field">
-                                    <span>Apellido <strong>*</strong></span>
-                                    <input type="text" name="apellido" autocomplete="family-name" required>
-                                </label>
+                                <input type="hidden" name="form-name" value="contacto">
 
-                                <label class="contact-field">
-                                    <span>Posición</span>
-                                    <input type="text" name="posicion" autocomplete="organization-title">
-                                </label>
+                                <p style="display:none">
+                                    <label>No llenar esto: <input name="bot-field" /></label>
+                                </p>
 
-                                <label class="contact-field">
-                                    <span>Email <strong>*</strong></span>
-                                    <input type="email" name="email" autocomplete="email" required
-                                        placeholder="@empresa.com">
-                                </label>
-                            </div>
+                                <div class="contact-grid contact-grid-top">
+                                    <label class="contact-field">
+                                        <span>Nombre <strong>*</strong></span>
+                                        <input type="text" name="nombre" autocomplete="given-name" required>
+                                    </label>
 
-                            <div class="contact-grid contact-grid-mid">
-                                <label class="contact-field contact-field-company">
-                                    <span>Nombre Empresa <strong>*</strong></span>
-                                    <input type="text" name="empresa" autocomplete="organization" required>
-                                </label>
+                                    <label class="contact-field">
+                                        <span>Apellido <strong>*</strong></span>
+                                        <input type="text" name="apellido" autocomplete="family-name" required>
+                                    </label>
 
-                                <label class="contact-field">
-                                    <span>Teléfono</span>
-                                    <input type="tel" name="telefono" autocomplete="tel" inputmode="tel"
-                                        pattern="[0-9+\-\s()]{8,20}" placeholder="8888-8888">
-                                </label>
+                                    <label class="contact-field">
+                                        <span>Posición</span>
+                                        <input type="text" name="posicion" autocomplete="organization-title">
+                                    </label>
 
-                                <label class="contact-field contact-field-service">
-                                    <span>Estoy interesado en <strong>*</strong></span>
-                                    <select name="servicio" id="serviceInterest" required>
-                                        <option value="" selected disabled>Selecciona un servicio</option>
-                                        <option value="Servicios Administrativos">Servicios Administrativos</option>
-                                        <option value="Servicios Contables">Servicios Contables</option>
-                                        <option value="Servicios Legales">Servicios Legales</option>
-                                        <option value="Marketing y Branding">Marketing y Branding</option>
-                                        <option value="Otro">Otro</option>
-                                    </select>
-                                </label>
-                            </div>
-
-                            <div class="contact-bottom">
-                                <label class="contact-field contact-message">
-                                    <span>Comentario</span>
-                                    <textarea name="comentario" rows="6"
-                                        placeholder="Agregar respuesta aquí"></textarea>
-                                </label>
-
-                                <div class="contact-optin-wrap">
-                                    <label class="contact-optin">
-                                        <input type="checkbox" name="suscripcion" checked>
-                                        <span>Quiero suscribirme y recibir información sobre los servicios</span>
+                                    <label class="contact-field">
+                                        <span>Email <strong>*</strong></span>
+                                        <input type="email" name="email" autocomplete="email" required
+                                            placeholder="@empresa.com">
                                     </label>
                                 </div>
-                            </div>
 
-                            <div class="contact-actions">
-                                <button class="contact-submit" type="submit">Enviar</button>
-                            </div>
+                                <div class="contact-grid contact-grid-mid">
+                                    <label class="contact-field contact-field-company">
+                                        <span>Nombre Empresa <strong>*</strong></span>
+                                        <input type="text" name="empresa" autocomplete="organization" required>
+                                    </label>
 
-                            <p class="contact-privacy-note">Al hacer clic en enviar, aceptas nuestra <a
-                                    href="politicas.html">Politica de privacidad</a>.</p>
-                        </form>
+                                    <label class="contact-field">
+                                        <span>Teléfono</span>
+                                        <input type="tel" name="telefono" autocomplete="tel" inputmode="tel"
+                                            pattern="[0-9+\-\s()]{8,20}" placeholder="8888-8888">
+                                    </label>
+
+                                    <label class="contact-field contact-field-service">
+                                        <span>Estoy interesado en <strong>*</strong></span>
+                                        <select name="servicio" id="serviceInterest" required>
+                                            <option value="" selected disabled>Selecciona un servicio</option>
+                                            <option value="Servicios Administrativos">Servicios Administrativos</option>
+                                            <option value="Servicios Contables">Servicios Contables</option>
+                                            <option value="Servicios Legales">Servicios Legales</option>
+                                            <option value="Marketing y Branding">Marketing y Branding</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                                <div class="contact-bottom">
+                                    <label class="contact-field contact-message">
+                                        <span>Comentario</span>
+                                        <textarea name="comentario" rows="6"
+                                            placeholder="Agregar respuesta aquí"></textarea>
+                                    </label>
+
+                                    <div class="contact-optin-wrap">
+                                        <label class="contact-optin">
+                                            <input type="checkbox" name="suscripcion" checked>
+                                            <span>Quiero suscribirme al blog y recibir información sobre los servicios</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="contact-actions">
+                                    <button class="contact-submit" type="submit">Enviar</button>
+                                    <div class="contact-captcha" role="group" aria-label="reCAPTCHA temporal">
+                                        <label class="contact-optin">
+                                            <input type="checkbox" name="captcha-temporal" required>
+                                            <span>No soy un robot</span>
+                                        </label>
+                                        <p class="contact-captcha-error" aria-live="polite">Bloque temporal mientras se integra reCAPTCHA definitivo.</p>
+                                    </div>
+                                    <p class="contact-privacy-note">Al hacer clic en enviar, aceptas nuestra <a
+                                            href="politicas.html">Politica de privacidad</a>.</p>
+                                </div>
+                            </form>
+                        </section>
                     </section>
-
-                    <aside class="contact-proof-panel glass-panel" aria-label="Confianza y ubicacion OSARE">
-                        <h3>Tu solicitud será atendida por un asesor de nuestro equipo</h3>
-                        <p>En OSARE atendemos tu solicitud, analizamos tu caso, y te devolvemos una ruta de acción inicial para que avances con seguridad.</p>
-
-                        <ul class="contact-proof-list">
-                            <li>Respuesta en menos de 24 horas hábiles.</li>
-                            <li>Confidencialidad absoluta en el manejo de tu información.</li>
-                            <li>Consultas ilimitadas en tu proceso de decisión*.</li>
-                            <li>Seguimiento de tus inquietudes y necesidades.</li>
-                        </ul>
-
-                    </aside>
                 </div>
+
+                <section class="social-proof glass-panel" aria-label="Método OSARE">
+                    <p class="social-proof-title" style="font-size: 20px;">Método OSARE</p>
+                    <div class="logo-marquee" aria-hidden="true">
+                        <div class="logo-track">
+                            <span class="logo-pill"><strong>O</strong> - Organización</span>
+                            <span class="logo-pill"><strong>S</strong> - Sistemas</span>
+                            <span class="logo-pill"><strong>A</strong> - Automatización</span>
+                            <span class="logo-pill"><strong>R</strong> - Resultados</span>
+                            <span class="logo-pill"><strong>E</strong> - Estrategia y estructura legal</span>
+
+                            <span class="logo-pill"><strong>O</strong> - Organización</span>
+                            <span class="logo-pill"><strong>S</strong> - Sistemas</span>
+                            <span class="logo-pill"><strong>A</strong> - Automatización</span>
+                            <span class="logo-pill"><strong>R</strong> - Resultados</span>
+                            <span class="logo-pill"><strong>E</strong> - Estrategia y estructura legal</span>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
 
