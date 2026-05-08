@@ -20,8 +20,8 @@
 }
 
 /* Base spacing below menu */
-.home-topbar + .main {
-  margin-top: calc(var(--fixed-video-height, 74px) + 96px) !important;
+body:not(.about-page-body) .home-topbar + .main {
+  margin-top: calc(var(--fixed-video-height, 74px) + 126px) !important;
 }
 
 html,
@@ -144,8 +144,8 @@ table {
     margin: 0 !important;
   }
 
-  .home-topbar + .main {
-    margin-top: calc(var(--fixed-video-height, 74px) + 11rem) !important;
+  body:not(.about-page-body) .home-topbar + .main {
+    margin-top: calc(var(--fixed-video-height, 74px) + 11rem + 30px) !important;
   }
 
   .container,
