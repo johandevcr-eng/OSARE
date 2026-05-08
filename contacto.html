@@ -78,8 +78,10 @@
         </div>
 
         <main class="contact-page">
+            <div class="contact-conversion-layout">
             <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
-                <h2 class="contact-title">Contacto</h2>
+                <h2 class="contact-title">Empieza a blindar tu negocio hoy</h2>
+                <p class="contact-lead">Cuentanos sobre tu necesidad y nuestro equipo te respondera en menos de 24 horas habiles.</p>
 
                 <form class="contact-form" id="contactForm" name="contacto" action="https://formsubmit.co/johandev.cr@gmail.com" method="post" novalidate>
                     <input type="hidden" name="_subject" value="Nuevo contacto desde OSARE">
@@ -103,7 +105,7 @@
 
                         <label class="contact-field">
                             <span>Email <strong>*</strong></span>
-                            <input type="email" name="email" autocomplete="email" required>
+                            <input type="email" name="email" autocomplete="email" required placeholder="@empresa.com">
                         </label>
                     </div>
 
@@ -115,12 +117,19 @@
 
                         <label class="contact-field">
                             <span>Teléfono</span>
-                            <input type="tel" name="telefono" autocomplete="tel">
+                            <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" pattern="[0-9+\-\s()]{8,20}" placeholder="8888-8888">
                         </label>
 
-                        <label class="contact-field contact-field-address">
-                            <span>Dirección</span>
-                            <input type="text" name="direccion" autocomplete="street-address">
+                        <label class="contact-field contact-field-service">
+                            <span>Estoy interesado en <strong>*</strong></span>
+                            <select name="servicio" id="serviceInterest" required>
+                                <option value="" selected disabled>Selecciona un servicio</option>
+                                <option value="Servicios Administrativos">Servicios Administrativos</option>
+                                <option value="Servicios Contables">Servicios Contables</option>
+                                <option value="Servicios Legales">Servicios Legales</option>
+                                <option value="Marketing y Branding">Marketing y Branding</option>
+                                <option value="Otro">Otro</option>
+                            </select>
                         </label>
                     </div>
 
@@ -131,18 +140,52 @@
                         </label>
 
                         <div class="contact-optin-wrap">
+                            <!-- <p class="contact-human-note">Nuestro equipo de consultores revisara tu caso y te contactara con una recomendacion inicial.</p> -->
                             <label class="contact-optin">
                                 <input type="checkbox" name="suscripcion" checked>
                                 <span>Quiero suscribirme y recibir información sobre los servicios</span>
                             </label>
+
+                            <!-- <div class="contact-trust" aria-label="Elementos de confianza">
+                                <p>Respuesta en menos de 24 horas habiles.</p>
+                                <p>Garantia de confidencialidad total.</p>
+                            </div> -->
                         </div>
                     </div>
 
                     <div class="contact-actions">
-                        <button class="contact-submit" type="submit">Enviar</button>
+                        <button class="contact-submit" type="submit">Quiero mi diagnostico</button>
                     </div>
+
+                    <p class="contact-privacy-note">Al hacer clic en enviar, aceptas nuestra <a href="politicas.html">Politica de privacidad</a> y el tratamiento de tus datos para fines de contacto comercial.</p>
                 </form>
             </section>
+
+            <aside class="contact-proof-panel glass-panel" aria-label="Confianza y ubicacion OSARE">
+                <h3>Tu solicitud queda en manos de consultores reales</h3>
+                <p>En OSARE analizamos tu caso, priorizamos riesgos y te devolvemos una ruta de accion inicial para que avances con seguridad.</p>
+
+                <ul class="contact-proof-list">
+                    <li>Respuesta en menos de 24 horas habiles.</li>
+                    <li>Confidencialidad total en cada consulta.</li>
+                    <li>Acompanamiento remoto con seguimiento.</li>
+                </ul>
+
+                <div class="contact-method-card" aria-label="Metodo OSARE">
+                    <h4>Método OSARE</h4>
+                    <p>Organizacion, sistemas, automatizacion, resultados y estrategia legal para proteger el crecimiento de tu empresa.</p>
+                </div>
+
+                <div class="contact-map-wrap" aria-label="Ubicacion de OSARE">
+                    <p class="contact-map-title">Cartago, Dulce Nombre, Costa Rica</p>
+                    <iframe
+                        title="Ubicacion OSARE en Cartago"
+                        src="https://www.google.com/maps?q=Cartago%20Dulce%20Nombre%20Costa%20Rica&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </aside>
+            </div>
         </main>
     </div>
 

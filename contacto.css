@@ -1,8 +1,15 @@
 .contact-page {
     grid-column: 2;
     min-width: 0;
-    width: min(100%, 980px);
+    width: min(100%, 1220px);
     justify-self: center;
+}
+
+.contact-conversion-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.85fr);
+    gap: 18px;
+    align-items: start;
 }
 
 .contact-panel {
@@ -16,6 +23,14 @@
     font-size: clamp(28px, 4vw, 36px);
     line-height: 1.1;
     color: var(--text-main);
+}
+
+.contact-lead {
+    margin: -8px 0 16px;
+    color: var(--text-main);
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 70ch;
 }
 
 .contact-form {
@@ -69,7 +84,8 @@
 }
 
 .contact-field input,
-.contact-field textarea {
+.contact-field textarea,
+.contact-field select {
     width: 100%;
     border: 1px solid var(--card-border);
     border-radius: 8px;
@@ -88,6 +104,16 @@
     resize: vertical;
 }
 
+.contact-field select {
+    min-height: 42px;
+}
+
+.contact-field-service select {
+    width: fit-content;
+    min-width: 30ch;
+    max-width: 100%;
+}
+
 @media (max-width: 480px) {
     .contact-field input {
         min-height: 48px;
@@ -101,13 +127,15 @@
 }
 
 .contact-field input:focus-visible,
-.contact-field textarea:focus-visible {
+.contact-field textarea:focus-visible,
+.contact-field select:focus-visible {
     outline: 2px solid rgba(8, 152, 196, 0.4);
     outline-offset: 1px;
 }
 
 .contact-field input,
-.contact-field textarea {
+.contact-field textarea,
+.contact-field select {
     border: 1px solid #000000 !important;
     background: var(--card-bg);
     box-shadow: none;
@@ -134,7 +162,14 @@
 .contact-optin-wrap {
     display: grid;
     gap: 18px;
-    padding-top: 34px;
+    padding-top: 6px;
+}
+
+.contact-human-note {
+    margin: 0;
+    font-size: 15px;
+    color: #203247;
+    line-height: 1.45;
 }
 
 .contact-optin {
@@ -151,6 +186,22 @@
     width: 18px;
     height: 18px;
     accent-color: #0ba8d4;
+}
+
+.contact-trust {
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid rgba(11, 168, 212, 0.3);
+    border-radius: 10px;
+    background: rgba(11, 168, 212, 0.06);
+}
+
+.contact-trust p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #17314a;
 }
 
 .contact-captcha {
@@ -205,6 +256,91 @@
     outline: none;
 }
 
+.contact-privacy-note {
+    margin: 2px 0 0;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.45;
+    color: #30465f;
+}
+
+.contact-privacy-note a {
+    color: #056f95;
+    font-weight: 700;
+}
+
+.contact-proof-panel {
+    position: sticky;
+    top: calc(var(--fixed-video-height) + 20px);
+    border-radius: 16px;
+    padding: clamp(16px, 2vw, 24px);
+    border: 1px solid #000000 !important;
+    background: var(--card-bg);
+    display: grid;
+    gap: 14px;
+}
+
+.contact-proof-panel h3 {
+    margin: 0;
+    font-size: clamp(20px, 2.1vw, 26px);
+    line-height: 1.2;
+    color: #102236;
+}
+
+.contact-proof-panel > p {
+    margin: 0;
+    color: #203247;
+    line-height: 1.5;
+}
+
+.contact-proof-list {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 8px;
+    color: #17314a;
+    line-height: 1.45;
+}
+
+.contact-method-card {
+    border: 1px solid rgba(11, 168, 212, 0.28);
+    border-radius: 12px;
+    background: rgba(11, 168, 212, 0.06);
+    padding: 12px;
+}
+
+.contact-method-card h4 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: #0a6f92;
+}
+
+.contact-method-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #17314a;
+    line-height: 1.45;
+}
+
+.contact-map-wrap {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-map-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    color: #102236;
+}
+
+.contact-map-wrap iframe {
+    width: 100%;
+    min-height: 220px;
+    border: 1px solid rgba(16, 34, 54, 0.18);
+    border-radius: 12px;
+}
+
 @media (max-width: 1200px) {
     .contact-page {
         grid-column: 1;
@@ -212,6 +348,15 @@
 }
 
 @media (max-width: 1020px) {
+    .contact-conversion-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-proof-panel {
+        position: static;
+        top: auto;
+    }
+
     .contact-grid-top {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -237,6 +382,11 @@
 
 @media (max-width: 640px) {
     .contact-panel {
+        border-radius: 14px;
+        padding: 16px;
+    }
+
+    .contact-proof-panel {
         border-radius: 14px;
         padding: 16px;
     }
