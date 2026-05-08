@@ -888,3 +888,31 @@ table {
     bottom: 58px;
   }
 }
+
+/* Unified mobile stack for floating action buttons */
+@media (max-width: 900px) {
+  .back-to-top,
+  .whatsapp-float,
+  .telegram-float {
+    --fab-size: 48px;
+    --fab-gap: 10px;
+    --fab-right: 12px;
+    --fab-base-bottom: 12px;
+
+    right: var(--fab-right) !important;
+    width: var(--fab-size) !important;
+    height: var(--fab-size) !important;
+  }
+
+  .back-to-top {
+    bottom: calc(var(--fab-base-bottom) + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .telegram-float {
+    bottom: calc(var(--fab-base-bottom) + var(--fab-size) + var(--fab-gap) + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .whatsapp-float {
+    bottom: calc(var(--fab-base-bottom) + (var(--fab-size) * 2) + (var(--fab-gap) * 2) + env(safe-area-inset-bottom, 0px) - 6px) !important;
+  }
+}
