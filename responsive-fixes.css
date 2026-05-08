@@ -9,6 +9,10 @@
   --small-mobile-font: 14px;
 }
 
+.topbar-compact-toggle {
+  display: none;
+}
+
 /* Keep topbar fixed with the video on all pages */
 .home-topbar {
   position: fixed !important;
@@ -289,6 +293,125 @@ table {
 
 /* Tablets */
 @media (max-width: 900px) {
+  .home-topbar.is-mobile-compact {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+    padding-right: 64px !important;
+    overflow: visible !important;
+  }
+
+  .home-topbar.is-mobile-compact .home-topbar-brand,
+  .home-topbar.is-mobile-compact .logo,
+  .home-topbar.is-mobile-compact #title-menu {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+  }
+
+  .home-topbar.is-mobile-compact .home-topbar-brand,
+  .home-topbar.is-mobile-compact .logo {
+    width: auto !important;
+    max-width: 100% !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  .home-topbar.is-mobile-compact #title-menu {
+    display: none !important;
+  }
+
+  .topbar-compact-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(118, 149, 196, 0.38);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #f9fbff 0%, #edf2f9 68%, #e7edf6 100%);
+    color: #0b3b92;
+    box-shadow: 0 6px 16px rgba(12, 45, 105, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    flex: 0 0 46px;
+    margin-left: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .topbar-compact-toggle:hover,
+  .topbar-compact-toggle:focus-visible {
+    background: radial-gradient(circle at 35% 30%, #ffffff 0%, #eff4fc 70%, #e9eff8 100%);
+    box-shadow: 0 8px 18px rgba(12, 45, 105, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.92);
+    outline: none;
+  }
+
+  .topbar-compact-toggle:active {
+    transform: translateY(-50%) scale(0.97);
+  }
+
+  .topbar-compact-toggle .dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .topbar-compact-toggle .dots > span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    display: block;
+  }
+
+  .home-topbar.is-mobile-compact .topbar-menu {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    display: none !important;
+    width: 100% !important;
+    padding: 10px !important;
+    border-radius: 14px !important;
+    background: rgba(248, 250, 255, 0.98) !important;
+    border: 1px solid rgba(26, 63, 134, 0.12) !important;
+    box-shadow: 0 14px 30px rgba(9, 28, 70, 0.2) !important;
+    z-index: 115 !important;
+  }
+
+  .home-topbar.is-mobile-compact.is-mobile-menu-open .topbar-menu {
+    display: block !important;
+  }
+
+  .home-topbar.is-mobile-compact .topbar-menu > ul {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    row-gap: 8px !important;
+  }
+
+  .home-topbar.is-mobile-compact .topbar-menu .menu-link-btn,
+  .home-topbar.is-mobile-compact .topbar-menu .menu-label {
+    min-height: 44px;
+    justify-content: flex-start !important;
+  }
+
+  .home-topbar.is-mobile-compact + .main {
+    margin-top: calc(var(--fixed-video-height, 74px) + 104px) !important;
+  }
+
+  .home-topbar.is-mobile-compact .dropdown-arrow {
+    margin-left: auto !important;
+  }
+
   .full-viewport-video,
   .home-topbar {
     width: calc(100% - 20px) !important;
@@ -472,6 +595,10 @@ table {
 
   .home-topbar + .main {
     margin-top: calc(var(--fixed-video-height, 74px) + 16rem) !important;
+  }
+
+  .home-topbar.is-mobile-compact + .main {
+    margin-top: calc(var(--fixed-video-height, 74px) + 98px) !important;
   }
 
   .container,
@@ -665,6 +792,10 @@ table {
 
   .home-topbar + .main {
     margin-top: calc(var(--fixed-video-height, 74px) + 17rem) !important;
+  }
+
+  .home-topbar.is-mobile-compact + .main {
+    margin-top: calc(var(--fixed-video-height, 74px) + 94px) !important;
   }
 
   .container,
