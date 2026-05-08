@@ -1,19 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/jpeg" href="img/osare.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contacte a OSARE CR para recibir asesoría administrativa, contable, legal y de marketing para tu empresa.">
+    <meta name="description"
+        content="Contacte a OSARE CR para recibir asesoría administrativa, contable, legal y de marketing para tu empresa.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_CR">
     <meta property="og:site_name" content="OSARE CR">
     <meta property="og:title" content="Contacto | OSARE CR">
-    <meta property="og:description" content="Converse con nuestro equipo y recibe una propuesta a la medida de tu negocio.">
+    <meta property="og:description"
+        content="Converse con nuestro equipo y recibe una propuesta a la medida de tu negocio.">
     <meta property="og:image" content="https://osare.cr/img/osare.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contacto | OSARE CR">
-    <meta name="twitter:description" content="Converse con nuestro equipo y recibe una propuesta a la medida de tu negocio.">
+    <meta name="twitter:description"
+        content="Converse con nuestro equipo y recibe una propuesta a la medida de tu negocio.">
     <meta name="twitter:image" content="https://osare.cr/img/osare.jpg">
     <title>Contacto | OSARE</title>
     <link rel="stylesheet" href="style.css">
@@ -22,28 +26,35 @@
     <script src="contacto.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="responsive-fixes.css">
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="full-viewport-video">
-        <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }" src="video/banner.mp4"></video>
-    </div>
-
-    <div class="header home-topbar glass-panel">
-        <div class="home-topbar-brand logo">
-            <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async">
-            <img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35" decoding="async">
+        <div class="full-viewport-video">
+            <video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" muted
+                loop autoplay
+                onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/banner.mp4'; this.load(); this.play().catch(function () {}); }"
+                src="video/banner.mp4"></video>
         </div>
-        <h1 id="title-menu">Menú principal</h1>
 
-        <!-- Switch Claro/Oscuro -->
-        
-        <!-- <div class="header-actions">
+        <div class="header home-topbar glass-panel">
+            <div class="home-topbar-brand logo">
+                <img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async">
+                <img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35"
+                    decoding="async">
+            </div>
+            <h1 id="title-menu">Menú principal</h1>
+
+            <!-- Switch Claro/Oscuro -->
+
+            <!-- <div class="header-actions">
             <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
                 <span class="theme-toggle-track">
                     <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☾</span>
@@ -52,174 +63,201 @@
                 </span>
             </button>
         </div> -->
-    </div>
-
-    <div class="main">
-        <div class="sidebar" id="primarySidebar">
-            <ul>
-                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
-                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
-                <li class="has-dropdown">
-                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownContacto">
-                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
-                        <span class="dropdown-arrow" aria-hidden="true"></span>
-                    </button>
-                    <ul class="submenu-dropdown" id="servicesDropdownContacto">
-                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
-                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
-                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
-                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
-                    </ul>
-                </li>
-                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
-                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
-
-            </ul>
         </div>
 
-        <main class="contact-page">
-            <div class="contact-conversion-layout">
-            <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
-                <h2 class="contact-title">Empieza a blindar tu negocio hoy</h2>
-                <p class="contact-lead">Cuentanos sobre tu necesidad y nuestro equipo te respondera en menos de 24 horas habiles.</p>
+        <div class="main">
+            <div class="sidebar" id="primarySidebar">
+                <ul>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img
+                                class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button"
+                            data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp"
+                                alt=""><span>Acerca de</span></button></li>
+                    <li class="has-dropdown">
+                        <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
+                            aria-controls="servicesDropdownContacto">
+                            <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
+                                    alt="">Servicios</span>
+                            <span class="dropdown-arrow" aria-hidden="true"></span>
+                        </button>
+                        <ul class="submenu-dropdown" id="servicesDropdownContacto">
+                            <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios
+                                    Administrativos</button></li>
+                            <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios
+                                    Contables</button></li>
+                            <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios
+                                    Legales</button></li>
+                            <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios
+                                    Marketing y Branding</button></li>
+                        </ul>
+                    </li>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img
+                                class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button"
+                            data-href="contacto.html"><img class="imagenes" src="img/contacto.webp"
+                                alt=""><span>Contacto</span></button></li>
 
-                <form class="contact-form" id="contactForm" name="contacto" action="https://formsubmit.co/johandev.cr@gmail.com" method="post" novalidate>
-                    <input type="hidden" name="_subject" value="Nuevo contacto desde OSARE">
-                    <input type="hidden" name="_next" value="gracias.html">
-                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
-                    <div class="contact-grid contact-grid-top">
-                        <label class="contact-field">
-                            <span>Nombre <strong>*</strong></span>
-                            <input type="text" name="nombre" autocomplete="given-name" required>
-                        </label>
+                </ul>
+            </div>
 
-                        <label class="contact-field">
-                            <span>Apellido <strong>*</strong></span>
-                            <input type="text" name="apellido" autocomplete="family-name" required>
-                        </label>
+            <main class="contact-page">
+                <div class="contact-conversion-layout">
+                    <section class="contact-panel glass-panel" aria-label="Formulario de contacto">
+                        <h2 class="contact-title">Empieza a blindar tu negocio hoy</h2>
+                        <p class="contact-lead">Cuentanos sobre tu necesidad y nuestro equipo te respondera en menos de
+                            24 horas habiles.</p>
 
-                        <label class="contact-field">
-                            <span>Posición</span>
-                            <input type="text" name="posicion" autocomplete="organization-title">
-                        </label>
+                        <form class="contact-form" id="contactForm" name="contacto"
+                            action="https://formsubmit.co/johandev.cr@gmail.com" method="post" novalidate>
+                            <input type="hidden" name="_subject" value="Nuevo contacto desde OSARE">
+                            <input type="hidden" name="_next" value="gracias.html">
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+                            <div class="contact-grid contact-grid-top">
+                                <label class="contact-field">
+                                    <span>Nombre <strong>*</strong></span>
+                                    <input type="text" name="nombre" autocomplete="given-name" required>
+                                </label>
 
-                        <label class="contact-field">
-                            <span>Email <strong>*</strong></span>
-                            <input type="email" name="email" autocomplete="email" required placeholder="@empresa.com">
-                        </label>
-                    </div>
+                                <label class="contact-field">
+                                    <span>Apellido <strong>*</strong></span>
+                                    <input type="text" name="apellido" autocomplete="family-name" required>
+                                </label>
 
-                    <div class="contact-grid contact-grid-mid">
-                        <label class="contact-field contact-field-company">
-                            <span>Nombre Empresa <strong>*</strong></span>
-                            <input type="text" name="empresa" autocomplete="organization" required>
-                        </label>
+                                <label class="contact-field">
+                                    <span>Posición</span>
+                                    <input type="text" name="posicion" autocomplete="organization-title">
+                                </label>
 
-                        <label class="contact-field">
-                            <span>Teléfono</span>
-                            <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" pattern="[0-9+\-\s()]{8,20}" placeholder="8888-8888">
-                        </label>
+                                <label class="contact-field">
+                                    <span>Email <strong>*</strong></span>
+                                    <input type="email" name="email" autocomplete="email" required
+                                        placeholder="@empresa.com">
+                                </label>
+                            </div>
 
-                        <label class="contact-field contact-field-service">
-                            <span>Estoy interesado en <strong>*</strong></span>
-                            <select name="servicio" id="serviceInterest" required>
-                                <option value="" selected disabled>Selecciona un servicio</option>
-                                <option value="Servicios Administrativos">Servicios Administrativos</option>
-                                <option value="Servicios Contables">Servicios Contables</option>
-                                <option value="Servicios Legales">Servicios Legales</option>
-                                <option value="Marketing y Branding">Marketing y Branding</option>
-                                <option value="Otro">Otro</option>
-                            </select>
-                        </label>
-                    </div>
+                            <div class="contact-grid contact-grid-mid">
+                                <label class="contact-field contact-field-company">
+                                    <span>Nombre Empresa <strong>*</strong></span>
+                                    <input type="text" name="empresa" autocomplete="organization" required>
+                                </label>
 
-                    <div class="contact-bottom">
-                        <label class="contact-field contact-message">
-                            <span>Comentario</span>
-                            <textarea name="comentario" rows="6" placeholder="Agregar respuesta aquí"></textarea>
-                        </label>
+                                <label class="contact-field">
+                                    <span>Teléfono</span>
+                                    <input type="tel" name="telefono" autocomplete="tel" inputmode="tel"
+                                        pattern="[0-9+\-\s()]{8,20}" placeholder="8888-8888">
+                                </label>
 
-                        <div class="contact-optin-wrap">
-                            <!-- <p class="contact-human-note">Nuestro equipo de consultores revisara tu caso y te contactara con una recomendacion inicial.</p> -->
-                            <label class="contact-optin">
-                                <input type="checkbox" name="suscripcion" checked>
-                                <span>Quiero suscribirme y recibir información sobre los servicios</span>
-                            </label>
+                                <label class="contact-field contact-field-service">
+                                    <span>Estoy interesado en <strong>*</strong></span>
+                                    <select name="servicio" id="serviceInterest" required>
+                                        <option value="" selected disabled>Selecciona un servicio</option>
+                                        <option value="Servicios Administrativos">Servicios Administrativos</option>
+                                        <option value="Servicios Contables">Servicios Contables</option>
+                                        <option value="Servicios Legales">Servicios Legales</option>
+                                        <option value="Marketing y Branding">Marketing y Branding</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </label>
+                            </div>
 
-                            <!-- <div class="contact-trust" aria-label="Elementos de confianza">
+                            <div class="contact-bottom">
+                                <label class="contact-field contact-message">
+                                    <span>Comentario</span>
+                                    <textarea name="comentario" rows="6"
+                                        placeholder="Agregar respuesta aquí"></textarea>
+                                </label>
+
+                                <div class="contact-optin-wrap">
+                                    <!-- <p class="contact-human-note">Nuestro equipo de consultores revisara tu caso y te contactara con una recomendacion inicial.</p> -->
+                                    <label class="contact-optin">
+                                        <input type="checkbox" name="suscripcion" checked>
+                                        <span>Quiero suscribirme y recibir información sobre los servicios</span>
+                                    </label>
+
+                                    <!-- <div class="contact-trust" aria-label="Elementos de confianza">
                                 <p>Respuesta en menos de 24 horas habiles.</p>
                                 <p>Garantia de confidencialidad total.</p>
                             </div> -->
+                                </div>
+                            </div>
+
+                            <div class="contact-actions">
+                                <button class="contact-submit" type="submit">Enviar</button>
+                            </div>
+
+                            <p class="contact-privacy-note">Al hacer clic en enviar, aceptas nuestra <a
+                                    href="politicas.html">Politica de privacidad</a> y el tratamiento de tus datos para
+                                fines de contacto comercial.</p>
+                        </form>
+                    </section>
+
+                    <aside class="contact-proof-panel glass-panel" aria-label="Confianza y ubicacion OSARE">
+                        <h3>Tu solicitud queda en manos de consultores reales</h3>
+                        <p>En OSARE analizamos tu caso, priorizamos riesgos y te devolvemos una ruta de accion inicial
+                            para que avances con seguridad.</p>
+
+                        <ul class="contact-proof-list">
+                            <li>Respuesta en menos de 24 horas hábiles.</li>
+                            <li>Confidencialidad total en cada consulta.</li>
+                            <li>Acompañamiento remoto con seguimiento.</li>
+                        </ul>
+
+                        <div class="contact-method-card" aria-label="Metodo OSARE">
+                            <h4>Método OSARE</h4>
+                            <p>Organización, sistemas, automatización, resultados y estrategia legal para proteger el
+                                crecimiento de tu empresa.</p>
                         </div>
-                    </div>
 
-                    <div class="contact-actions">
-                        <button class="contact-submit" type="submit">Quiero mi diagnostico</button>
-                    </div>
-
-                    <p class="contact-privacy-note">Al hacer clic en enviar, aceptas nuestra <a href="politicas.html">Politica de privacidad</a> y el tratamiento de tus datos para fines de contacto comercial.</p>
-                </form>
-            </section>
-
-            <aside class="contact-proof-panel glass-panel" aria-label="Confianza y ubicacion OSARE">
-                <h3>Tu solicitud queda en manos de consultores reales</h3>
-                <p>En OSARE analizamos tu caso, priorizamos riesgos y te devolvemos una ruta de accion inicial para que avances con seguridad.</p>
-
-                <ul class="contact-proof-list">
-                    <li>Respuesta en menos de 24 horas habiles.</li>
-                    <li>Confidencialidad total en cada consulta.</li>
-                    <li>Acompanamiento remoto con seguimiento.</li>
-                </ul>
-
-                <div class="contact-method-card" aria-label="Metodo OSARE">
-                    <h4>Método OSARE</h4>
-                    <p>Organizacion, sistemas, automatizacion, resultados y estrategia legal para proteger el crecimiento de tu empresa.</p>
+                        <div class="contact-map-wrap" aria-label="Ubicacion de OSARE">
+                            <p class="contact-map-title">Cartago, Dulce Nombre, Costa Rica</p>
+                            <iframe title="Ubicacion OSARE en Cartago"
+                                src="https://www.google.com/maps?q=Cartago%20Dulce%20Nombre%20Costa%20Rica&output=embed"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </aside>
                 </div>
+            </main>
+        </div>
 
-                <div class="contact-map-wrap" aria-label="Ubicacion de OSARE">
-                    <p class="contact-map-title">Cartago, Dulce Nombre, Costa Rica</p>
-                    <iframe
-                        title="Ubicacion OSARE en Cartago"
-                        src="https://www.google.com/maps?q=Cartago%20Dulce%20Nombre%20Costa%20Rica&output=embed"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </aside>
-            </div>
-        </main>
-    </div>
+        <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
+            <ul>
+                <li class="has-dropdown">
+                    <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
+                        aria-controls="floatingServicesDropdownContacto">
+                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
+                                alt="">Servicios</span>
+                        <span class="dropdown-arrow" aria-hidden="true"></span>
+                    </button>
+                    <ul class="submenu-dropdown" id="floatingServicesDropdownContacto">
+                        <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios
+                                Administrativos</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios
+                                Contables</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios
+                                Legales</button></li>
+                        <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y
+                                Branding</button></li>
+                    </ul>
+                </li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img
+                            class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+            </ul>
+        </aside>
 
-    <aside class="sidebar sidebar-floating" id="floatingSidebar" aria-label="Accesos rápidos">
-        <ul>
-            <li class="has-dropdown">
-                <button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="floatingServicesDropdownContacto">
-                    <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
-                    <span class="dropdown-arrow" aria-hidden="true"></span>
-                </button>
-                <ul class="submenu-dropdown" id="floatingServicesDropdownContacto">
-                    <li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
-                    <li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
-                    <li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
-                    <li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
-                </ul>
-            </li>
-            <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
-        </ul>
-    </aside>
+        <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
+            <span class="back-to-top-icon" aria-hidden="true">↑</span>
+            <span class="back-to-top-text">Inicio</span>
+        </button>
 
-    <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Subir al inicio">
-        <span class="back-to-top-icon" aria-hidden="true">↑</span>
-        <span class="back-to-top-text">Inicio</span>
-    </button>
+        <button class="whatsapp-float" type="button"
+            data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0"
+            aria-label="Abrir WhatsApp">
+            <img class="whatsapp-float-icon" src="img/whatsapp.png" alt="WhatsApp">
+        </button>
 
-    <button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
-        <img class="whatsapp-float-icon" src="img/whatsapp.png" alt="WhatsApp">
-    </button>
-
-    <button class="telegram-float" type="button"
-      data-href="https://t.me/osarecr" aria-label="Abrir Telegram">
-      <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" />
-    </button>
+        <button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram">
+            <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" />
+        </button>
 
         <footer>
             <div class="footer-inner">
@@ -231,17 +269,19 @@
                     <button class="footer-social-btn" type="button"
                         data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
                         aria-label="Facebook OSARE CR">
-                        <img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy" decoding="async" />
+                        <img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy"
+                            decoding="async" />
                     </button>
-                    <button class="footer-social-btn" type="button"
-                        data-href="https://www.instagram.com/osare_cr/"
+                    <button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
                         aria-label="Instagram OSARE CR">
-                        <img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy" decoding="async" />
+                        <img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy"
+                            decoding="async" />
                     </button>
                     <button class="footer-social-btn" type="button"
                         data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
                         aria-label="LinkedIn OSARE CR">
-                        <img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy" decoding="async" />
+                        <img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy"
+                            decoding="async" />
                     </button>
                     <!--
 <button class="footer-social-btn" type="button"
@@ -259,9 +299,11 @@
                         <a href="mailto:info@osarecr.com">info@osarecr.com</a>
                     </address>
                     <nav class="footer-links" aria-label="Páginas legales">
-                        <button class="footer-link-btn" type="button" data-href="terminos.html">Términos y condiciones</button>
+                        <button class="footer-link-btn" type="button" data-href="terminos.html">Términos y
+                            condiciones</button>
                         <span class="footer-divider" aria-hidden="true">·</span>
-                        <button class="footer-link-btn" type="button" data-href="politicas.html">Política de privacidad</button>
+                        <button class="footer-link-btn" type="button" data-href="politicas.html">Política de
+                            privacidad</button>
                     </nav>
                 </nav>
 
@@ -269,15 +311,8 @@
             </div>
         </footer>
 
-</div>
+    </div>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
