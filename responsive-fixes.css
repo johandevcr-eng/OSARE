@@ -7,9 +7,18 @@
   --small-mobile-font: 14px;
 }
 
-/* Base spacing below topbar */
+/* Keep topbar in normal flow to avoid overlay/cutoff issues */
+.home-topbar {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  margin: calc(var(--fixed-video-height, 74px) + 8px) auto 0 !important;
+}
+
+/* Base spacing below menu */
 .home-topbar + .main {
-  margin-top: clamp(12px, 2.2vw, 24px) !important;
+  margin-top: clamp(20px, 2.8vw, 34px) !important;
 }
 
 html,
@@ -83,7 +92,7 @@ table {
   }
 
   .home-topbar + .main {
-    margin-top: 14px !important;
+    margin-top: 24px !important;
   }
 
   .container,
@@ -400,7 +409,7 @@ table {
   }
 
   .home-topbar + .main {
-    margin-top: 12px !important;
+    margin-top: 18px !important;
   }
 
   .container,
@@ -587,7 +596,7 @@ table {
   }
 
   .home-topbar + .main {
-    margin-top: 10px !important;
+    margin-top: 16px !important;
   }
 
   .container,
