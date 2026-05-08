@@ -205,6 +205,7 @@ body {
 .card-bullet {
 	width: 35px;
 	height: 35px;
+	flex-shrink: 0;
 }
 
 .service-card ul {
