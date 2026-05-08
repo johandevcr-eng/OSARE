@@ -344,6 +344,26 @@ body {
 	color: #2a2a2a;
 }
 
+@media (max-width: 1024px) {
+	/* visual fix for single-column layout */
+	.services-visual {
+		min-height: 220px;
+		align-self: auto;
+	}
+
+	.services-lower-left {
+		text-align: center;
+	}
+
+	.services-grid-cta {
+		justify-content: center;
+	}
+
+	.services-grid-cta .btn {
+		width: min(100%, 220px);
+	}
+}
+
 @media (max-width: 860px) {
 	.serv-leg-topbar {
 		padding: 12px;

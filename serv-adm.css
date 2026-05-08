@@ -433,6 +433,25 @@ body {
 	color: #2a2a2a;
 }
 
+@media (max-width: 1024px) {
+	/* service-image offset fix for single-column layout */
+	.service-image {
+		justify-content: center;
+		min-height: 220px;
+	}
+
+	.service-image img {
+		transform: none;
+		object-position: center center;
+		margin: 0 auto;
+		padding: 16px;
+	}
+
+	.services-cta .btn {
+		max-width: none;
+	}
+}
+
 @media (max-width: 860px) {
 	.serv-adm-topbar {
 		padding: 12px;

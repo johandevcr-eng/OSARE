@@ -291,6 +291,25 @@ body {
 	color: #2a2a2a;
 }
 
+@media (max-width: 1024px) {
+	/* visual fix for single-column layout */
+	.services-visual {
+		min-height: 220px;
+	}
+
+	.services-visual img {
+		object-position: center center;
+	}
+
+	.services-grid-cta {
+		justify-content: stretch;
+	}
+
+	.services-grid-cta .btn {
+		width: 100%;
+	}
+}
+
 @media (max-width: 860px) {
 	.serv-cont-topbar {
 		padding: 12px;

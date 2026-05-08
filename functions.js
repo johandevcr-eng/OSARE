@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
         ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
         : false;
     const isMobileViewport = supportsMatchMedia
-        ? window.matchMedia('(max-width: 900px)').matches
-        : window.innerWidth <= 900;
+        ? window.matchMedia('(max-width: 1200px)').matches
+        : window.innerWidth <= 1200;
 
     function setupCompactMobileTopbar() {
         if (!pageTopbar || !primarySidebar) {
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const toggleId = 'mobileMenuToggle';
         const isMobileMenuViewport = function () {
             return supportsMatchMedia
-                ? window.matchMedia('(max-width: 900px)').matches
-                : window.innerWidth <= 900;
+                ? window.matchMedia('(max-width: 1200px)').matches
+                : window.innerWidth <= 1200;
         };
 
         let compactToggle = pageTopbar.querySelector('#' + toggleId);

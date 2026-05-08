@@ -335,6 +335,28 @@ body {
 	color: #2a2a2a;
 }
 
+@media (max-width: 1024px) {
+	/* visual and summary fix for single-column layout */
+	.services-visual {
+		min-height: 220px;
+		align-self: auto;
+	}
+
+	.services-grid-summary {
+		align-items: stretch;
+		text-align: left;
+	}
+
+	.services-grid-note {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.services-grid-cta {
+		justify-content: center;
+	}
+}
+
 @media (max-width: 860px) {
 	.serv-mark-topbar {
 		padding: 12px;
