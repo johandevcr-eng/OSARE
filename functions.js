@@ -4,6 +4,64 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageTopbar = document.querySelector('.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar');
     const primarySidebar = document.getElementById('primarySidebar');
 
+    function setupHeroVideoFallback() {
+        const heroVideos = Array.from(document.querySelectorAll('.full-viewport-video video'));
+        if (heroVideos.length === 0) {
+            return;
+        }
+
+        heroVideos.forEach(function (video) {
+            const originalSrc = video.getAttribute('src') || 'video/OSARE-HERO.mp4';
+            const sourceCandidates = [originalSrc, 'video/banner.mp4'].filter(function (src, index, list) {
+                return src && list.indexOf(src) === index;
+            });
+            const fallbackPoster = 'img/banner-princ.webp';
+            let sourceIndex = 0;
+            let ready = false;
+
+            // Use a broadly compatible poster to avoid empty gray bars on older browsers.
+            if ((video.getAttribute('poster') || '').toLowerCase().endsWith('.avif')) {
+                video.setAttribute('poster', fallbackPoster);
+            }
+
+            video.muted = true;
+            video.playsInline = true;
+
+            const loadNextSource = function () {
+                while (sourceIndex < sourceCandidates.length && video.getAttribute('src') === sourceCandidates[sourceIndex]) {
+                    sourceIndex += 1;
+                }
+
+                if (sourceIndex >= sourceCandidates.length) {
+                    return;
+                }
+
+                const nextSrc = sourceCandidates[sourceIndex];
+                sourceIndex += 1;
+
+                video.setAttribute('src', nextSrc);
+                video.load();
+                video.play().catch(function () {
+                    // Ignore autoplay rejections.
+                });
+            };
+
+            video.addEventListener('loadeddata', function () {
+                ready = true;
+            }, { once: true });
+
+            video.addEventListener('error', function () {
+                loadNextSource();
+            });
+
+            window.setTimeout(function () {
+                if (!ready && video.readyState < 2) {
+                    loadNextSource();
+                }
+            }, 3500);
+        });
+    }
+
     if (pageTopbar && primarySidebar && !pageTopbar.contains(primarySidebar)) {
         primarySidebar.classList.add('topbar-menu');
         pageTopbar.appendChild(primarySidebar);
@@ -146,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     setupCompactMobileTopbar();
+    setupHeroVideoFallback();
 
     const logoTrack = document.querySelector('.logo-track');
     if (logoTrack && !logoTrack.dataset.loopReady) {
