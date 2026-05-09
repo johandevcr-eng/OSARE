@@ -902,6 +902,12 @@ table {
 
   .benefits-accordion {
     margin-top: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .social-proof {
+    margin-top: 6px !important;
+    margin-bottom: 10px !important;
   }
 
   .hero,

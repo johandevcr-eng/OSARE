@@ -2374,7 +2374,9 @@
         }
 
         .banner-bpo-card p {
-            font-size: clamp(24px, 4vw, 34px);
+            font-size: clamp(17px, 3.4vw, 22px);
+            line-height: 1.42;
+            text-align: justify;
         }
 
         .banner-text-left,
@@ -2565,7 +2567,9 @@
         }
 
         .banner-bpo-card p {
-            font-size: clamp(22px, 6vw, 30px);
+            font-size: clamp(16px, 4.6vw, 19px);
+            line-height: 1.48;
+            text-align: justify;
         }
 
         .banner-list {
@@ -3608,7 +3612,9 @@
         }
 
         .banner-bpo-card p {
-            font-size: clamp(20px, 8vw, 26px);
+            font-size: clamp(14px, 5.4vw, 16px);
+            line-height: 1.5;
+            text-align: justify;
         }
 
         .section-title-main {
