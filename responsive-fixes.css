@@ -802,6 +802,15 @@ table {
     padding: 16px !important;
   }
 
+  .benefits-preview {
+    min-height: clamp(250px, 68vw, 340px) !important;
+  }
+
+  .benefits-preview-image {
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
   .container-services .service-card,
   .blog-card,
   .service-card {
@@ -811,6 +820,17 @@ table {
   .container-services .service-card {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .siglas-banner2-row {
+    margin: 0 0 6px !important;
+    gap: 10px !important;
+  }
+
+  .banner-blindaje-content {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 12px 10px !important;
   }
 
   .service-card-arrow {
@@ -874,6 +894,14 @@ table {
   .osare-sticky-scene {
     position: relative;
     top: auto;
+  }
+
+  .benefits-accordion-wrap {
+    margin-top: 2px !important;
+  }
+
+  .benefits-accordion {
+    margin-top: 0 !important;
   }
 
   .hero,
