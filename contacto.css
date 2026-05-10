@@ -603,3 +603,12 @@
         overflow: hidden;
     }
 }
+
+/* Honeypot field - Hidden with CSS */
+input[name="bot-field"] {
+    display: none !important;
+}
+
+input[name="bot-field"] + label {
+    display: none !important;
+}
