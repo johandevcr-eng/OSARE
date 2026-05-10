@@ -17,9 +17,9 @@
 }
 
 .contact-intro {
-    margin: 50px 0 20px;
+    margin: 36px 0 20px;
     text-align: center;
-    font-size: 45px;
+    font-size: clamp(30px, 4.2vw, 45px);
     line-height: 1.2;
     color: var(--text-main);
     font-weight: 600;
@@ -27,7 +27,7 @@
 
 .contact-conversion-layout {
     display: grid;
-    grid-template-columns: minmax(320px, 0.95fr) minmax(0, 1.35fr);
+    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
     gap: clamp(16px, 2vw, 28px);
     align-items: stretch;
     min-height: 0;
@@ -74,13 +74,13 @@
 }
 
 .contact-panel {
-    margin-top: 50px;
+    margin-top: 0;
     border-radius: 16px;
     padding: clamp(18px, 4vw, 34px);
-    height: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 
 .contact-title {
@@ -105,7 +105,7 @@
     gap: 20px;
     align-content: start;
     flex: 1;
-    width: min(100%, 1040px);
+    width: 100%;
     margin-inline: auto;
 }
 
@@ -119,10 +119,10 @@
 }
 
 .contact-grid-mid {
-    grid-template-columns: 1.25fr 0.8fr 1.75fr;
+    grid-template-columns: 1.1fr 0.9fr 1.35fr;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contact-grid-top {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -130,9 +130,13 @@
     .contact-grid-mid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .contact-field-service {
+        grid-column: 1 / -1;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
     .contact-grid-top,
     .contact-grid-mid {
         grid-template-columns: 1fr;
@@ -180,8 +184,8 @@
 }
 
 .contact-field-service select {
-    width: fit-content;
-    min-width: 30ch;
+    width: 100%;
+    min-width: 0;
     max-width: 100%;
 }
 
@@ -225,7 +229,7 @@
 
 .contact-bottom {
     display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.9fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     gap: 18px;
     align-items: center;
 }
@@ -250,14 +254,16 @@
     gap: 10px;
     color: var(--text-main);
     line-height: 1.35;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .contact-optin input {
-    width: 40px;
-    height: 40px;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
     accent-color: #0ba8d4;
-    margin-top: 15px;
+    margin-top: 2px;
 }
 
 .contact-trust {
@@ -310,10 +316,10 @@
 
 .contact-actions .contact-captcha[aria-label="reCAPTCHA temporal"] {
     grid-column: 2;
-    justify-self: center;
+    justify-self: stretch;
     align-self: center;
     margin-top: 12px;
-    width: min(100%, 280px);
+    width: min(100%, 320px);
 }
 
 .contact-captcha[aria-label="reCAPTCHA temporal"] .contact-optin {
@@ -335,7 +341,7 @@
 
 .contact-actions {
     display: grid;
-    grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.9fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
     gap: 18px;
     align-items: center;
     margin-top: 4px;
@@ -497,9 +503,13 @@
         grid-column: 1;
         min-height: auto;
     }
+
+    .contact-title {
+        font-size: clamp(28px, 3.2vw, 34px);
+    }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1100px) {
     .contact-conversion-layout {
         grid-template-columns: 1fr;
     }
@@ -507,8 +517,8 @@
     .contact-proof-panel {
         position: static;
         top: auto;
-        justify-items: start;
-        text-align: left;
+        justify-items: center;
+        text-align: center;
     }
 
     .contact-agent-photo {
@@ -521,6 +531,10 @@
 
     .contact-grid-mid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-field-service {
+        grid-column: 1 / -1;
     }
 
     .contact-field-address {
@@ -540,7 +554,9 @@
 
     .contact-actions .contact-captcha[aria-label="reCAPTCHA temporal"] {
         grid-column: auto;
+        justify-self: stretch;
         margin-top: 8px;
+        width: 100%;
     }
 
     .contact-privacy-note {
@@ -550,6 +566,11 @@
 
     .contact-optin-wrap {
         margin-top: 0;
+    }
+
+    .contact-submit {
+        width: 100%;
+        justify-self: stretch;
     }
 }
 
@@ -587,7 +608,6 @@
     }
 
     .contact-submit {
-        width: 100%;
         font-size: 18px;
     }
 }
