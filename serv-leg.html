@@ -1,61 +1,84 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
-    <link rel="icon" type="image/jpeg" href="img/osare.jpg">
+	<link rel="icon" type="image/jpeg" href="img/osare.jpg">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Servicios legales empresariales: notariado, cumplimiento normativo, litigio y asesoría para proteger y fortalecer tu negocio.">
+	<meta name="description"
+		content="Servicios legales empresariales: notariado, cumplimiento normativo, litigio y asesoría para proteger y fortalecer tu negocio.">
 	<meta property="og:type" content="website">
 	<meta property="og:locale" content="es_CR">
 	<meta property="og:site_name" content="OSARE CR">
 	<meta property="og:title" content="Servicios Legales | OSARE CR">
-	<meta property="og:description" content="Servicios notariales, cumplimiento normativo, litigio y asesoría legal para empresas.">
+	<meta property="og:description"
+		content="Servicios notariales, cumplimiento normativo, litigio y asesoría legal para empresas.">
 	<meta property="og:image" content="https://osare.cr/img/servicios-leg.webp">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="Servicios Legales | OSARE CR">
-	<meta name="twitter:description" content="Servicios notariales, cumplimiento normativo, litigio y asesoría legal para empresas.">
+	<meta name="twitter:description"
+		content="Servicios notariales, cumplimiento normativo, litigio y asesoría legal para empresas.">
 	<meta name="twitter:image" content="https://osare.cr/img/servicios-leg.webp">
 	<title>OSARE | Servicios Legales</title>
 	<script src="functions.js" defer></script>
 	<link rel="stylesheet" href="style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="serv-leg.css">
-    <link rel="stylesheet" href="responsive-fixes.css">
+	<link rel="stylesheet" href="responsive-fixes.css">
 </head>
+
 <body>
 	<div class="container serv-leg-container">
 		<div class="full-viewport-video">
-			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata" poster="img/banner-princ.avif" muted loop autoplay onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/OSARE-HERO.mp4'; this.load(); this.play().catch(function () {}); }" src="video/OSARE-HERO.mp4"></video>
+			<video id="comp-jusdonlo_video" class="K8MSra" crossorigin="anonymous" playsinline preload="metadata"
+				poster="img/banner-princ.avif" muted loop autoplay
+				onerror="if (!this.dataset.fallback) { this.dataset.fallback = '1'; this.src = 'video/OSARE-HERO.mp4'; this.load(); this.play().catch(function () {}); }"
+				src="video/OSARE-HERO.mp4"></video>
 		</div>
 
 		<div class="header home-topbar glass-panel" aria-label="Encabezado principal">
 			<div class="home-topbar-brand logo">
 				<img class="logo-inicial" src="img/osare.jpg" alt="OSARE" width="614" height="614" decoding="async" />
-				<img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35" decoding="async" />
+				<img class="logo-title-wordmark" src="img/logo_letras.png" alt="OSARE CR" width="140" height="35"
+					decoding="async" />
 			</div>
 
 			<h1 id="title-menu">Menú principal</h1>
 
 			<nav class="sidebar topbar-menu" id="primarySidebar" aria-label="Menú principal">
 				<ul>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="index.html"><img
+								class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button"
+							data-href="acerca-de.html"><img class="imagenes" src="img/informacion.webp"
+								alt=""><span>Acerca de</span></button></li>
 					<li class="has-dropdown">
-						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false" aria-controls="servicesDropdownLeg">
-							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp" alt="">Servicios</span>
+						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
+							aria-controls="servicesDropdownLeg">
+							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
+									alt="">Servicios</span>
 							<span class="dropdown-arrow" aria-hidden="true"></span>
 						</button>
 						<ul class="submenu-dropdown" id="servicesDropdownLeg">
-							<li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios Administrativos</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios Contables</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios Legales</button></li>
-							<li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios Marketing y Branding</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-adm.html">Servicios
+									Administrativos</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-cont.html">Servicios
+									Contables</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-leg.html">Servicios
+									Legales</button></li>
+							<li><button class="submenu-link" type="button" data-href="serv-mark.html">Servicios
+									Marketing y Branding</button></li>
 						</ul>
 					</li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="contacto.html"><img class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="blog.html"><img
+								class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button"
+							data-href="contacto.html"><img class="imagenes" src="img/contacto.webp"
+								alt=""><span>Contacto</span></button></li>
 				</ul>
 			</nav>
 		</div>
@@ -66,13 +89,16 @@
 				<section class="hero">
 					<h1>SERVICIOS LEGALES</h1>
 					<p>
-						Asesoramiento legal integral y especializado para proteger los intereses de tu negocio, cumplir con regulaciones normativas y resolver conflictos con experticia profesional.
+						Asesoramiento legal integral y especializado para proteger los intereses de tu negocio, cumplir
+						con regulaciones normativas y resolver conflictos con experticia profesional.
 					</p>
 					<blockquote>
-						"El secreto del éxito en los negocios es no hacerlo todo tú mismo, sino encontrar las mejores personas para hacerlo." - Robert Kiyosaki
+						"El secreto del éxito en los negocios es no hacerlo todo tú mismo, sino encontrar las mejores
+						personas para hacerlo." - Robert Kiyosaki
 					</blockquote>
 					<div class="hero-actions">
-						<button class="btn btn-primary" type="button" data-href="contacto.html">Reunión de Diagnóstico</button>
+						<button class="btn btn-primary" type="button" data-href="contacto.html">Reunión de
+							Diagnóstico</button>
 					</div>
 				</section>
 
@@ -82,7 +108,8 @@
 					</figure>
 
 					<article class="service-card service-card--a">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Servicios Notariales</h2>
+						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy"
+								decoding="async">Servicios Notariales</h2>
 						<ul>
 							<li>Constitución, modificación, disolución y liquidación de sociedades mercantiles.</li>
 							<li>Protocolización de actas de asambleas.</li>
@@ -93,7 +120,8 @@
 					</article>
 
 					<article class="service-card service-card--b">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Asesoría Inmobiliaria</h2>
+						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy"
+								decoding="async">Asesoría Inmobiliaria</h2>
 						<ul>
 							<li>Estudios registrales, identificación de gravámenes e impuestos municipales.</li>
 							<li>Revisión y elaboración de contratos de alquiler y compraventa.</li>
@@ -103,11 +131,13 @@
 					</article>
 
 					<article class="service-card service-card--c">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Cumplimiento Normativo Empresarial</h2>
+						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy"
+								decoding="async">Cumplimiento Normativo Empresarial</h2>
 						<ul>
 							<li>Diagnóstico y soluciones específicas en distintas áreas normativas.</li>
 							<li>Revisión de documentación constitutiva, permisos, patentes y licencias.</li>
-							<li>Revisión, mejoramiento e implementación de reglamentos internos y políticas corporativas.</li>
+							<li>Revisión, mejoramiento e implementación de reglamentos internos y políticas
+								corporativas.</li>
 							<li>Cumplimiento normativo en servicio al cliente y legislación laboral.</li>
 							<li>Protección de datos y asesoría en capacitaciones normativas.</li>
 						</ul>
@@ -126,7 +156,8 @@
 
 					<div class="services-lower-left">
 						<section class="note-box">
-							Si requieres algún otro servicio legal o de asesoría, escríbenos. <br>Con gusto atenderemos tu solicitud
+							Si requieres algún otro servicio legal o de asesoría, escríbenos. <br>Con gusto atenderemos
+							tu solicitud
 						</section>
 						<div class="services-grid-cta">
 							<button class="btn btn-primary" type="button" data-href="contacto.html">Cotizar</button>
@@ -134,7 +165,8 @@
 					</div>
 
 					<article class="service-card service-card--e">
-						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy" decoding="async">Asesoría para Emprendimientos y Pymes</h2>
+						<h2><img class="card-bullet" src="img/viñeta.png" alt="" loading="lazy"
+								decoding="async">Asesoría para Emprendimientos y Pymes</h2>
 						<ul>
 							<li>Asesoría y tramitación de permisos, patentes y registros.</li>
 							<li>Gestión de préstamos bancarios y trámites institucionales.</li>
@@ -163,14 +195,15 @@
 			<span class="back-to-top-text">Inicio</span>
 		</button>
 
-		<button class="whatsapp-float" type="button" data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0" aria-label="Abrir WhatsApp">
+		<button class="whatsapp-float" type="button"
+			data-href="https://api.whatsapp.com/message/4RR2AW6ZXKSTN1?autoload=1&app_absent=0"
+			aria-label="Abrir WhatsApp">
 			<img class="whatsapp-float-icon" src="img/whatsapp.png" alt="WhatsApp">
 		</button>
 
-    <button class="telegram-float" type="button"
-      data-href="https://t.me/osarecr" aria-label="Abrir Telegram">
-      <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" />
-    </button>
+		<button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram">
+			<img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" />
+		</button>
 
 		<footer>
 			<div class="footer-inner">
@@ -182,17 +215,19 @@
 					<button class="footer-social-btn" type="button"
 						data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
 						aria-label="Facebook OSARE CR">
-						<img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy" decoding="async" />
+						<img src="img/facebook.webp" alt="Facebook" width="24" height="24" loading="lazy"
+							decoding="async" />
 					</button>
-					<button class="footer-social-btn" type="button"
-						data-href="https://www.instagram.com/osare_cr/"
+					<button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
 						aria-label="Instagram OSARE CR">
-						<img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy" decoding="async" />
+						<img src="img/instagram.webp" alt="Instagram" width="24" height="24" loading="lazy"
+							decoding="async" />
 					</button>
 					<button class="footer-social-btn" type="button"
 						data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
 						aria-label="LinkedIn OSARE CR">
-						<img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy" decoding="async" />
+						<img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" loading="lazy"
+							decoding="async" />
 					</button>
 					<!--
 <button class="footer-social-btn" type="button"
@@ -210,9 +245,11 @@
 						<a href="mailto:administracion@osarecr.com">administracion@osarecr.com</a>
 					</address>
 					<nav class="footer-links" aria-label="Páginas legales">
-						<button class="footer-link-btn" type="button" data-href="terminos.html">Términos y condiciones</button>
+						<button class="footer-link-btn" type="button" data-href="terminos.html">Términos y
+							condiciones</button>
 						<span class="footer-divider" aria-hidden="true">·</span>
-						<button class="footer-link-btn" type="button" data-href="politicas.html">Política de privacidad</button>
+						<button class="footer-link-btn" type="button" data-href="politicas.html">Política de
+							privacidad</button>
 					</nav>
 				</nav>
 
@@ -221,14 +258,5 @@
 		</footer>
 	</div>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-

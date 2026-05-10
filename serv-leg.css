@@ -351,8 +351,14 @@ body {
 		align-self: auto;
 	}
 
+	/* Keep note+CTA after the last service card on tablet/mobile */
+	.services-grid > .service-card--e {
+		order: 98;
+	}
+
 	.services-lower-left {
 		text-align: center;
+		order: 99;
 	}
 
 	.services-grid-cta {
