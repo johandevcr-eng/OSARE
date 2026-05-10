@@ -361,6 +361,8 @@
         align-self: auto;
         max-height: none;
         overflow: visible;
+        z-index: 20;
+        isolation: isolate;
         grid-column: 1;
         width: 100%;
     }
