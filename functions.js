@@ -351,6 +351,56 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    const blogSuggestToggle = document.getElementById('blogSuggestToggle');
+    const blogSuggestPanel = document.getElementById('blogSuggestPanel');
+    const blogSuggestFeedback = document.getElementById('blogSuggestFeedback');
+
+    if (blogSuggestToggle && blogSuggestPanel) {
+        const blogSuggestEmail = document.getElementById('blogSuggestEmail');
+        const blogSuggestComment = document.getElementById('blogSuggestComment');
+
+        const setSuggestionVisibility = function (isOpen) {
+            blogSuggestPanel.hidden = !isOpen;
+            blogSuggestToggle.setAttribute('aria-expanded', String(isOpen));
+            if (isOpen && blogSuggestEmail) {
+                blogSuggestEmail.focus();
+            }
+        };
+
+        blogSuggestToggle.addEventListener('click', function () {
+            const willOpen = blogSuggestPanel.hidden;
+            setSuggestionVisibility(willOpen);
+        });
+
+        blogSuggestPanel.addEventListener('submit', function (event) {
+            if (!blogSuggestEmail || !blogSuggestComment || !blogSuggestFeedback) {
+                return;
+            }
+
+            const comment = blogSuggestComment.value.trim();
+            const isEmailValid = blogSuggestEmail.reportValidity();
+            const isCommentValid = blogSuggestComment.reportValidity();
+
+            blogSuggestFeedback.classList.remove('is-error');
+
+            if (!isEmailValid || !isCommentValid) {
+                blogSuggestFeedback.classList.add('is-error');
+                blogSuggestFeedback.textContent = 'Revisa los campos marcados antes de enviar.';
+                return;
+            }
+
+            if (comment.length < 10) {
+                event.preventDefault();
+                blogSuggestFeedback.classList.add('is-error');
+                blogSuggestFeedback.textContent = 'Escribe un comentario un poco mas detallado.';
+                blogSuggestComment.focus();
+                return;
+            }
+
+            blogSuggestFeedback.textContent = '';
+        });
+    }
+
     const storage = {
         getItem: function (key) {
             try {

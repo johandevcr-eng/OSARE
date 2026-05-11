@@ -7,9 +7,92 @@
 }
 
 .blog-suggest {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    justify-items: center;
+    gap: 14px;
     padding: 10px 0 20px;
+}
+
+.blog-suggest-form {
+    width: min(680px, 100%);
+    display: grid;
+    gap: 10px;
+    padding: clamp(14px, 2.5vw, 22px);
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+}
+
+.blog-suggest-form[hidden] {
+    display: none;
+}
+
+.blog-suggest-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.blog-suggest-input,
+.blog-suggest-textarea {
+    width: 100%;
+    border: 1px solid rgba(0, 120, 168, 0.28);
+    border-radius: 12px;
+    padding: 11px 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.86);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-suggest-textarea {
+    resize: vertical;
+    min-height: 132px;
+}
+
+.blog-suggest-input:focus,
+.blog-suggest-textarea:focus {
+    border-color: rgba(0, 120, 168, 0.7);
+    box-shadow: 0 0 0 3px rgba(0, 120, 168, 0.14);
+}
+
+.blog-suggest-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.blog-suggest-send {
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--cta), var(--cta-hover));
+    box-shadow: 0 8px 18px rgba(0, 120, 168, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-suggest-send:hover,
+.blog-suggest-send:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 22px rgba(0, 120, 168, 0.32);
+    outline: none;
+}
+
+.blog-suggest-feedback {
+    margin: 0;
+    min-height: 20px;
+    font-size: 14px;
+    color: var(--accent-strong);
+    font-weight: 700;
+}
+
+.blog-suggest-feedback.is-error {
+    color: #a52828;
 }
 
 .blog-hero {
@@ -138,5 +221,13 @@
 
     .blog-card {
         border-radius: 14px;
+    }
+
+    .blog-suggest-actions {
+        justify-content: stretch;
+    }
+
+    .blog-suggest-send {
+        width: 100%;
     }
 }
