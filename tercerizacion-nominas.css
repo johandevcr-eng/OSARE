@@ -1,4 +1,4 @@
-﻿.post-page {
+.post-page {
     --post-page-width: 980px;
     --post-page-horizontal-padding: clamp(18px, 6vmin, 52px);
     --post-page-vertical-padding: clamp(32px, 8vmin, 60px);
@@ -307,17 +307,8 @@
 }
 
 .post-recent-panel,
-.post-comments-panel {
-    border: 1px solid var(--card-border);
-    border-radius: 20px;
-    padding: 18px;
-    background: rgba(255, 255, 255, 0.2);
-}
 
 .post-recent-panel,
-.post-comments-panel {
-    background: var(--card-bg);
-}
 
 .post-recent-header {
     margin-bottom: 14px;
@@ -328,12 +319,6 @@
 }
 
 .post-recent-header h3,
-.post-comments-panel h3 {
-    margin: 0;
-    font-family: 'Lora', serif;
-    font-size: clamp(20px, 2.1vw, 25px);
-    color: var(--text-main);
-}
 
 .post-recent-header a {
     color: var(--text-main);
@@ -399,37 +384,10 @@
     outline: none;
 }
 
-.post-comments-panel {
-    padding: 20px;
-}
 
-.post-comments-divider {
-    margin: 12px 0 14px;
-    height: 1px;
-    background: rgba(0, 0, 0, 0.12);
-}
 
-.post-comments-input {
-    width: 100%;
-    min-height: 56px;
-    border: 2px solid rgba(20, 48, 78, 0.28);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.14);
-    color: var(--text-main);
-    font: inherit;
-    padding: 14px;
-    resize: vertical;
-    box-shadow: 0 8px 16px rgba(7, 30, 56, 0.12);
-}
 
-.post-comments-input::placeholder {
-    color: var(--text-muted);
-}
 
-.post-comments-input:focus-visible {
-    outline: 2px solid rgba(7, 122, 164, 0.35);
-    outline-offset: 1px;
-}
 
 @media (max-width: 1100px) {
     .post-page {
@@ -568,10 +526,6 @@
     }
 
     .post-recent-panel,
-    .post-comments-panel {
-        border-radius: 14px;
-        padding: 16px;
-    }
 }
 
 @media (max-width: 760px) {
@@ -610,10 +564,6 @@
         height: auto;
     }
 
-    .post-comments-input {
-        min-height: 52px;
-        padding: 12px;
-    }
 
     .post-social-links {
         gap: 10px;
@@ -634,9 +584,6 @@
     .post-article,
     .post-actions,
     .post-recent-panel,
-    .post-comments-panel {
-        padding: 14px;
-    }
 
     .post-title {
         font-size: clamp(24px, 8.2vw, 30px);
@@ -657,9 +604,6 @@
     }
 
     .post-recent-header h3,
-    .post-comments-panel h3 {
-        font-size: 21px;
-    }
 
     .post-recent-card img {
         height: auto;
@@ -670,9 +614,6 @@
         font-size: 17px;
     }
 
-    .post-comments-input {
-        font-size: 15px;
-    }
 
 }
 
@@ -709,10 +650,6 @@
     .post-article,
     .post-actions,
     .post-recent-panel,
-    .post-comments-panel {
-        padding: 12px;
-        border-radius: 12px;
-    }
 
     .post-title {
         font-size: 20px;
@@ -745,9 +682,6 @@
     }
 
     .post-recent-header h3,
-    .post-comments-panel h3 {
-        font-size: 18px;
-    }
 
     .post-recent-card img {
         height: auto;
@@ -758,11 +692,6 @@
         font-size: 15px;
     }
 
-    .post-comments-input {
-        min-height: 48px;
-        padding: 10px;
-        font-size: 14px;
-    }
 
     .post-social-link {
         width: 34px;
