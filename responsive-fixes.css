@@ -918,10 +918,13 @@ table {
   }
 
   .benefits-preview {
-    min-height: clamp(250px, 68vw, 340px) !important;
+    min-height: 0 !important;
+    padding: 0 !important;
   }
 
   .benefits-preview-image {
+    width: 100% !important;
+    height: auto !important;
     object-fit: contain !important;
     object-position: center !important;
   }

@@ -3018,8 +3018,8 @@
 
     .benefits-preview {
         border-radius: 20px;
-        min-height: 420px;
-        padding: 26px;
+        min-height: 0;
+        padding: 0;
         position: relative;
         color: #f8fbff;
         background: transparent;
@@ -3032,16 +3032,18 @@
     }
 
     .benefits-preview-picture {
-        position: absolute;
-        inset: 0;
+        position: relative;
+        inset: auto;
         z-index: 0;
         margin: 0;
+        display: block;
+        width: 100%;
     }
 
     .benefits-preview-image {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        object-fit: contain;
         object-position: center;
         display: block;
     }
