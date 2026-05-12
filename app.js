@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const pageTopbar = document.querySelector('.home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar');
     const primarySidebar = document.getElementById('primarySidebar');
 
+    // En mobile: eliminar el video del hero para ahorrar ancho de banda y mejorar LCP
+    if (supportsMatchMedia && window.matchMedia('(max-width: 768px)').matches) {
+        document.querySelectorAll('.full-viewport-video').forEach(function (wrap) {
+            wrap.remove();
+        });
+    }
+
     function setupHeroVideoFallback() {
         const heroVideos = Array.from(document.querySelectorAll('.full-viewport-video video'));
         if (heroVideos.length === 0) {

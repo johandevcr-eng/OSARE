@@ -1305,3 +1305,18 @@ table {
     display: block;
   }
 }
+
+/* Ocultar video hero en mobile: ahorra ancho de banda y mejora LCP */
+@media (max-width: 768px) {
+  :root {
+    --fixed-video-height: 0px;
+  }
+
+  .full-viewport-video {
+    display: none !important;
+  }
+
+  .full-viewport-video video {
+    display: none !important;
+  }
+}
