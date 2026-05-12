@@ -1,2 +1,8 @@
 [build]
   publish = "."
+
+# Servir 404.html para cualquier ruta no encontrada, con el código HTTP correcto.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
