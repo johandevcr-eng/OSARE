@@ -1319,14 +1319,4 @@ table {
   .full-viewport-video video {
     display: none !important;
   }
-
-  /* Reservar espacio en el hero para reducir CLS al cargar fuentes web */
-  .main-no-sidebar > .banner-princ-summary {
-    min-height: 360px;
-    contain: layout;
-  }
-
-  .banner-princ-summary-logo img {
-    aspect-ratio: 1 / 1;
-  }
 }
