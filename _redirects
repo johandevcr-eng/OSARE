@@ -1,0 +1,3 @@
+# Reglas de redireccionamiento para Netlify
+# Cualquier ruta no encontrada sirve la página 404 con el código HTTP correcto.
+/*    /404.html    404

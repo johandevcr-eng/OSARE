@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Bloquear páginas internas o de confirmación
+Disallow: /gracias.html
+Disallow: /404.html
+
+Sitemap: https://osare.cr/sitemap.xml
