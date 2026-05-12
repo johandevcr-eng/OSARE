@@ -422,6 +422,13 @@ document.addEventListener('DOMContentLoaded', function () {
             } catch (error) {
                 // Ignore storage errors (private mode, blocked storage, quotas).
             }
+        },
+        removeItem: function (key) {
+            try {
+                window.localStorage.removeItem(key);
+            } catch (error) {
+                // Ignore storage errors.
+            }
         }
     };
 
@@ -498,13 +505,44 @@ document.addEventListener('DOMContentLoaded', function () {
         return banner;
     };
 
-    if (!savedCookieConsent) {
+    const showCookieBanner = function () {
+        if (document.getElementById('cookieNotice')) {
+            return;
+        }
         const cookieBanner = buildCookieBanner();
         document.body.appendChild(cookieBanner);
         window.requestAnimationFrame(function () {
             document.body.classList.add('cookie-banner-visible');
             cookieBanner.classList.add('is-visible');
         });
+    };
+
+    // Inyectar enlace "Configurar cookies" en todos los footers (Ley 8968: derecho a revocar consentimiento)
+    document.querySelectorAll('.footer-links').forEach(function (nav) {
+        if (nav.querySelector('[data-cookie-settings]')) {
+            return;
+        }
+        const divider = document.createElement('span');
+        divider.className = 'footer-divider';
+        divider.setAttribute('aria-hidden', 'true');
+        divider.textContent = '\u00B7';
+
+        const btn = document.createElement('button');
+        btn.className = 'footer-link-btn';
+        btn.type = 'button';
+        btn.setAttribute('data-cookie-settings', '');
+        btn.textContent = 'Configurar cookies';
+        btn.addEventListener('click', function () {
+            storage.removeItem(cookieBannerStorageKey);
+            showCookieBanner();
+        });
+
+        nav.appendChild(divider);
+        nav.appendChild(btn);
+    });
+
+    if (!savedCookieConsent) {
+        showCookieBanner();
     }
 
     if (backToTopButton) {
