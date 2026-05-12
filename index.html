@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="preload" as="image" href="img/logo_principal.png" fetchpriority="high">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="H_nejegvc4CMO8lyWlVpGMvNDRLZy_6cROlRv6jyVU4" />
   <meta name="description"
@@ -28,10 +29,8 @@
   <script src="app.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="responsive-fixes.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"></noscript>
+  <link rel="preload" as="style" href="responsive-fixes.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="responsive-fixes.css"></noscript>
     <link rel="canonical" href="https://osarecr.com/" />
   <script type="application/ld+json">
   {
@@ -175,7 +174,7 @@
 
       <section class="banner-princ-summary" aria-label="Resumen principal OSARE">
         <div class="banner-princ-summary-logo">
-          <img src="img/logo_principal.png" alt="">
+          <img src="img/logo_principal.png" alt="OSARE" width="340" height="340" fetchpriority="high" decoding="async">
         </div>
         <h3 id="bannerTitle">El Motor Silencioso de tu Éxito</h3>
         <p>Servicios integrales de Outsourcing Administrativo, Contable, Legal y Marketing en Costa Rica.</p>
@@ -216,7 +215,11 @@
             <div class="image-card-glow"></div>
             <div class="banner-blindaje-content">
               <div class="banner-blindaje-bg-art" aria-hidden="true">
-                <img src="img/fondo_metodo_osare.png" alt="" decoding="async" />
+              <picture>
+                <source srcset="img/fondo_metodo_osare.avif" type="image/avif">
+                <source srcset="img/fondo_metodo_osare.webp" type="image/webp">
+                <img src="img/fondo_metodo_osare.png" alt="" width="500" height="500" loading="lazy" decoding="async" />
+              </picture>
               </div>
               <div class="banner-blindaje-logo">
                 <img src="img/logo_negro.webp" class="logo-negro" alt="OSARE" decoding="async" />
@@ -331,8 +334,12 @@
           </div>
           <div class="benefits-preview" id="benefitsPreview" aria-live="polite">
             <picture class="benefits-preview-picture" aria-hidden="true">
-              <img class="benefits-preview-image" src="img/banner.png" alt="" width="1080" height="670" loading="lazy"
+              <picture>
+              <source srcset="img/banner.avif" type="image/avif">
+              <source srcset="img/banner.webp" type="image/webp">
+              <img class="benefits-preview-image" src="img/banner.png" alt="" width="486" height="452" loading="lazy"
                 fetchpriority="low" decoding="async" />
+            </picture>
             </picture>
           </div>
         </div>
@@ -371,9 +378,13 @@
 
       <section class="banner-siglas osare-scrolly" id="osareScrolly">
         <figure class="osare-visual-card">
-          <img class="osare-visual-image" src="img/proposito.jpeg"
-            alt="Comparativa entre el método tradicional y el modelo OSARE preventivo" loading="lazy"
-            decoding="async" />
+          <picture>
+            <source srcset="img/proposito.avif" type="image/avif">
+            <source srcset="img/proposito.webp" type="image/webp">
+            <img class="osare-visual-image" src="img/proposito.jpeg"
+              alt="Comparativa entre el método tradicional y el modelo OSARE preventivo" width="1000" height="1000" loading="lazy"
+              decoding="async" />
+          </picture>
         </figure>
         <div class="osare-content-card glass-panel">
           <p class="banner-blindaje-method">El Método OSARE</p>
