@@ -1,3 +1,25 @@
 # Reglas de redireccionamiento para Netlify
 # Cualquier ruta no encontrada sirve la página 404 con el código HTTP correcto.
 /*    /404.html    404
+
+# _redirects — colocar en la RAIZ del repositorio (mismo nivel que index.html) 
+# Nombre exacto: _redirects (sin extension de archivo) 
+ 
+# Redireccion www a non-www (URL canonica sin www) 
+https://www.osarecr.com/*    https://osarecr.com/:splat    301! 
+ 
+# Paginas del sitio: forzar URLs limpias sin extension .html 
+/acerca-de.html    /acerca-de    301! 
+/serv-adm.html     /serv-adm     301! 
+/serv-cont.html    /serv-cont    301! 
+/serv-leg.html     /serv-leg     301! 
+/serv-mark.html    /serv-mark    301! 
+/blog.html         /blog         301! 
+/contacto.html     /contacto     301! 
+/terminos.html     /terminos     301! 
+/politicas.html    /politicas    301! 
+/gracias.html      /gracias      301! 
+ 
+# Articulos del blog (agregar una regla por cada post existente) 
+/blog-post-1.html  /blog-post-1  301! 
+/blog-post-2.html  /blog-post-2  301!
