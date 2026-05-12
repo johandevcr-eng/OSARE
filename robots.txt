@@ -1,8 +1,6 @@
-﻿User-agent: *
-Allow: /
-
-# Bloquear páginas internas o de confirmación
-Disallow: /gracias.html
-Disallow: /404.html
-
-Sitemap: https://osarecr.com/sitemap.xml
+﻿# robots.txt — colocar en la RAIZ del repositorio 
+User-agent: * 
+Allow: / 
+Disallow: /gracias 
+ 
+Sitemap: https://osarecr.com/sitemap.xml 
