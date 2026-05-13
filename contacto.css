@@ -17,18 +17,17 @@
 }
 
 .contact-intro {
-    margin: 36px 0 20px;
+    margin: 36px auto 20px;
     text-align: center;
-    font-size: clamp(30px, 4.2vw, 45px);
+    font-size: 45px;
     line-height: 1.2;
     color: var(--text-main);
     font-weight: 600;
+    width: 60%;
 }
 
 .contact-conversion-layout {
     display: grid;
-    grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
-    gap: clamp(16px, 2vw, 28px);
     align-items: stretch;
     min-height: 0;
 }
@@ -418,6 +417,7 @@
     font-size: clamp(20px, 2.1vw, 26px);
     line-height: 1.2;
     color: #102236;
+    width: 50%;
 }
 
 .contact-proof-panel > p {
@@ -427,7 +427,8 @@
 }
 
 .contact-proof-box {
-    width: 100%;
+    width: 50%;
+    height: 15rem;
     margin-top: 40px;
     padding: 14px;
     border-radius: 14px;
