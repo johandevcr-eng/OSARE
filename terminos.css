@@ -948,6 +948,16 @@
     text-align: center;
 }
 
+.terminos-highlight{
+    background: rgba(45, 169, 207, 0.1);
+    padding: 10px 12px;
+    border-radius: 0;
+    border-left: 3px solid #2da9cf;
+    font-weight: 600;
+    color: #134e63;
+    margin: 20px 0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .page-content {
