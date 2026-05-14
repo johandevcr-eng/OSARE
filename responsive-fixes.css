@@ -565,11 +565,19 @@ table {
   }
 
   .footer-links {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     justify-self: end !important;
     justify-content: flex-end !important;
     text-align: right !important;
     margin-left: auto;
+    margin-bottom: 0 !important;
+    row-gap: 2px;
+    column-gap: 14px;
+  }
+
+  /* Ocultar dividers "·" cuando los enlaces envuelven para evitar que queden huérfanos al inicio/fin de línea */
+  .footer-links .footer-divider {
+    display: none !important;
   }
 
   .footer-company-data {
@@ -737,9 +745,11 @@ table {
     align-items: center;
     justify-content: center !important;
     text-align: center !important;
-    gap: 8px 12px;
+    flex-wrap: wrap !important;
+    gap: 6px 14px;
     margin-top: 6px;
     margin-left: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .footer-link-btn {
@@ -747,7 +757,7 @@ table {
   }
 
   .footer-divider {
-    display: inline-block !important;
+    display: none !important;
   }
 }
 
@@ -871,6 +881,29 @@ table {
 
   .footer-right {
     padding-right: 54px !important;
+  }
+
+  .footer-right,
+  .footer-company-data,
+  .footer-links {
+    justify-self: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .footer-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px 14px !important;
+    width: 100%;
+    padding-right: 0 !important;
+  }
+
+  .footer-links .footer-divider {
+    display: none !important;
   }
 
   .topbar-menu,
