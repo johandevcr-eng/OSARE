@@ -51,10 +51,10 @@
     border-radius: 20px;
 }
 
-.contact-choice-note:hover{
-	transform: translateY(-5px) scale(1.012);
-	box-shadow: 0 12px 40px rgba(14, 172, 216, 0.18), 0 3px 10px rgba(0, 0, 0, 0.09);
-	border-color: rgba(14, 172, 216, 0.46);
+.contact-choice-note:hover {
+    transform: translateY(-5px) scale(1.012);
+    box-shadow: 0 12px 40px rgba(14, 172, 216, 0.18), 0 3px 10px rgba(0, 0, 0, 0.09);
+    border-color: rgba(14, 172, 216, 0.46);
 }
 
 
@@ -136,6 +136,7 @@
 }
 
 @media (max-width: 560px) {
+
     .contact-grid-top,
     .contact-grid-mid {
         grid-template-columns: 1fr;
@@ -384,7 +385,7 @@
     font-weight: 700;
 }
 
-#asterisco{
+#asterisco {
     margin-top: 20px;
     color: rgb(38, 38, 160);
 }
@@ -420,7 +421,7 @@
     width: 50%;
 }
 
-.contact-proof-panel > p {
+.contact-proof-panel>p {
     margin: 0;
     color: #203247;
     line-height: 1.5;
@@ -438,7 +439,7 @@
     text-align: left;
 }
 
-.contact-proof-box > p {
+.contact-proof-box>p {
     margin: 0 0 10px;
     font-size: 14px;
     line-height: 1.45;
@@ -499,8 +500,15 @@
     border-radius: 12px;
 }
 
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
 @media (max-width: 1200px) {
-    .home-topbar + .main {
+    .home-topbar+.main {
         margin-top: calc(var(--fixed-video-height, 74px) + 8.25rem) !important;
     }
 
@@ -530,7 +538,7 @@
     }
 
     .social-proof {
-        order: 4;
+        order: 5;
     }
 
     .contact-form-column {
@@ -544,6 +552,10 @@
         top: auto;
         justify-items: center;
         text-align: center;
+    }
+
+    .mapa {
+        order: 4;
     }
 
     .contact-agent-photo {
@@ -573,7 +585,7 @@
         align-items: start;
     }
 
-    .home-topbar + .main {
+    .home-topbar+.main {
         margin-top: calc(var(--fixed-video-height, 74px) + 9.5rem) !important;
     }
 
@@ -658,6 +670,6 @@ input[name="bot-field"] {
     display: none !important;
 }
 
-input[name="bot-field"] + label {
+input[name="bot-field"]+label {
     display: none !important;
 }
