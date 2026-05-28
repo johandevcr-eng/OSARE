@@ -45,25 +45,45 @@
 
 		<div class="header home-topbar glass-panel" aria-label="Encabezado principal">
 			<div class="home-topbar-brand logo">
-				<img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="614" height="614" decoding="async" fetchpriority="high" />
-				<img class="logo-title-wordmark" src="img/logo_letras.webp" alt="OSARE CR" width="140" height="35"
-					decoding="async" />
+				
+				<picture>
+					<source srcset="img/logo-osare.webp" type="image/webp">
+				<img class="logo-inicial" src="img/logo-osare.webp" alt="OSARE" width="614" height="614" decoding="async" fetchpriority="high" />
+				</picture>
+				<picture>
+					<source srcset="img/logo-letras-osare.webp" type="image/webp">
+					<img class="logo-title-wordmark" src="img/logo-letras-osare.png" alt="OSARE CR" width="140" height="35"
+						decoding="async">
+				</picture>
 			</div>
 
 			<h1 id="title-menu">Menú principal</h1>
 
 			<nav class="sidebar topbar-menu" id="primarySidebar" aria-label="Menú principal">
 				<ul>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/"><img
-								class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/">
+						<picture>
+							<source srcset="img/icono-hogar.webp" type="image/webp">
+						<img class="imagenes" src="img/icono-hogar.webp" alt="">
+						</picture>
+						<span>Inicio</span></button></li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button"
-							data-href="/acerca-de"><img class="imagenes" src="img/informacion.webp"
-								alt=""><span>Acerca de</span></button></li>
+							data-href="/acerca-de">
+							<picture>
+								<source srcset="img/icono-informacion.webp" type="image/webp">
+								<img class="imagenes" src="img/icono-informacion.webp" alt="">
+							</picture>
+							<span>Acerca de</span></button></li>
 					<li class="has-dropdown">
 						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
 							aria-controls="servicesDropdownMark">
-							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
-									alt="">Servicios</span>
+							<span class="menu-label-text">
+								<picture>
+									<source srcset="img/icono-servicios.webp" type="image/webp">
+									<img class="imagenes" src="img/icono-servicios.webp" alt="">
+								</picture>
+								<span>Servicios</span>
+							</span>
 							<span class="dropdown-arrow" aria-hidden="true"></span>
 						</button>
 						<ul class="submenu-dropdown" id="servicesDropdownMark">
@@ -77,11 +97,19 @@
 									Marketing y Branding</button></li>
 						</ul>
 					</li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog"><img
-								class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog">
+						<picture>
+							<source srcset="img/icono-blog.webp" type="image/webp">
+							<img class="imagenes" src="img/icono-blog.webp" alt="">
+						</picture>
+						<span>Blog</span></button></li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button"
-							data-href="/contacto"><img class="imagenes" src="img/contacto.webp"
-								alt=""><span>Contacto</span></button></li>
+							data-href="/contacto">
+							<picture>
+								<source srcset="img/icono-contacto.webp" type="image/webp">
+								<img class="imagenes" src="img/icono-contacto.webp" alt="">
+							</picture>
+							<span>Contacto</span></button></li>
 				</ul>
 			</nav>
 		</div>
@@ -107,12 +135,19 @@
 
 				<section class="services-grid" aria-label="Servicios de marketing y branding disponibles">
 					<figure class="services-visual" aria-hidden="true">
-						<img src="img/mark-services.webp" alt="" fetchpriority="high" decoding="async">
+						<picture>
+							<source srcset="img/branding-osare.png" type="image/webp">
+							<img src="img/branding-osare.png" alt="" fetchpriority="high" decoding="async">
+						</picture>
 					</figure>
 
 					<article class="service-card service-card--a">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Identidad de Marca Empresarial y Personal</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.webp" alt="" fetchpriority="high" decoding="async">
+							</picture>
+							Identidad de Marca Empresarial y Personal</h2>
 						<ul>
 							<li>Logotipo y variantes del logo para distintos canales.</li>
 							<li>Paleta de colores, tipografía y elementos gráficos de marca.</li>
@@ -123,8 +158,12 @@
 					</article>
 
 					<article class="service-card service-card--b">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Desarrollo y Posicionamiento de Marca</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.webp" alt="" fetchpriority="high" decoding="async">
+							</picture>
+							Desarrollo y Posicionamiento de Marca</h2>
 						<ul>
 							<li>Análisis DAFO, valores y fortalezas sostenibles.</li>
 							<li>Definición de público y cliente objetivo.</li>
@@ -135,8 +174,12 @@
 					</article>
 
 					<article class="service-card service-card--c">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Creación de Contenido</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.webp" alt="" fetchpriority="high" decoding="async">
+							</picture>
+							Creación de Contenido</h2>
 						<ul>
 							<li>Diseño de imágenes, infografías, fotografía y video.</li>
 							<li>Contenido para interacción, fidelización, educación y ventas.</li>
@@ -147,8 +190,12 @@
 					</article>
 
 					<article class="service-card service-card--d">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Branding y Cultura Corporativa</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.webp" alt="" fetchpriority="high" decoding="async">
+							</picture>
+							Branding y Cultura Corporativa</h2>
 						<ul>
 							<li>Aplicación de la identidad de marca en cultura interna.</li>
 							<li>Políticas de servicio y relación con cliente interno y externo.</li>
@@ -159,7 +206,6 @@
 
 
 					<div class="services-grid-summary">
-						
 						<p class="services-grid-note">Entendemos que cada negocio y cada proyecto es diferente, así que
 							no dudes en agendar una cita para conversar sobre los detalles de tus ideas.</p>
 
@@ -177,36 +223,54 @@
 		<button class="whatsapp-float" type="button"
             data-href="https://wa.me/50686818733?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios."
             aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
-            <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async">
+            <picture>
+                <source srcset="img/icono-whatsapp.webp" type="image/webp">
+                <img class="whatsapp-float-icon" src="img/icono-whatsapp.webp" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async">
+            </picture>
         </button>
 
 		<button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram" target="_blank" rel="noopener noreferrer">
-			<img class="telegram-float-icon" src="img/telegram.webp" alt="Telegram" width="56" height="56" fetchpriority="high" decoding="async" />
+			<picture>
+				<source srcset="img/telegram.webp" type="image/webp">
+				<img class="telegram-float-icon" src="img/telegram.webp" alt="Telegram" width="56" height="56" fetchpriority="high" decoding="async" />
+			</picture>
 		</button>
 
 		<footer>
 			<div class="footer-inner">
 				<div class="footer-brand">
-					<img class="footer-logo" src="img/logo_footer.webp" alt="OSARE" fetchpriority="high" decoding="async" />
+					<picture>
+						<source srcset="img/logo-blanco-letras.webp" type="image/webp">
+						<img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="high" decoding="async" />
+					</picture>
 				</div>
 
 				<nav class="footer-social" aria-label="Redes sociales">
 					<button class="footer-social-btn" type="button"
 						data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
 						aria-label="Facebook OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img src="img/facebook.webp" alt="Facebook" width="24" height="24" fetchpriority="high"
-							decoding="async" />
+						<picture>
+							<source srcset="img/icono-facebook.webp" type="image/webp">
+							<img src="img/icono-facebook.webp" alt="Facebook" width="24" height="24" fetchpriority="high"
+								decoding="async" />
+						</picture>
 					</button>
 					<button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
 						aria-label="Instagram OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img src="img/instagram.webp" alt="Instagram" width="24" height="24" fetchpriority="high"
-							decoding="async" />
+						<picture>
+							<source srcset="img/icono-instagram.webp" type="image/webp">
+							<img src="img/icono-instagram.webp" alt="Instagram" width="24" height="24" fetchpriority="high"
+								decoding="async" />
+						</picture>
 					</button>
 					<button class="footer-social-btn" type="button"
 						data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
 						aria-label="LinkedIn OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" fetchpriority="high"
-							decoding="async" />
+						<picture>
+							<source srcset="img/icono-linkedin.webp" type="image/webp">
+							<img src="img/icono-linkedin.webp" alt="LinkedIn" width="24" height="24" fetchpriority="high"
+								decoding="async" />
+						</picture>
 					</button>
 					<!--
 <button class="footer-social-btn" type="button"

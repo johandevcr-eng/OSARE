@@ -44,25 +44,47 @@
 
 		<div class="header home-topbar glass-panel" aria-label="Encabezado principal">
 			<div class="home-topbar-brand logo">
-				<img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="614" height="614" decoding="async" fetchpriority="high" />
-				<img class="logo-title-wordmark" src="img/logo_letras.webp" alt="OSARE CR" width="140" height="35"
-					decoding="async" />
+				<picture>
+					<source srcset="img/logo-osare.webp" type="image/webp">
+					<img class="logo-inicial" src="img/logo-osare.png" alt="OSARE" width="614" height="614" decoding="async" fetchpriority="high" />
+				</picture>
+				<picture>
+					<source srcset="img/logo-letras-osare.webp" type="image/webp">
+					<img class="logo-title-wordmark" src="img/logo-letras-osare.png" alt="OSARE CR" width="140" height="35"
+						decoding="async" />
+				</picture>
 			</div>
 
 			<h1 id="title-menu">Menú principal</h1>
 
 			<nav class="sidebar topbar-menu" id="primarySidebar" aria-label="Menú principal">
 				<ul>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/"><img
-								class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/">
+						<picture>
+							<source srcset="img/icono-hogar.webp" type="image/webp">
+							<img class="imagenes" src="img/icono-hogar.png" alt="Inicio" width="24" height="24" fetchpriority="high" decoding="async" />
+						</picture>
+						<span>Inicio</span>
+					</button>
+					</li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button"
-							data-href="/acerca-de"><img class="imagenes" src="img/informacion.webp"
-								alt=""><span>Acerca de</span></button></li>
+							data-href="/acerca-de"><picture>
+								<source srcset="img/icono-informacion.webp" type="image/webp">
+								<img class="imagenes" src="img/icono-informacion.png" alt="Acerca de" width="24" height="24" fetchpriority="high" decoding="async" />
+							</picture>
+							<span>Acerca de</span>
+						</button>
+					</li>
 					<li class="has-dropdown">
 						<button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
 							aria-controls="servicesDropdownLeg">
-							<span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
-									alt="">Servicios</span>
+							<span class="menu-label-text">
+								<picture>
+									<source srcset="img/icono-servicios.webp" type="image/webp">
+									<img class="imagenes" src="img/icono-servicios.png" alt="Servicios" width="24" height="24" fetchpriority="high" decoding="async" />
+								</picture>
+								<span>Servicios</span>
+							</span>
 							<span class="dropdown-arrow" aria-hidden="true"></span>
 						</button>
 						<ul class="submenu-dropdown" id="servicesDropdownLeg">
@@ -76,11 +98,23 @@
 									Marketing y Branding</button></li>
 						</ul>
 					</li>
-					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog"><img
-								class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
+					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog">
+						
+						<picture>
+							<source srcset="img/icono-blog.webp" type="image/webp">
+							<img class="imagenes" src="img/icono-blog.png" alt="Blog" width="24" height="24" fetchpriority="high" decoding="async" />
+						</picture>
+						<span>Blog</span>
+					</button>
+					</li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button"
-							data-href="/contacto"><img class="imagenes" src="img/contacto.webp"
-								alt=""><span>Contacto</span></button></li>
+							data-href="/contacto"><picture>
+								<source srcset="img/icono-contacto.webp" type="image/webp">
+								<img class="imagenes" src="img/icono-contacto.png" alt="Contacto" width="24" height="24" fetchpriority="high" decoding="async" />
+							</picture>
+							<span>Contacto</span>
+						</button>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -106,12 +140,19 @@
 
 				<section class="services-grid" aria-label="Servicios legales disponibles">
 					<figure class="services-visual" aria-hidden="true">
-						<img src="img/legal-services.webp" alt="" fetchpriority="high" decoding="async">
+						<picture>
+							<source srcset="img/servicios-legales-osare.webp" type="image/webp">
+							<img src="img/servicios-legales-osare.png" alt="" width="600" height="400" fetchpriority="high" decoding="async" />
+						</picture>
 					</figure>
 
 					<article class="service-card service-card--a">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Servicios Notariales</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" fetchpriority="high" decoding="async" />
+							</picture>
+							Servicios Notariales</h2>
 						<ul>
 							<li>Constitución, modificación, disolución y liquidación de sociedades mercantiles.</li>
 							<li>Protocolización de actas de asambleas.</li>
@@ -122,8 +163,12 @@
 					</article>
 
 					<article class="service-card service-card--b">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Asesoría Inmobiliaria</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" fetchpriority="high" decoding="async" />
+							</picture>
+							Asesoría Inmobiliaria</h2>
 						<ul>
 							<li>Estudios registrales, identificación de gravámenes e impuestos municipales.</li>
 							<li>Revisión y elaboración de contratos de alquiler y compraventa.</li>
@@ -133,8 +178,24 @@
 					</article>
 
 					<article class="service-card service-card--c">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Cumplimiento Normativo Empresarial</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" fetchpriority="high" decoding="async" />
+							</picture>
+							Cumplimiento Normativo Empresarial</h2>
+						<ul>
+							<li>Diagnóstico y soluciones específicas en distintas áreas normativas.</li>
+							<li>Revisión de documentación constitutiva, permisos, patentes y licencias.</li>
+							<li>Revisión, mejoramiento e implementación de reglamentos internos y políticas
+								corporativas.</li>
+							<li>Cumplimiento normativo en servicio al cliente y legislación laboral.</li>
+							<li>Protección de datos y asesoría en capacitaciones normativas.</li>
+						</ul>
+					</article>
+
+					<!-- <article class="service-card service-card--d">
+						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high" decoding="async">Procesos Judiciales - Litigio</h2>
 						<ul>
 							<li>Diagnóstico y soluciones específicas en distintas áreas normativas.</li>
 							<li>Revisión de documentación constitutiva, permisos, patentes y licencias.</li>
@@ -167,8 +228,12 @@
 					</div>
 
 					<article class="service-card service-card--e">
-						<h2><img class="card-bullet" src="img/viñeta.webp" alt="" fetchpriority="high"
-								decoding="async">Asesoría para Emprendimientos y Pymes</h2>
+						<h2>
+							<picture>
+								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" fetchpriority="high" decoding="async" />
+							</picture>
+							Asesoría para Emprendimientos y Pymes</h2>
 						<ul>
 							<li>Asesoría y tramitación de permisos, patentes y registros.</li>
 							<li>Gestión de préstamos bancarios y trámites institucionales.</li>
@@ -200,36 +265,53 @@
 		<button class="whatsapp-float" type="button"
             data-href="https://wa.me/50686818733?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios."
             aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
-            <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async">
+            <picture>
+				<source srcset="img/icono-whatsapp.webp" type="image/webp">
+			<img class="whatsapp-float-icon" src="img/icono-whatsapp.webp" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async">
+			</picture>
         </button>
 
 		<button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram" target="_blank" rel="noopener noreferrer">
-			<img class="telegram-float-icon" src="img/telegram.webp" alt="Telegram" width="56" height="56" fetchpriority="high" decoding="async" />
+			<picture>
+				<source srcset="img/telegram.webp" type="image/webp">
+				<img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" fetchpriority="high" decoding="async" />
+			</picture>
 		</button>
 
 		<footer>
 			<div class="footer-inner">
 				<div class="footer-brand">
-					<img class="footer-logo" src="img/logo_footer.webp" alt="OSARE" fetchpriority="high" decoding="async" />
+					<picture>
+						<source srcset="img/logo-blanco-letras.webp" type="image/webp">
+						<img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="high" decoding="async" />
+					</picture>
 				</div>
 
 				<nav class="footer-social" aria-label="Redes sociales">
 					<button class="footer-social-btn" type="button"
 						data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
 						aria-label="Facebook OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img src="img/facebook.webp" alt="Facebook" width="24" height="24" fetchpriority="high"
-							decoding="async" />
+						<picture>
+							<source srcset="img/icono-facebook.webp" type="image/webp">
+							<img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" fetchpriority="high" decoding="async" />
+						</picture>
 					</button>
 					<button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
 						aria-label="Instagram OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img src="img/instagram.webp" alt="Instagram" width="24" height="24" fetchpriority="high"
+						<picture>
+							<source srcset="img/icono-instagram.webp" type="image/webp">
+							<img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" fetchpriority="high"
 							decoding="async" />
+						</picture>
 					</button>
 					<button class="footer-social-btn" type="button"
 						data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
 						aria-label="LinkedIn OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" fetchpriority="high"
-							decoding="async" />
+						<picture>
+							<source srcset="img/icono-linkedin.webp" type="image/webp">
+							<img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" fetchpriority="high"
+								decoding="async" />
+						</picture>
 					</button>
 					<!--
 <button class="footer-social-btn" type="button"

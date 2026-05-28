@@ -69,6 +69,89 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function getImageFallbackCandidates(src) {
+        if (!src) {
+            return [];
+        }
+
+        const chainByExtension = {
+            avif: ['webp', 'png', 'jpg', 'jpeg'],
+            webp: ['png', 'jpg', 'jpeg'],
+            png: ['jpg', 'jpeg'],
+            jpg: ['jpeg', 'png'],
+            jpeg: ['jpg', 'png']
+        };
+        const candidates = [];
+        const trimmedSrc = src.trim();
+
+        if (trimmedSrc.indexOf('img//') === 0) {
+            candidates.push(trimmedSrc.replace(/^img\/+/, 'img/'));
+        }
+
+        const extMatch = trimmedSrc.match(/\.(avif|webp|png|jpe?g)(?=([?#].*)?$)/i);
+        if (extMatch) {
+            const currentExtension = extMatch[1].toLowerCase();
+            const chain = chainByExtension[currentExtension] || [];
+            chain.forEach(function (targetExtension) {
+                candidates.push(trimmedSrc.replace(/\.(avif|webp|png|jpe?g)(?=([?#].*)?$)/i, '.' + targetExtension));
+            });
+        }
+
+        return candidates.filter(function (candidate, index, list) {
+            return candidate && candidate !== trimmedSrc && list.indexOf(candidate) === index;
+        });
+    }
+
+    function setupImageFallbacks() {
+        const transparentPlaceholder = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221%22 height=%221%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E';
+
+        document.querySelectorAll('img').forEach(function (img) {
+            if (img.dataset.fallbackReady === '1') {
+                return;
+            }
+
+            img.dataset.fallbackReady = '1';
+            const originalSrc = img.getAttribute('src');
+            const candidates = getImageFallbackCandidates(originalSrc);
+
+            if (candidates.length === 0) {
+                return;
+            }
+
+            let candidateIndex = 0;
+            const applyNextCandidate = function () {
+                while (candidateIndex < candidates.length) {
+                    const nextSrc = candidates[candidateIndex];
+                    candidateIndex += 1;
+                    if (nextSrc === img.getAttribute('src')) {
+                        continue;
+                    }
+
+                    // Avoid the browser re-requesting a broken srcset candidate.
+                    img.removeAttribute('srcset');
+                    img.setAttribute('src', nextSrc);
+                    return true;
+                }
+
+                return false;
+            };
+
+            img.addEventListener('error', function () {
+                if (applyNextCandidate()) {
+                    return;
+                }
+
+                if (img.dataset.fallbackExhausted === '1') {
+                    return;
+                }
+
+                img.dataset.fallbackExhausted = '1';
+                img.removeAttribute('srcset');
+                img.setAttribute('src', transparentPlaceholder);
+            });
+        });
+    }
+
     if (pageTopbar && primarySidebar && !pageTopbar.contains(primarySidebar)) {
         primarySidebar.classList.add('topbar-menu');
         pageTopbar.appendChild(primarySidebar);
@@ -212,6 +295,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setupCompactMobileTopbar();
     setupHeroVideoFallback();
+    setupImageFallbacks();
 
     const logoTrack = document.querySelector('.logo-track');
     if (logoTrack && !logoTrack.dataset.loopReady) {

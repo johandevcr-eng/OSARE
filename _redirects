@@ -21,5 +21,7 @@ https://www.osarecr.com/*    https://osarecr.com/:splat    301!
 /gracias.html      /gracias      301! 
  
 # Articulos del blog (agregar una regla por cada post existente) 
-/blog-post-1.html  /blog-post-1  301! 
-/blog-post-2.html  /blog-post-2  301!
+/branding-corporativo.html              /branding-corporativo    301! 
+/retos-pymes-2025.html                  /retos-pymes-2025     301! 
+/tercerizacion-administrativa.html      /tercerizacion-administrativa     301! 
+/tercerizacion-nominas.html             /tercerizacion-nominas     301! 

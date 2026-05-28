@@ -72,10 +72,16 @@
         </div>
         <div class="header home-topbar glass-panel">
             <div class="home-topbar-brand logo">
-                <img class="logo-inicial" src="img/osare.webp" alt="OSARE" width="614" height="614" decoding="async"
+                <picture>
+                    <source srcset="img/logo-osare.webp" type="image/webp">
+                <img class="logo-inicial" src="img/logo-osare.png" alt="OSARE" width="614" height="614" decoding="async"
                     fetchpriority="high">
-                <img class="logo-title-wordmark" src="img/logo_letras.webp" alt="OSARE CR" width="140" height="35"
+                </picture>
+               <picture>
+                    <source srcset="img/logo-letras-osare.webp" type="image/webp">
+                    <img class="logo-title-wordmark" src="img/logo-letras-osare.png" alt="OSARE CR" width="140" height="35"
                     decoding="async">
+               </picture>
             </div>
             <h1 id="title-menu">Menú principal</h1>
 
@@ -95,15 +101,30 @@
         <div class="main">
             <div class="sidebar" id="primarySidebar">
                 <ul>
-                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/"><img
-                                class="imagenes" src="img/hogar.webp" alt=""><span>Inicio</span></button></li>
-                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/acerca-de"><img
-                                class="imagenes" src="img/informacion.webp" alt=""><span>Acerca de</span></button></li>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/">
+                       <picture>
+                            <source srcset="img/icono-hogar.webp" type="image/webp">
+                            <img class="imagenes" src="img/icono-hogar.webp" alt=""><span>Inicio</span>
+                        </picture>
+                    </button></li>
+
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/acerca-de">
+                        <picture>
+                            <source srcset="img/icono-informacion.webp" type="image/webp">
+                            <img class="imagenes" src="img/icono-informacion.webp" alt=""><span>Acerca de</span>
+                        </picture>
+                    </button></li>
+
                     <li class="has-dropdown">
                         <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
                             aria-controls="servicesDropdownArticleConveniencia">
-                            <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
-                                    alt="">Servicios</span>
+                            <span class="menu-label-text">
+                                <picture>
+                                    <source srcset="img/icono-servicios.webp" type="image/webp">
+                                    <img class="imagenes" src="img/icono-servicios.webp" alt="">
+                                </picture>
+                                <span>Servicios</span>
+                            </span>
                             <span class="dropdown-arrow" aria-hidden="true"></span>
                         </button>
                         <ul class="submenu-dropdown" id="servicesDropdownArticleConveniencia">
@@ -117,10 +138,18 @@
                                     Branding</button></li>
                         </ul>
                     </li>
-                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog"><img
-                                class="imagenes" src="img/blog.webp" alt=""><span>Blog</span></button></li>
-                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto"><img
-                                class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog">
+                        <picture>
+                            <source srcset="img/icono-blog.webp" type="image/webp">
+                            <img class="imagenes" src="img/icono-blog.webp" alt=""><span>Blog</span>
+                        </picture>
+                    </button></li>
+                    <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto">
+                        <picture>
+                            <source srcset="img/icono-contacto.webp" type="image/webp">
+                            <img class="imagenes" src="img/icono-contacto.webp" alt=""><span>Contacto</span>
+                        </picture>
+                    </button></li>
                 </ul>
             </div>
 
@@ -130,18 +159,27 @@
                     <h2 class="post-title">Conveniencia de la tercerización administrativa</h2>
                     <ul class="post-meta" aria-label="Información del artículo">
                         <li class="post-meta-author-item">
-                            <img class="post-meta-avatar" src="img/osare.webp" alt="Autor Nelson Castro"
+                           <picture>
+                                <source srcset="img/logo-osare.webp" type="image/webp"> 
+                            <img class="post-meta-avatar" src="img/logo-osare.png" alt="Autor Nelson Castro"
                                 fetchpriority="high" decoding="async">
+                                 </picture>
                             <span class="post-meta-author">Nelson Castro</span>
+                           
                         </li>
                         <li>14 feb 2024</li>
                         <li>2 min de lectura</li>
                     </ul>
                 </section>
 
-                <!-- <figure class="post-cover glass-panel">
-                <img src="img/art-conveniencia.webp" srcset="img/art-conveniencia.webp 1200w" sizes="(max-width: 900px) 96vw, (max-width: 1400px) 72vw, 980px" alt="Conveniencia de la tercerizacion administrativa" loading="eager" fetchpriority="high" decoding="async">
-            </figure> -->
+                <figure class="post-cover glass-panel">
+                   <picture>
+                        <source srcset="img/el-eficiencia-de-tercerizar-servicios.webp" type="image/webp">
+                        <img src="img/el-eficiencia-de-tercerizar-servicios.png" srcset="img/el-eficiencia-de-tercerizar-servicios.png 1600w"
+                            sizes="(max-width: 900px) 96vw, (max-width: 1400px) 72vw, 980px"
+                            alt="Conveniencia de la tercerización administrativa" loading="eager" fetchpriority="high" decoding="async">
+                    </picture>
+                </figure>
 
                 <article class="post-article glass-panel" aria-label="Contenido del artículo">
                     <p>
@@ -202,8 +240,11 @@
 
                     <section class="post-ending-split" aria-label="Cierre del artículo">
                         <figure class="post-inline-image post-inline-image-ending">
-                            <img src="img/art-conveniencia.webp" alt="Conveniencia de la tercerización"
+                           <picture>
+                                <source srcset="img/trabajando-en-equipo.webp" type="image/webp">
+                            <img src="img/trabajando-en-equipo.png" alt="Conveniencia de la tercerización"
                                 fetchpriority="high" decoding="async">
+                            </picture>
                         </figure>
                         <p class="post-quote">
                             Tercerizar administración no es perder control: es ganar foco para crecer con mayor
@@ -211,16 +252,27 @@
                         </p>
                         <div class="post-social-links" aria-label="Redes sociales de OSARE">
                             <a class="post-social-link" href="https://www.facebook.com/people/Osarecr/61552264208402/"
-                                target="_blank" rel="noopener noreferrer" aria-label="Facebook de OSARE"><img
-                                    src="img/facebook.webp" alt="Facebook de OSARE" fetchpriority="high"
+                                target="_blank" rel="noopener noreferrer" aria-label="Facebook de OSARE">
+                                <picture>
+                                    <source srcset="img/icono-facebook.webp" type="image/webp">
+                                <img src="img/icono-facebook.png" alt="Facebook de OSARE" fetchpriority="high"
                                     decoding="async"></a>
+                                </picture>
                             <a class="post-social-link" href="https://www.instagram.com/osare_cr/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Instagram de OSARE"><img src="img/instagram.webp"
+                                rel="noopener noreferrer" aria-label="Instagram de OSARE">
+                                <picture>
+                                    <source srcset="img/icono-instagram.webp" type="image/webp">
+                                <img src="img/icono-instagram.png"
                                     alt="Instagram de OSARE" fetchpriority="high" decoding="async"></a>
+                                </picture>
                             <a class="post-social-link"
                                 href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" target="_blank"
-                                rel="noopener noreferrer" aria-label="LinkedIn de OSARE"><img src="img/linkedin.webp"
+                                rel="noopener noreferrer" aria-label="LinkedIn de OSARE">
+                                <picture>
+                                    <source srcset="img/icono-linkedin.webp" type="image/webp">
+                                <img src="img/icono-linkedin.png"
                                     alt="LinkedIn de OSARE" fetchpriority="high" decoding="async"></a>
+                                </picture>
                         </div>
                     </section>
                 </article>
@@ -237,19 +289,29 @@
                         </header>
                         <div class="post-recent-grid">
                             <a class="post-recent-card" href="/retos-pymes-2025"
-                                aria-label="2025 Retos para las Pymes"><img src="img/art-retos.webp"
-                                    alt="2025 Retos para las Pymes" fetchpriority="high" decoding="async">
+                                aria-label="2025 Retos para las Pymes">
+                                <picture>
+                                    <source srcset="img/trabajo-de-equipo-en-empresas.webp" type="image/webp">
+                                    <img src="img/trabajo-de-equipo-en-empresas.png" alt="2025 Retos para las Pymes" fetchpriority="high" decoding="async">
+                                </picture>
                                 <h4>2025: Retos para las Pymes</h4>
                             </a>
                             <a class="post-recent-card" href="/branding-corporativo"
-                                aria-label="Branding Corporativo"><img src="img/art-branding.webp"
-                                    alt="Branding corporativo" fetchpriority="high" decoding="async">
+                                aria-label="Branding Corporativo">
+                                <picture>
+                                    <source srcset="img/el-arte-del-branding.webp" type="image/webp">
+                                    <img src="img/el-arte-del-branding.png" alt="Branding corporativo" fetchpriority="high" decoding="async">
+                                </picture>
                                 <h4>Branding Corporativo: Claves para el éxito</h4>
                             </a>
                             <a class="post-recent-card" href="/tercerizacion-nominas"
-                                aria-label="Servicio Tercerizado de Administración de Nóminas"><img
-                                    src="img/art-tercerizado.webp" alt="Servicio tercerizado" fetchpriority="high"
-                                    decoding="async">
+                                aria-label="Servicio Tercerizado de Administración de Nóminas">
+
+                                <picture>
+                                    <source srcset="img/el-eficiencia-de-tercerizar-servicios.webp" type="image/webp">
+                                    <img src="img/el-eficiencia-de-tercerizar-servicios.png" alt="Servicio tercerizado" fetchpriority="high"
+                                        decoding="async">
+                                </picture>
                                 <h4>Servicio Tercerizado de Administración de Nóminas</h4>
                             </a>
                         </div>
@@ -263,8 +325,13 @@
                 <li class="has-dropdown">
                     <button class="menu-label dropdown-toggle" type="button" aria-expanded="false"
                         aria-controls="floatingServicesDropdownConveniencia">
-                        <span class="menu-label-text"><img class="imagenes" src="img/servicios.webp"
-                                alt="">Servicios</span>
+                        <span class="menu-label-text">
+                            <picture>
+                                <source srcset="img/icono-servicios.webp" type="image/webp">
+                                <img class="imagenes" src="img/icono-servicios.png" alt="Servicios">
+                            </picture>
+                            Servicios
+                        </span>
                         <span class="dropdown-arrow" aria-hidden="true"></span>
                     </button>
                     <ul class="submenu-dropdown" id="floatingServicesDropdownConveniencia">
@@ -278,46 +345,67 @@
                                 Branding</button></li>
                     </ul>
                 </li>
-                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto"><img
-                            class="imagenes" src="img/contacto.webp" alt=""><span>Contacto</span></button></li>
+                <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto">
+                    <picture>
+                        <source srcset="img/icono-contacto.webp" type="image/webp">
+                    <img class="imagenes" src="img/icono-contacto.png" alt=""><span>Contacto</span></button></li>
+                    </picture>
             </ul>
         </aside>
 
         <button class="whatsapp-float" type="button"
             data-href="https://wa.me/50686818733?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios."
             aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
-            <img class="whatsapp-float-icon" src="img/whatsapp.webp" alt="WhatsApp" width="56" height="56"
+            <picture>
+                <source srcset="img/icono-whatsapp.webp" type="image/webp">
+            <img class="whatsapp-float-icon" src="img/icono-whatsapp.png" alt="WhatsApp" width="56" height="56"
                 fetchpriority="high" decoding="async">
+            </picture>
         </button>
 
         <button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram" target="_blank" rel="noopener noreferrer">
-            <img class="telegram-float-icon" src="img/telegram.webp" alt="Telegram" width="56" height="56"
+            <picture>
+                <source srcset="img/telegram.webp" type="image/webp">
+            <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56"
                 fetchpriority="high" decoding="async" />
+            </picture>
         </button>
         <footer>
             <div class="footer-inner">
                 <div class="footer-brand">
-                    <img class="footer-logo" src="img/logo_footer.webp" alt="OSARE" fetchpriority="high"
+                   <picture>
+                        <source srcset="img/logo-blanco-letras.webp" type="image/webp">
+                    <img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="high"
                         decoding="async" />
+                    </picture>
                 </div>
 
                 <nav class="footer-social" aria-label="Redes sociales">
                     <button class="footer-social-btn" type="button"
                         data-href="https://www.facebook.com/people/Osarecr/61552264208402/"
                         aria-label="Facebook OSARE CR" target="_blank" rel="noopener noreferrer">
-                        <img src="img/facebook.webp" alt="Facebook" width="24" height="24" fetchpriority="high"
+                        <picture>
+                            <source srcset="img/icono-facebook.webp" type="image/webp">
+                        <img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" fetchpriority="high"
                             decoding="async" />
+                        </picture>
                     </button>
                     <button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
                         aria-label="Instagram OSARE CR" target="_blank" rel="noopener noreferrer">
-                        <img src="img/instagram.webp" alt="Instagram" width="24" height="24" fetchpriority="high"
+                        <picture>
+                            <source srcset="img/icono-instagram.webp" type="image/webp">
+                        <img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" fetchpriority="high"
                             decoding="async" />
+                        </picture>
                     </button>
                     <button class="footer-social-btn" type="button"
                         data-href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true"
                         aria-label="LinkedIn OSARE CR" target="_blank" rel="noopener noreferrer">
-                        <img src="img/linkedin.webp" alt="LinkedIn" width="24" height="24" fetchpriority="high"
+                        <picture>
+                            <source srcset="img/icono-linkedin.webp" type="image/webp">
+                        <img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" fetchpriority="high"
                             decoding="async" />
+                        </picture>
                     </button>
                     <!--
 <button class="footer-social-btn" type="button"

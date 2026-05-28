@@ -306,9 +306,9 @@
     gap: 22px;
 }
 
-.post-recent-panel,
-
-.post-recent-panel,
+.post-recent-panel {
+    display: block;
+}
 
 .post-recent-header {
     margin-bottom: 14px;
@@ -318,11 +318,18 @@
     gap: 12px;
 }
 
-.post-recent-header h3,
+.post-recent-header h3 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--text-main);
+}
 
 .post-recent-header a {
     color: var(--text-main);
     font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
     opacity: 0.9;
 }
@@ -371,7 +378,6 @@
     text-wrap: balance;
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -383,11 +389,6 @@
     border-color: rgba(10, 122, 164, 0.55);
     outline: none;
 }
-
-
-
-
-
 
 @media (max-width: 1100px) {
     .post-page {
@@ -524,8 +525,6 @@
     .post-meta li + li::before {
         margin: 0 7px;
     }
-
-    .post-recent-panel,
 }
 
 @media (max-width: 760px) {
@@ -564,7 +563,6 @@
         height: auto;
     }
 
-
     .post-social-links {
         gap: 10px;
     }
@@ -582,8 +580,9 @@
 
     .post-hero,
     .post-article,
-    .post-actions,
-    .post-recent-panel,
+    .post-actions {
+        border-radius: 12px;
+    }
 
     .post-title {
         font-size: clamp(24px, 8.2vw, 30px);
@@ -603,7 +602,9 @@
         font-size: 15px;
     }
 
-    .post-recent-header h3,
+    .post-recent-header h3 {
+        font-size: clamp(18px, 5vw, 20px);
+    }
 
     .post-recent-card img {
         height: auto;
@@ -613,8 +614,6 @@
         padding: 12px;
         font-size: 17px;
     }
-
-
 }
 
 @media (max-width: 360px) {
@@ -648,8 +647,9 @@
 
     .post-hero,
     .post-article,
-    .post-actions,
-    .post-recent-panel,
+    .post-actions {
+        border-radius: 10px;
+    }
 
     .post-title {
         font-size: 20px;
@@ -681,7 +681,9 @@
         padding: 10px 14px;
     }
 
-    .post-recent-header h3,
+    .post-recent-header h3 {
+        font-size: 17px;
+    }
 
     .post-recent-card img {
         height: auto;
@@ -702,7 +704,6 @@
         width: 19px;
         height: 19px;
     }
-
 }
 
 
