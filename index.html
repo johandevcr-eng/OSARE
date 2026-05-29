@@ -52,47 +52,72 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "OSARE",
-        "url": "https://osarecr.com",
-        "logo": "https://osarecr.com/img/logo-osare.webp",
-        "description": "Outsourcing de servicios administrativos, contables y legales para pymes en Costa Rica",
-        "telephone": "+506 2552-9313",
-        "email": "administracion@osarecr.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cartago",
-          "addressRegion": "Cartago",
-          "addressCountry": "CR"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Costa Rica"
-        },
-        "openingHoursSpecification": [
+        "@graph": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:00",
-            "closes": "17:00"
+            "@type": "Organization",
+            "@id": "https://osarecr.com/#organization",
+            "name": "OSARE CR",
+            "url": "https://osarecr.com/",
+            "description": "Outsourcing de servicios administrativos, contables, legales y de marketing para pymes en Costa Rica",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://osarecr.com/img/logo-osare.webp"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "CR"
+            },
+            "email": "administracion@osarecr.com",
+            "telephone": "+506 2552-9313",
+            "sameAs": [
+              "https://www.facebook.com/people/Osarecr/61552264208402/",
+              "https://www.instagram.com/osare_cr/",
+              "https://www.linkedin.com/company/osare-cr"
+            ]
           },
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "14:00"
+            "@type": "ProfessionalService",
+            "@id": "https://osarecr.com/#professional-service",
+            "name": "OSARE CR",
+            "url": "https://osarecr.com/",
+            "description": "Outsourcing de servicios administrativos, contables y legales para pymes en Costa Rica",
+            "image": "https://osarecr.com/img/logo-osare.webp",
+            "email": "administracion@osarecr.com",
+            "telephone": "+506 2552-9313",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Cartago",
+              "addressRegion": "Cartago",
+              "addressCountry": "CR"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Costa Rica"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "09:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "14:00"
+              }
+            ],
+            "parentOrganization": {
+              "@id": "https://osarecr.com/#organization"
+            }
           }
-        ],
-        "sameAs": [
-          "https://www.facebook.com/people/Osarecr/61552264208402/",
-          "https://www.instagram.com/osare_cr/",
-          "https://www.linkedin.com/company/osare-cr"
         ]
       }
     </script>
