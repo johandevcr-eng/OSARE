@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Fix mojibake html",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\fix_mojibake_html.ps1"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Fix mojibake html",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\fix_mojibake_html.ps1"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Fix mojibake html",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				".\\fix_mojibake_html.ps1"
+			],
+			"problemMatcher": []
+		}
+	]
+}

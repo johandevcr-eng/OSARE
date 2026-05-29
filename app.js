@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        
+
 
         // Links legales
         const footerLinks = footerInner.querySelector('.footer-links');
