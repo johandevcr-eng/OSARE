@@ -429,31 +429,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (n && a) {
     (a.classList.remove("is-visible"), f && (a.style.display = "none"));
-    let e = !0;
-    const t = function () {
-        const t = n.getBoundingClientRect(),
-          o = t.top < window.innerHeight,
-          i = t.bottom > 88;
-        e = o && i;
-      },
-      o = function () {
-        t();
-        const n = !e && window.scrollY > 120;
-        a.classList.toggle("is-visible", n);
-      };
+    let e = !0,
+      o = window.scrollY > 120;
+    const i = function () {
+      a.classList.toggle("is-visible", !e && o);
+    };
     if (!f) {
       if ("IntersectionObserver" in window) {
-        new IntersectionObserver(
+        const t = new IntersectionObserver(
           function (t) {
-            0 !== t.length && ((e = t[0].isIntersecting), o());
+            0 !== t.length && ((e = t[0].isIntersecting), i());
           },
-          { threshold: 0.08 },
-        ).observe(n);
-      } else t();
-      const i = m(o);
-      (window.addEventListener("scroll", i, { passive: !0 }),
-        window.addEventListener("resize", o),
-        o());
+          { threshold: 0.08, rootMargin: "-88px 0px 0px 0px" },
+        );
+        t.observe(n);
+      }
+      const t = function () {
+          o = window.scrollY > 120;
+          i();
+        },
+        r = m(t);
+      (window.addEventListener("scroll", r, { passive: !0 }),
+        window.addEventListener("resize", t),
+        t());
     }
   }
   if (s && d) {
@@ -470,18 +468,15 @@ document.addEventListener("DOMContentLoaded", function () {
         e.style.setProperty("--gx", i.toFixed(3)),
         e.style.setProperty("--gy", a.toFixed(3)));
     });
-    const n = function () {
-      const e = s.getBoundingClientRect(),
-        n =
-          (window.innerHeight - e.top) / (e.height + 0.3 * window.innerHeight),
-        o = Math.max(0, Math.min(n, 1)),
-        i = Math.min(5, Math.max(0, Math.ceil(5 * o)));
+    const n = function (e) {
+      const n = Math.max(0, Math.min(e, 1)),
+        o = Math.min(5, Math.max(0, Math.ceil(5 * n)));
       (d.classList.toggle("is-ordered", o > 0.45),
         t.forEach(function (e, t) {
-          e.classList.toggle("is-visible", t < i);
+          e.classList.toggle("is-visible", t < o);
         }),
-        (d.style.opacity = String(Math.max(0.35, 1 - 0.5 * o))),
-        (d.style.filter = "saturate(" + (0.85 + 0.4 * o).toFixed(2) + ")"));
+        (d.style.opacity = String(Math.max(0.35, 1 - 0.5 * n))),
+        (d.style.filter = "saturate(" + (0.85 + 0.4 * n).toFixed(2) + ")"));
     };
     if (f || u)
       (d.classList.add("is-ordered"),
@@ -490,11 +485,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }),
         (d.style.opacity = "0.9"),
         (d.style.filter = "none"));
-    else {
-      const e = m(n);
-      (window.addEventListener("scroll", e, { passive: !0 }),
-        window.addEventListener("resize", n),
-        n());
+    else if ("IntersectionObserver" in window) {
+      const e = Array.from({ length: 11 }, function (_, e) {
+          return e / 10;
+        }),
+        o = new IntersectionObserver(
+          function (e) {
+            0 !== e.length && n(e[0].intersectionRatio || 0);
+          },
+          { threshold: e },
+        );
+      o.observe(s);
+    } else {
+      n(0);
     }
   }
   if (r && c) {
@@ -562,20 +565,28 @@ document.addEventListener("DOMContentLoaded", function () {
         l.style.transform = "translate3d(0, 0, 0)";
       };
     if (f || u || n) return void o();
-    (document.addEventListener("mousemove", function (e) {
-      const n = l.getBoundingClientRect(),
-        i = n.left + n.width / 2,
-        a = n.top + n.height / 2,
-        r = e.clientX - i,
-        c = e.clientY - a,
-        s = Math.hypot(r, c),
-        d = 170;
-      if (s > d) return void o();
-      const u = (1 - s / d) * t,
-        f = (r / d) * u,
-        g = (c / d) * u;
-      l.style.transform =
-        "translate3d(" + f.toFixed(2) + "px," + g.toFixed(2) + "px,0)";
+    let i = null;
+    const a = function () {
+      i = l.getBoundingClientRect();
+    };
+    (a(),
+      window.addEventListener("resize", a),
+      window.addEventListener("scroll", a, { passive: !0 }),
+      l.addEventListener("pointerenter", a),
+      document.addEventListener("mousemove", function (e) {
+        const n = i || (a(), i),
+          r = n.left + n.width / 2,
+          c = n.top + n.height / 2,
+          s = e.clientX - r,
+          d = e.clientY - c,
+          u = Math.hypot(s, d),
+          g = 170;
+        if (u > g) return void o();
+        const f = (1 - u / g) * t,
+          x = (s / g) * f,
+          y = (d / g) * f;
+        l.style.transform =
+          "translate3d(" + x.toFixed(2) + "px," + y.toFixed(2) + "px,0)";
     }),
       l.addEventListener("mouseleave", o),
       window.addEventListener("scroll", o, { passive: !0 }));
