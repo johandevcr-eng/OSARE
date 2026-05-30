@@ -39,6 +39,7 @@ video {
 }
 :root {
   --fixed-video-height: 74px;
+  --font-sans-fallback: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 * {
   min-width: 0;
@@ -49,18 +50,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Montserrat, "Plus Jakarta Sans", sans-serif;
+  font-family: Montserrat, "Plus Jakarta Sans", var(--font-sans-fallback);
   line-height: 1.15;
 }
 button,
 li,
 p,
 span {
-  font-family: "Plus Jakarta Sans", Inter, sans-serif;
+  font-family: "Plus Jakarta Sans", Inter, "Open Sans", var(--font-sans-fallback);
 }
 body {
   margin: 0;
-  font-family: "Plus Jakarta Sans", Inter, Montserrat, sans-serif;
+  font-family: "Plus Jakarta Sans", Inter, "Open Sans", Montserrat, var(--font-sans-fallback);
   background: var(--bg-main);
   overscroll-behavior-x: none;
   touch-action: pan-y;
