@@ -47,27 +47,26 @@
                 <source srcset="img/logo-osare.webp" type="image/webp">
                 <img class="logo-inicial" src="img/logo-osare.png" alt="OSARE" width="614" height="614" decoding="async"
                     fetchpriority="high">
-               </picture>
+                </picture>
                <picture>
                 <source srcset="img/logo-letras-osare.webp" type="image/webp">
                     <img class="logo-title-wordmark" src="img/logo-letras-osare.png" alt="OSARE CR" width="140" height="35"
-                    decoding="async">
+                    decoding="async" fetchpriority="high">
                 </picture>
             </div>
             <h1 id="title-menu">Menú principal</h1>
-
             <nav class="sidebar topbar-menu" id="primarySidebar" aria-label="Menú principal">
                 <ul>
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/">
                          <picture>
                         <source srcset="img/icono-hogar.webp" type="image/webp">
-                        <img class="imagenes" src="img/icono-hogar.png" alt="">
+                        <img class="imagenes" src="img/icono-hogar.png" alt="" fetchpriority="low">
                         </picture>
                             <span>Inicio</span></button></li>
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/acerca-de">
                         <picture>
                             <source srcset="img/icono-informacion.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-informacion.png" alt="">
+                            <img class="imagenes" src="img/icono-informacion.png" alt="" fetchpriority="low">
                     </picture>
                     <span>Acerca de</span></button></li>
                     <li class="has-dropdown">
@@ -76,9 +75,10 @@
                             <span class="menu-label-text">
                                 <picture>
                                     <source srcset="img/icono-servicios.webp" type="image/webp">
-                                    <img class="imagenes" src="img/icono-servicios.png" alt="">
+                                    <img class="imagenes" src="img/icono-servicios.png" alt="" fetchpriority="low">
                                 </picture>
                                     <span>Servicios</span>
+                            </span>
                             <span class="dropdown-arrow" aria-hidden="true"></span>
                         </button>
                         <ul class="submenu-dropdown" id="servicesDropdownGracias">
@@ -95,13 +95,13 @@
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog">
                         <picture>
                             <source srcset="img/icono-blog.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-blog.png" alt="">
+                            <img class="imagenes" src="img/icono-blog.png" alt="" fetchpriority="low">
                         </picture>
                         <span>Blog</span></button></li>
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto">
                         <picture>
                             <source srcset="img/icono-contacto.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-contacto.png" alt="">
+                            <img class="imagenes" src="img/icono-contacto.png" alt="" fetchpriority="low">
                         </picture>
                         <span>Contacto</span></button></li>
                 </ul>
@@ -121,7 +121,7 @@
                 <section class="privacy-intro">
                     <p class="policy-highlight">En OSARE respetamos profundamente su privacidad. El principio que rige
                         esta Política es simple: no recopilamos, no almacenamos ni utilizamos sus datos personales con
-                        ningún fin. Si nos contacta, es para atenderle — nada más.</a>
+                        ningún fin. Si nos contacta, es para atenderle — nada más.
                     </p>
                 </section>
 
@@ -152,7 +152,7 @@
                     <h2>2. PRINCIPIO BASE: NO RECOPILACIÓN DE DATOS PERSONALES</h2>
                     <p>El Sitio de OSARE no cuenta con formularios de registro, suscripción, captura de datos ni ningún
                         mecanismo que implique la recolección sistemática de datos personales de sus visitantes. <br>
-                        En consecuencia:
+                        En consecuencia:</p>
                     <ul>
                         <li>OSARE no mantiene bases de datos de usuarios o visitantes del Sitio.</li>
                         <li>OSARE no ha inscrito ninguna base de datos ante PRODHAB por concepto del uso de este Sitio,
@@ -160,7 +160,6 @@
                         <li>OSARE no realiza tratamiento automatizado de datos personales identificables a través del
                             Sitio.</li>
                     </ul>
-                    </p>
 
                     <p>
                         La presente Política distingue entre dos tipos de información: datos personales identificables
@@ -168,6 +167,7 @@
                         navegación anónimos y no vinculables a personas, que se generan automáticamente al usar
                         cualquier sitio web y se detallan en la Sección 4.
                     </p>
+                </section>
 
 
 
@@ -420,14 +420,14 @@
             aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
             <picture>
                 <source srcset="img/whatsapp-osare.webp" type="image/webp">
-                <img class="whatsapp-float-icon" src="img/whatsapp-osare.png" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async">
+                <img class="whatsapp-float-icon" src="img/whatsapp-osare.png" alt="WhatsApp" width="56" height="56" fetchpriority="low" decoding="async">
             </picture>
         </button>
 
         <button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram" target="_blank" rel="noopener noreferrer">
             <picture>
                 <source srcset="img/telegram.webp" type="image/webp">
-                <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" loading="lazy" decoding="async" />
+                <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" loading="lazy" decoding="async"  fetchpriority="low">
             </picture>
         </button>
 
@@ -436,7 +436,7 @@
                 <div class="footer-brand">
                     <picture>
                         <source srcset="img/logo-blanco-letras.webp" type="image/webp">
-                        <img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="high"
+                        <img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="low"
                             decoding="async">
                     </picture>
                 </div>
@@ -447,7 +447,7 @@
                         <picture>
                             <source srcset="img/icono-facebook.webp" type="image/webp">
                             <img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" loading="lazy"
-                                decoding="async" />
+                                decoding="async"  fetchpriority="low">
                         </picture>
                     </button>
                     <button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
@@ -455,7 +455,7 @@
                         <picture>
                             <source srcset="img/icono-instagram.webp" type="image/webp">
                             <img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" loading="lazy"
-                                decoding="async" />
+                                decoding="async"  fetchpriority="low">
                         </picture>
                     </button>
                     <button class="footer-social-btn" type="button"
@@ -464,11 +464,11 @@
                         <picture>
                             <source srcset="img/icono-linkedin.webp" type="image/webp">
                             <img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" loading="lazy"
-                                decoding="async" />
+                                decoding="async"  fetchpriority="low">
                         </picture>
                     </button>
                     <!--
-<button class="footer-social-btn" type="button" data-href="https://t.me/osarecr" aria-label="Telegram OSARE CR" target="_blank" rel="noopener noreferrer"><img class="footer-social-icon-telegram" src="img/telegram.webp" alt="Telegram" width="24" height="24" fetchpriority="high" decoding="async" /></button>
+<button class="footer-social-btn" type="button" data-href="https://t.me/osarecr" aria-label="Telegram OSARE CR" target="_blank" rel="noopener noreferrer"><img class="footer-social-icon-telegram" src="img/telegram.webp" alt="Telegram" width="24" height="24" fetchpriority="low" decoding="async" /></button>
 -->
                 </nav>
                 <nav class="footer-right">

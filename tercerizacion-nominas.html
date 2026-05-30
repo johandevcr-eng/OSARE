@@ -99,7 +99,7 @@
                <picture>
                     <source srcset="img/logo-letras-osare.webp" type="image/webp">
                     <img class="logo-title-wordmark" src="img/logo-letras-osare.png" alt="OSARE CR" width="140" height="35"
-                    decoding="async">
+                    decoding="async" fetchpriority="high">
                </picture>
             </div>
 
@@ -122,13 +122,13 @@
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/">
                         <picture>
                             <source srcset="img/icono-hogar.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-hogar.png" alt=""><span>Inicio</span>
+                            <img class="imagenes" src="img/icono-hogar.png" alt="" fetchpriority="low"><span>Inicio</span>
                         </picture>
                     </button></li>
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/acerca-de">
                         <picture>
                             <source srcset="img/icono-informacion.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-informacion.png" alt=""><span>Acerca de</span>
+                            <img class="imagenes" src="img/icono-informacion.png" alt="" fetchpriority="low"><span>Acerca de</span>
                         </picture>
                     </button></li>
                     <li class="has-dropdown">
@@ -137,7 +137,7 @@
                             <span class="menu-label-text">
                                 <picture>
                                     <source srcset="img/icono-servicios.webp" type="image/webp">
-                                    <img class="imagenes" src="img/icono-servicios.png" alt="">
+                                    <img class="imagenes" src="img/icono-servicios.png" alt="" fetchpriority="low">
                                 </picture>
                                 <span>Servicios</span>
                             </span>
@@ -157,13 +157,13 @@
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog">
                         <picture>
                             <source srcset="img/icono-blog.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-blog.png" alt=""><span>Blog</span>
+                            <img class="imagenes" src="img/icono-blog.png" alt="" fetchpriority="low"><span>Blog</span>
                         </picture>
                     </button></li>
                     <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto">
                         <picture>
                             <source srcset="img/icono-contacto.webp" type="image/webp">
-                            <img class="imagenes" src="img/icono-contacto.png" alt=""><span>Contacto</span>
+                            <img class="imagenes" src="img/icono-contacto.png" alt="" fetchpriority="low"><span>Contacto</span>
                         </picture>
                     </button></li>
                 </ul>
@@ -178,7 +178,7 @@
                            <picture>
                                 <source srcset="img/logo-osare.webp" type="image/webp">
                                 <img class="post-meta-avatar" src="img/logo-osare.png" alt="Autor Nelson Castro"
-                                    fetchpriority="high" decoding="async">
+                                    fetchpriority="low" decoding="async">
                             </picture>
                             <span class="post-meta-author">Nelson Castro</span>
                         </li>
@@ -192,7 +192,7 @@
                         <source srcset="img/trabajando-en-equipo.webp" type="image/webp">
                         <img src="img/trabajando-en-equipo.png" srcset="img/trabajando-en-equipo.png 1600w"
                             sizes="(max-width: 900px) 96vw, (max-width: 1400px) 72vw, 980px"
-                            alt="2025: Retos para las Pymes" loading="eager" fetchpriority="high" decoding="async">
+                            alt="2025: Retos para las Pymes" loading="eager" fetchpriority="low" decoding="async">
                     </picture>
                 </figure>
 
@@ -267,7 +267,7 @@
                            <picture>
                                 <source srcset="img/el-eficiencia-de-tercerizar-servicios.webp" type="image/webp">
                             <img src="img/el-eficiencia-de-tercerizar-servicios.png" alt="Gestión tercerizada de nóminas"
-                                fetchpriority="high" decoding="async">
+                                fetchpriority="low" decoding="async">
                             </picture>
                         </figure>
                         <p class="post-quote">
@@ -279,24 +279,27 @@
                                 target="_blank" rel="noopener noreferrer" aria-label="Facebook de OSARE">
                                 <picture>
                                     <source srcset="img/icono-facebook.webp" type="image/webp">
-                                <img src="img/icono-facebook.png" alt="Facebook de OSARE" fetchpriority="high"
-                                    decoding="async"></a>
+                                <img src="img/icono-facebook.png" alt="Facebook de OSARE" fetchpriority="low"
+                                    decoding="async">
                                     </picture>
+                            </a>
 
                             <a class="post-social-link" href="https://www.instagram.com/osare_cr/" target="_blank"
                                 rel="noopener noreferrer" aria-label="Instagram de OSARE">
                                 <picture>
                                     <source srcset="img/icono-instagram.webp" type="image/webp">
-                                <img src="img/icono-instagram.png" alt="Instagram de OSARE" fetchpriority="high" decoding="async"></a>
+                                <img src="img/icono-instagram.png" alt="Instagram de OSARE" fetchpriority="low" decoding="async">
                                     </picture>
+                            </a>
 
                             <a class="post-social-link"
                                 href="https://www.linkedin.com/company/osare-cr/?viewAsMember=true" target="_blank"
                                 rel="noopener noreferrer" aria-label="LinkedIn de OSARE">
                                 <picture>
                                     <source srcset="img/icono-linkedin.webp" type="image/webp">
-                                <img src="img/icono-linkedin.png" alt="LinkedIn de OSARE" fetchpriority="high" decoding="async"></a>
+                                <img src="img/icono-linkedin.png" alt="LinkedIn de OSARE" fetchpriority="low" decoding="async">
                                     </picture>
+                            </a>
 
                         </div>
                     </section>
@@ -317,7 +320,7 @@
                                 aria-label="2025 Retos para las Pymes">
                                 <picture>
                                     <source srcset="img/trabajo-de-equipo-en-empresas.webp" type="image/webp">
-                                <img src="img/trabajo-de-equipo-en-empresas.png" alt="2025 Retos para las Pymes" fetchpriority="high" decoding="async">
+                                <img src="img/trabajo-de-equipo-en-empresas.png" alt="2025 Retos para las Pymes" fetchpriority="low" decoding="async">
                                 </picture>
                                 <h4>2025: Retos para las Pymes</h4>
                             </a>
@@ -325,7 +328,7 @@
                                 aria-label="Branding Corporativo">
                                 <picture>
                                     <source srcset="img/el-arte-del-branding.webp" type="image/webp">
-                                <img src="img/el-arte-del-branding.png" alt="Branding corporativo" fetchpriority="high" decoding="async">
+                                <img src="img/el-arte-del-branding.png" alt="Branding corporativo" fetchpriority="low" decoding="async">
                                 </picture>
                                 <h4>Branding Corporativo: Claves para el éxito</h4>
                             </a>
@@ -333,7 +336,7 @@
                                 aria-label="Conveniencia de la tercerización administrativa">
                                 <picture>
                                 <source srcset="img/trabajando-en-equipo.webp" type="image/webp">
-                                <img src="img/trabajando-en-equipo.png" alt="Conveniencia de la tercerización administrativa" fetchpriority="high" decoding="async">
+                                <img src="img/trabajando-en-equipo.png" alt="Conveniencia de la tercerización administrativa" fetchpriority="low" decoding="async">
                                 </picture>
                                 <h4>Conveniencia de la tercerización administrativa</h4>
                             </a>
@@ -350,7 +353,7 @@
                         aria-controls="floatingServicesDropdownNominas">
                         <span class="menu-label-text">
                             
-                            <img class="imagenes" src="img/icono-servicios.webp" alt="">Servicios</span>
+                            <img class="imagenes" src="img/icono-servicios.webp" alt="" fetchpriority="low">Servicios</span>
                         <span class="dropdown-arrow" aria-hidden="true"></span>
                     </button>
                     <ul class="submenu-dropdown" id="floatingServicesDropdownNominas">
@@ -367,8 +370,9 @@
                 <li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/contacto">
                     <picture>
                         <source srcset="img/icono-contacto.webp" type="image/webp">
-                    <img class="imagenes" src="img/icono-contacto.png" alt=""><span>Contacto</span></button></li>
+                        <img class="imagenes" src="img/icono-contacto.png" alt="" fetchpriority="low">
                     </picture>
+                    <span>Contacto</span></button></li>
             </ul>
         </aside>
 
@@ -382,14 +386,14 @@
             aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
             <picture>
                 <source srcset="img/whatsapp-osare.webp" type="image/webp">
-            <img class="whatsapp-float-icon" src="img/whatsapp-osare.png" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async">
+            <img class="whatsapp-float-icon" src="img/whatsapp-osare.png" alt="WhatsApp" width="56" height="56" fetchpriority="low" decoding="async">
             </picture>
         </button>
 
         <button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram" target="_blank" rel="noopener noreferrer">
            <picture>
                 <source srcset="img/telegram.webp" type="image/webp">
-            <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" fetchpriority="high" decoding="async" />
+            <img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" fetchpriority="low" decoding="async" />
            </picture>
         </button>
         <footer>
@@ -397,7 +401,8 @@
                 <div class="footer-brand">
                     <picture>
                         <source srcset="img/logo-blanco-letras.webp" type="image/webp">
-                    <img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="high" decoding="async" />
+                    <img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" fetchpriority="low" decoding="async" />
+                    </picture>
 
                 </div>
 
@@ -407,14 +412,14 @@
                         aria-label="Facebook OSARE CR" target="_blank" rel="noopener noreferrer">
                        <picture>
                             <source srcset="img/icono-facebook.webp" type="image/webp">
-                        <img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" fetchpriority="high" decoding="async" />
+                        <img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" fetchpriority="low" decoding="async" />
                        </picture>
                     </button>
                     <button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
                         aria-label="Instagram OSARE CR" target="_blank" rel="noopener noreferrer">
                         <picture>
                             <source srcset="img/icono-instagram.webp" type="image/webp">
-                        <img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" fetchpriority="high" decoding="async" /> 
+                        <img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" fetchpriority="low" decoding="async" /> 
                         </picture>
                     </button>
                     <button class="footer-social-btn" type="button"
@@ -422,14 +427,14 @@
                         aria-label="LinkedIn OSARE CR" target="_blank" rel="noopener noreferrer">
                       <picture>
                             <source srcset="img/icono-linkedin.webp" type="image/webp"> 
-                        <img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" fetchpriority="high" decoding="async" />
+                        <img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" fetchpriority="low" decoding="async" />
                       </picture>
                     </button>
                     <!--
 <button class="footer-social-btn" type="button"
                         data-href="https://t.me/osarecr"
                         aria-label="Telegram OSARE CR" target="_blank" rel="noopener noreferrer">
-                        <img class="footer-social-icon-telegram" src="img/telegram.webp" alt="Telegram" width="24" height="24" fetchpriority="high" decoding="async" />
+                        <img class="footer-social-icon-telegram" src="img/telegram.webp" alt="Telegram" width="24" height="24" fetchpriority="low" decoding="async" />
                     </button>
 -->
                 </nav>

@@ -52,7 +52,7 @@
 				<picture>
 					<source srcset="img/logo-letras-osare.webp" type="image/webp">
 					<img class="logo-title-wordmark" src="img/logo-letras-osare.png" alt="OSARE CR" width="140" height="35"
-						decoding="async" />
+						decoding="async"  fetchpriority="high">
 				</picture>
 			</div>
 
@@ -63,15 +63,15 @@
 					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/">
 						<picture>
 							<source srcset="img/icono-hogar.webp" type="image/webp">
-							<img class="imagenes" src="img/icono-hogar.png" alt="Inicio" width="24" height="24" decoding="async" fetchpriority="high" />	
+							<img class="imagenes" src="img/icono-hogar.png" alt="Inicio" width="24" height="24" decoding="async" fetchpriority="low" />	
 						</picture>
 						<img
-								><span>Inicio</span></button></li>
+								 fetchpriority="low"><span>Inicio</span></button></li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button"
 							data-href="/acerca-de">
 							<picture>
 								<source srcset="img/icono-informacion.webp" type="image/webp">
-								<img class="imagenes" src="img/icono-informacion.png" alt="Acerca de" width="24" height="24" decoding="async" fetchpriority="high" />
+								<img class="imagenes" src="img/icono-informacion.png" alt="Acerca de" width="24" height="24" decoding="async" fetchpriority="low" />
 							</picture>
 							<span>Acerca de</span></button></li>
 					<li class="has-dropdown">
@@ -80,7 +80,7 @@
 							<span class="menu-label-text">
 								<picture>
 									<source srcset="img/icono-servicios.webp" type="image/webp">
-									<img class="imagenes" src="img/icono-servicios.png" alt="Servicios" width="24" height="24" decoding="async" fetchpriority="high" />	
+									<img class="imagenes" src="img/icono-servicios.png" alt="Servicios" width="24" height="24" decoding="async" fetchpriority="low" />	
 								</picture>
 								<span>Servicios</span>
 							</span>
@@ -100,13 +100,13 @@
 					<li class="nav-button-item"><button class="menu-link-btn" type="button" data-href="/blog">
 						<picture>
 							<source srcset="img/icono-blog.webp" type="image/webp">
-							<img class="imagenes" src="img/icono-blog.png" alt="Blog" width="24" height="24" decoding="async" fetchpriority="high" />
+							<img class="imagenes" src="img/icono-blog.png" alt="Blog" width="24" height="24" decoding="async" fetchpriority="low" />
 						</picture>
 						<span>Blog</span></button></li>
 					<li class="nav-button-item"><button class="menu-link-btn" type="button"
 							data-href="/contacto"><picture>
 								<source srcset="img/icono-contacto.webp" type="image/webp">
-								<img class="imagenes" src="img/icono-contacto.png" alt="Contacto" width="24" height="24" decoding="async" fetchpriority="high" />
+								<img class="imagenes" src="img/icono-contacto.png" alt="Contacto" width="24" height="24" decoding="async" fetchpriority="low" />
 							</picture><span>Contacto</span></button></li>
 				</ul>
 			</nav>
@@ -137,7 +137,7 @@
 						<h2>
 							<picture>
 								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
-								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="high" />	
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="low" />	
 							</picture>
 							Auxiliares Contables Remotos</h2>
 
@@ -153,7 +153,7 @@
 						<h2>
 							<picture>
 								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
-								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="high" />	
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="low" />	
 							</picture>
 							Servicios Especiales</h2>
 						<ul>
@@ -170,7 +170,7 @@
 						<h2>
 							<picture>
 								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
-								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="high" />	
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="low" />	
 							</picture>
 							Contabilidad General</h2>
 						<ul>
@@ -187,12 +187,12 @@
 					<figure class="services-visual" aria-hidden="true">
 						<picture>
 							<source srcset="img/servicios-contabilidad-osare.webp" type="image/webp">
-							<img src="img/servicios-contabilidad-osare.png" alt="" fetchpriority="high" decoding="async">
+							<img src="img/servicios-contabilidad-osare.png" alt="" fetchpriority="low" decoding="async">
 						</picture>
 					</figure>
 
 					<!-- <article class="service-card">
-						<h2><img class="card-bullet" src="img/logo-negro-viñeta.webp" alt="" fetchpriority="high" decoding="async">Inventarios</h2>
+						<h2><img class="card-bullet" src="img/logo-negro-viñeta.webp" alt="" fetchpriority="low" decoding="async">Inventarios</h2>
 						<ul>
 							<li>Tomas físicas de producto terminado</li>
 							<li>Elaboración de controles específicos por tipo de negocio.</li>
@@ -207,7 +207,7 @@
 						<h2>
 							<picture>
 								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
-								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="high" />	
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="low" />	
 							</picture>
 							Controles</h2>
 						<ul>
@@ -224,7 +224,7 @@
 						<h2>
 							<picture>
 								<source srcset="img/logo-negro-viñeta.webp" type="image/webp">
-								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="high" />	
+								<img class="card-bullet" src="img/logo-negro-viñeta.png" alt="" width="16" height="16" decoding="async" fetchpriority="low" />	
 							</picture>
 							Soporte
 							General</h2>
@@ -257,14 +257,14 @@
             aria-label="Contactar por WhatsApp" target="_blank" rel="noopener noreferrer">
             <picture>
 				<source srcset="img/whatsapp-osare.webp" type="image/webp">
-				<img class="whatsapp-float-icon" src="img/whatsapp-osare.png" alt="WhatsApp" width="56" height="56" fetchpriority="high" decoding="async" />
+				<img class="whatsapp-float-icon" src="img/whatsapp-osare.png" alt="WhatsApp" width="56" height="56" fetchpriority="low" decoding="async" />
 			</picture>
         </button>
 
 		<button class="telegram-float" type="button" data-href="https://t.me/osarecr" aria-label="Abrir Telegram" target="_blank" rel="noopener noreferrer">
 			<picture>
 				<source srcset="img/telegram.webp" type="image/webp">
-				<img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" fetchpriority="high" decoding="async" />
+				<img class="telegram-float-icon" src="img/telegram.png" alt="Telegram" width="56" height="56" fetchpriority="low" decoding="async" />
 			</picture>
 		</button>
 
@@ -273,7 +273,7 @@
 				<div class="footer-brand">
 					<picture>
 						<source srcset="img/logo-blanco-letras.webp" type="image/webp">
-						<img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" width="614" height="614" decoding="async" fetchpriority="high" />
+						<img class="footer-logo" src="img/logo-blanco-letras.png" alt="OSARE" width="614" height="614" decoding="async" fetchpriority="low" />
 					</picture>
 				</div>
 
@@ -283,14 +283,14 @@
 						aria-label="Facebook OSARE CR" target="_blank" rel="noopener noreferrer">
 						<picture>
 							<source srcset="img/icono-facebook.webp" type="image/webp">
-							<img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" fetchpriority="high" decoding="async" />
+							<img src="img/icono-facebook.png" alt="Facebook" width="24" height="24" fetchpriority="low" decoding="async" />
 						</picture>
 					</button>
 					<button class="footer-social-btn" type="button" data-href="https://www.instagram.com/osare_cr/"
 						aria-label="Instagram OSARE CR" target="_blank" rel="noopener noreferrer">
 						<picture>
 							<source srcset="img/icono-instagram.webp" type="image/webp">
-							<img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" fetchpriority="high" decoding="async" />
+							<img src="img/icono-instagram.png" alt="Instagram" width="24" height="24" fetchpriority="low" decoding="async" />
 						</picture>
 					</button>
 					<button class="footer-social-btn" type="button"
@@ -298,14 +298,14 @@
 						aria-label="LinkedIn OSARE CR" target="_blank" rel="noopener noreferrer">
 						<picture>
 							<source srcset="img/icono-linkedin.webp" type="image/webp">
-							<img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" fetchpriority="high" decoding="async" />
+							<img src="img/icono-linkedin.png" alt="LinkedIn" width="24" height="24" fetchpriority="low" decoding="async" />
 						</picture>
 					</button>
 					<!--
 <button class="footer-social-btn" type="button"
 						data-href="https://t.me/osarecr"
 						aria-label="Telegram OSARE CR" target="_blank" rel="noopener noreferrer">
-						<img class="footer-social-icon-telegram" src="img/telegram.webp" alt="Telegram" width="24" height="24" fetchpriority="high" decoding="async" />
+						<img class="footer-social-icon-telegram" src="img/telegram.webp" alt="Telegram" width="24" height="24" fetchpriority="low" decoding="async" />
 					</button>
 -->
 				</nav>
