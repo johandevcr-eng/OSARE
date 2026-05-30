@@ -1,4 +1,4 @@
-﻿    :root {
+    :root {
         --fixed-video-height: 74px;
     }
 
@@ -6,7 +6,7 @@
         box-sizing: border-box;
     }
 
-    /* â”€â”€ Mejoras tipografÃ­a base â”€â”€ */
+    /* Mejoras tipografia base */
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
         line-height: 1.15;
@@ -775,7 +775,7 @@
             flex-wrap: nowrap;
         }
 
-/* â”€â”€ Estilos especÃ­ficos para pÃ¡gina de polÃ­ticas â”€â”€ */
+/* Estilos especificos para pagina de politicas */
 
 .page-content {
     max-width: 1200px;
@@ -1598,7 +1598,7 @@
         transition: transform 0.28s cubic-bezier(.22,.68,0,1.2), box-shadow 0.28s ease, border-color 0.28s ease;
     }
 
-    /* Bento: columna izquierda mÃ¡s grande (Administrativos y Legales) */
+    /* Bento: columna izquierda mas grande (Administrativos y Legales) */
     .container-services > div:nth-child(1) {
         grid-column: 1;
         grid-row: 1;
@@ -1613,7 +1613,7 @@
         background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
     }
 
-    /* Marketing: tamaÃ±o pequeÃ±o, columna izquierda fila 2 */
+    /* Marketing: tamano pequeno, columna izquierda fila 2 */
     .container-services > div:nth-child(3) {
         grid-column: 1;
         grid-row: 2;
@@ -1621,7 +1621,7 @@
         border-color: rgba(0, 80, 209, 0.18);
     }
 
-    /* Legales: al lado derecho, mismo tamaÃ±o grande que Administrativos */
+    /* Legales: al lado derecho, mismo tamano grande que Administrativos */
     .container-services > div:nth-child(4) {
         grid-column: 2;
         grid-row: 2;

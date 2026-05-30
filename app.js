@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       0 !== e.length &&
         e.forEach(function (e) {
           const t = [
-            e.getAttribute("src") || "video/OSARE-HERO.mp4",
+            e.getAttribute("src") || "video/osare-hero.mp4",
             "video/banner.mp4",
           ].filter(function (e, t, n) {
             return e && n.indexOf(e) === t;
