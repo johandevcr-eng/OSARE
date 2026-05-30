@@ -20,14 +20,29 @@
     Cache-Control = "public, max-age=31536000, immutable" 
  
 [[headers]] 
-  for = "/css/*" 
+  for = "/*.css" 
   [headers.values] 
     Cache-Control = "public, max-age=31536000, immutable" 
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
  
 [[headers]] 
   for = "/video/*" 
   [headers.values] 
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 
 # Servir 404.html para cualquier ruta no encontrada, con el código HTTP correcto.
