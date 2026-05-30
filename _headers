@@ -1,0 +1,13 @@
+# Cache persistente para imágenes
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache persistente para videos
+/video/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache para CSS y JS
+/OSARE/*.css
+  Cache-Control: public, max-age=31536000, immutable
+/OSARE/*.js
+  Cache-Control: public, max-age=31536000, immutable
