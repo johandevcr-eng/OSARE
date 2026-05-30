@@ -65,6 +65,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=optional"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=optional"
       rel="stylesheet"
     />
@@ -342,7 +347,14 @@
           aria-label="Resumen principal OSARE"
         >
           <div class="banner-princ-summary-logo">
-            <img src="img/logo-osare.webp" alt="" />
+            <img
+              src="img/logo-osare.webp"
+              alt=""
+              width="614"
+              height="614"
+              decoding="async"
+              fetchpriority="high"
+            />
           </div>
           <h3 id="bannerTitle">El Motor Silencioso de tu Éxito</h3>
           <p>
