@@ -36,6 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
     f = e
       ? window.matchMedia("(max-width: 1200px)").matches
       : window.innerWidth <= 1200;
+  const I = function (e, t) {
+    "requestIdleCallback" in window
+      ? window.requestIdleCallback(e, { timeout: t || 1200 })
+      : window.setTimeout(e, 500);
+  };
   (!(function () {
     if (!t || !n) return;
     const o = "mobileMenuToggle",
@@ -199,13 +204,17 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     })());
   const g = document.querySelector(".logo-track");
-  if (g && !g.dataset.loopReady) {
-    (Array.from(g.children).forEach(function (e) {
-      const t = e.cloneNode(!0);
-      (t.setAttribute("aria-hidden", "true"), g.appendChild(t));
-    }),
-      (g.dataset.loopReady = "true"));
-  }
+  g &&
+    !g.dataset.loopReady &&
+    I(function () {
+      g &&
+        !g.dataset.loopReady &&
+        (Array.from(g.children).forEach(function (e) {
+          const t = e.cloneNode(!0);
+          (t.setAttribute("aria-hidden", "true"), g.appendChild(t));
+        }),
+        (g.dataset.loopReady = "true"));
+    }, 1400);
   function m(e) {
     let t = !1;
     return function () {
@@ -245,9 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
     (e.classList.toggle("is-open", t),
       n && n.setAttribute("aria-expanded", String(t)));
   }
-  ("requestIdleCallback" in window
-    ? window.requestIdleCallback(p, { timeout: 1200 })
-    : window.setTimeout(p, 450),
+  (I(p, 1200),
     o.length > 0 &&
       (o.forEach(function (e) {
         b(e, !1);
@@ -416,27 +423,25 @@ document.addEventListener("DOMContentLoaded", function () {
             e.classList.add("is-visible"));
         }));
     };
-  if (
-    (document.querySelectorAll(".footer-links").forEach(function (e) {
-      if (e.querySelector("[data-cookie-settings]")) return;
-      const t = document.createElement("span");
-      ((t.className = "footer-divider"),
-        t.setAttribute("aria-hidden", "true"),
-        (t.textContent = "·"));
-      const n = document.createElement("button");
-      ((n.className = "footer-link-btn"),
-        (n.type = "button"),
-        n.setAttribute("data-cookie-settings", ""),
-        (n.textContent = "Configurar cookies"),
-        n.addEventListener("click", function () {
-          (E(k), S());
-        }),
-        e.appendChild(t),
-        e.appendChild(n));
-    }),
-    A || S(),
-    i)
-  ) {
+  (document.querySelectorAll(".footer-links").forEach(function (e) {
+    if (e.querySelector("[data-cookie-settings]")) return;
+    const t = document.createElement("span");
+    ((t.className = "footer-divider"),
+      t.setAttribute("aria-hidden", "true"),
+      (t.textContent = "·"));
+    const n = document.createElement("button");
+    ((n.className = "footer-link-btn"),
+      (n.type = "button"),
+      n.setAttribute("data-cookie-settings", ""),
+      (n.textContent = "Configurar cookies"),
+      n.addEventListener("click", function () {
+        (E(k), S());
+      }),
+      e.appendChild(t),
+      e.appendChild(n));
+  }),
+    A || I(S, 1800));
+  if (i) {
     let e = null;
     const t = function () {
         const t = window.scrollY > 350;
@@ -476,52 +481,54 @@ document.addEventListener("DOMContentLoaded", function () {
         t());
     }
   }
-  if (s && d) {
-    const e = Array.from(d.querySelectorAll(".chaos-chip")),
-      t = Array.from(s.querySelectorAll(".osare-word span"));
-    e.length;
-    e.forEach(function (e, t) {
-      const n = 0.12 + 0.76 * Math.random(),
-        o = 0.14 + 0.72 * Math.random(),
-        i = 0.17 + 0.17 * (t % 5),
-        a = 0.28 + 0.24 * Math.floor(t / 5);
-      (e.style.setProperty("--x", n.toFixed(3)),
-        e.style.setProperty("--y", o.toFixed(3)),
-        e.style.setProperty("--gx", i.toFixed(3)),
-        e.style.setProperty("--gy", a.toFixed(3)));
-    });
-    const n = function (e) {
-      const n = Math.max(0, Math.min(e, 1)),
-        o = Math.min(5, Math.max(0, Math.ceil(5 * n)));
-      (d.classList.toggle("is-ordered", o > 0.45),
-        t.forEach(function (e, t) {
-          e.classList.toggle("is-visible", t < o);
-        }),
-        (d.style.opacity = String(Math.max(0.35, 1 - 0.5 * n))),
-        (d.style.filter = "saturate(" + (0.85 + 0.4 * n).toFixed(2) + ")"));
-    };
-    if (f || u)
-      (d.classList.add("is-ordered"),
-        t.forEach(function (e) {
-          e.classList.add("is-visible");
-        }),
-        (d.style.opacity = "0.9"),
-        (d.style.filter = "none"));
-    else if ("IntersectionObserver" in window) {
-      const e = Array.from({ length: 11 }, function (_, e) {
-          return e / 10;
-        }),
-        o = new IntersectionObserver(
-          function (e) {
-            0 !== e.length && n(e[0].intersectionRatio || 0);
-          },
-          { threshold: e },
-        );
-      o.observe(s);
-    } else {
-      n(0);
-    }
-  }
+  s &&
+    d &&
+    I(function () {
+      if (!s || !d) return;
+      const e = Array.from(d.querySelectorAll(".chaos-chip")),
+        t = Array.from(s.querySelectorAll(".osare-word span"));
+      e.forEach(function (e, t) {
+        const n = 0.12 + 0.76 * Math.random(),
+          o = 0.14 + 0.72 * Math.random(),
+          i = 0.17 + 0.17 * (t % 5),
+          a = 0.28 + 0.24 * Math.floor(t / 5);
+        (e.style.setProperty("--x", n.toFixed(3)),
+          e.style.setProperty("--y", o.toFixed(3)),
+          e.style.setProperty("--gx", i.toFixed(3)),
+          e.style.setProperty("--gy", a.toFixed(3)));
+      });
+      const n = function (e) {
+        const n = Math.max(0, Math.min(e, 1)),
+          o = Math.min(5, Math.max(0, Math.ceil(5 * n)));
+        (d.classList.toggle("is-ordered", o > 0.45),
+          t.forEach(function (e, t) {
+            e.classList.toggle("is-visible", t < o);
+          }),
+          (d.style.opacity = String(Math.max(0.35, 1 - 0.5 * n))),
+          (d.style.filter = "saturate(" + (0.85 + 0.4 * n).toFixed(2) + ")"));
+      };
+      if (f || u)
+        (d.classList.add("is-ordered"),
+          t.forEach(function (e) {
+            e.classList.add("is-visible");
+          }),
+          (d.style.opacity = "0.9"),
+          (d.style.filter = "none"));
+      else if ("IntersectionObserver" in window) {
+        const e = Array.from({ length: 11 }, function (_, e) {
+            return e / 10;
+          }),
+          o = new IntersectionObserver(
+            function (e) {
+              0 !== e.length && n(e[0].intersectionRatio || 0);
+            },
+            { threshold: e },
+          );
+        o.observe(s);
+      } else {
+        n(0);
+      }
+    }, f ? 1900 : 1200);
   if (r && c) {
     const e = Array.from(r.querySelectorAll(".benefit-item")),
       t = {

@@ -1645,6 +1645,16 @@ footer {
   pointer-events: none;
   transition: opacity 0.28s;
 }
+@media (max-width: 768px) {
+  .cookie-notice {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(10, 26, 48, 0.72);
+  }
+  .cookie-notice__panel {
+    box-shadow: 0 12px 24px rgba(3, 15, 33, 0.26);
+  }
+}
 .cookie-notice.is-visible {
   opacity: 1;
   pointer-events: auto;
