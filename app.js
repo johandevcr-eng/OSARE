@@ -139,10 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 3500));
         });
     })(),
-    document.querySelectorAll("img").forEach(function (e) {
-      if ("1" === e.dataset.fallbackReady) return;
-      e.dataset.fallbackReady = "1";
-      const t = (function (e) {
+    (function () {
+      const e = function (e) {
         if (!e) return [];
         const t = {
             avif: ["webp", "png", "jpg", "jpeg"],
@@ -166,31 +164,40 @@ document.addEventListener("DOMContentLoaded", function () {
             return e && e !== o && n.indexOf(e) === t;
           })
         );
-      })(e.getAttribute("src"));
-      if (0 === t.length) return;
-      let n = 0;
-      e.addEventListener("error", function () {
-        (function () {
-          for (; n < t.length; ) {
-            const o = t[n];
-            if (((n += 1), o !== e.getAttribute("src")))
-              return (
-                e.removeAttribute("srcset"),
-                e.setAttribute("src", o),
-                !0
-              );
+      };
+      document.addEventListener(
+        "error",
+        function (t) {
+          const n = t.target;
+          if (!n || "IMG" !== n.tagName || "1" === n.dataset.fallbackExhausted)
+            return;
+          const o = n.dataset.fallbackCandidates
+            ? n.dataset.fallbackCandidates.split("|")
+            : e(n.getAttribute("src"));
+          if (0 === o.length)
+            return void (n.dataset.fallbackExhausted = "1");
+          n.dataset.fallbackCandidates ||
+            (n.dataset.fallbackCandidates = o.join("|"));
+          let i = Number(n.dataset.fallbackIndex || "0");
+          for (; i < o.length; ) {
+            const e = o[i];
+            if (((i += 1), e !== n.getAttribute("src"))) {
+              ((n.dataset.fallbackIndex = String(i)),
+                n.removeAttribute("srcset"),
+                n.setAttribute("src", e));
+              return;
+            }
           }
-          return !1;
-        })() ||
-          ("1" !== e.dataset.fallbackExhausted &&
-            ((e.dataset.fallbackExhausted = "1"),
-            e.removeAttribute("srcset"),
-            e.setAttribute(
+          ((n.dataset.fallbackExhausted = "1"),
+            n.removeAttribute("srcset"),
+            n.setAttribute(
               "src",
               "data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%221%22 height=%221%22 viewBox=%220 0 1 1%22%3E%3C/svg%3E",
-            )));
-      });
-    }));
+            ));
+        },
+        !0,
+      );
+    })());
   const g = document.querySelector(".logo-track");
   if (g && !g.dataset.loopReady) {
     (Array.from(g.children).forEach(function (e) {
@@ -586,7 +593,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     (a(),
       window.addEventListener("resize", a),
-      window.addEventListener("scroll", a, { passive: !0 }),
       l.addEventListener("pointerenter", a),
       document.addEventListener("mousemove", function (e) {
         const n = i || (a(), i),
