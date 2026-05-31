@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return !e.complete;
     });
     if (0 === e.length) return;
-    const t = f ? 6 : 3;
+    const t = f ? 1 : 2;
     e.slice(0, t).forEach(function (e) {
       ((e.loading = "eager"),
         e.getAttribute("fetchpriority") ||
