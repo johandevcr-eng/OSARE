@@ -92,39 +92,50 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       0 !== e.length &&
         e.forEach(function (e) {
+          const n = window.navigator && window.navigator.connection,
+            o = !!(n && n.saveData),
+            i =
+              !!window.matchMedia &&
+              window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (o || i)
+            return void e.closest(".full-viewport-video")?.remove();
           const t = [
-            e.getAttribute("src") || "video/osare-hero.mp4",
+            e.getAttribute("data-src") ||
+              e.getAttribute("src") ||
+              "video/osare-hero.mp4",
             "video/banner.mp4",
           ].filter(function (e, t, n) {
             return e && n.indexOf(e) === t;
           });
-          let n = 0,
-            o = !1;
+          let a = 0,
+            r = !1;
           ((e.getAttribute("poster") || "").toLowerCase().endsWith(".avif") &&
             e.setAttribute("poster", "img/banner-princ.webp"),
             (e.muted = !0),
             (e.playsInline = !0));
-          const i = function () {
-            for (; n < t.length && e.getAttribute("src") === t[n]; ) n += 1;
-            if (n >= t.length) return;
-            const o = t[n];
-            ((n += 1),
-              e.setAttribute("src", o),
+          const c = function () {
+            for (; a < t.length && e.getAttribute("src") === t[a]; ) a += 1;
+            if (a >= t.length) return;
+            const n = t[a];
+            ((a += 1),
+              e.setAttribute("src", n),
               e.load(),
               e.play().catch(function () {}));
           };
+          e.getAttribute("src") ||
+            (e.setAttribute("src", t[0]), e.load(), e.play().catch(function () {}));
           (e.addEventListener(
             "loadeddata",
             function () {
-              o = !0;
+              r = !0;
             },
             { once: !0 },
           ),
             e.addEventListener("error", function () {
-              i();
+              c();
             }),
             window.setTimeout(function () {
-              !o && e.readyState < 2 && i();
+              !r && e.readyState < 2 && c();
             }, 3500));
         });
     })(),

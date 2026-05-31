@@ -19,12 +19,6 @@
       media="(min-width: 769px)"
       fetchpriority="high"
     />
-    <link
-      rel="preload"
-      as="video"
-      href="video/osare-hero.mp4"
-      type="video/mp4"
-    />
     <meta
       name="google-site-verification"
       content="H_nejegvc4CMO8lyWlVpGMvNDRLZy_6cROlRv6jyVU4"
@@ -65,13 +59,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=optional"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
-    <noscript
-      ><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=optional" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=optional" /></noscript></noscript>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+    </noscript>
     <link rel="canonical" href="https://osarecr.com/" />
 
     <script type="application/ld+json">
@@ -156,7 +154,7 @@
           class="K8MSra"
           crossorigin="anonymous"
           playsinline
-          preload="metadata"
+          preload="none"
           poster="img/logo-osare.webp"
           muted
           loop
@@ -169,7 +167,7 @@
               this.play().catch(function () {});
             }
           "
-          src="video/osare-hero.mp4"
+          data-src="video/osare-hero.mp4"
         ></video>
       </div>
 
@@ -356,8 +354,9 @@
               alt=""
               width="614"
               height="614"
+              loading="eager"
               decoding="async"
-              fetchpriority="low"
+              fetchpriority="high"
             />
           </div>
           <h3 id="bannerTitle">El Motor Silencioso de tu Éxito</h3>
@@ -396,6 +395,7 @@
                 ><img height="500" width="500"
                   src="img/logo-negro-viñeta.webp"
                   alt=""
+                  loading="lazy"
                   fetchpriority="low"
                 />
                 Administrativa</span
@@ -404,6 +404,7 @@
                 ><img height="500" width="500"
                   src="img/logo-negro-viñeta.webp"
                   alt=""
+                  loading="lazy"
                   fetchpriority="low"
                 />
                 Legal</span
@@ -412,6 +413,7 @@
                 ><img height="500" width="500"
                   src="img/logo-negro-viñeta.webp"
                   alt=""
+                  loading="lazy"
                   fetchpriority="low"
                 />
                 Contables</span
@@ -420,6 +422,7 @@
                 ><img height="500" width="500"
                   src="img/logo-negro-viñeta.webp"
                   alt=""
+                  loading="lazy"
                   fetchpriority="low"
                 />
                 Marketing digital</span
@@ -446,6 +449,7 @@
                   <img height="500" width="500"
                     src="img/metódo-osare.webp"
                     alt=""
+                    loading="lazy"
                     decoding="async"
                     fetchpriority="low"
                   />
@@ -455,6 +459,7 @@
                     src="img/logo-negro-osare.webp"
                     class="logo-negro"
                     alt="OSARE"
+                    loading="lazy"
                     decoding="async"
                     fetchpriority="low"
                   />
@@ -631,6 +636,7 @@
                 alt=""
                 width="1080"
                 height="670"
+                loading="lazy"
                 fetchpriority="low"
                 decoding="async"
               />
@@ -672,6 +678,7 @@
               class="osare-visual-image"
               src="img/graficos-osare.webp"
               alt="Comparativa entre el método tradicional y el modelo OSARE preventivo"
+              loading="lazy"
               fetchpriority="low"
               decoding="async"
             />
@@ -733,6 +740,7 @@
               alt=""
               width="224"
               height="223"
+              loading="lazy"
               fetchpriority="low"
               decoding="async"
             />
@@ -762,6 +770,7 @@
               alt=""
               width="193"
               height="189"
+              loading="lazy"
               fetchpriority="low"
               decoding="async"
             />
@@ -790,6 +799,7 @@
               alt=""
               width="226"
               height="230"
+              loading="lazy"
               fetchpriority="low"
               decoding="async"
             />
@@ -818,6 +828,7 @@
               alt=""
               width="231"
               height="226"
+              loading="lazy"
               fetchpriority="low"
               decoding="async"
             />
@@ -871,6 +882,7 @@
           alt="WhatsApp"
           width="56"
           height="56"
+          loading="lazy"
           fetchpriority="low"
           decoding="async"
         />
@@ -890,6 +902,7 @@
           alt="Telegram"
           width="56"
           height="56"
+          loading="lazy"
           fetchpriority="low"
           decoding="async"
         />
@@ -902,6 +915,7 @@
               class="footer-logo"
               src="img/logo-osare-footer.png"
               alt="OSARE"
+              loading="lazy"
               fetchpriority="low"
               decoding="async"
             />
@@ -921,6 +935,7 @@
                 alt="Facebook"
                 width="24"
                 height="24"
+                loading="lazy"
                 fetchpriority="low"
                 decoding="async"
               />
@@ -938,6 +953,7 @@
                 alt="Instagram"
                 width="24"
                 height="24"
+                loading="lazy"
                 fetchpriority="low"
                 decoding="async"
               />
@@ -955,6 +971,7 @@
                 alt="LinkedIn"
                 width="24"
                 height="24"
+                loading="lazy"
                 fetchpriority="low"
                 decoding="async"
               />
