@@ -199,13 +199,11 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
   if (t) {
-    let e = null;
-    const n = function () {
-        const n = window.scrollY > 14;
-        n !== e && (t.classList.toggle("is-scrolled", n), (e = n));
+    const e = function () {
+        t.classList.toggle("is-scrolled", window.scrollY > 14);
       },
-      o = m(n);
-    (window.addEventListener("scroll", o, { passive: !0 }), n());
+      n = m(e);
+    (window.addEventListener("scroll", n, { passive: !0 }), e());
   }
   function p() {
     const e = Array.from(
@@ -419,17 +417,15 @@ document.addEventListener("DOMContentLoaded", function () {
     A || S(),
     i)
   ) {
-    let e = null;
-    const t = function () {
-        const t = window.scrollY > 350;
-        t !== e && (i.classList.toggle("is-visible", t), (e = t));
+    const e = function () {
+        i.classList.toggle("is-visible", window.scrollY > 350);
       },
-      n = m(t);
-    (window.addEventListener("scroll", n, { passive: !0 }),
+      t = m(e);
+    (window.addEventListener("scroll", t, { passive: !0 }),
       i.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: f || u ? "auto" : "smooth" });
       }),
-      t());
+      e());
   }
   if (n && a) {
     (a.classList.remove("is-visible"), f && (a.style.display = "none"));
