@@ -23,5 +23,14 @@ https://www.osarecr.com/*    https://osarecr.com/:splat    301!
 /tercerizacion-administrativa.html      /tercerizacion-administrativa     301! 
 /tercerizacion-nominas.html             /tercerizacion-nominas     301! 
 
+# URLs viejas del sitio anterior - eliminadas permanentemente
+/legales         /410.html    410
+/contables       /410.html    410
+/administrativos /410.html    410
+/servicios       /410.html    410
+/acerca-de       /410.html    410
+/marketing       /410.html    410
+/post/*    /410.html    410
+
 # Cualquier ruta no encontrada sirve la página 404 con el código HTTP correcto.
 /*    /404.html    404
