@@ -5,6 +5,7 @@
 https://www.osarecr.com/*    https://osarecr.com/:splat    301! 
  
 # Paginas del sitio: forzar URLs limpias sin extension .html 
+/index.html        /              301!
 /acerca-de.html    /acerca-de    301! 
 /serv-adm.html     /serv-adm     301! 
 /serv-cont.html    /serv-cont    301! 
