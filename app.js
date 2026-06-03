@@ -360,6 +360,29 @@ document.addEventListener("DOMContentLoaded", function () {
       const t = { choice: e, savedAt: new Date().toISOString() };
       w(k, JSON.stringify(t));
     },
+    R = function (e) {
+      if (!e) return null;
+      try {
+        const t = JSON.parse(e);
+        return t && "string" == typeof t.choice ? t.choice : null;
+      } catch (e) {
+        return null;
+      }
+    },
+    C = function (e) {
+      const t = "accepted" === e ? "granted" : "denied";
+      (window.dataLayer = window.dataLayer || []),
+        "function" != typeof window.gtag &&
+          (window.gtag = function () {
+            window.dataLayer.push(arguments);
+          }),
+        window.gtag("consent", "update", {
+          analytics_storage: t,
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+        });
+    },
     x = function () {
       const e = document.createElement("section");
       return (
@@ -393,13 +416,14 @@ document.addEventListener("DOMContentLoaded", function () {
         e.querySelectorAll("[data-cookie-action]").forEach(function (e) {
           e.addEventListener("click", function () {
             const t = e.getAttribute("data-cookie-action");
-            (L(
+            const n =
               "accept" === t
                 ? "accepted"
                 : "essential" === t
                   ? "essential-only"
-                  : "rejected-non-essential",
-            ),
+                  : "rejected-non-essential";
+            (L(n),
+              C(n),
               (function () {
                 const e = document.getElementById("cookieNotice");
                 e &&
@@ -423,7 +447,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.classList.add("is-visible"));
         }));
     };
-  (document.querySelectorAll(".footer-links").forEach(function (e) {
+  document.querySelectorAll(".footer-links").forEach(function (e) {
     if (e.querySelector("[data-cookie-settings]")) return;
     const t = document.createElement("span");
     ((t.className = "footer-divider"),
@@ -439,8 +463,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }),
       e.appendChild(t),
       e.appendChild(n));
-  }),
-    A || I(S, 1800));
+  });
+  const T = R(A);
+  T ? C(T) : I(S, 1800);
   if (i) {
     let e = null;
     const t = function () {
