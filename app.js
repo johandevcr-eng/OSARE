@@ -1,11 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   const e = "function" == typeof window.matchMedia,
+    P = function () {
+      return e
+        ? window.matchMedia("(max-width: 768px)").matches
+        : window.innerWidth <= 768;
+    },
     t = document.querySelector(
       ".home-topbar, .serv-adm-topbar, .serv-cont-topbar, .serv-leg-topbar, .serv-mark-topbar",
     ),
     n = document.getElementById("primarySidebar");
-  (e &&
-    window.matchMedia("(max-width: 768px)").matches &&
+  const O = function () {
+    const e = !!document.querySelector(".full-viewport-video");
+    (document.body.classList.toggle("has-fixed-video", e),
+      e
+        ? document.body.style.removeProperty("--fixed-video-height")
+        : document.body.style.setProperty("--fixed-video-height", "0px"));
+  };
+  (P() &&
     document.querySelectorAll(".full-viewport-video").forEach(function (e) {
       e.remove();
     }),
@@ -102,8 +113,8 @@ document.addEventListener("DOMContentLoaded", function () {
             i =
               !!window.matchMedia &&
               window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-          if (o || i)
-            return void e.closest(".full-viewport-video")?.remove();
+          if ((o || i) && P())
+            return void (e.closest(".full-viewport-video")?.remove(), O());
           const t = [
             e.getAttribute("data-src") ||
               e.getAttribute("src") ||
@@ -144,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 3500));
         });
     })(),
+    O(),
     (function () {
       const e = function (e) {
         if (!e) return [];
