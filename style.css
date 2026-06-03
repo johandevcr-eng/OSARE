@@ -3421,10 +3421,10 @@ table {
 @media (max-width: 1200px) {
   .home-topbar.is-mobile-compact + .main,
   body:not(.about-page-body) .home-topbar.is-mobile-compact + .main {
-    margin-top: calc(var(--fixed-video-height, 74px) + 100px) !important;
+    margin-top: calc(var(--fixed-video-height, 74px) + 11rem + 30px) !important;
   }
   body.contact-page-body .home-topbar.is-mobile-compact + .main {
-    margin-top: calc(var(--fixed-video-height, 74px) + 66px) !important;
+    margin-top: calc(var(--fixed-video-height, 74px) + 120px) !important;
   }
   .home-topbar {
     position: fixed !important;
