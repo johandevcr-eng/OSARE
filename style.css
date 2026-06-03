@@ -69,6 +69,9 @@ body {
   color: var(--text-main);
   min-height: 100vh;
 }
+body.home-page-body {
+  --fixed-video-height: 74px;
+}
 .container {
   width: min(1500px, 100%);
   max-width: 1500px;
@@ -86,12 +89,19 @@ body {
   transform: translateX(-50%);
   margin: 0;
   z-index: 60;
+  overflow: hidden;
+  background: #fff;
 }
 .full-viewport-video video {
   display: block;
   width: 100%;
   height: var(--fixed-video-height);
   object-fit: cover;
+  object-position: center;
+  background: #fff;
+}
+body.home-page-body .full-viewport-video video {
+  object-position: center 50%;
 }
 .header {
   display: flex;
