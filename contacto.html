@@ -386,18 +386,28 @@
             </aside>
           </div>
 
-          <div class="mapa">
-            <iframe
-              class="mapa"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4836.978868325997!2d-83.90729082416799!3d9.84994207559719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0df1dd0f127b7%3A0x9f7a81782a3f19f3!2sOutsourcing%20%7C%20OSARE.CR%20%7C%20Proveedores%20de%20servicios!5e1!3m2!1sen!2scr!4v1778802314994!5m2!1sen!2scr"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
+          <section class="mapa mapa-static" aria-label="Ubicación de OSARE">
+            <img
+              class="mapa-static-image"
+              src="img/mapa.png"
+              alt="Vista previa de ubicación de OSARE en Cartago"
+              width="1200"
+              height="628"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+              decoding="async"
+            />
+            <div class="mapa-static-overlay">
+              <p>Google Maps se abre solo bajo solicitud del usuario.</p>
+              <a
+                class="mapa-static-btn"
+                href="https://www.google.com/maps?q=Outsourcing+%7C+OSARE.CR+%7C+Proveedores+de+servicios"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abrir en Maps
+              </a>
+            </div>
+          </section>
 
           <section class="social-proof glass-panel" aria-label="Método OSARE">
             <p class="social-proof-title" style="font-size: 20px">

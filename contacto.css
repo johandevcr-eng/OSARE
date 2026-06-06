@@ -507,6 +507,71 @@
     height: 200px;
 }
 
+.mapa-static {
+    position: relative;
+    width: min(100%, 960px);
+    margin: 0 auto;
+    height: auto;
+    min-height: 240px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(16, 34, 54, 0.24);
+    background: #0f1f31;
+}
+
+.mapa-static-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 240px;
+    object-fit: cover;
+    filter: saturate(0.88) contrast(1.03);
+}
+
+.mapa-static-overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: linear-gradient(180deg, rgba(7, 16, 27, 0) 0%, rgba(7, 16, 27, 0.84) 48%, rgba(7, 16, 27, 0.9) 100%);
+}
+
+.mapa-static-overlay p {
+    margin: 0;
+    color: #f3f8ff;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.mapa-static-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #0c2f4a;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.mapa-static-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(7, 16, 27, 0.35);
+}
+
+.mapa-static-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
 @media (max-width: 1200px) {
     .home-topbar+.main {
         margin-top: calc(var(--fixed-video-height, 74px) + 8.25rem) !important;
@@ -556,6 +621,11 @@
 
     .mapa {
         order: 4;
+    }
+
+    .mapa-static-overlay {
+        justify-content: center;
+        text-align: center;
     }
 
     .contact-agent-photo {
