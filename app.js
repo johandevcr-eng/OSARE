@@ -108,6 +108,7 @@
       );
       0 !== e.length &&
         e.forEach(function (e) {
+          const s = e.closest(".full-viewport-video");
           const n = window.navigator && window.navigator.connection,
             o = !!(n && n.saveData),
             i =
@@ -128,6 +129,7 @@
             r = !1;
           ((e.getAttribute("poster") || "").toLowerCase().endsWith(".avif") &&
             e.setAttribute("poster", "img/banner-princ.webp"),
+            (e.style.objectFit = "contain"),
             (e.muted = !0),
             (e.playsInline = !0));
           const c = function () {
@@ -135,6 +137,7 @@
             if (a >= t.length) return;
             const n = t[a];
             ((a += 1),
+              (e.style.objectFit = "contain"),
               e.setAttribute("src", n),
               e.load(),
               e.play().catch(function () {}));
@@ -144,7 +147,7 @@
           (e.addEventListener(
             "loadeddata",
             function () {
-              r = !0;
+              ((r = !0), (e.style.objectFit = "cover"), s?.classList.add("is-ready"));
             },
             { once: !0 },
           ),
@@ -153,7 +156,8 @@
             }),
             window.setTimeout(function () {
               !r && e.readyState < 2 && c();
-            }, 3500));
+            }, 3500),
+            e.readyState >= 2 && ((r = !0), (e.style.objectFit = "cover"), s?.classList.add("is-ready")));
         });
     })(),
     O(),
