@@ -2208,6 +2208,9 @@ footer {
   }
 }
 @media (max-width: 640px) {
+  .full-viewport-video {
+    display: none !important;
+  }
   .banner-blindaje-content {
     padding: 24px 12px;
     gap: 14px;
@@ -2240,7 +2243,7 @@ footer {
     padding: 0 14px;
   }
   :root {
-    --fixed-video-height: 58px;
+    --fixed-video-height: 0px;
   }
   .sidebar-floating {
     right: 8px;

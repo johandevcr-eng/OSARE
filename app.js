@@ -119,31 +119,37 @@
           const t = [
             e.getAttribute("data-src") ||
               e.getAttribute("src") ||
-              "video/Osare-Hero.mp4",
-            "video/Osare-Hero.mp4",
-            "video/Osare-Hero.mp4",
+              "video/osare-hero.mp4",
+            "video/osare-hero.mp4",
           ].filter(function (e, t, n) {
             return e && n.indexOf(e) === t;
           });
           let a = 0,
             r = !1;
+          const d = function () {
+            e.play().catch(function () {});
+          };
           ((e.getAttribute("poster") || "").toLowerCase().endsWith(".avif") &&
             e.setAttribute("poster", "img/banner-princ.webp"),
-            (e.style.objectFit = "contain"),
+            (e.style.objectFit = "cover"),
+            (e.defaultMuted = !0),
             (e.muted = !0),
-            (e.playsInline = !0));
+            (e.playsInline = !0),
+            e.setAttribute("muted", ""),
+            e.setAttribute("playsinline", ""),
+            e.setAttribute("webkit-playsinline", ""));
           const c = function () {
             for (; a < t.length && e.getAttribute("src") === t[a]; ) a += 1;
             if (a >= t.length) return;
             const n = t[a];
             ((a += 1),
-              (e.style.objectFit = "contain"),
+              (e.style.objectFit = "cover"),
               e.setAttribute("src", n),
               e.load(),
-              e.play().catch(function () {}));
+              d());
           };
           e.getAttribute("src") ||
-            (e.setAttribute("src", t[0]), e.load(), e.play().catch(function () {}));
+            (e.setAttribute("src", t[0]), e.load(), d());
           (e.addEventListener(
             "loadeddata",
             function () {
@@ -151,6 +157,7 @@
             },
             { once: !0 },
           ),
+            e.addEventListener("canplay", d, { once: !0 }),
             e.addEventListener("error", function () {
               c();
             }),
@@ -657,4 +664,5 @@
       window.addEventListener("scroll", o, { passive: !0 }));
   }
 });
+
 
