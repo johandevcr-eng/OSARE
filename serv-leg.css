@@ -226,7 +226,14 @@ body {
 .card-bullet {
 	width: 35px;
 	height: 35px;
+	object-fit: contain;
+	display: block;
 	flex-shrink: 0;
+}
+
+.service-card--e .card-bullet {
+	width: 56px;
+	height: 56px;
 }
 
 .service-card ul {
