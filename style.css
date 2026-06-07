@@ -3846,6 +3846,9 @@ table {
   }
 }
 @media (max-width: 768px) {
+  .home-topbar {
+    top: 0 !important;
+  }
   .home-topbar + .main {
     margin-top: calc(var(--fixed-video-height, 74px) + 100px) !important;
   }
