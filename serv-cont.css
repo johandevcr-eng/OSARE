@@ -219,8 +219,18 @@ body {
 	margin-top: 14px;
 }
 
+.notes-row {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 16px;
+	margin: 20px auto 0;
+	width: min(100%, 720px);
+	max-width: 720px;
+}
+
 .note-box {
-	margin: 28px auto 0;
+	margin: 0;
 	background: var(--card-bg);
 	color: var(--text-main);
 	border-radius: 12px;
@@ -229,24 +239,75 @@ body {
 	border: 1px solid var(--card-border);
 	box-shadow: 0 4px 24px rgba(14, 172, 216, 0.08), 0 1px 4px rgba(0, 0, 0, 0.06);
 	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-	width: fit-content;
-	max-width: 100%;
+	width: 100%;
+	max-width: none;
+	height: 100%;
+	min-height: 170px;
+	display: flex;
+	align-items: center;
 }
 
 .note-box + .note-box {
 	margin-top: 16px;
 }
 
+.notes-row .note-box + .note-box {
+	margin-top: 0;
+}
+
 .note-box--highlight {
 	background: linear-gradient(to top left, rgba(111, 165, 228, 0) 46%, rgba(111, 165, 228, 0.22) 72%, rgba(111, 165, 228, 0.45) 100%), linear-gradient(135deg, #173f78 0%, #0b2954 100%);
 	color: #ffffff;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	padding: 18px 22px;
+	padding: 14px 18px 10px;
 	line-height: 1.7;
 	font-weight: 600;
-	width: min(100%, 760px);
 	border-radius: 14px;
 	box-shadow: 0 8px 22px rgba(0, 96, 160, 0.25);
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 8px;
+	width: 100%;
+	height: auto;
+	min-height: 0;
+	margin: 0;
+}
+
+.note-box-label {
+	margin: 0;
+	font: 700 12px/1.2 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	padding: 5px 8px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.note-box-text {
+	margin: 0;
+	line-height: 1.55;
+	font-weight: 600;
+	text-align: center;
+}
+
+.note-box--plain {
+	width: 100%;
+	margin: 0;
+	min-height: 0;
+	height: auto;
+	align-self: flex-start;
+	align-items: stretch;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 16px;
+	padding: 18px 24px 22px;
+}
+
+.note-box--plain > p {
+	margin: 0;
+	text-align: center;
 }
 
 .note-box:hover {
@@ -359,6 +420,25 @@ body {
 
 	.services-grid-cta .btn {
 		width: 100%;
+	}
+
+	.notes-row {
+		width: min(100%, 100%);
+		max-width: 720px;
+		gap: 14px;
+	}
+
+	.note-box {
+		min-height: 0;
+	}
+
+	.note-box--plain {
+		width: 100%;
+		max-width: none;
+	}
+
+	.note-box--highlight {
+		margin-right: 0;
 	}
 }
 

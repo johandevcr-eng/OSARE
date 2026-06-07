@@ -466,20 +466,15 @@
     };
   document.querySelectorAll(".footer-links").forEach(function (e) {
     if (e.querySelector("[data-cookie-settings]")) return;
-    const t = document.createElement("span");
-    ((t.className = "footer-divider"),
-      t.setAttribute("aria-hidden", "true"),
-      (t.textContent = "Â·"));
-    const n = document.createElement("button");
-    ((n.className = "footer-link-btn"),
-      (n.type = "button"),
-      n.setAttribute("data-cookie-settings", ""),
-      (n.textContent = "Configurar cookies"),
-      n.addEventListener("click", function () {
+    const t = document.createElement("button");
+    ((t.className = "footer-link-btn"),
+      (t.type = "button"),
+      t.setAttribute("data-cookie-settings", ""),
+      (t.textContent = "Configurar cookies"),
+      t.addEventListener("click", function () {
         (E(k), S());
       }),
-      e.appendChild(t),
-      e.appendChild(n));
+      e.appendChild(t));
   });
   const T = R(A);
   T ? C(T) : I(S, 1800);
