@@ -220,7 +220,7 @@ body {
 }
 
 .note-box {
-	margin: 80px auto 0;
+	margin: 28px auto 0;
 	background: var(--card-bg);
 	color: var(--text-main);
 	border-radius: 12px;
@@ -231,6 +231,22 @@ body {
 	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 	width: fit-content;
 	max-width: 100%;
+}
+
+.note-box + .note-box {
+	margin-top: 16px;
+}
+
+.note-box--highlight {
+	background: linear-gradient(to top left, rgba(111, 165, 228, 0) 46%, rgba(111, 165, 228, 0.22) 72%, rgba(111, 165, 228, 0.45) 100%), linear-gradient(135deg, #173f78 0%, #0b2954 100%);
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding: 18px 22px;
+	line-height: 1.7;
+	font-weight: 600;
+	width: min(100%, 760px);
+	border-radius: 14px;
+	box-shadow: 0 8px 22px rgba(0, 96, 160, 0.25);
 }
 
 .note-box:hover {
