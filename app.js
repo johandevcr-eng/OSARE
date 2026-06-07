@@ -119,8 +119,8 @@
           const t = [
             e.getAttribute("data-src") ||
               e.getAttribute("src") ||
-              "video/osare-hero.mp4",
-            "video/osare-hero.mp4",
+              "video/Osare-Hero.mp4",
+            "video/Osare-Hero.mp4",
           ].filter(function (e, t, n) {
             return e && n.indexOf(e) === t;
           });
@@ -664,5 +664,6 @@
       window.addEventListener("scroll", o, { passive: !0 }));
   }
 });
+
 
 
