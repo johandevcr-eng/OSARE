@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
   const e = "function" == typeof window.matchMedia,
     P = function () {
       return e
@@ -118,8 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
           const t = [
             e.getAttribute("data-src") ||
               e.getAttribute("src") ||
-              "video/osare-hero.mp4",
-            "video/banner.mp4",
+              "video/Osare-Hero.mp4",
+            "video/Osare-Hero.mp4",
+            "video/Osare-Hero.mp4",
           ].filter(function (e, t, n) {
             return e && n.indexOf(e) === t;
           });
@@ -410,11 +411,11 @@ document.addEventListener("DOMContentLoaded", function () {
           '<div class="cookie-notice__text-wrap">',
           '<p class="cookie-notice__text">',
           "<strong>OSARE</strong> utiliza cookies propias y de terceros para mejorar su experiencia y analizar el uso del sitio.",
-          " Al continuar navegando, acepta su uso según nuestra política.",
+          " Al continuar navegando, acepta su uso segÃºn nuestra polÃ­tica.",
           "</p>",
           '<div class="cookie-notice__links">',
-          '<a class="cookie-notice__link" href="politicas.html">Política de Privacidad</a>',
-          '<a class="cookie-notice__link" href="terminos.html">Términos y Condiciones</a>',
+          '<a class="cookie-notice__link" href="politicas.html">PolÃ­tica de Privacidad</a>',
+          '<a class="cookie-notice__link" href="terminos.html">TÃ©rminos y Condiciones</a>',
           "</div>",
           "</div>",
           "</div>",
@@ -464,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const t = document.createElement("span");
     ((t.className = "footer-divider"),
       t.setAttribute("aria-hidden", "true"),
-      (t.textContent = "·"));
+      (t.textContent = "Â·"));
     const n = document.createElement("button");
     ((n.className = "footer-link-btn"),
       (n.type = "button"),
@@ -657,3 +658,4 @@ document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("scroll", o, { passive: !0 }));
   }
 });
+
