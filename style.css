@@ -109,6 +109,7 @@ body.home-page-body .full-viewport-video video {
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+
 }
 .home-topbar {
   display: flex;
@@ -4201,8 +4202,8 @@ table {
     height: 18px !important;
   }
   .home-topbar + .main {
-    margin-top: calc(var(--fixed-video-height, 74px) + 17rem) !important;
-  }
+  margin-top: calc(var(--fixed-video-height, 74px) + 94px) !important;
+}
   .home-topbar.is-mobile-compact + .main {
     margin-top: calc(var(--fixed-video-height, 74px) + 94px) !important;
   }
