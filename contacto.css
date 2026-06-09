@@ -8,7 +8,7 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 16px;
-    min-height: calc(100vh - var(--fixed-video-height) - 220px);
+    min-height: calc(100vh - 220px);
 }
 
 .contact-page p,
@@ -17,13 +17,13 @@
 }
 
 .contact-intro {
-    margin: 36px auto 20px;
+    margin: 28px auto 16px;
     text-align: center;
-    font-size: 45px;
+    font-size: clamp(22px, 5.5vw, 42px);
     line-height: 1.2;
     color: var(--text-main);
     font-weight: 600;
-    width: 60%;
+    width: min(90%, 760px);
 }
 
 .contact-conversion-layout {
@@ -42,8 +42,8 @@
     color: var(--text-main);
     font-size: 16px;
     line-height: 1.5;
-    width: 32rem;
-    padding: 20px 20px;
+    width: min(100%, 480px);
+    padding: 16px 20px;
     margin: auto;
     text-align: left;
     background-color: #ffffff;
@@ -418,7 +418,7 @@
     font-size: clamp(20px, 2.1vw, 26px);
     line-height: 1.2;
     color: #102236;
-    width: 50%;
+    max-width: min(90%, 420px);
 }
 
 .contact-proof-panel>p {
@@ -428,9 +428,10 @@
 }
 
 .contact-proof-box {
-    width: 50%;
-    height: 15rem;
-    margin-top: 40px;
+    width: min(90%, 480px);
+    height: auto;
+    min-height: 180px;
+    margin-top: 20px;
     padding: 14px;
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -574,7 +575,7 @@
 
 @media (max-width: 1200px) {
     .home-topbar+.main {
-        margin-top: calc(var(--fixed-video-height, 74px) + 8.25rem) !important;
+        margin-top: 132px !important;
     }
 
     .contact-page {
@@ -591,7 +592,7 @@
     .contact-page {
         display: flex;
         flex-direction: column;
-        padding-top: 60px;
+        padding-top: 20px;
     }
 
     .contact-conversion-layout {
@@ -656,7 +657,7 @@
     }
 
     .home-topbar+.main {
-        margin-top: calc(var(--fixed-video-height, 74px) + 9.5rem) !important;
+        margin-top: 100px !important;
     }
 
     .contact-actions {
@@ -732,6 +733,43 @@
     .contact-captcha {
         min-height: 84px;
         overflow: hidden;
+    }
+}
+
+/* ── Mejoras responsive móvil ≤480px ─────────────────────────── */
+@media (max-width: 480px) {
+    .contact-intro {
+        margin: 16px auto 12px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .contact-choice-note {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 14px;
+    }
+
+    .contact-proof-box {
+        width: 100%;
+    }
+
+    .contact-proof-panel h3 {
+        max-width: 100%;
+        font-size: clamp(18px, 5vw, 22px);
+    }
+
+    .contact-agent-photo {
+        width: min(100%, 220px);
+    }
+
+    .contact-page {
+        min-height: auto;
+        gap: 12px;
+    }
+
+    .contact-bottom {
+        gap: 12px;
     }
 }
 
