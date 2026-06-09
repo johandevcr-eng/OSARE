@@ -119,8 +119,8 @@
           const t = [
             e.getAttribute("data-src") ||
               e.getAttribute("src") ||
-              "video/Osare-Hero.mp4",
-            "video/Osare-Hero.mp4",
+              "video/",
+            "video/",
           ].filter(function (e, t, n) {
             return e && n.indexOf(e) === t;
           });
@@ -130,7 +130,7 @@
             e.play().catch(function () {});
           };
           ((e.getAttribute("poster") || "").toLowerCase().endsWith(".avif") &&
-            e.setAttribute("poster", "img/banner-princ.webp"),
+            e.setAttribute("poster", "img/"),
             (e.style.objectFit = "cover"),
             (e.defaultMuted = !0),
             (e.muted = !0),
