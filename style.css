@@ -72,6 +72,10 @@ body {
   padding: 20px;
 }
 
+.home-topbar {
+  width: min(1500px, calc(100% - 20px));
+}
+
 body.home-page-body 
 .header {
   display: flex;
