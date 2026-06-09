@@ -217,23 +217,24 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 22px;
 	display: flex;
-	align-items: center;
-	gap: 8px;
+	align-items: flex-start;
+	gap: 10px;
 	overflow-wrap: break-word;
 	word-break: normal;
 }
 
 .card-bullet {
-	width: 35px;
-	height: 35px;
+	width: 36px;
+	height: 36px;
 	object-fit: contain;
 	display: block;
 	flex-shrink: 0;
+	margin-top: 2px;
 }
 
 .service-card--e .card-bullet {
-	width: 56px;
-	height: 56px;
+	width: 36px;
+	height: 36px;
 }
 
 .service-card ul {
