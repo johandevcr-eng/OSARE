@@ -14,6 +14,22 @@
         wait_for_update: 500,
       });
     </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-5NEJLKE9T8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-5NEJLKE9T8");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -183,8 +199,6 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="container">
-     
-
       <!-- Header -->
       <div
         class="header home-topbar glass-panel"
@@ -203,7 +217,7 @@
               fetchpriority="high"
             />
           </picture>
- 
+
           <picture>
             <source srcset="img/logo-letras-osare.webp" />
             <img
@@ -218,7 +232,6 @@
           </picture>
         </div>
 
-
         <nav
           class="sidebar topbar-menu"
           id="primarySidebar"
@@ -226,7 +239,11 @@
         >
           <ul>
             <li class="nav-button-item">
-              <button class="menu-link-btn" type="button" data-href="index.html">
+              <button
+                class="menu-link-btn"
+                type="button"
+                data-href="index.html"
+              >
                 <picture>
                   <source srcset="img/icono-hogar.webp" />
                   <img
@@ -334,7 +351,11 @@
               </button>
             </li>
             <li class="nav-button-item">
-              <button class="menu-link-btn" type="button" data-href="contacto.html">
+              <button
+                class="menu-link-btn"
+                type="button"
+                data-href="contacto.html"
+              >
                 <img
                   height="512"
                   width="512"
@@ -681,7 +702,9 @@
               <span class="logo-pill">Auxiliares Contables Remotos</span>
               <span class="logo-pill">Cumplimiento Normativo Empresarial</span>
               <span class="logo-pill">Gestión Inmobiliaria</span>
-              <span class="logo-pill">Identidad de Marca Empresarial y Personal</span>
+              <span class="logo-pill"
+                >Identidad de Marca Empresarial y Personal</span
+              >
               <span class="logo-pill">Creación de Contenido</span>
             </div>
           </div>
@@ -1049,11 +1072,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
